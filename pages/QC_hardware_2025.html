@@ -9,8 +9,13 @@ Licence URI: https://www.os-templates.com/template-terms
 <html lang="">
 <!-- To declare your language - read more here: https://www.w3.org/International/questions/qa-html-language-declarations -->
 <head>
-<title>Wetwest | Pages | Full Width</title>
-<meta charset="utf-8">
+  <title>超導量子電腦硬體指南 (2025) | 量子位元、組件與廠商全解析</title>
+  <meta name="description" content="深入解析2025年超導量子電腦的構建，涵蓋量子處理器(QPU)、稀釋製冷機、控制電子、低溫佈線等核心硬體。提供全球主要製造商、價格範圍、技術挑戰與未來趨勢的詳細指引。">
+  <meta name="keywords" content="超導量子電腦, 量子位元, Qubit, QPU, 稀釋製冷機, IBM, Google, QuantWare, Bluefors, 低溫系統, 控制電子, Josephson Junction, Transmon, Fluxonium, 量子計算硬體, SEO">
+  <link rel="canonical" href="https://www.insight-ihbar.com/superconducting-quantum-computer-guide.html" />
+
+
+  <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
 </head>
@@ -76,7 +81,7 @@ Licence URI: https://www.os-templates.com/template-terms
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
-<div class="wrapper bgded overlay" style="background-image:url('../images/demo/backgrounds/01.png');">
+<div class="wrapper bgded overlay" style="background-image:url('../images/GOOD_1a.png');">
   <div id="breadcrumb" class="hoc clear"> 
     <!-- ################################################################################################ -->
     <ul>
@@ -88,57 +93,81 @@ Licence URI: https://www.os-templates.com/template-terms
     <!-- ################################################################################################ -->
   </div>
 </div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
+
 <div class="wrapper row3">
   <main class="hoc container clear"> 
     <!-- main body -->
     <!-- ################################################################################################ -->
     <div class="content"> 
-      <!-- ################################################################################################ -->
-
 
       <ol>
 
         <section id="c1">
           <div class="container">
             <header class="major">
-            <h2><li>超導量子電腦-硬體技術與廠商指引(2025)</li></h2>
+              <div style="text-align: center;">
+                <h2><font size="6">超導量子電腦-硬體技術與廠商指引(2025)</font></h2>
+                <h1>構建超導量子電腦：關鍵部件、廠商、與技術挑戰深度解析</h1>
+              </div>
             </header>
-          
-            <h1>構建超導量子電腦：關鍵部件、廠商、成本與技術挑戰深度解析</h1>
+
+            <h2>I. 引言</h2>
+            <p style="text-align:justify" class="dark-background">
+              超導量子電腦利用量子力學原理及超導體的獨特性質，有望在密碼學、人工智慧、材料科學等領域引發革命性變革。這些系統的核心是超導量子位元，一種在極低溫下呈現零電阻的特製電路。
+              構建這樣一台尖端設備，不僅需要尖端的量子處理單元和極端的低溫環境，還依賴於精密的控制與讀取電子設備、特製的低溫佈線，以及複雜的軟體堆疊來執行和糾正量子運算。接下來，我們將逐一解析這些關鍵組成部分。
+            </p>
         
-        <h2>I. 引言</h2>
-        
-        <p>超導量子電腦利用量子力學原理及超導體的獨特性質，有望在密碼學、人工智慧、材料科學等領域引發革命性變革 [1]。這些系統的核心是超導量子位元（qubits），一種在極低溫下呈現零電阻的特製電路 [1]。本報告旨在深入剖析構建一台超導量子電腦所需的各大主要部件，涵蓋其功能、代表性製造商、大致價格範圍、主要研發國家/地區以及所面臨的關鍵技術門檻。</p>
-        
-        <p>構建這樣一台尖端設備，不僅需要尖端的量子處理單元和極端的低溫環境，還依賴於精密的控制與讀取電子設備、特製的低溫佈線，以及複雜的軟體堆疊來執行和糾正量子運算。接下來，我們將逐一解析這些關鍵組成部分。</p>
-        
-      
             <div style="text-align: center;">
-            <a href="./Image/IBM Q.jpg">
-              <img src="./Image/IBM Q.jpg" alt="取代文字" style="width: 100%; height: auto;">
-            </a>
+              <a href="./Image/IBM_QC_cloud_ch.png">
+                <img src="./Image/IBM_QC_cloud_ch.png" alt="取代文字" style="width: 100%; height: auto;">
+              </a>
             </div>
             <p style="text-align:justify" class="dark-background">
-            Ref: <a href="https://www.forschungsfabrik-mikroelektronik.de/en/focus-topics/next-generation-computing/ibm-q-system-one.html">
-            IBM
-            </a>
+              ▲由於當前量子電腦仍然在發展中，超導量子電腦需要運作在近乎絕對零度之下，一台原型機非常巨大且昂貴、且需要許多電子控制器協調控制個別的量子位元。由IBM、Google、IQM等生產的量子電腦原型機，透過網路介面公開，使外界可以開發新的量子應用。
+              圖中是由IBM發展的量子電腦雲端開發應用場景，
+              (1)使用者可透過雲端介面，送指令進入到IBM的系統中。
+              (2)指令經由古典電腦轉譯成控制訊號後(DAC，數位到類比轉換)，由微波電子設備傳送脈衝訊號。
+              (3)脈衝訊號透過超導同軸電纜進入到低溫環境，
+              (4)量子位元經過訊號運算後，將訊號經過讀取迴路送回。
+              (5)讀取回路包含隔離器(避免訊號返回量子位元)、
+              (6)量子放大器後，
+              (7)回到微波電子設備分析(ADC，類比到數位轉換)，
+              (8)儀器分析訊號後
+              (9)回傳到使用者。
+              Ref: IBM，作者譯。原圖見<a href="./Image/IBM_QC_cloud.webp">此</a>。
+            </p>
+      
+            <div style="text-align: center;">
+              <a href="./Image/IBM Q.jpg">
+                <img src="./Image/IBM Q.jpg" alt="取代文字" style="width: 100%; height: auto;">
+              </a>
+            </div>
+            <p style="text-align:justify" class="dark-background">
+              ▲IBM的量子電腦原型機，我們將由下一張圖來解說相關部件。Ref: <a href="https://www.forschungsfabrik-mikroelektronik.de/en/focus-topics/next-generation-computing/ibm-q-system-one.html">
+              IBM。
+              </a>
             </p>
             
             
             <div style="text-align: center;">
-            <a href="./Image/QC_structure_illu.png">
-            <img src="./Image/QC_structure_illu.png" alt="取代文字" style="width: 100%; height: auto;">
-            </a>
-          </div>
-          <p style="text-align:justify" class="dark-background">
-            Ref: IBM，作者譯。原圖見<a href="./Image/LEPbw.jpg">此</a>。
+              <a href="./Image/QC_structure_illu.png">
+                <img src="./Image/QC_structure_illu.png" alt="取代文字" style="width: 100%; height: auto;">
+              </a>
+            </div>
+            <p style="text-align:justify" class="dark-background">
+              ▲IBM解說自家的量子電腦原型機部件。由於量子電腦需要在近乎絕對零度的溫度下操作。溫度隔絕、熱雜訊隔絕是非常重要的議題。
+              稀釋製冷冷凍機分為多個溫度區段，藉由階段性隔熱的方式，從室溫逐步將到15mK以下。
+              此外，當微波訊號從外界進入到量子位元時，訊號如果沒有經過濾波，熱雜訊會藉由訊號污染量子態。
+              故傳遞訊號的超導同軸電纜須經由不同階段的衰減器濾除熱雜訊。
+              超導量子處理器QPU被放置在冷凍機底部，受磁屏蔽罩隔絕外界電磁干擾。
+              除了輸入端需要信號衰減外，由於量子尺度的關係，量子位元回傳的量子訊號，須經由量子放大器增益。
+              量子放大器是操作在量子極限的訊號增益元件，亦是透過超導材料實現量子層級的增益。
+              當回傳訊號通過增益後，須避免反向回傳到量子位元，故需要隔離器使訊號單向望外傳輸。
+              Ref: IBM，作者譯。原圖見<a href="./Image/LEPbw.jpg">此</a>。
             </p>
 
 
-            <div style="text-align: center;"></div>
+            <div style="text-align: center;">
               <a href="./Image/IQM_QPU.png">
                 <img src="./Image/IQM_QPU.png" alt="取代文字" style="width: 100%; height: auto;">
               </a>
@@ -193,7 +222,15 @@ Licence URI: https://www.os-templates.com/template-terms
 
             
 
-
+                  <div style="text-align: center;">
+                    <a href="./Image/Delft circuit.png">
+                      <img src="./Image/Delft circuit.png" alt="取代文字" style="width: 100%; height: auto;">
+                    </a>
+                    </div>
+                    <p style="text-align:justify">
+                    
+                    Ref: Delft circuit
+                    </p>
       
       
       
@@ -1037,508 +1074,6 @@ Licence URI: https://www.os-templates.com/template-terms
     
     
     
-            <table>
-            <thead>
-                <tr>
-                    <th>部件類別</th>
-                    <th>具體部件/服務</th>
-                    <th>主要廠商/機構 (根據提供的HTML內容)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td rowspan="2"><b>量子處理單元 (QPU) / 量子晶片</b></td>
-                    <td>QPU 標準產品及代工服務</td>
-                    <td>
-                        <ul>
-                            <li>SpinQ [cite: 5, 36]</li>
-                            <li>QuantWare [cite: 36]</li>
-                            <li>Rigetti Computing [cite: 36]</li>
-                            <li>SkyWater Technology [cite: 36]</li>
-                            <li>SEEQC [cite: 10, 36]</li>
-                        </ul>
-                    </td>
-                </tr>
-                <tr>
-                    <td>QPU 內部開發/研究 (大型集成商/研究機構)</td>
-                    <td>
-                        <ul>
-                            <li>IBM [cite: 1, 2, 10, 36, 37]</li>
-                            <li>Google Quantum AI [cite: 1, 2, 10, 36, 37]</li>
-                            <li>Intel [cite: 1, 2, 10, 36, 37]</li>
-                            <li>OQC (Oxford Quantum Circuits) [cite: 1, 5, 6]</li>
-                            <li>Anyon Systems [cite: 1, 5, 6]</li>
-                            <li>Yale University [cite: 1, 5, 6]</li>
-                            <li>UMD (University of Maryland) [cite: 1, 5, 6]</li>
-                            <li>Atlantic Quantum [cite: 1, 5, 6]</li>
-                        </ul>
-                    </td>
-                </tr>
-                <tr>
-                    <td><b>低溫系統</b></td>
-                    <td>稀釋製冷機</td>
-                    <td>
-                        <ul>
-                            <li>Bluefors [cite: 8, 9, 11, 12, 13, 14, 24, 31, 36, 37, 41]</li>
-                            <li>Oxford Instruments [cite: 8, 9, 11, 12, 13, 14, 24, 36, 41] (文檔中為 Oxford Instruments NanoScience)</li>
-                            <li>ULVAC [cite: 8, 9, 10, 11, 12, 13, 14, 24, 36, 41]</li>
-                            <li>Maybell Quantum [cite: 8, 9, 11, 12, 13, 14, 32, 36, 41]</li>
-                            <li>Janis/Quantum Design (資訊來源：更新內容中的「超導量子電腦主要部件與廠商選項」表)</li>
-                            <li>Leiden Cryogenics [cite: 1, 9, 10, 11, 12]</li>
-                        </ul>
-                    </td>
-                </tr>
-                <tr>
-                    <td rowspan="2"><b>控制與讀取電子設備</b></td>
-                    <td>控制電子系統 (專用平台/模塊化系統/脈衝產生器)</td>
-                    <td>
-                        <ul>
-                            <li>Quantum Machines [cite: 14, 15, 16, 17, 18, 19, 36]</li>
-                            <li>Qblox [cite: 14, 15, 16, 17, 18, 19, 36, 37]</li>
-                            <li>Zurich Instruments [cite: 14, 15, 16, 17, 18, 19, 36, 45]</li>
-                            <li>SpinQ [cite: 14, 15, 16, 17, 18, 19, 36]</li>
-                            <li>Keysight Technologies (也提供單項儀器如AWG) [cite: 6, 16, 18, 19]</li>
-                            <li>Rohde & Schwarz (也提供單項儀器如AWG) [cite: 6, 16, 18, 19]</li>
-                            <li>Tektronix (AWG) (資訊來源：更新內容中的「超導量子電腦主要部件與廠商選項」表)</li>
-                            <li>Tabor Quantum Solutions (Tabor Electronics) [cite: 6, 18, 19, 42]</li>
-                            <li>Intel (Cryo-CMOS 研究) [cite: 6, 11, 18, 19]</li>
-                            <li>NVIDIA (與QM合作DGX Quantum) [cite: 17, 18, 19]</li>
-                        </ul>
-                    </td>
-                </tr>
-                <tr>
-                    <td>讀出與測量系統組件</td>
-                    <td>
-                        <ul>
-                            <li>(許多控制系統供應商如Quantum Machines, Qblox, Zurich Instruments, SpinQ 的產品集成讀取功能)</li>
-                            <li><strong>低溫放大器:</strong>
-                                <ul>
-                                    <li>HEMT (高電子遷移率電晶體) 放大器: Low Noise Factory, MITEQ, 扩维科技 (資訊來源：更新內容中的「超導量子電腦主要部件與廠商選項」表)。新HTML文本「低溫設置工程...」部分描述其用途。</li>
-                                    <li>TWPA/JPA (行波/約瑟夫森參數放大器): QuantWare (TWPA); 耶魯大學、MIT 等 (JPA/TWPA 研究/自研) (資訊來源：更新內容中的「超導量子電腦主要部件與廠商選項」表)。新HTML文本「低溫設置工程...」部分描述TWPA用途。</li>
-                                </ul>
-                            </li>
-                            <li><strong>微波無源元件 (Cryogenic Passive Microwave Components):</strong>
-                                <ul>
-                                    <li>隔離器 (Isolator) / 循環器 (Circulator): DiTom Microwave, QuinStar, 天靈微波 (資訊來源：更新內容中的「超導量子電腦主要部件與廠商選項」表)。新HTML文本「低溫設置工程...」部分描述其用途。</li>
-                                    <li>低通濾波器 (Low-pass filter): Minicircuits (VLFX1300+) (資訊來源：新HTML文本「低溫設置工程...」部分)。</li>
-                                    <li>帶通濾波器 (Band-pass filter): 新HTML文本「低溫設置工程...」部分描述其用途; 特定商業生產商需參考通用微波元件供應商。</li>
-                                    <li>Eccosorb 濾波器: 基於 Eccosorb® CR-124 吸收材料的客製化紅外濾波器 (資訊來源：新HTML文本「低溫設置工程...」部分)。Eccosorb® 為材料品牌。</li>
-                                    <li>定向耦合器 (Dir. Coupler / Directional Coupler): 新HTML文本「低溫設置工程...」部分描述其用途; 特定商業生產商需參考通用微波元件供應商。</li>
-                                    <li>終端 (Termination): 新HTML文本「低溫設置工程...」部分描述其應用; 特定商業生產商需參考通用微波元件供應商。</li>
-                                </ul>
-                            </li>
-                            <li>外導體熱沉 (Thermalisation of outer conductor): 新HTML文本「低溫設置工程...」部分描述為一種設計技術，非標準採購部件。</li>
-                            <li>通用量測儀器 (VNA, 信號產生器, 頻譜儀等): Keysight Technologies, Rohde & Schwarz, Anritsu, AlazarTech (資訊來源：「超導量子電腦主要部件與廠商選項」表及原文) [cite: 34]</li>
-                            <li>低溫傳感器/儀器: Lake Shore Cryotronics [cite: 34, 39, 42]</li>
-                            <li>低溫霍爾傳感器: Paragraf [cite: 34]</li>
-                        </ul>
-                    </td>
-                </tr>
-                <tr>
-                    <td rowspan="2"><b>特殊導線與接頭</b></td>
-                    <td>低溫導線 (同軸電纜, 柔性線纜, 雙絞線, 光纖選項)</td>
-                    <td>
-                        <ul>
-                            <li>Delft Circuits (Cri/oFlex® 柔性線纜) [cite: 10, 20, 21, 23, 24, 25, 26, 27, 30, 31, 36, 42, 44]</li>
-                            <li>Maybell Quantum (Flexlines 柔性線纜) [cite: 10, 20, 21, 23, 24, 25, 26, 27, 32, 36, 41]</li>
-                            <li>Rosenberger (同軸電纜) [cite: 21, 23, 24, 25, 26, 27, 36, 42]</li>
-                            <li>CryoCoax (Intelliconnect) (同軸電纜) [cite: 21, 23, 24, 25, 26, 27, 30, 31, 36, 42, 43]</li>
-                            <li>EZ Form Cable (同軸電纜) [cite: 21, 23, 24, 25, 26, 27, 36, 42]</li>
-                            <li>MIT Lincoln Lab (柔性線纜技術) [cite: 21, 23, 24, 26]</li>
-                            <li>Bluefors (提供多種線纜選項，包括雙絞線、光纖) [cite: 21, 23, 24, 25, 26, 27, 37]</li>
-                            <li>QDevil (低溫連接與封裝) (資訊來源：更新內容中的「超導量子電腦主要部件與廠商選項」表)</li>
-                        </ul>
-                    </td>
-                </tr>
-                <tr>
-                    <td>低溫連接器/接頭 (RF接頭, 高密度接頭, 氣密接頭/饋通)</td>
-                    <td>
-                        <ul>
-                            <li>Quantum Microwave [cite: 22, 23, 24, 28, 29, 30, 36]</li>
-                            <li>Rosenberger [cite: 22, 23, 24, 28, 29, 30, 36, 42]</li>
-                            <li>Delft Circuits [cite: 22, 23, 24, 28, 29, 30, 36, 42]</li>
-                            <li>Ardent Concepts (高密度板級連接器) [cite: 22, 23, 24, 28, 29, 30]</li>
-                            <li>Martec (氣密接頭/饋通) [cite: 22, 23, 24, 28, 29, 30, 36, 42]</li>
-                            <li>Amphenol Aerospace (Cryo-Seal 氣密接頭) [cite: 22, 23, 24, 28, 29, 30, 36, 42]</li>
-                            <li>QDevil (資訊來源：更新內容中的「超導量子電腦主要部件與廠商選項」表)</li>
-                            <li>CryoCoax (Intelliconnect) (資訊來源：更新內容中的「超導量子電腦主要部件與廠商選項」表)</li>
-                            <li>Lake Shore Cryotronics (樣品盒等) (資訊來源：更新內容中的「超導量子電腦主要部件與廠商選項」表)</li>
-                        </ul>
-                    </td>
-                </tr>
-                <tr>
-                    <td rowspan="2"><b>輔助系統部件</b></td>
-                    <td>真空系統部件 (真空幫浦, 真空計, 閥門等)</td>
-                    <td>
-                        <ul>
-                            <li>Leybold [cite: 11, 30, 31, 32, 38, 42]</li>
-                            <li>Edwards Vacuum [cite: 30, 31, 32, 38, 42]</li>
-                            <li>Pfeiffer Vacuum [cite: 30, 31, 32, 38, 42]</li>
-                            <li>SAES Getters (NEG 幫浦) [cite: 30, 31, 32, 38, 42]</li>
-                            <li>Gamma Vacuum (離子幫浦) [cite: 30, 31, 32, 38, 42]</li>
-                            <li>Busch Vacuum Solutions [cite: 31, 32, 38, 42]</li>
-                            <li>Agilent (原 Varian) [cite: 31, 32, 38, 42]</li>
-                            <li>Welch [cite: 31, 32, 38, 42]</li>
-                            <li>VAT (真空閥門) [cite: 31, 32, 38, 42]</li>
-                        </ul>
-                    </td>
-                </tr>
-                <tr>
-                    <td>磁屏蔽與輻射屏蔽</td>
-                    <td>
-                        <ul>
-                            <li>Amuneal Manufacturing Corp. [cite: 32, 33, 38, 42]</li>
-                            <li>Magnetic Shields Limited (MSL) [cite: 32, 33, 38, 42]</li>
-                            <li>Bluefors (集成屏蔽方案) [cite: 33]</li>
-                            <li>Quantum Machines (QCage 樣品架提供磁屏蔽選項) [cite: 33]</li>
-                        </ul>
-                    </td>
-                </tr>
-                <tr>
-                    <td><b>完整系統提供商</b></td>
-                    <td>提供完整超導量子計算系統或解決方案</td>
-                    <td>
-                        <ul>
-                            <li>IBM [cite: 1, 43, 44]</li>
-                            <li>Google Quantum AI [cite: 1, 43, 44]</li>
-                            <li>Intel [cite: 44]</li>
-                            <li>Rigetti Computing [cite: 3, 44, 45]</li>
-                            <li>D-Wave Systems (量子退火機為主,亦開發門模型) [cite: 45]</li>
-                            <li>SpinQ [cite: 1, 45]</li>
-                            <li>Oxford Quantum Circuits (OQC) [cite: 6, 45]</li>
-                            <li>Anyon Systems [cite: 45]</li>
-                            <li>Alice & Bob [cite: 1, 38, 45]</li>
-                            <li>Atlantic Quantum [cite: 1, 5, 6, 45]</li>
-                            <li>IQM [cite: 2, 16, 45]</li>
-                        </ul>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    
-    
-    
-    
-    
-            <table>
-              <thead>
-                  <tr>
-                      <th>部件類別</th>
-                      <th>具體部件/服務</th>
-                      <th>主要廠商/機構 (根據PDF內容)</th>
-                  </tr>
-              </thead>
-              <tbody>
-                  <tr>
-                      <td rowspan="2"><b>量子處理單元 (QPU) / 量子晶片</b></td>
-                      <td>QPU 標準產品及代工服務</td>
-                      <td>
-                          <ul>
-                              <li>SpinQ [cite: 5, 36]</li>
-                              <li>QuantWare [cite: 36]</li>
-                              <li>Rigetti Computing [cite: 36]</li>
-                              <li>SkyWater Technology [cite: 36]</li>
-                              <li>SEEQC [cite: 10, 36]</li>
-                          </ul>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td>QPU 內部開發/研究 (大型集成商/研究機構)</td>
-                      <td>
-                          <ul>
-                              <li>IBM [cite: 1, 2, 10, 36, 37]</li>
-                              <li>Google Quantum AI [cite: 1, 2, 10, 36, 37]</li>
-                              <li>Intel [cite: 1, 2, 10, 36, 37]</li>
-                              <li>OQC (Oxford Quantum Circuits) [cite: 1, 5, 6]</li>
-                              <li>Anyon Systems [cite: 1, 5, 6]</li>
-                              <li>Yale University [cite: 1, 5, 6]</li>
-                              <li>UMD (University of Maryland) [cite: 1, 5, 6]</li>
-                              <li>Atlantic Quantum [cite: 1, 5, 6]</li>
-                          </ul>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td><b>低溫系統</b></td>
-                      <td>稀釋製冷機</td>
-                      <td>
-                          <ul>
-                              <li>Bluefors [cite: 8, 9, 11, 12, 13, 14, 24, 31, 36, 37, 41]</li>
-                              <li>Oxford Instruments NanoScience [cite: 8, 9, 11, 12, 13, 14, 24, 36, 41]</li>
-                              <li>ULVAC [cite: 8, 9, 11, 12, 13, 14, 24, 36, 41]</li>
-                              <li>Maybell Quantum [cite: 8, 9, 11, 12, 13, 14, 32, 36, 41]</li>
-                          </ul>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td rowspan="2"><b>控制與讀取電子設備</b></td>
-                      <td>控制電子系統 (專用平台/模塊化系統)</td>
-                      <td>
-                          <ul>
-                              <li>Quantum Machines [cite: 14, 15, 16, 17, 18, 19, 36]</li>
-                              <li>Qblox [cite: 14, 15, 16, 17, 18, 19, 36, 37]</li>
-                              <li>Zurich Instruments [cite: 14, 15, 16, 17, 18, 19, 36]</li>
-                              <li>SpinQ [cite: 14, 15, 16, 17, 18, 19, 36]</li>
-                              <li>Keysight Technologies (也提供單項儀器) [cite: 16, 18, 19]</li>
-                              <li>Rohde & Schwarz (也提供單項儀器) [cite: 16, 18, 19]</li>
-                              <li>NVIDIA (與QM合作DGX Quantum) [cite: 17, 18, 19]</li>
-                          </ul>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td>讀出與測量系統組件 (包含低溫放大器、隔離器及通用量測儀器)</td>
-                      <td>
-                          <ul>
-                              <li>(許多控制系統供應商如Quantum Machines, Qblox, Zurich Instruments, SpinQ 的產品集成讀取功能)</li>
-                              <li>低溫放大器:
-                                  <ul>
-                                      <li>HEMT (高電子遷移率電晶體) 放大器: PDF核心部分提及為關鍵組件 [cite: 15]，並在其引用的 "Engineering cryogenic setups..." 文獻部分描述其在4K階段的用途。文件中未明確列出特定商業生產商。</li>
-                                      <li>TWPA (行波參數放大器): PDF在其引用的 "Engineering cryogenic setups..." 文獻部分描述其在MXC階段作為接近量子極限放大器的用途。文件中未明確列出特定商業生產商 (QuantWare 在PDF中主要作為QPU代工廠被提及 [cite: 36])。</li>
-                                      <li>JPA (約瑟夫森參量放大器): PDF提及為關鍵組件 [cite: 15]。專用商業單獨供應商細節不多，多為系統集成或研究機構開發。</li>
-                                  </ul>
-                              </li>
-                              <li>隔離器 (Isolator): PDF在其引用的 "Engineering cryogenic setups..." 文獻部分描述其在低溫設置中的用途。文件中未明確列出特定商業生產商。</li>
-                              <li>通用量測儀器 (VNA, 信號產生器, 頻譜儀等): Keysight Technologies, Rohde & Schwarz, Anritsu [cite: 34]</li>
-                              <li>低溫傳感器/儀器: Lake Shore Cryotronics [cite: 34, 39, 42]</li>
-                              <li>低溫霍爾傳感器: Paragraf [cite: 34]</li>
-                          </ul>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td rowspan="2"><b>特殊導線與接頭</b></td>
-                      <td>低溫導線 (同軸電纜, 柔性線纜, 雙絞線, 光纖選項)</td>
-                      <td>
-                          <ul>
-                              <li>Delft Circuits (Cri/oFlex® 柔性線纜) [cite: 10, 20, 21, 23, 24, 25, 26, 27, 36, 42, 44]</li>
-                              <li>Maybell Quantum (Flexlines 柔性線纜) [cite: 10, 20, 21, 23, 24, 25, 26, 27, 32, 36, 41]</li>
-                              <li>Rosenberger (同軸電纜) [cite: 21, 23, 24, 25, 26, 27, 36, 42]</li>
-                              <li>CryoCoax (同軸電纜) [cite: 21, 23, 24, 25, 26, 27, 36, 42]</li>
-                              <li>EZ Form Cable (同軸電纜) [cite: 21, 23, 24, 25, 26, 27, 36, 42]</li>
-                              <li>MIT Lincoln Lab (柔性線纜技術) [cite: 21, 23, 24, 26]</li>
-                              <li>Bluefors (提供多種線纜選項，包括雙絞線、光纖) [cite: 21, 23, 24, 25, 26, 27, 37]</li>
-                          </ul>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td>低溫連接器/接頭 (RF接頭, 高密度接頭, 氣密接頭/饋通)</td>
-                      <td>
-                          <ul>
-                              <li>Quantum Microwave [cite: 22, 23, 24, 28, 29, 30, 36]</li>
-                              <li>Rosenberger [cite: 22, 23, 24, 28, 29, 30, 36, 42]</li>
-                              <li>Delft Circuits [cite: 22, 23, 24, 28, 29, 30, 36, 42]</li>
-                              <li>Ardent Concepts (高密度板級連接器) [cite: 22, 23, 24, 28, 29, 30]</li>
-                              <li>Martec (氣密接頭/饋通) [cite: 22, 23, 24, 28, 29, 30, 36, 42]</li>
-                              <li>Amphenol Aerospace (Cryo-Seal 氣密接頭) [cite: 22, 23, 24, 28, 29, 30, 36, 42]</li>
-                          </ul>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td rowspan="2"><b>輔助系統部件</b></td>
-                      <td>真空系統部件 (真空幫浦, 真空計, 閥門等)</td>
-                      <td>
-                          <ul>
-                              <li>Leybold [cite: 11, 30, 31, 32, 38, 42]</li>
-                              <li>Edwards Vacuum [cite: 30, 31, 32, 38, 42]</li>
-                              <li>Pfeiffer Vacuum [cite: 30, 31, 32, 38, 42]</li>
-                              <li>SAES Getters (NEG 幫浦) [cite: 30, 31, 32, 38, 42]</li>
-                              <li>Gamma Vacuum (離子幫浦) [cite: 30, 31, 32, 38, 42]</li>
-                              <li>Busch Vacuum Solutions [cite: 31, 32, 38, 42]</li>
-                              <li>Agilent (原 Varian) [cite: 31, 32, 38, 42]</li>
-                              <li>Welch [cite: 31, 32, 38, 42]</li>
-                              <li>VAT (真空閥門) [cite: 31, 32, 38, 42]</li>
-                          </ul>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td>磁屏蔽與輻射屏蔽</td>
-                      <td>
-                          <ul>
-                              <li>Amuneal Manufacturing Corp. [cite: 32, 33, 38, 42]</li>
-                              <li>Magnetic Shields Limited (MSL) [cite: 32, 33, 38, 42]</li>
-                              <li>Bluefors (集成屏蔽方案) [cite: 33]</li>
-                              <li>Quantum Machines (QCage 樣品架提供磁屏蔽選項) [cite: 33]</li>
-                          </ul>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td><b>完整系統提供商</b></td>
-                      <td>提供完整超導量子計算系統或解決方案</td>
-                      <td>
-                          <ul>
-                              <li>IBM [cite: 1, 43, 44]</li>
-                              <li>Google Quantum AI [cite: 1, 43, 44]</li>
-                              <li>Intel [cite: 44]</li>
-                              <li>Rigetti Computing [cite: 3, 44, 45]</li>
-                              <li>D-Wave Systems (量子退火機為主,亦開發門模型) [cite: 45]</li>
-                              <li>SpinQ [cite: 1, 45]</li>
-                              <li>Oxford Quantum Circuits (OQC) [cite: 6, 45]</li>
-                              <li>Anyon Systems [cite: 45]</li>
-                              <li>Alice & Bob [cite: 45] (文檔中為, 調整為文末文獻列表格式)</li>
-                              <li>Atlantic Quantum [cite: 45]</li>
-                          </ul>
-                      </td>
-                  </tr>
-              </tbody>
-          </table>
-    
-    
-    
-    
-    
-                  <table>
-                      <thead>
-                          <tr>
-                              <th>部件類別</th>
-                              <th>具體部件/服務</th>
-                              <th>主要廠商/機構 (根據PDF內容)</th>
-                          </tr>
-                      </thead>
-                      <tbody>
-                          <tr>
-                              <td rowspan="2"><b>量子處理單元 (QPU) / 量子晶片</b></td>
-                              <td>QPU 標準產品及代工服務</td>
-                              <td>
-                                  <ul>
-                                      <li>SpinQ [cite: 5, 36]</li>
-                                      <li>QuantWare [cite: 36]</li>
-                                      <li>Rigetti Computing [cite: 36]</li>
-                                      <li>SkyWater Technology [cite: 36]</li>
-                                      <li>SEEQC [cite: 10, 36]</li>
-                                  </ul>
-                              </td>
-                          </tr>
-                          <tr>
-                              <td>QPU 內部開發/研究 (大型集成商/研究機構)</td>
-                              <td>
-                                  <ul>
-                                      <li>IBM [cite: 1, 2, 10, 36, 37]</li>
-                                      <li>Google Quantum AI [cite: 1, 2, 10, 36, 37]</li>
-                                      <li>Intel [cite: 1, 2, 10, 36, 37]</li>
-                                      <li>OQC (Oxford Quantum Circuits) [cite: 1, 5, 6]</li>
-                                      <li>Anyon Systems [cite: 1, 5, 6]</li>
-                                      <li>Yale University [cite: 1, 5, 6]</li>
-                                      <li>UMD (University of Maryland) [cite: 1, 5, 6]</li>
-                                      <li>Atlantic Quantum [cite: 1, 5, 6]</li>
-                                  </ul>
-                              </td>
-                          </tr>
-                          <tr>
-                              <td><b>低溫系統</b></td>
-                              <td>稀釋製冷機</td>
-                              <td>
-                                  <ul>
-                                      <li>Bluefors [cite: 8, 9, 11, 12, 13, 14, 24, 31, 36, 37, 41]</li>
-                                      <li>Oxford Instruments NanoScience [cite: 8, 9, 11, 12, 13, 14, 24, 36, 41]</li>
-                                      <li>ULVAC [cite: 8, 9, 11, 12, 13, 14, 24, 36, 41]</li>
-                                      <li>Maybell Quantum [cite: 8, 9, 11, 12, 13, 14, 32, 36, 41]</li>
-                                  </ul>
-                              </td>
-                          </tr>
-                          <tr>
-                              <td rowspan="2"><b>控制與讀取電子設備</b></td>
-                              <td>控制電子系統 (專用平台/模塊化系統)</td>
-                              <td>
-                                  <ul>
-                                      <li>Quantum Machines [cite: 14, 15, 16, 17, 18, 19, 36]</li>
-                                      <li>Qblox [cite: 14, 15, 16, 17, 18, 19, 36, 37]</li>
-                                      <li>Zurich Instruments [cite: 14, 15, 16, 17, 18, 19, 36]</li>
-                                      <li>SpinQ [cite: 14, 15, 16, 17, 18, 19, 36]</li>
-                                      <li>Keysight Technologies (也提供單項儀器) [cite: 16, 18, 19]</li>
-                                      <li>Rohde & Schwarz (也提供單項儀器) [cite: 16, 18, 19]</li>
-                                      <li>NVIDIA (與QM合作DGX Quantum) [cite: 17, 18, 19]</li>
-                                  </ul>
-                              </td>
-                          </tr>
-                          <tr>
-                              <td>讀出與測量系統組件 (包含低溫放大器及通用量測儀器)</td>
-                              <td>
-                                  <ul>
-                                      <li>(許多控制系統供應商如Quantum Machines, Qblox, Zurich Instruments, SpinQ 的產品集成讀取功能)</li>
-                                      <li>低溫放大器 (HEMT, JPA, TWPA): (PDF提及為關鍵組件[cite: 15], 但專用商業單獨供應商細節不多，多為系統集成或研究機構開發)</li>
-                                      <li>通用量測儀器 (VNA, 信號產生器, 頻譜儀等): Keysight Technologies, Rohde & Schwarz, Anritsu [cite: 34]</li>
-                                      <li>低溫傳感器/儀器: Lake Shore Cryotronics [cite: 34, 39, 42]</li>
-                                      <li>低溫霍爾傳感器: Paragraf [cite: 34]</li>
-                                  </ul>
-                              </td>
-                          </tr>
-                          <tr>
-                              <td rowspan="2"><b>特殊導線與接頭</b></td>
-                              <td>低溫導線 (同軸電纜, 柔性線纜, 雙絞線, 光纖選項)</td>
-                              <td>
-                                  <ul>
-                                      <li>Delft Circuits (Cri/oFlex® 柔性線纜) [cite: 10, 20, 21, 23, 24, 25, 26, 27, 36, 42, 44]</li>
-                                      <li>Maybell Quantum (Flexlines 柔性線纜) [cite: 10, 20, 21, 23, 24, 25, 26, 27, 32, 36, 41]</li>
-                                      <li>Rosenberger (同軸電纜) [cite: 21, 23, 24, 25, 26, 27, 36, 42]</li>
-                                      <li>CryoCoax (同軸電纜) [cite: 21, 23, 24, 25, 26, 27, 36, 42]</li>
-                                      <li>EZ Form Cable (同軸電纜) [cite: 21, 23, 24, 25, 26, 27, 36, 42]</li>
-                                      <li>MIT Lincoln Lab (柔性線纜技術) [cite: 21, 23, 24, 26]</li>
-                                      <li>Bluefors (提供多種線纜選項，包括雙絞線、光纖) [cite: 21, 23, 24, 25, 26, 27, 37]</li>
-                                  </ul>
-                              </td>
-                          </tr>
-                          <tr>
-                              <td>低溫連接器/接頭 (RF接頭, 高密度接頭, 氣密接頭/饋通)</td>
-                              <td>
-                                  <ul>
-                                      <li>Quantum Microwave [cite: 22, 23, 24, 28, 29, 30, 36]</li>
-                                      <li>Rosenberger [cite: 22, 23, 24, 28, 29, 30, 36, 42]</li>
-                                      <li>Delft Circuits [cite: 22, 23, 24, 28, 29, 30, 36, 42]</li>
-                                      <li>Ardent Concepts (高密度板級連接器) [cite: 22, 23, 24, 28, 29, 30]</li>
-                                      <li>Martec (氣密接頭/饋通) [cite: 22, 23, 24, 28, 29, 30, 36, 42]</li>
-                                      <li>Amphenol Aerospace (Cryo-Seal 氣密接頭) [cite: 22, 23, 24, 28, 29, 30, 36, 42]</li>
-                                  </ul>
-                              </td>
-                          </tr>
-                          <tr>
-                              <td rowspan="2"><b>輔助系統部件</b></td>
-                              <td>真空系統部件 (真空幫浦, 真空計, 閥門等)</td>
-                              <td>
-                                  <ul>
-                                      <li>Leybold [cite: 11, 30, 31, 32, 38, 42]</li>
-                                      <li>Edwards Vacuum [cite: 30, 31, 32, 38, 42]</li>
-                                      <li>Pfeiffer Vacuum [cite: 30, 31, 32, 38, 42]</li>
-                                      <li>SAES Getters (NEG 幫浦) [cite: 30, 31, 32, 38, 42]</li>
-                                      <li>Gamma Vacuum (離子幫浦) [cite: 30, 31, 32, 38, 42]</li>
-                                      <li>Busch Vacuum Solutions [cite: 31, 32, 38, 42]</li>
-                                      <li>Agilent (原 Varian) [cite: 31, 32, 38, 42]</li>
-                                      <li>Welch [cite: 31, 32, 38, 42]</li>
-                                      <li>VAT (真空閥門) [cite: 31, 32, 38, 42]</li>
-                                  </ul>
-                              </td>
-                          </tr>
-                          <tr>
-                              <td>磁屏蔽與輻射屏蔽</td>
-                              <td>
-                                  <ul>
-                                      <li>Amuneal Manufacturing Corp. [cite: 32, 33, 38, 42]</li>
-                                      <li>Magnetic Shields Limited (MSL) [cite: 32, 33, 38, 42]</li>
-                                      <li>Bluefors (集成屏蔽方案) [cite: 33]</li>
-                                      <li>Quantum Machines (QCage 樣品架提供磁屏蔽選項) [cite: 33]</li>
-                                  </ul>
-                              </td>
-                          </tr>
-                          <tr>
-                              <td><b>完整系統提供商</b></td>
-                              <td>提供完整超導量子計算系統或解決方案</td>
-                              <td>
-                                  <ul>
-                                      <li>IBM [cite: 1, 43, 44]</li>
-                                      <li>Google Quantum AI [cite: 1, 43, 44]</li>
-                                      <li>Intel [cite: 44]</li>
-                                      <li>Rigetti Computing [cite: 3, 44, 45]</li>
-                                      <li>D-Wave Systems (量子退火機為主,亦開發門模型) [cite: 45]</li>
-                                      <li>SpinQ [cite: 1, 45]</li>
-                                      <li>Oxford Quantum Circuits (OQC) [cite: 6, 45]</li>
-                                      <li>Anyon Systems [cite: 45]</li>
-                                      <li>Alice & Bob [cite: 45] (文檔中為, 調整為文末文獻列表格式)</li>
-                                      <li>Atlantic Quantum [cite: 45]</li>
-                                  </ul>
-                              </td>
-                          </tr>
-                      </tbody>
-                  </table>
-    
-    
-    
                   <table>
                     <thead>
                         <tr>
@@ -1614,251 +1149,7 @@ Licence URI: https://www.os-templates.com/template-terms
 
 
         
-        <section id="e1">
-          <div class="container">
-            <header class="major">
-              <h2><li>其他種類的Qubit</li></h2>
-            </header>
-
-            <h3>超導電路系統的低溫設置工程：百量子位元規模的實現</h3>
-
-        <p>
-            這份文件探討了用於<strong>百量子位元規模超導電路系統</strong>的工程化低溫設置 [1]。論文作者工程化了一個低溫設置，該設置在最大限度地減少被動和主動熱負載的同時，確保了快速的量子位元控制和讀取 [1]。其結果對於管理未來基於超導電路的大規模量子電腦的熱預算非常重要 [1]。
-        </p>
-
-        <h2>引言</h2>
-        <p>
-            有前景的固態量子計算平台，例如<strong>超導電路</strong>或半導體量子點中的電荷與自旋，需要達到<strong>毫開爾文 (Millikelvin) 等級的溫度</strong> [2]。這是為了將系統初始化到其基態，並避免在運作期間因熱激發而產生的錯誤 [2]。毫開爾文溫度是透過 ³He/⁴He <strong>稀釋冷凍機 (dilution refrigerator, DR)</strong> 實現的 [2]。
-        </p>
-        <p>
-            將這些方法從少數量子位元擴展到大型量子處理器時，需要將越來越多的<strong>微波和直流電纜</strong>整合到稀釋冷凍機中 [2]。這些電纜將室溫 (RT) 下的傳統控制電子裝置連接到稀釋冷凍機最低溫度階段的量子處理器 [2]。
-        </p>
-        <p>
-            這種連接會對稀釋冷凍機產生相當大的<strong>熱負載 (heat load)</strong> [2]。主要的負載來源是熱傳導造成的<strong>被動負載 (passive load)</strong> [2]。除此之外，控制訊號在電纜和衰減器中的耗散也產生了<strong>主動負載 (active load)</strong> [2]。為了熱化傳入的輻射場並減少入射到樣本上的熱光子數量，工程化的耗散（即使用衰減器）是必要的 [2-4]。
-        </p>
-        <p>
-            雖然已經實現了操作 20 個量子位元的超導量子處理器，但關於其低溫設置及其向更大系統尺寸擴展的報告較少 [3]。這份文件旨在介紹一種<strong>經過熱優化、穩健的佈線方案和低溫設置</strong>，該方案適用於在 14 mK 溫度下操作 50 個量子位元 [3]。忽略稀釋冷凍機內的空間限制，使用此方法至少可以操作 150 個量子位元 [3]。本文提出了減少稀釋冷凍機所有階段被動熱負載的方法，並討論了在保持較低主動負載的同時，最大程度地減少連接室溫元件與基溫階段的電纜中的熱光子數量 [3, 4]。
-        </p>
-        <p>
-            研究測量了典型包含 25 條同軸電纜的電纜樹所產生的被動負載，並將其與基於同軸電纜熱導的現有數據估計值進行比較 [4]。還對應用控制訊號引起的主動負載進行了表徵 [4]。最終討論了總熱負載以及可能的改進，預計這些改進將允許在不考慮空間限制的情況下將操作量子位元數量增加到最多一千個 [4]。
-        </p>
-
-        <h3>典型用於超導電路實驗的佈線 [5]</h3>
-        <p>
-            設計連接到超導量子處理器的控制線和輸出線時，目標是在提供足夠強的耦合速率的同時，最大程度地減少由於透過這些線路耦合到環境而導致的<strong>去相干 (decoherence)</strong> [5]。由於量子處理器連接到室溫下的電子裝置而存在的熱雜訊，不僅會導致量子位元去相 [3, 4, 6]，還可能導致準粒子產生，進而導致耗散和能量弛豫時間縮短 [8–13]。因此，在稀釋冷凍機的各個溫度階段對電纜、衰減器和微波元件進行<strong>徹底的熱化 (thermalization)</strong>，不僅對於減少稀釋冷凍機的熱負載很重要，而且對於<strong>保護量子處理器免受熱輻射</strong>也很重要 [5]。除了熱錨定外，濾波器（帶阻在量子位元和讀出諧振器頻率範圍之外）以及紅外阻擋濾波器 [7-9] 進一步抑制了熱輻射 [5]。其他可能對相干時間產生負面影響的外部雜訊源包括電子儀器產生的 1/f 雜訊 [6, 10] 以及磁場波動或磁偏移場引起的磁渦旋，這些可能導致耗散 [7, 11, 12]。這些雜訊源可以透過適當的濾波器和磁屏蔽來緩解，但本文不聚焦於此 [5]。
-        </p>
-        <p>
-            文件中簡要介紹了超導電路實驗中通常使用的佈線類型，區分為<strong>直流 (DC) 佈線</strong>和<strong>射頻 (RF) 佈線</strong> [13]。
-            <ul>
-                <li><strong>直流線路 (DC lines):</strong> 使用雙絞線對 (twisted pairs of wires)，經過低通濾波，並在每個溫度階段進行熱化 [13]。典型用途包括偏置低溫放大器以及對頻率可調諧量子位元進行磁通偏置 [13, 14]。由於其熱導率較高，銅 (Cu) 或磷青銅 (PhBr) 雙絞線對僅用於從室溫到 4 K 階段 [11]。從 4 K 到 MXC 階段使用超導 NbTi 雙絞線對 [11]。在這些材料中，只有銅雙絞線對會產生與同軸電纜相當的顯著被動負載 [17, 見圖 1]。</li>
-                <li><strong>射頻線路 (RF lines):</strong> 通常使用半硬微波電纜 (semi-rigid microwave cables) 實現，並包含各種微波元件，如衰減器、濾波器和放大器 [13]。它們連接到量子處理器，用於其控制和讀出 [13]。射頻線路通常區分為<strong>驅動線路 (drive lines)</strong>、<strong>磁通線路 (flux lines)</strong> 和<strong>輸出線路 (output lines)</strong> [13]。</li>
-            </ul>
-        </p>
-        <p>
-            <strong>驅動線路 (Drive lines)</strong> 用於使用微波音調控制量子位元的量子態，實現單量子位元門，並用於探測讀出諧振器的頻率偏移 [6]。為減少量子位元的熱群體填充以及由於與讀出諧振器的色散相互作用導致的量子位元頻率偏移 [15]，要求到達稀釋冷凍機混合腔板 (MXC) 的驅動線路中的<strong>熱雜訊光子數量遠低於單光子級別</strong> [6]。更精確地說，為確保 MXC 處的雜訊光子數處於 10⁻³ 級別，總衰減約需 60 dB [7, 見第 2.2.1 和 3.2 節]。同時，驅動線路的頻寬需要足夠大，以覆蓋量子位元 (4–6 GHz) 和讀出諧振器 (4–8 GHz) 的典型頻率範圍 [6]。儘管驅動量子位元或讀出的訊號很小（例如，一個 20 ns 長的 π 脈衝需要約 –66 dBm 的峰值功率 [12, 16]），但由於需要顯著衰減室溫下的黑體輻射（即 Johnson-Nyquist 雜訊 [12, 14]），施加在稀釋冷凍機入口的功率要大得多 [12]。
-        </p>
-        <p>
-            <strong>磁通線路 (Flux lines)</strong> 用於實現基於量子位元或獨立耦合子電路的動態磁通可調諧轉變頻率的雙量子位元門 [8, 21–25]。此外，可用於補償因約瑟夫森接面製造缺陷而發生的量子位元頻率變化 [17]。可調諧頻率量子位元利用 SQUID (superconducting quantum interference device) 環路作為電感元件 [17]。透過穿過 SQUID 環路的磁通量 Φ，量子位元的頻率大約會隨 ωq ∝ √| cos(πΦ/Φ₀)| 變化 [10, 18]。磁通線路與 SQUID 環路之間的互感是透過將晶片上的磁通線路部分繞過 SQUID 環路來實現的 [18]。因此，應用到磁通線路的電流會在 SQUID 環路中產生磁通量，有效地調諧量子位元的轉變頻率 [18]。磁通線路中的低通濾波器將頻寬限制在約 1 GHz [18-21]，消除了量子位元頻率處的熱雜訊光子 [22]。然而，由於 SQUID 環路中的磁通量 Φ 設定了量子位元轉變頻率，任何<strong>電流雜訊都會導致量子位元去相</strong> [6, 10, 18]。為了減少電流雜訊，磁通線路中也增加了適量的衰減（10–20 dB） [9, 見第 3.3 節]；這足以減輕熱雜訊引起的量子位元去相 [23]。
-        </p>
-        <p>
-            <strong>輸出線路 (Output lines)</strong> 包含一系列低溫和室溫放大器，用於檢測讀出訊號 [10, 26–28]。為了隔離樣本免受熱雜訊光子和放大器輸入雜訊的影響，同時不衰減輸出訊號，使用了<strong>隔離器 (isolators) 和環行器 (circulators)</strong> [10, 見第 3.4 節]。
-        </p>
-
-        <h2>熱負載來源 [24]</h2>
-        <p>
-            作者考慮了稀釋冷凍機上熱負載的三個主要貢獻來源 [24]：
-            <ul>
-                <li><strong>被動負載 (Passive load):</strong> 這是由於熱從較高溫度階段傳導到較低溫度階段所致 [24]。在本文中，僅考慮透過安裝的電纜傳導的熱量 [24]。透過稀釋冷凍機支柱等結構元件傳導的熱量不在此考慮範圍內，因為製造商已在其提供的冷卻能力規格中考慮了這部分，並在其他地方獨立評估過 [10, 29–31]。</li>
-                <li><strong>主動負載 (Active load):</strong> 這源於施加的微波訊號在衰減器和微波電纜本身中的耗散（焦耳熱） [24]。用於偏置 4 K 階段的 HEMT 放大器或偏置 MXC 晶片上量子位元的磁通等直流訊號的耗散也屬於此類別 [24]。</li>
-                <li><strong>輻射負載 (Radiative load):</strong> 這是由於較高溫度階段和屏蔽層的黑體輻射照射到較低溫度階段和屏蔽層所致 [24]。然而，製造商提供的可用冷卻能力規格中也考慮了此負載 [24]。</li>
-            </ul>
-            為了完整性，作者也提到了殘留氣體造成的負載，特別是氦氣，因為它在低溫下具有最高的蒸氣壓 [24]。但在稀釋冷凍機的正常運作期間，低溫表面具有低溫泵浦能力，可將真空罐內的壓力維持在 10⁻⁵ mbar 以下，提供足夠的隔離真空 [24, 25]。因此，本文不考慮此負載 [24]。然而，脫附過程中釋放的潛熱可能會產生額外負載，例如當氣體從安裝的元件中脫附並凝結在最近的階段時 [24]。
-        </p>
-
-        <h3>被動負載的最小化與估計 [7, 26]</h3>
-        <p>
-            為了最小化被動熱負載，作者使用了<strong>熱導率低的電纜材料</strong> [26]。值得注意的是，除了超導體之外，這通常伴隨著較差的導電性，因此在施加微波訊號時會導致更多的耗散 [26]。然而，在大多數線路中，衰減（因而耗散）是期望的，以便熱化傳入的輻射場 [11, 見第 2.2 節]。
-        </p>
-        <p>
-            為了估計安裝電纜產生的被動負載，作者考慮了稀釋冷凍機各板上的固定溫度，這對應於穩態 [26]。到階段 i 的熱流量 Pi 由傅立葉定律積分得出 [7, 27]，公式考慮了外導體、介電層和中心導體的熱導率、橫截面積以及連接階段 i-1 和 i 的電纜長度 Li [7]。階段標示 i ∈ {1, 2, 3, 4, 5} 分別對應於階段 {“50 K”, “4 K”, “Still”, 冷板 (“CP”), “MXC”} [7]。<strong>表 1</strong> 列出了其 Bluefors XLD400 稀釋冷凍機在空載安裝後達到的對應溫度和可用冷卻能力 [8, 28]。這些值是先進脈衝管冷卻器稀釋冷凍機的典型值 [29, 30]。用於估計的熱導率列於附錄 1 [7, 31]。
-        </p>
-        <p>
-            為了說明第 3 節中詳述的電纜材料選擇，<strong>圖 1</strong> 顯示了不同材料的單根同軸電纜對各溫度階段的熱流量估計 [9, 28]。這些估計假設外導體、介電層和中心導體在每個階段都完全熱化 [28]。
-        </p>
-        <p>
-            討論了三種典型且易於獲得的 0.085 英寸直徑同軸電纜類型 [9]。電纜長度列於表 1，對應於稀釋冷凍機板間距離加上為應力釋放而彎曲的少量修正 [15, 見表 1]。<strong>不鏽鋼電纜 (UT-085-SS-SS) 和鈮鈦電纜 (UT-085-NbTi) 具有最低的被動負載</strong> [9]。因此，作者選擇不鏽鋼電纜用於需要大衰減的驅動線路 [9]。NbTi 電纜在 10 K 以下是超導體，因此在 10 K 以下具有非常低的衰減 [9, 32]，這就是為什麼它被用於 4 K 和 MXC 階段之間的輸出線路部分 [9]。這兩種電纜類型的熱流量主要由其外導體決定，其橫截面積比中心導體大 10 倍 [9]。特氟龍 (Teflon) 介電層的貢獻與內導體相當，這是由於特氟龍的低熱導率和與外導體相當的橫截面積所致 [15, 見附錄 1]。
-        </p>
-        <p>
-            銅鎳 (CuNi) 電纜是不鏽鋼的替代品 [10]。預計其被動負載比 SS-SS 電纜大約 50% [10, 33]。另一種常用電纜類型是 UT-085-SS 電纜（不鏽鋼外導體，SPCWa 中心導體） [10]。這種電纜導致的熱負載顯著較大，因為銅的熱導率較高，並且在 50 K 以下的溫度異常增強 [16, 見附錄 1]。由於其較低的衰減 [16, 見附錄 2]，這種電纜類型原則上適合用於稀釋冷凍機真空法蘭到 4 K 階段的輸出線路部分 [16, 見第 3.4 節中的討論]。
-        </p>
-
-        <h3>主動負載 [12]</h3>
-        <p>
-            稀釋冷凍機中的主動負載取決於射頻線路的衰減水平、安裝的衰減器以及晶片所需的訊號水平 [12]。因此，本節簡要討論了需要多少衰減來減少熱雜訊以及如何在各個溫度階段分配衰減器 [12]。此外，還討論了典型超導量子位元實驗所需的訊號水平 [12]。
-        </p>
-
-        <h4>衰減的必要性 [12]</h4>
-        <p>
-            儘管驅動量子位元或讀出所需的訊號很小（例如，一個 20 ns 長的 π 脈衝需要約 –66 dBm 的峰值功率 [12, 34]），但在稀釋冷凍機輸入端施加的功率卻大幾個數量級 [12]。這是因為總共需要至少約 60 dB 的衰減，才能將室溫電纜中的黑體輻射降低到樣本處對應於少數 10⁻³ 熱光子佔有數的水平 [12, 19]。在有效的單維電纜中，黑體輻射被稱為電子學中的 Johnson-Nyquist 雜訊 [12, 14]。這些熱光子沿著線路傳播到較低溫度階段 [15]。為了降低熱輻射的頻譜密度，在微波線路中安裝了一系列衰減器 [15]。一個衰減為 A = 20 dB = 100 的衰減器有效地充當分束器，傳輸 1% 的入射訊號並增加 99% 與其熱化溫度 Tatt 相關的黑體輻射 [15]。請注意，99% 的入射訊號在衰減器中耗散 [15]。為了防止衰減器升溫並保持其重新發射熱輻射的有效溫度較低，需要對其進行高效熱化 [15]。更正式地說，階段 i 的雜訊光子佔有數 ni(ω) 取決於階段 i-1 的雜訊光子數和熱化在階段 i 的衰減器發射的黑體輻射 [19]。透過安裝一系列在隨後較低溫度階段熱化的衰減器，可以計算 MXC 階段的雜訊光子佔有數 nMXC [19]。
-        </p>
-        <p>
-            對於本文的討論，考慮訊號頻率 ω̄/2π = 6 GHz，因為典型的量子位元在 5 GHz 運作，讀出諧振器在 7 GHz 運作 [19]。達到 nMXC = 10⁻³ 雜訊光子數所需的總衰減的下限約為 60 dB [21, 見第 2.2.1 節]，這是透過忽略衰減器自身發射的黑體輻射獲得的 [19]。
-        </p>
-        <p>
-            在各個溫度階段分配總衰減量非常重要，以確保較低階段的主動負載遠低於這些階段可用的冷卻能力 [20]。分配衰減時，應避免在階段 i 放置過多衰減 Ai，使其超過將傳入輻射場熱化到該階段所需的值 [20]。在階段 i 放置衰減的良好參考值是前一階段 (i-1) 和階段 i 熱光子佔有數的比值 [20]。例如，考慮總衰減 60 dB，由在 4 K、CP 和 MXC 階段熱化的 20 dB 衰減器組成 [20]。將 nMXC 繪製為各階段衰減的函數（見圖 2a），可以看出，隨著衰減增加到一定值（接近該階段的熱雜訊本底）後，對 nMXC 的進一步減少效率降低 [20, 35]。然而，第 3.2 節中將看到，MXC 的有限冷卻能力限制了在此處可安裝的衰減量 [36]。
-        </p>
-
-        <h4>量子處理器運作所需的訊號水平 [36]</h4>
-        <p>
-            本節估計了晶片上驅動量子位元 π 脈衝和設定磁通偏置所需的功率 [36]。驅動 π 脈衝所需的峰值功率約為 –66 dBm [16, 37, 38]，而脈衝的平均功率約為 –71 dBm [16]。考慮到量子算法執行期間的有限佔空比（例如，單量子位元門和雙量子位元門交替執行的最高 33% [16, 20, 21]），以及 π/2 脈衝只需四分之一的功率 [39]，用於估計的每條量子位元驅動線路的平均所需功率為 –78 dBm [27, 見第 3.2 節]。讀出訊號所需的功率通常低一個數量級且佔空比更低，因此在估計中未考慮 [40]。
-        </p>
-        <p>
-            磁通線路中的耗散主要來自用於設定量子位元頻率的直流偏置電流 [40]。在最壞情況下，需要應用 ±1 mA 的電流來補償隨機偏移磁場 [40]。這種偏置電流在 MXC 階段最為關鍵，因為其冷卻能力最低 [40]。耗散的熱量取決於不鏽鋼電纜和低通濾波器的直流電阻 [40]。對於 25 條磁通線路，這種直流偏置導致 MXC 的總熱負載估計為 1.25 μW (CP 為 3.5 μW)，這比 MXC 和 CP 的冷卻能力分別小約 15 倍和 40 倍 [41]。這被認為是最壞情況，透過仔細的磁屏蔽可以將偏移磁通降低到接近零 [41]。用於雙量子位元門的磁通脈衝也會產生耗散 [42]，其負載約為直流磁通偏置負載的六分之一 [73, 見圖 10]。
-        </p>
-
-        <h4>輻射負載 [43]</h4>
-        <p>
-            每個溫度階段（冷板除外）都配備了專用的隔熱屏蔽層，以保護下一個較低溫度階段免受來自上一個較高溫度階段的輻射負載 [43]。50 K 和 4 K 階段的隔熱屏蔽層由鋁製成，Still 和 MXC 階段由銅製成 [43]。它們的發射率為 0.06 [43]。與每個階段的冷卻能力相比，只有 50 K 階段有顯著貢獻，約為 50 W [43]。這大約是兩個脈衝管冷卻器標稱冷卻能力的一半 [30, 見第 84 節]，但此負載已包含在製造商提供的可用冷卻能力規格中 [43]。較低溫度階段的輻射負載微不足道 [25, 44]。
-        </p>
-
-        <h2>低溫設置 [44]</h2>
-        <p>
-            本文描述了一種定制化且現已商業化的 Bluefors XLD400 稀釋冷凍機 [31, 見圖 3(a)]。其稀釋單元位於 MXC 板的中心位置，這在系統圓周處騰出了空間用於額外的視線 (LOS) 端口 [44]。系統總共有六個 LOS 側端口可供安裝射頻電纜 [44]。一個 LOS 端口由各個板上垂直對齊的切口組成，用於穿過射頻電纜 [44]。在每個切口中安裝了銅板，用於電纜和衰減器的熱化 [31, 見圖 4(a)–(c)]。作者設計了寬度為 88 mm 的矩形切口，而非標準的圓形切口 [44]。這些切口允許使用定制的安裝工具從側面安裝完全組裝好的電纜樹 [31, 見圖 4(e)–(g)]。這樣做的好處是可以將包含 25 條射頻線和真空法蘭的每個電纜樹在稀釋冷凍機外部預先組裝和測試 [44]。
-        </p>
-        <p>
-            此外，Still 板和 CP 之間的距離增加了 60 mm，為微波元件的內聯整合以及減少從 Still 到 CP 的電纜被動熱負載提供了更多空間 [25]。稀釋冷凍機由製造商根據規格預先安裝了兩組銅雙絞線對和兩組磷青銅雙絞線對，均從室溫延伸到 4 K [27]。從 4 K 到 MXC 預先安裝了兩組 NbTi 雙絞線對 [27]。每組包含 12 對雙絞線 [27]。
-        </p>
-        <p>
-            作者測量了定制稀釋冷凍機每個階段的可用冷卻能力（在存在預安裝直流佈線的情況下），如表 1 所示 [8, 27]。這些功率不應超過，以確保基溫低於 20 mK [27, 45]。作者設計和規劃的佈線和衰減方案的目標是使產生的總熱負載至少約為這些冷卻能力的<strong>三分之一</strong> [27]。表 1 還包含階段之間的射頻電纜長度 [8]。請注意，電纜有彎曲（彎曲半徑約 1 cm），以減輕系統冷卻時對射頻連接器的應力 [27]。
-        </p>
-        <p>
-            如第 2 節所述，電纜和衰減器的良好熱化對於降低影響量子位元相干性的熱雜訊光子和降低影響低溫恆溫器性能的較低階段熱負載都很重要 [29]。為此，作者開發了一種用於衰減器和電纜的通用熱化方法 [29]。該方法由一個帶有六邊形切口的銅板組成 [29]。在這些切口中，使用楔形銅塊夾住衰減器，擰緊黃銅螺絲時，楔形塊將衰減器壓向切口的兩個面 [34, 見圖 4(a) 和 (b)]。擰緊扭矩為 0.9 Nm [29]。使用黃銅螺絲是因為它們在冷卻時比銅收縮更多，為衰減器提供了額外的夾緊力 [29]。這很重要，因為在低溫下，兩個金屬件之間的接觸電阻主要由夾緊力決定，而非表面積 [29, 46]。除了熱化衰減器外，作者還在沒有衰減器的階段（50 K 和 Still 階段）使用相同的銅板結合兩部分銅適配器（圖 4(d)）熱化射頻電纜的外導體 [34, 見圖 4(c)]。這些部件上的圓形法蘭確保了輻射緊密的安裝 [29]。使用這些板，作者將 25 條射頻線安裝到每個六個 LOS 端口中 [29]。
-        </p>
-        <p>
-            接著更詳細地描述了稀釋冷凍機的定制佈線 [30]。驅動線路、磁通線路和讀出線路的示意圖如圖 3b 所示，這是超導量子位元實驗的典型配置 [30]。為了最小化被動熱負載，作者選擇 UT-085-SS-SS 電纜用於除輸出線路之外的所有類型線路 [30]。作者透過安裝三個可能的電纜樹中的三個來表徵和測試了系統容量的一半：一個包含 25 條驅動線路的電纜樹，一個包含 25 條磁通線路的電纜樹，以及一個包含讀出所需線路的電纜樹 [30]。這個讀出電纜樹包括六條驅動線路和五條泵浦線路（見第 3.4 節），都從稀釋冷凍機頂部到底部延伸，以及四條從室溫到 4 K 階段的輸出線路 [30]。輸出線路的其餘部分在其中一個脈衝管冷卻器下方的非 LOS 切口中繼續，那裡有更多空間容納較大的輸出線路元件 [30]。
-        </p>
-
-        <h3>驅動線路配置 [32]</h3>
-        <p>
-            基於第 2.2.1 節對熱雜訊的討論，作者選擇在 4 K、CP、MXC 階段各放置 20 dB 衰減器的配置 [32]。作者計算了連接室溫真空法蘭到 MXC 的同軸電纜中，總衰減 60 dB 的四種衰減器配置 (C1-C4) 下，MXC 的熱雜訊光子數 nMXC（圖 5a 中的實心條） [32]。計算假設表 1 中的板溫作為有效的衰減器溫度 [32]。此外，還考慮了射頻電纜本身的衰減（合計約 9 dB，結合了室溫和低溫數據 [36, 見附錄 2]） [32]。使用方程 (3) 的連續版本並假設電纜中的線性溫度梯度，獲得了圖 5(a) 中虛線條所示的 nMXC [32]。對於每種配置，作者計算了 25 條驅動線路在每個溫度階段的耗散功率，並與該階段可用的冷卻能力（表 1）進行比較（見圖 5b） [32]。計算假設 MXC 需要的平均功率水平為 –78 dBm（見第 2.2.2 節），並考慮了射頻電纜的衰減 [32]。
-        </p>
-        <p>
-            考慮到噪音光子數和 MXC 熱負載之間的權衡，作者選擇了配置 C3 = {0, 20, 0, 20, 20} dB [38]，其噪音光子數約為 0.001（考慮了電纜中的衰減） [38]。
-        </p>
-        <p>
-            為了過濾可能導致準粒子產生並因此降低 T1 時間的紅外輻射 [8–13]，作者提供了在 MXC 衰減器之前安裝定制的基於 Eccosorb CR-124 吸收材料的紅外濾波器選項（見附錄 3） [38]。在 6 GHz 時，該濾波器提供 6 dB 的衰減 [38]。
-        </p>
-
-        <h3>磁通線路配置 [21]</h3>
-        <p>
-            為了減少量子位元 SQUID 環路中的電流和磁通雜訊，需要在磁通線路中安裝適量的衰減 [21]。部分衰減可以在室溫下實現，以將連接到磁通線路的儀器（例如任意波形產生器）產生的 1/f 雜訊和白雜訊降低到室溫 Johnson-Nyquist 雜訊水平 [21]。為了將雜訊水平降低到室溫 Johnson-Nyquist 雜訊以下，作者在 4 K 階段安裝了一個單獨的衰減器 A4K [21]。該衰減器之後的電流雜訊功率頻譜密度計算如方程 (4) 所示 [45]。在 4 K 階段安裝 10-20 dB 的衰減已足以減輕熱雜訊導致的量子位元去相干 [23]。
-        </p>
-        <p>
-            由於典型磁通脈衝的頻寬最多為 1 GHz [19-22]，作者在磁通線路中安裝了截止頻率約為 1.9 GHz 的低通濾波器 (Minicircuits VLFX1300+) [46, 見附錄 3]，以抑制在量子位元頻率處的熱雜訊光子 [22]。為了減少超導薄膜中的準粒子產生，安裝了定制的吸收性紅外濾波器 [46, 見附錄 3]，並將其安裝在 MXC 階段的射頻線路中 [22]。為了抑制反射性低通濾波器和量子處理器之間產生的駐波，吸收性紅外濾波器被放置在低通濾波器之後 [82, 見圖 3(b)]。
-        </p>
-
-        <h3>輸出線路配置 [47]</h3>
-        <p>
-            作者設計了四條輸出線路，用於在單光子水平檢測量子位元讀出訊號 [40, 47, 48]。在 MXC 安裝了行波約瑟夫森參數放大器 (TWPA) 作為接近量子極限的放大器 [47, 49, 見圖 6(a)]。其接近量子極限的性能及其在 3-12 GHz 頻率範圍內約 20-30 dB 的寬帶增益，允許快速的單次多路讀出，可以使用一條輸出線路同時讀出約十個量子位元 [48, 49]。在 4 K 階段安裝了增益約 40 dB 的高電子遷移率晶體管 (HEMT) 放大器 [48, 見圖 6(b)]。CP 的環行器和 MXC 的兩個隔離器提供了對樣本超過 60 dB 的總隔離 [48]。兩個隔離器（工作範圍 3-12 GHz）也需要用於 TWPA 在其整個增益頻寬內的阻抗匹配 [48]。為此，一個隔離器安裝在 TWPA 之前，一個安裝在之後 [48, 見圖 3(b)]。每個隔離器都是一個四通道隔離器陣列的一部分 [48, 見圖 6(a)]。環行器和隔離器都經過磁屏蔽 [48]。
-        </p>
-        <p>
-            在 MXC 階段，一個反射式帶通濾波器抑制了環行器和隔離器頻寬之外的雜訊 [49, 見圖 6(c)]。為了最小化兩個放大器之間的訊號損失，在 MXC 和 4 K 之間使用了超導 NbTi 同軸電纜 [50]。為了最小化被動熱負載，從 4 K 到室溫選擇了不鏽鋼電纜 [50]。根據 Friis 公式，與 SPCW 電纜等相比，增加的損耗不會降低放大器鏈的訊噪比 [50]。
-        </p>
-        <p>
-            TWPA 的運作需要一個典型的頻率在 6-8 GHz 範圍內、輸入 TWPA 功率水平約為 –55 dBm 的微波泵浦訊號 [49]。這個泵浦訊號透過一個 20 dB 定向耦合器的隔離端口添加到 TWPA [50, 見圖 3(b)]。為了實現相對較大的泵浦功率，泵浦線路的總衰減為 50 dB，比驅動線路的 60 dB 衰減要小 [49]。這 50 dB 衰減包括定向耦合器提供的 20 dB 衰減 [49]。用於讀出的元件照片顯示在圖 6 中 [49]。TWPA 和隔離器陣列安裝在 2 mm 厚的銅板上 [50, 見圖 6(a)]。
-        </p>
-
-        <h2>被動熱負載的直接測量 [51]</h2>
-        <p>
-            為了確定每個電纜樹引起的被動熱負載並提取每條線路的熱負載，作者進行了在沒有微波佈線時稀釋冷凍機系統冷卻能力的參考測量 [51, 見第 4.1 節]。然後，每次安裝新的電纜樹後，都會冷卻系統並記錄稀釋冷凍機各階段的溫度升高，以推斷相應的被動熱負載 [51]。冷卻包含多達 25 條相同類型線路的電纜樹，其優點是產生的溫度升高比單條線路更大，也比稀釋冷凍機各階段的典型運行間溫度變化更大 [51]。此外，這種方法自然地平均了材料和元件的變化，以及單獨電纜和衰減器的安裝和熱化中可能出現的變化 [51]。
-        </p>
-
-        <h3>參考測量 [52]</h3>
-        <p>
-            參考測量包括對給定溫度階段施加一個明確定義的電氣熱負載，並記錄所有其他階段的穩態溫度升高 [52, 見圖 7]。在穩態下，施加的熱負載對應於該階段在其穩態溫度下的冷卻能力 [52]。使用的溫度感測器和加熱器在附錄 4 中描述 [52, 53]。測量到的相對溫度升高作為施加到給定階段熱負載的函數顯示在圖 7 中 [52, 54]。加熱一個給定階段也會影響較低溫度的階段，因為它們透過稀釋冷凍機的結構元件（如支柱）以及稀釋單元和預安裝的直流佈線等其他元件熱連接在一起 [52]。
-        </p>
-
-        <h3>被動熱負載的確定 [55]</h3>
-        <p>
-            圖 7 中所示的參考測量結果，允許將給定電纜樹冷卻後在階段 i 上觀察到的溫度升高 ΔTi 轉換為該階段的被動熱負載 Pi [55]。係數 ∂Pi/∂Ti 是從圖 7 數據的低溫區域的線性擬合中提取的 [55]。由於下一個更高階段 i-1 的溫度升高，ΔPi 也包含來自電纜以外所有元件的少量貢獻 [55]。因此，作者從 ΔPi 中減去此貢獻，以獲得安裝電纜的純被動熱負載 ΔP̃i [55]。只有對於 ΔP̃Still 來說，修正值才會顯著 (> 20%) [55]。透過測量類似於圖 7 所示的 Ti 對 Pi 曲線，但對於 Pi-1 ≠ 0，作者驗證了此程序（見附錄 6） [55, 56]。
-        </p>
-        <p>
-            在確定 ΔTCP 和 ΔTMXC 時需要格外小心 [57]。這是因為 Still 溫度的升高改變了通過稀釋單元的流量，因此不僅導致 CP 和 MXC 產生額外的被動負載，而且有效地改變了冷卻能力與溫度之間的曲線 [57]。在確定 ΔTCP 和 ΔTMXC 之前，作者因此減少了 Still 的熱功率，以達到參考測量時設定的相同流量 [57]。
-        </p>
-        <p>
-            為了提取每種類型線路的平均被動熱負載 ΔP̃i，作者在分別安裝驅動線路電纜樹、不含 NbTi 線路的讀出電纜樹、4 條 NbTi 輸出線路（介於 4 K 階段和 MXC 階段之間）以及磁通線路電纜樹後，冷卻了稀釋冷凍機 [58]。從每次冷卻後提取的總被動熱負載中，除以電纜樹中的線路數量，計算出每條線路的平均負載 [58]。
-        </p>
-        <p>
-            平均被動熱負載數據顯示在<strong>表 2</strong> 中 [59]。對於驅動線路，數據與基於方程 (1) 的計算值定性一致 [60]。估計區間代表了在沒有衰減器的階段（50 K 和 Still 階段），中心導體和介電層完全熱化或完全沒有熱化的情況下的估計值 [60]。作者假設在有衰減器的階段，中心導體和介電層完全熱化 [60]。
-        </p>
-        <p>
-            測量到的 MXC 階段負載大於預測值 [61]。這可能有幾個原因，包括電纜不鏽鋼熱導率與數據不符 [61]、中心導體通過 CP 衰減器熱化不完全 [61]、MXC 元件熱化時間長（特別是含氫元件）導致估計過高 [54, 61]，以及新安裝元件脫附氣體在 MXC 凝結 [62]。
-        </p>
-        <p>
-            磁通線路在 50 K、4 K 和 Still 階段的平均被動負載與驅動線路相符 [62]。CP 負載也與驅動線路相當 [62]。磁通線路在 MXC 的測量被動負載 (0.029(5) μW) 比驅動線路大一倍以上 [62]。這可以用磁通線路在 CP 沒有衰減器來解釋，導致通過中心導體和介電層從 Still 直接產生被動負載到 MXC 階段 [62]。
-        </p>
-        <p>
-            總結而言，安裝 66 條射頻線（主要為 UT-085-SS-SS）後，TMXC 從 6.1(1) mK 增加到 8.4(2) mK [63]。MXC 的總被動熱負載為 1.4(2) μW [63]。這比 20 mK 可用的冷卻能力小十倍以上 [63]，為數十到數百個超導量子位元的實驗奠定了基礎 [63]。
-        </p>
-
-        <h2>主動負載測量 [64]</h2>
-        <p>
-            為了確定量子處理器運行期間產生的主動負載，作者對單條驅動線路施加連續訊號或對單條磁通線路施加電流，並測量稀釋冷凍機各階段產生的熱負載 [64]。利用第 2.2 節中討論的典型佔空比和功率水平，可以根據測量到的負載估計總主動負載 [64]。
-        </p>
-
-        <h3>驅動線路 [64]</h3>
-        <p>
-            為了實驗測試驅動線路中訊號耗散引起的負載，作者對其中一條線施加射頻訊號，並測量稀釋冷凍機各階段對應的溫度升高 [64]。測量顯示，衰減器中耗散的功率絕大部分 (超過 99%) 流向了衰減器熱錨定的階段 [65]。這驗證了作者的衰減器熱化方法 [65]。提取到的主動負載是純主動負載，即從測量到的負載中減去了由上一個更高階段溫度升高引起的額外被動負載 [65]。
-        </p>
-        <p>
-            此外，作者施加了 5 GHz、16 dBm 的微波音調 [66]。這導致在 MXC 的訊號水平約為 –52.5 dBm（考慮電纜衰減和 60 dB 離散衰減），遠高於驅動線路中所需的 –78 dBm 平均值 [66]。實驗數據顯示，在有衰減器的階段，測量到的主動負載與計算值吻合良好 [67, 見圖 8]。實驗測量表明，通過將衰減器中耗散的功率歸因於其熱化的階段，可以很好地計算驅動線路中的主動負載 [67]。TWPA 泵浦線路的測量主動負載與驅動線路的主動負載相當 [67]。
-        </p>
-        <p>
-            本節討論了在驅動線路中選擇的 {0, 20, 0, 20, 20} dB 衰減器配置下實驗確定的主動負載 [68]。由於選擇此配置是為了使主動負載顯著低於可用冷卻能力，執行單量子位元門引起的主動負載對量子處理器的溫度影響很小 [68]。
-        </p>
-
-        <h3>磁通線路 [69]</h3>
-        <p>
-            為了確定由量子位元磁通偏置引起的主動負載，作者在 MXC 終端一條磁通線路並施加直流電流，並測量相應的溫度升高和熱負載 [69]。在室溫到 Still 的階段，相對溫度升高微不足道，但在 CP 和 MXC 階段顯著 [69]。正如預期，提取的負載 PMXC/CP = Reff,MXC/CPI²MXC 隨施加電流呈二次方增長（見圖 9） [69]。從二次擬合數據中提取的有效電阻 Reff,MXC = 0.15(1) Ω 和 Reff,CP = 0.42(2) Ω [69]。
-        </p>
-        <p>
-            對於 25 條磁通線路，直流偏置引起的熱負載總計約為 MXC 的 1.25 μW 和 CP 的 3.5 μW [41]。這比 MXC (20 mK) 和 CP (140 mK) 可用的冷卻能力分別小約 15 倍和 40 倍 [41]。用於雙量子位元門的磁通脈衝也會產生耗散 [41]，其在 CP 和 MXC 上的熱負載約為直流磁通偏置負載的六分之一 [73, 見圖 10]。
-        </p>
-
-        <h2>結論與展望 [70]</h2>
-        <p>
-            基於對被動和主動負載的測量，作者估計了在運行具有獨立驅動和磁通控制以及多路讀出架構的 50 個量子位元處理器時，稀釋冷凍機各階段承受的總熱負載（見圖 10） [70]。這樣的處理器總共需要 124 條射頻線路（50 條驅動線路、50 條磁通線路、8 條輸出線路、8 條讀出諧振器驅動線路、8 條 TWPA 泵浦線路） [70]，這對應於所呈現系統的滿載運行 [70]。最大的相對負載約為 30%，出現在 CP 和 MXC 階段，被動負載和主動負載各佔一半 [70]。MXC 的負載對應於 14 mK 的運行溫度 [70]。驅動線路中的主動負載是為了達到 10⁻³ 或更少的雜訊光子數目標而產生的 [70]。50 K 和 4 K 階段的相對負載分別約為 20% 和 10%，主要由被動負載主導 [70]。Still 階段的負載微不足道 [70]。因此，如果同軸線路的承載能力增加三倍，討論的系統的熱性能將允許運行一個 150 個量子位元的處理器 [70]。這種容量增加可以通過提高同軸線路整合密度或建造更大直徑的稀釋冷凍機來實現 [70]。
-        </p>
-        <p>
-            同軸電纜的材料選擇是為了最小化所有階段的被動熱負載 [71]。然而，可以考慮使用更小直徑的電纜（例如 0.047 英寸），被動熱負載會顯著降低（超過三倍） [71]。對於驅動線路，由於需要大衰減，如果相應減少安裝衰減器的衰減量，執行單量子位元門引起的主動負載不會增加 [71]。但對於磁通線路，由量子位元磁通偏置引起的主要主動負載會增加三倍以上，因為電纜的直流電阻與其直徑成反比 [71]。不過，如果使用超導 NbTi 電纜，磁通線路中的主動負載可以降至接近零 [71]。
-        </p>
-        <p>
-            展望未來，一個樂觀的場景是通過仔細屏蔽量子處理器將磁通偏移降至接近零 [72]。這樣就避免了由直流磁通偏置引起的主動負載，並且考慮使用 0.047 英寸直徑的電纜，CP 階段的主要相對負載約為 14%，這允許運行約 360 個量子位元 [72]。
-        </p>
-        <p>
-            為了實現運行約一千個量子位元的目標，作者提出以下修改 [72]：
-            <ol>
-                <li>使用超導 NbTi 電纜作為磁通線路，消除這些線路中的主動負載 [72]。</li>
-                <li>容忍 CP 溫度約為 200 mK，在此溫度下至少有 400 μW 的冷卻能力 [72]。將約 7 dB 的衰減從 CP 轉移到 MXC 階段，在不影響雜訊光子數的同時，將 MXC 的主動負載增加六倍 [72]。</li>
-                <li>容忍基板溫度為 30 mK，在此溫度下 MXC 的冷卻能力至少增加一倍至約 40 μW，同時不影響雜訊光子數 [72]。在此情景下，驅動線路中的主動負載將成為 CP 和 MXC 的主要熱負載 [72]。</li>
-            </ol>
-            最終，未來的大規模稀釋冷凍機可能會有多個稀釋單元和/或更大的單元，以在 CP 和 MXC 階段提供足夠的冷卻能力 [31]。
-        </p>
-
-        <h3>附錄簡述</h3>
-        <ul>
-            <li><strong>附錄 1:</strong> 提供了用於估計被動熱負載的相關材料和電纜的熱導率數據 [31, 73]。</li>
-            <li><strong>附錄 2:</strong> 提供了不同類型同軸電纜的衰減數據，並考慮了溫度依賴性 [73, 74]。</li>
-            <li><strong>附錄 3:</strong> 描述了射頻線路的散射參數測量，包括驅動線路和磁通線路，並討論了紅外濾波器的影響 [75-77]。</li>
-            <li><strong>附錄 4:</strong> 列出了用於溫度測量和加熱的感測器和加熱器類型 [53, 78]。</li>
-            <li><strong>附錄 5:</strong> 測量了稀釋冷凍機中脈衝管冷卻器在不同應用功率組合下的冷卻能力表現 [78]。</li>
-            <li><strong>附錄 6:</strong> 驗證了較高階段溫度的升高僅在較低階段產生偏移被動負載，而不會改變冷卻能力與溫度的函數關係 [56, 79]。</li>
-        </ul>
-
-        <p><small>本介紹基於來源文件 "Engineering cryogenic setups for 100-qubit scale superconducting circuit systems.pdf" 的摘錄 [1-107]。</small></p>
-
-      </div>
-    </section>
+       
     
     
 
@@ -4186,6 +3477,255 @@ Licence URI: https://www.os-templates.com/template-terms
 
 
 
+            <section id="e1">
+              <div class="container">
+                <header class="major">
+                  <h2><li>其他種類的Qubit</li></h2>
+                </header>
+    
+                <h3>超導電路系統的低溫設置工程：百量子位元規模的實現</h3>
+    
+            <p>
+                這份文件探討了用於<strong>百量子位元規模超導電路系統</strong>的工程化低溫設置 [1]。論文作者工程化了一個低溫設置，該設置在最大限度地減少被動和主動熱負載的同時，確保了快速的量子位元控制和讀取 [1]。其結果對於管理未來基於超導電路的大規模量子電腦的熱預算非常重要 [1]。
+            </p>
+    
+            <h2>引言</h2>
+            <p>
+                有前景的固態量子計算平台，例如<strong>超導電路</strong>或半導體量子點中的電荷與自旋，需要達到<strong>毫開爾文 (Millikelvin) 等級的溫度</strong> [2]。這是為了將系統初始化到其基態，並避免在運作期間因熱激發而產生的錯誤 [2]。毫開爾文溫度是透過 ³He/⁴He <strong>稀釋冷凍機 (dilution refrigerator, DR)</strong> 實現的 [2]。
+            </p>
+            <p>
+                將這些方法從少數量子位元擴展到大型量子處理器時，需要將越來越多的<strong>微波和直流電纜</strong>整合到稀釋冷凍機中 [2]。這些電纜將室溫 (RT) 下的傳統控制電子裝置連接到稀釋冷凍機最低溫度階段的量子處理器 [2]。
+            </p>
+            <p>
+                這種連接會對稀釋冷凍機產生相當大的<strong>熱負載 (heat load)</strong> [2]。主要的負載來源是熱傳導造成的<strong>被動負載 (passive load)</strong> [2]。除此之外，控制訊號在電纜和衰減器中的耗散也產生了<strong>主動負載 (active load)</strong> [2]。為了熱化傳入的輻射場並減少入射到樣本上的熱光子數量，工程化的耗散（即使用衰減器）是必要的 [2-4]。
+            </p>
+            <p>
+                雖然已經實現了操作 20 個量子位元的超導量子處理器，但關於其低溫設置及其向更大系統尺寸擴展的報告較少 [3]。這份文件旨在介紹一種<strong>經過熱優化、穩健的佈線方案和低溫設置</strong>，該方案適用於在 14 mK 溫度下操作 50 個量子位元 [3]。忽略稀釋冷凍機內的空間限制，使用此方法至少可以操作 150 個量子位元 [3]。本文提出了減少稀釋冷凍機所有階段被動熱負載的方法，並討論了在保持較低主動負載的同時，最大程度地減少連接室溫元件與基溫階段的電纜中的熱光子數量 [3, 4]。
+            </p>
+            <p>
+                研究測量了典型包含 25 條同軸電纜的電纜樹所產生的被動負載，並將其與基於同軸電纜熱導的現有數據估計值進行比較 [4]。還對應用控制訊號引起的主動負載進行了表徵 [4]。最終討論了總熱負載以及可能的改進，預計這些改進將允許在不考慮空間限制的情況下將操作量子位元數量增加到最多一千個 [4]。
+            </p>
+    
+            <h3>典型用於超導電路實驗的佈線 [5]</h3>
+            <p>
+                設計連接到超導量子處理器的控制線和輸出線時，目標是在提供足夠強的耦合速率的同時，最大程度地減少由於透過這些線路耦合到環境而導致的<strong>去相干 (decoherence)</strong> [5]。由於量子處理器連接到室溫下的電子裝置而存在的熱雜訊，不僅會導致量子位元去相 [3, 4, 6]，還可能導致準粒子產生，進而導致耗散和能量弛豫時間縮短 [8–13]。因此，在稀釋冷凍機的各個溫度階段對電纜、衰減器和微波元件進行<strong>徹底的熱化 (thermalization)</strong>，不僅對於減少稀釋冷凍機的熱負載很重要，而且對於<strong>保護量子處理器免受熱輻射</strong>也很重要 [5]。除了熱錨定外，濾波器（帶阻在量子位元和讀出諧振器頻率範圍之外）以及紅外阻擋濾波器 [7-9] 進一步抑制了熱輻射 [5]。其他可能對相干時間產生負面影響的外部雜訊源包括電子儀器產生的 1/f 雜訊 [6, 10] 以及磁場波動或磁偏移場引起的磁渦旋，這些可能導致耗散 [7, 11, 12]。這些雜訊源可以透過適當的濾波器和磁屏蔽來緩解，但本文不聚焦於此 [5]。
+            </p>
+            <p>
+                文件中簡要介紹了超導電路實驗中通常使用的佈線類型，區分為<strong>直流 (DC) 佈線</strong>和<strong>射頻 (RF) 佈線</strong> [13]。
+                <ul>
+                    <li><strong>直流線路 (DC lines):</strong> 使用雙絞線對 (twisted pairs of wires)，經過低通濾波，並在每個溫度階段進行熱化 [13]。典型用途包括偏置低溫放大器以及對頻率可調諧量子位元進行磁通偏置 [13, 14]。由於其熱導率較高，銅 (Cu) 或磷青銅 (PhBr) 雙絞線對僅用於從室溫到 4 K 階段 [11]。從 4 K 到 MXC 階段使用超導 NbTi 雙絞線對 [11]。在這些材料中，只有銅雙絞線對會產生與同軸電纜相當的顯著被動負載 [17, 見圖 1]。</li>
+                    <li><strong>射頻線路 (RF lines):</strong> 通常使用半硬微波電纜 (semi-rigid microwave cables) 實現，並包含各種微波元件，如衰減器、濾波器和放大器 [13]。它們連接到量子處理器，用於其控制和讀出 [13]。射頻線路通常區分為<strong>驅動線路 (drive lines)</strong>、<strong>磁通線路 (flux lines)</strong> 和<strong>輸出線路 (output lines)</strong> [13]。</li>
+                </ul>
+            </p>
+            <p>
+                <strong>驅動線路 (Drive lines)</strong> 用於使用微波音調控制量子位元的量子態，實現單量子位元門，並用於探測讀出諧振器的頻率偏移 [6]。為減少量子位元的熱群體填充以及由於與讀出諧振器的色散相互作用導致的量子位元頻率偏移 [15]，要求到達稀釋冷凍機混合腔板 (MXC) 的驅動線路中的<strong>熱雜訊光子數量遠低於單光子級別</strong> [6]。更精確地說，為確保 MXC 處的雜訊光子數處於 10⁻³ 級別，總衰減約需 60 dB [7, 見第 2.2.1 和 3.2 節]。同時，驅動線路的頻寬需要足夠大，以覆蓋量子位元 (4–6 GHz) 和讀出諧振器 (4–8 GHz) 的典型頻率範圍 [6]。儘管驅動量子位元或讀出的訊號很小（例如，一個 20 ns 長的 π 脈衝需要約 –66 dBm 的峰值功率 [12, 16]），但由於需要顯著衰減室溫下的黑體輻射（即 Johnson-Nyquist 雜訊 [12, 14]），施加在稀釋冷凍機入口的功率要大得多 [12]。
+            </p>
+            <p>
+                <strong>磁通線路 (Flux lines)</strong> 用於實現基於量子位元或獨立耦合子電路的動態磁通可調諧轉變頻率的雙量子位元門 [8, 21–25]。此外，可用於補償因約瑟夫森接面製造缺陷而發生的量子位元頻率變化 [17]。可調諧頻率量子位元利用 SQUID (superconducting quantum interference device) 環路作為電感元件 [17]。透過穿過 SQUID 環路的磁通量 Φ，量子位元的頻率大約會隨 ωq ∝ √| cos(πΦ/Φ₀)| 變化 [10, 18]。磁通線路與 SQUID 環路之間的互感是透過將晶片上的磁通線路部分繞過 SQUID 環路來實現的 [18]。因此，應用到磁通線路的電流會在 SQUID 環路中產生磁通量，有效地調諧量子位元的轉變頻率 [18]。磁通線路中的低通濾波器將頻寬限制在約 1 GHz [18-21]，消除了量子位元頻率處的熱雜訊光子 [22]。然而，由於 SQUID 環路中的磁通量 Φ 設定了量子位元轉變頻率，任何<strong>電流雜訊都會導致量子位元去相</strong> [6, 10, 18]。為了減少電流雜訊，磁通線路中也增加了適量的衰減（10–20 dB） [9, 見第 3.3 節]；這足以減輕熱雜訊引起的量子位元去相 [23]。
+            </p>
+            <p>
+                <strong>輸出線路 (Output lines)</strong> 包含一系列低溫和室溫放大器，用於檢測讀出訊號 [10, 26–28]。為了隔離樣本免受熱雜訊光子和放大器輸入雜訊的影響，同時不衰減輸出訊號，使用了<strong>隔離器 (isolators) 和環行器 (circulators)</strong> [10, 見第 3.4 節]。
+            </p>
+    
+            <h2>熱負載來源 [24]</h2>
+            <p>
+                作者考慮了稀釋冷凍機上熱負載的三個主要貢獻來源 [24]：
+                <ul>
+                    <li><strong>被動負載 (Passive load):</strong> 這是由於熱從較高溫度階段傳導到較低溫度階段所致 [24]。在本文中，僅考慮透過安裝的電纜傳導的熱量 [24]。透過稀釋冷凍機支柱等結構元件傳導的熱量不在此考慮範圍內，因為製造商已在其提供的冷卻能力規格中考慮了這部分，並在其他地方獨立評估過 [10, 29–31]。</li>
+                    <li><strong>主動負載 (Active load):</strong> 這源於施加的微波訊號在衰減器和微波電纜本身中的耗散（焦耳熱） [24]。用於偏置 4 K 階段的 HEMT 放大器或偏置 MXC 晶片上量子位元的磁通等直流訊號的耗散也屬於此類別 [24]。</li>
+                    <li><strong>輻射負載 (Radiative load):</strong> 這是由於較高溫度階段和屏蔽層的黑體輻射照射到較低溫度階段和屏蔽層所致 [24]。然而，製造商提供的可用冷卻能力規格中也考慮了此負載 [24]。</li>
+                </ul>
+                為了完整性，作者也提到了殘留氣體造成的負載，特別是氦氣，因為它在低溫下具有最高的蒸氣壓 [24]。但在稀釋冷凍機的正常運作期間，低溫表面具有低溫泵浦能力，可將真空罐內的壓力維持在 10⁻⁵ mbar 以下，提供足夠的隔離真空 [24, 25]。因此，本文不考慮此負載 [24]。然而，脫附過程中釋放的潛熱可能會產生額外負載，例如當氣體從安裝的元件中脫附並凝結在最近的階段時 [24]。
+            </p>
+    
+            <h3>被動負載的最小化與估計 [7, 26]</h3>
+            <p>
+                為了最小化被動熱負載，作者使用了<strong>熱導率低的電纜材料</strong> [26]。值得注意的是，除了超導體之外，這通常伴隨著較差的導電性，因此在施加微波訊號時會導致更多的耗散 [26]。然而，在大多數線路中，衰減（因而耗散）是期望的，以便熱化傳入的輻射場 [11, 見第 2.2 節]。
+            </p>
+            <p>
+                為了估計安裝電纜產生的被動負載，作者考慮了稀釋冷凍機各板上的固定溫度，這對應於穩態 [26]。到階段 i 的熱流量 Pi 由傅立葉定律積分得出 [7, 27]，公式考慮了外導體、介電層和中心導體的熱導率、橫截面積以及連接階段 i-1 和 i 的電纜長度 Li [7]。階段標示 i ∈ {1, 2, 3, 4, 5} 分別對應於階段 {“50 K”, “4 K”, “Still”, 冷板 (“CP”), “MXC”} [7]。<strong>表 1</strong> 列出了其 Bluefors XLD400 稀釋冷凍機在空載安裝後達到的對應溫度和可用冷卻能力 [8, 28]。這些值是先進脈衝管冷卻器稀釋冷凍機的典型值 [29, 30]。用於估計的熱導率列於附錄 1 [7, 31]。
+            </p>
+            <p>
+                為了說明第 3 節中詳述的電纜材料選擇，<strong>圖 1</strong> 顯示了不同材料的單根同軸電纜對各溫度階段的熱流量估計 [9, 28]。這些估計假設外導體、介電層和中心導體在每個階段都完全熱化 [28]。
+            </p>
+            <p>
+                討論了三種典型且易於獲得的 0.085 英寸直徑同軸電纜類型 [9]。電纜長度列於表 1，對應於稀釋冷凍機板間距離加上為應力釋放而彎曲的少量修正 [15, 見表 1]。<strong>不鏽鋼電纜 (UT-085-SS-SS) 和鈮鈦電纜 (UT-085-NbTi) 具有最低的被動負載</strong> [9]。因此，作者選擇不鏽鋼電纜用於需要大衰減的驅動線路 [9]。NbTi 電纜在 10 K 以下是超導體，因此在 10 K 以下具有非常低的衰減 [9, 32]，這就是為什麼它被用於 4 K 和 MXC 階段之間的輸出線路部分 [9]。這兩種電纜類型的熱流量主要由其外導體決定，其橫截面積比中心導體大 10 倍 [9]。特氟龍 (Teflon) 介電層的貢獻與內導體相當，這是由於特氟龍的低熱導率和與外導體相當的橫截面積所致 [15, 見附錄 1]。
+            </p>
+            <p>
+                銅鎳 (CuNi) 電纜是不鏽鋼的替代品 [10]。預計其被動負載比 SS-SS 電纜大約 50% [10, 33]。另一種常用電纜類型是 UT-085-SS 電纜（不鏽鋼外導體，SPCWa 中心導體） [10]。這種電纜導致的熱負載顯著較大，因為銅的熱導率較高，並且在 50 K 以下的溫度異常增強 [16, 見附錄 1]。由於其較低的衰減 [16, 見附錄 2]，這種電纜類型原則上適合用於稀釋冷凍機真空法蘭到 4 K 階段的輸出線路部分 [16, 見第 3.4 節中的討論]。
+            </p>
+    
+            <h3>主動負載 [12]</h3>
+            <p>
+                稀釋冷凍機中的主動負載取決於射頻線路的衰減水平、安裝的衰減器以及晶片所需的訊號水平 [12]。因此，本節簡要討論了需要多少衰減來減少熱雜訊以及如何在各個溫度階段分配衰減器 [12]。此外，還討論了典型超導量子位元實驗所需的訊號水平 [12]。
+            </p>
+    
+            <h4>衰減的必要性 [12]</h4>
+            <p>
+                儘管驅動量子位元或讀出所需的訊號很小（例如，一個 20 ns 長的 π 脈衝需要約 –66 dBm 的峰值功率 [12, 34]），但在稀釋冷凍機輸入端施加的功率卻大幾個數量級 [12]。這是因為總共需要至少約 60 dB 的衰減，才能將室溫電纜中的黑體輻射降低到樣本處對應於少數 10⁻³ 熱光子佔有數的水平 [12, 19]。在有效的單維電纜中，黑體輻射被稱為電子學中的 Johnson-Nyquist 雜訊 [12, 14]。這些熱光子沿著線路傳播到較低溫度階段 [15]。為了降低熱輻射的頻譜密度，在微波線路中安裝了一系列衰減器 [15]。一個衰減為 A = 20 dB = 100 的衰減器有效地充當分束器，傳輸 1% 的入射訊號並增加 99% 與其熱化溫度 Tatt 相關的黑體輻射 [15]。請注意，99% 的入射訊號在衰減器中耗散 [15]。為了防止衰減器升溫並保持其重新發射熱輻射的有效溫度較低，需要對其進行高效熱化 [15]。更正式地說，階段 i 的雜訊光子佔有數 ni(ω) 取決於階段 i-1 的雜訊光子數和熱化在階段 i 的衰減器發射的黑體輻射 [19]。透過安裝一系列在隨後較低溫度階段熱化的衰減器，可以計算 MXC 階段的雜訊光子佔有數 nMXC [19]。
+            </p>
+            <p>
+                對於本文的討論，考慮訊號頻率 ω̄/2π = 6 GHz，因為典型的量子位元在 5 GHz 運作，讀出諧振器在 7 GHz 運作 [19]。達到 nMXC = 10⁻³ 雜訊光子數所需的總衰減的下限約為 60 dB [21, 見第 2.2.1 節]，這是透過忽略衰減器自身發射的黑體輻射獲得的 [19]。
+            </p>
+            <p>
+                在各個溫度階段分配總衰減量非常重要，以確保較低階段的主動負載遠低於這些階段可用的冷卻能力 [20]。分配衰減時，應避免在階段 i 放置過多衰減 Ai，使其超過將傳入輻射場熱化到該階段所需的值 [20]。在階段 i 放置衰減的良好參考值是前一階段 (i-1) 和階段 i 熱光子佔有數的比值 [20]。例如，考慮總衰減 60 dB，由在 4 K、CP 和 MXC 階段熱化的 20 dB 衰減器組成 [20]。將 nMXC 繪製為各階段衰減的函數（見圖 2a），可以看出，隨著衰減增加到一定值（接近該階段的熱雜訊本底）後，對 nMXC 的進一步減少效率降低 [20, 35]。然而，第 3.2 節中將看到，MXC 的有限冷卻能力限制了在此處可安裝的衰減量 [36]。
+            </p>
+    
+            <h4>量子處理器運作所需的訊號水平 [36]</h4>
+            <p>
+                本節估計了晶片上驅動量子位元 π 脈衝和設定磁通偏置所需的功率 [36]。驅動 π 脈衝所需的峰值功率約為 –66 dBm [16, 37, 38]，而脈衝的平均功率約為 –71 dBm [16]。考慮到量子算法執行期間的有限佔空比（例如，單量子位元門和雙量子位元門交替執行的最高 33% [16, 20, 21]），以及 π/2 脈衝只需四分之一的功率 [39]，用於估計的每條量子位元驅動線路的平均所需功率為 –78 dBm [27, 見第 3.2 節]。讀出訊號所需的功率通常低一個數量級且佔空比更低，因此在估計中未考慮 [40]。
+            </p>
+            <p>
+                磁通線路中的耗散主要來自用於設定量子位元頻率的直流偏置電流 [40]。在最壞情況下，需要應用 ±1 mA 的電流來補償隨機偏移磁場 [40]。這種偏置電流在 MXC 階段最為關鍵，因為其冷卻能力最低 [40]。耗散的熱量取決於不鏽鋼電纜和低通濾波器的直流電阻 [40]。對於 25 條磁通線路，這種直流偏置導致 MXC 的總熱負載估計為 1.25 μW (CP 為 3.5 μW)，這比 MXC 和 CP 的冷卻能力分別小約 15 倍和 40 倍 [41]。這被認為是最壞情況，透過仔細的磁屏蔽可以將偏移磁通降低到接近零 [41]。用於雙量子位元門的磁通脈衝也會產生耗散 [42]，其負載約為直流磁通偏置負載的六分之一 [73, 見圖 10]。
+            </p>
+    
+            <h4>輻射負載 [43]</h4>
+            <p>
+                每個溫度階段（冷板除外）都配備了專用的隔熱屏蔽層，以保護下一個較低溫度階段免受來自上一個較高溫度階段的輻射負載 [43]。50 K 和 4 K 階段的隔熱屏蔽層由鋁製成，Still 和 MXC 階段由銅製成 [43]。它們的發射率為 0.06 [43]。與每個階段的冷卻能力相比，只有 50 K 階段有顯著貢獻，約為 50 W [43]。這大約是兩個脈衝管冷卻器標稱冷卻能力的一半 [30, 見第 84 節]，但此負載已包含在製造商提供的可用冷卻能力規格中 [43]。較低溫度階段的輻射負載微不足道 [25, 44]。
+            </p>
+    
+            <h2>低溫設置 [44]</h2>
+            <p>
+                本文描述了一種定制化且現已商業化的 Bluefors XLD400 稀釋冷凍機 [31, 見圖 3(a)]。其稀釋單元位於 MXC 板的中心位置，這在系統圓周處騰出了空間用於額外的視線 (LOS) 端口 [44]。系統總共有六個 LOS 側端口可供安裝射頻電纜 [44]。一個 LOS 端口由各個板上垂直對齊的切口組成，用於穿過射頻電纜 [44]。在每個切口中安裝了銅板，用於電纜和衰減器的熱化 [31, 見圖 4(a)–(c)]。作者設計了寬度為 88 mm 的矩形切口，而非標準的圓形切口 [44]。這些切口允許使用定制的安裝工具從側面安裝完全組裝好的電纜樹 [31, 見圖 4(e)–(g)]。這樣做的好處是可以將包含 25 條射頻線和真空法蘭的每個電纜樹在稀釋冷凍機外部預先組裝和測試 [44]。
+            </p>
+            <p>
+                此外，Still 板和 CP 之間的距離增加了 60 mm，為微波元件的內聯整合以及減少從 Still 到 CP 的電纜被動熱負載提供了更多空間 [25]。稀釋冷凍機由製造商根據規格預先安裝了兩組銅雙絞線對和兩組磷青銅雙絞線對，均從室溫延伸到 4 K [27]。從 4 K 到 MXC 預先安裝了兩組 NbTi 雙絞線對 [27]。每組包含 12 對雙絞線 [27]。
+            </p>
+            <p>
+                作者測量了定制稀釋冷凍機每個階段的可用冷卻能力（在存在預安裝直流佈線的情況下），如表 1 所示 [8, 27]。這些功率不應超過，以確保基溫低於 20 mK [27, 45]。作者設計和規劃的佈線和衰減方案的目標是使產生的總熱負載至少約為這些冷卻能力的<strong>三分之一</strong> [27]。表 1 還包含階段之間的射頻電纜長度 [8]。請注意，電纜有彎曲（彎曲半徑約 1 cm），以減輕系統冷卻時對射頻連接器的應力 [27]。
+            </p>
+            <p>
+                如第 2 節所述，電纜和衰減器的良好熱化對於降低影響量子位元相干性的熱雜訊光子和降低影響低溫恆溫器性能的較低階段熱負載都很重要 [29]。為此，作者開發了一種用於衰減器和電纜的通用熱化方法 [29]。該方法由一個帶有六邊形切口的銅板組成 [29]。在這些切口中，使用楔形銅塊夾住衰減器，擰緊黃銅螺絲時，楔形塊將衰減器壓向切口的兩個面 [34, 見圖 4(a) 和 (b)]。擰緊扭矩為 0.9 Nm [29]。使用黃銅螺絲是因為它們在冷卻時比銅收縮更多，為衰減器提供了額外的夾緊力 [29]。這很重要，因為在低溫下，兩個金屬件之間的接觸電阻主要由夾緊力決定，而非表面積 [29, 46]。除了熱化衰減器外，作者還在沒有衰減器的階段（50 K 和 Still 階段）使用相同的銅板結合兩部分銅適配器（圖 4(d)）熱化射頻電纜的外導體 [34, 見圖 4(c)]。這些部件上的圓形法蘭確保了輻射緊密的安裝 [29]。使用這些板，作者將 25 條射頻線安裝到每個六個 LOS 端口中 [29]。
+            </p>
+            <p>
+                接著更詳細地描述了稀釋冷凍機的定制佈線 [30]。驅動線路、磁通線路和讀出線路的示意圖如圖 3b 所示，這是超導量子位元實驗的典型配置 [30]。為了最小化被動熱負載，作者選擇 UT-085-SS-SS 電纜用於除輸出線路之外的所有類型線路 [30]。作者透過安裝三個可能的電纜樹中的三個來表徵和測試了系統容量的一半：一個包含 25 條驅動線路的電纜樹，一個包含 25 條磁通線路的電纜樹，以及一個包含讀出所需線路的電纜樹 [30]。這個讀出電纜樹包括六條驅動線路和五條泵浦線路（見第 3.4 節），都從稀釋冷凍機頂部到底部延伸，以及四條從室溫到 4 K 階段的輸出線路 [30]。輸出線路的其餘部分在其中一個脈衝管冷卻器下方的非 LOS 切口中繼續，那裡有更多空間容納較大的輸出線路元件 [30]。
+            </p>
+    
+            <h3>驅動線路配置 [32]</h3>
+            <p>
+                基於第 2.2.1 節對熱雜訊的討論，作者選擇在 4 K、CP、MXC 階段各放置 20 dB 衰減器的配置 [32]。作者計算了連接室溫真空法蘭到 MXC 的同軸電纜中，總衰減 60 dB 的四種衰減器配置 (C1-C4) 下，MXC 的熱雜訊光子數 nMXC（圖 5a 中的實心條） [32]。計算假設表 1 中的板溫作為有效的衰減器溫度 [32]。此外，還考慮了射頻電纜本身的衰減（合計約 9 dB，結合了室溫和低溫數據 [36, 見附錄 2]） [32]。使用方程 (3) 的連續版本並假設電纜中的線性溫度梯度，獲得了圖 5(a) 中虛線條所示的 nMXC [32]。對於每種配置，作者計算了 25 條驅動線路在每個溫度階段的耗散功率，並與該階段可用的冷卻能力（表 1）進行比較（見圖 5b） [32]。計算假設 MXC 需要的平均功率水平為 –78 dBm（見第 2.2.2 節），並考慮了射頻電纜的衰減 [32]。
+            </p>
+            <p>
+                考慮到噪音光子數和 MXC 熱負載之間的權衡，作者選擇了配置 C3 = {0, 20, 0, 20, 20} dB [38]，其噪音光子數約為 0.001（考慮了電纜中的衰減） [38]。
+            </p>
+            <p>
+                為了過濾可能導致準粒子產生並因此降低 T1 時間的紅外輻射 [8–13]，作者提供了在 MXC 衰減器之前安裝定制的基於 Eccosorb CR-124 吸收材料的紅外濾波器選項（見附錄 3） [38]。在 6 GHz 時，該濾波器提供 6 dB 的衰減 [38]。
+            </p>
+    
+            <h3>磁通線路配置 [21]</h3>
+            <p>
+                為了減少量子位元 SQUID 環路中的電流和磁通雜訊，需要在磁通線路中安裝適量的衰減 [21]。部分衰減可以在室溫下實現，以將連接到磁通線路的儀器（例如任意波形產生器）產生的 1/f 雜訊和白雜訊降低到室溫 Johnson-Nyquist 雜訊水平 [21]。為了將雜訊水平降低到室溫 Johnson-Nyquist 雜訊以下，作者在 4 K 階段安裝了一個單獨的衰減器 A4K [21]。該衰減器之後的電流雜訊功率頻譜密度計算如方程 (4) 所示 [45]。在 4 K 階段安裝 10-20 dB 的衰減已足以減輕熱雜訊導致的量子位元去相干 [23]。
+            </p>
+            <p>
+                由於典型磁通脈衝的頻寬最多為 1 GHz [19-22]，作者在磁通線路中安裝了截止頻率約為 1.9 GHz 的低通濾波器 (Minicircuits VLFX1300+) [46, 見附錄 3]，以抑制在量子位元頻率處的熱雜訊光子 [22]。為了減少超導薄膜中的準粒子產生，安裝了定制的吸收性紅外濾波器 [46, 見附錄 3]，並將其安裝在 MXC 階段的射頻線路中 [22]。為了抑制反射性低通濾波器和量子處理器之間產生的駐波，吸收性紅外濾波器被放置在低通濾波器之後 [82, 見圖 3(b)]。
+            </p>
+    
+            <h3>輸出線路配置 [47]</h3>
+            <p>
+                作者設計了四條輸出線路，用於在單光子水平檢測量子位元讀出訊號 [40, 47, 48]。在 MXC 安裝了行波約瑟夫森參數放大器 (TWPA) 作為接近量子極限的放大器 [47, 49, 見圖 6(a)]。其接近量子極限的性能及其在 3-12 GHz 頻率範圍內約 20-30 dB 的寬帶增益，允許快速的單次多路讀出，可以使用一條輸出線路同時讀出約十個量子位元 [48, 49]。在 4 K 階段安裝了增益約 40 dB 的高電子遷移率晶體管 (HEMT) 放大器 [48, 見圖 6(b)]。CP 的環行器和 MXC 的兩個隔離器提供了對樣本超過 60 dB 的總隔離 [48]。兩個隔離器（工作範圍 3-12 GHz）也需要用於 TWPA 在其整個增益頻寬內的阻抗匹配 [48]。為此，一個隔離器安裝在 TWPA 之前，一個安裝在之後 [48, 見圖 3(b)]。每個隔離器都是一個四通道隔離器陣列的一部分 [48, 見圖 6(a)]。環行器和隔離器都經過磁屏蔽 [48]。
+            </p>
+            <p>
+                在 MXC 階段，一個反射式帶通濾波器抑制了環行器和隔離器頻寬之外的雜訊 [49, 見圖 6(c)]。為了最小化兩個放大器之間的訊號損失，在 MXC 和 4 K 之間使用了超導 NbTi 同軸電纜 [50]。為了最小化被動熱負載，從 4 K 到室溫選擇了不鏽鋼電纜 [50]。根據 Friis 公式，與 SPCW 電纜等相比，增加的損耗不會降低放大器鏈的訊噪比 [50]。
+            </p>
+            <p>
+                TWPA 的運作需要一個典型的頻率在 6-8 GHz 範圍內、輸入 TWPA 功率水平約為 –55 dBm 的微波泵浦訊號 [49]。這個泵浦訊號透過一個 20 dB 定向耦合器的隔離端口添加到 TWPA [50, 見圖 3(b)]。為了實現相對較大的泵浦功率，泵浦線路的總衰減為 50 dB，比驅動線路的 60 dB 衰減要小 [49]。這 50 dB 衰減包括定向耦合器提供的 20 dB 衰減 [49]。用於讀出的元件照片顯示在圖 6 中 [49]。TWPA 和隔離器陣列安裝在 2 mm 厚的銅板上 [50, 見圖 6(a)]。
+            </p>
+    
+            <h2>被動熱負載的直接測量 [51]</h2>
+            <p>
+                為了確定每個電纜樹引起的被動熱負載並提取每條線路的熱負載，作者進行了在沒有微波佈線時稀釋冷凍機系統冷卻能力的參考測量 [51, 見第 4.1 節]。然後，每次安裝新的電纜樹後，都會冷卻系統並記錄稀釋冷凍機各階段的溫度升高，以推斷相應的被動熱負載 [51]。冷卻包含多達 25 條相同類型線路的電纜樹，其優點是產生的溫度升高比單條線路更大，也比稀釋冷凍機各階段的典型運行間溫度變化更大 [51]。此外，這種方法自然地平均了材料和元件的變化，以及單獨電纜和衰減器的安裝和熱化中可能出現的變化 [51]。
+            </p>
+    
+            <h3>參考測量 [52]</h3>
+            <p>
+                參考測量包括對給定溫度階段施加一個明確定義的電氣熱負載，並記錄所有其他階段的穩態溫度升高 [52, 見圖 7]。在穩態下，施加的熱負載對應於該階段在其穩態溫度下的冷卻能力 [52]。使用的溫度感測器和加熱器在附錄 4 中描述 [52, 53]。測量到的相對溫度升高作為施加到給定階段熱負載的函數顯示在圖 7 中 [52, 54]。加熱一個給定階段也會影響較低溫度的階段，因為它們透過稀釋冷凍機的結構元件（如支柱）以及稀釋單元和預安裝的直流佈線等其他元件熱連接在一起 [52]。
+            </p>
+    
+            <h3>被動熱負載的確定 [55]</h3>
+            <p>
+                圖 7 中所示的參考測量結果，允許將給定電纜樹冷卻後在階段 i 上觀察到的溫度升高 ΔTi 轉換為該階段的被動熱負載 Pi [55]。係數 ∂Pi/∂Ti 是從圖 7 數據的低溫區域的線性擬合中提取的 [55]。由於下一個更高階段 i-1 的溫度升高，ΔPi 也包含來自電纜以外所有元件的少量貢獻 [55]。因此，作者從 ΔPi 中減去此貢獻，以獲得安裝電纜的純被動熱負載 ΔP̃i [55]。只有對於 ΔP̃Still 來說，修正值才會顯著 (> 20%) [55]。透過測量類似於圖 7 所示的 Ti 對 Pi 曲線，但對於 Pi-1 ≠ 0，作者驗證了此程序（見附錄 6） [55, 56]。
+            </p>
+            <p>
+                在確定 ΔTCP 和 ΔTMXC 時需要格外小心 [57]。這是因為 Still 溫度的升高改變了通過稀釋單元的流量，因此不僅導致 CP 和 MXC 產生額外的被動負載，而且有效地改變了冷卻能力與溫度之間的曲線 [57]。在確定 ΔTCP 和 ΔTMXC 之前，作者因此減少了 Still 的熱功率，以達到參考測量時設定的相同流量 [57]。
+            </p>
+            <p>
+                為了提取每種類型線路的平均被動熱負載 ΔP̃i，作者在分別安裝驅動線路電纜樹、不含 NbTi 線路的讀出電纜樹、4 條 NbTi 輸出線路（介於 4 K 階段和 MXC 階段之間）以及磁通線路電纜樹後，冷卻了稀釋冷凍機 [58]。從每次冷卻後提取的總被動熱負載中，除以電纜樹中的線路數量，計算出每條線路的平均負載 [58]。
+            </p>
+            <p>
+                平均被動熱負載數據顯示在<strong>表 2</strong> 中 [59]。對於驅動線路，數據與基於方程 (1) 的計算值定性一致 [60]。估計區間代表了在沒有衰減器的階段（50 K 和 Still 階段），中心導體和介電層完全熱化或完全沒有熱化的情況下的估計值 [60]。作者假設在有衰減器的階段，中心導體和介電層完全熱化 [60]。
+            </p>
+            <p>
+                測量到的 MXC 階段負載大於預測值 [61]。這可能有幾個原因，包括電纜不鏽鋼熱導率與數據不符 [61]、中心導體通過 CP 衰減器熱化不完全 [61]、MXC 元件熱化時間長（特別是含氫元件）導致估計過高 [54, 61]，以及新安裝元件脫附氣體在 MXC 凝結 [62]。
+            </p>
+            <p>
+                磁通線路在 50 K、4 K 和 Still 階段的平均被動負載與驅動線路相符 [62]。CP 負載也與驅動線路相當 [62]。磁通線路在 MXC 的測量被動負載 (0.029(5) μW) 比驅動線路大一倍以上 [62]。這可以用磁通線路在 CP 沒有衰減器來解釋，導致通過中心導體和介電層從 Still 直接產生被動負載到 MXC 階段 [62]。
+            </p>
+            <p>
+                總結而言，安裝 66 條射頻線（主要為 UT-085-SS-SS）後，TMXC 從 6.1(1) mK 增加到 8.4(2) mK [63]。MXC 的總被動熱負載為 1.4(2) μW [63]。這比 20 mK 可用的冷卻能力小十倍以上 [63]，為數十到數百個超導量子位元的實驗奠定了基礎 [63]。
+            </p>
+    
+            <h2>主動負載測量 [64]</h2>
+            <p>
+                為了確定量子處理器運行期間產生的主動負載，作者對單條驅動線路施加連續訊號或對單條磁通線路施加電流，並測量稀釋冷凍機各階段產生的熱負載 [64]。利用第 2.2 節中討論的典型佔空比和功率水平，可以根據測量到的負載估計總主動負載 [64]。
+            </p>
+    
+            <h3>驅動線路 [64]</h3>
+            <p>
+                為了實驗測試驅動線路中訊號耗散引起的負載，作者對其中一條線施加射頻訊號，並測量稀釋冷凍機各階段對應的溫度升高 [64]。測量顯示，衰減器中耗散的功率絕大部分 (超過 99%) 流向了衰減器熱錨定的階段 [65]。這驗證了作者的衰減器熱化方法 [65]。提取到的主動負載是純主動負載，即從測量到的負載中減去了由上一個更高階段溫度升高引起的額外被動負載 [65]。
+            </p>
+            <p>
+                此外，作者施加了 5 GHz、16 dBm 的微波音調 [66]。這導致在 MXC 的訊號水平約為 –52.5 dBm（考慮電纜衰減和 60 dB 離散衰減），遠高於驅動線路中所需的 –78 dBm 平均值 [66]。實驗數據顯示，在有衰減器的階段，測量到的主動負載與計算值吻合良好 [67, 見圖 8]。實驗測量表明，通過將衰減器中耗散的功率歸因於其熱化的階段，可以很好地計算驅動線路中的主動負載 [67]。TWPA 泵浦線路的測量主動負載與驅動線路的主動負載相當 [67]。
+            </p>
+            <p>
+                本節討論了在驅動線路中選擇的 {0, 20, 0, 20, 20} dB 衰減器配置下實驗確定的主動負載 [68]。由於選擇此配置是為了使主動負載顯著低於可用冷卻能力，執行單量子位元門引起的主動負載對量子處理器的溫度影響很小 [68]。
+            </p>
+    
+            <h3>磁通線路 [69]</h3>
+            <p>
+                為了確定由量子位元磁通偏置引起的主動負載，作者在 MXC 終端一條磁通線路並施加直流電流，並測量相應的溫度升高和熱負載 [69]。在室溫到 Still 的階段，相對溫度升高微不足道，但在 CP 和 MXC 階段顯著 [69]。正如預期，提取的負載 PMXC/CP = Reff,MXC/CPI²MXC 隨施加電流呈二次方增長（見圖 9） [69]。從二次擬合數據中提取的有效電阻 Reff,MXC = 0.15(1) Ω 和 Reff,CP = 0.42(2) Ω [69]。
+            </p>
+            <p>
+                對於 25 條磁通線路，直流偏置引起的熱負載總計約為 MXC 的 1.25 μW 和 CP 的 3.5 μW [41]。這比 MXC (20 mK) 和 CP (140 mK) 可用的冷卻能力分別小約 15 倍和 40 倍 [41]。用於雙量子位元門的磁通脈衝也會產生耗散 [41]，其在 CP 和 MXC 上的熱負載約為直流磁通偏置負載的六分之一 [73, 見圖 10]。
+            </p>
+    
+            <h2>結論與展望 [70]</h2>
+            <p>
+                基於對被動和主動負載的測量，作者估計了在運行具有獨立驅動和磁通控制以及多路讀出架構的 50 個量子位元處理器時，稀釋冷凍機各階段承受的總熱負載（見圖 10） [70]。這樣的處理器總共需要 124 條射頻線路（50 條驅動線路、50 條磁通線路、8 條輸出線路、8 條讀出諧振器驅動線路、8 條 TWPA 泵浦線路） [70]，這對應於所呈現系統的滿載運行 [70]。最大的相對負載約為 30%，出現在 CP 和 MXC 階段，被動負載和主動負載各佔一半 [70]。MXC 的負載對應於 14 mK 的運行溫度 [70]。驅動線路中的主動負載是為了達到 10⁻³ 或更少的雜訊光子數目標而產生的 [70]。50 K 和 4 K 階段的相對負載分別約為 20% 和 10%，主要由被動負載主導 [70]。Still 階段的負載微不足道 [70]。因此，如果同軸線路的承載能力增加三倍，討論的系統的熱性能將允許運行一個 150 個量子位元的處理器 [70]。這種容量增加可以通過提高同軸線路整合密度或建造更大直徑的稀釋冷凍機來實現 [70]。
+            </p>
+            <p>
+                同軸電纜的材料選擇是為了最小化所有階段的被動熱負載 [71]。然而，可以考慮使用更小直徑的電纜（例如 0.047 英寸），被動熱負載會顯著降低（超過三倍） [71]。對於驅動線路，由於需要大衰減，如果相應減少安裝衰減器的衰減量，執行單量子位元門引起的主動負載不會增加 [71]。但對於磁通線路，由量子位元磁通偏置引起的主要主動負載會增加三倍以上，因為電纜的直流電阻與其直徑成反比 [71]。不過，如果使用超導 NbTi 電纜，磁通線路中的主動負載可以降至接近零 [71]。
+            </p>
+            <p>
+                展望未來，一個樂觀的場景是通過仔細屏蔽量子處理器將磁通偏移降至接近零 [72]。這樣就避免了由直流磁通偏置引起的主動負載，並且考慮使用 0.047 英寸直徑的電纜，CP 階段的主要相對負載約為 14%，這允許運行約 360 個量子位元 [72]。
+            </p>
+            <p>
+                為了實現運行約一千個量子位元的目標，作者提出以下修改 [72]：
+                <ol>
+                    <li>使用超導 NbTi 電纜作為磁通線路，消除這些線路中的主動負載 [72]。</li>
+                    <li>容忍 CP 溫度約為 200 mK，在此溫度下至少有 400 μW 的冷卻能力 [72]。將約 7 dB 的衰減從 CP 轉移到 MXC 階段，在不影響雜訊光子數的同時，將 MXC 的主動負載增加六倍 [72]。</li>
+                    <li>容忍基板溫度為 30 mK，在此溫度下 MXC 的冷卻能力至少增加一倍至約 40 μW，同時不影響雜訊光子數 [72]。在此情景下，驅動線路中的主動負載將成為 CP 和 MXC 的主要熱負載 [72]。</li>
+                </ol>
+                最終，未來的大規模稀釋冷凍機可能會有多個稀釋單元和/或更大的單元，以在 CP 和 MXC 階段提供足夠的冷卻能力 [31]。
+            </p>
+    
+            <h3>附錄簡述</h3>
+            <ul>
+                <li><strong>附錄 1:</strong> 提供了用於估計被動熱負載的相關材料和電纜的熱導率數據 [31, 73]。</li>
+                <li><strong>附錄 2:</strong> 提供了不同類型同軸電纜的衰減數據，並考慮了溫度依賴性 [73, 74]。</li>
+                <li><strong>附錄 3:</strong> 描述了射頻線路的散射參數測量，包括驅動線路和磁通線路，並討論了紅外濾波器的影響 [75-77]。</li>
+                <li><strong>附錄 4:</strong> 列出了用於溫度測量和加熱的感測器和加熱器類型 [53, 78]。</li>
+                <li><strong>附錄 5:</strong> 測量了稀釋冷凍機中脈衝管冷卻器在不同應用功率組合下的冷卻能力表現 [78]。</li>
+                <li><strong>附錄 6:</strong> 驗證了較高階段溫度的升高僅在較低階段產生偏移被動負載，而不會改變冷卻能力與溫度的函數關係 [56, 79]。</li>
+            </ul>
+    
+            <p><small>本介紹基於來源文件 "Engineering cryogenic setups for 100-qubit scale superconducting circuit systems.pdf" 的摘錄 [1-107]。</small></p>
+    
+          </div>
+        </section>
+
+
+
+
 
 
             <section id="c2">
@@ -4256,16 +3796,8 @@ Licence URI: https://www.os-templates.com/template-terms
                 
                 </p>
                 
-                <div style="text-align: center;">
-                <a href="./Image/Delft circuit.png">
-                  <img src="./Image/Delft circuit.png" alt="取代文字" style="width: 100%; height: auto;">
-                </a>
-                </div>
-                <p style="text-align:justify">
                 
-                Ref: Delft circuit
                 
-                <br>
             
                 <div style="text-align: center;">
                 <a href="./Image/LEPbw.jpg">
@@ -4277,6 +3809,7 @@ Licence URI: https://www.os-templates.com/template-terms
                 Ref: IBM Q
                 
                 <br>
+                </p>
                 
                 </div>
                 </section>
