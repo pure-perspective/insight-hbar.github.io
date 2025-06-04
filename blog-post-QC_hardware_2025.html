@@ -184,6 +184,8 @@
                                           ▲IBM的量子電腦原型機，可以見到平台分為多個區段，我們將由下一張圖來解說相關部件的功能。Ref: <a href="https://www.forschungsfabrik-mikroelektronik.de/en/focus-topics/next-generation-computing/ibm-q-system-one.html">
                                           IBM。
                                           </a>
+                                          <br>
+                                          <br>
                                         </p>
                                         
                                         
@@ -202,6 +204,8 @@
                                           量子放大器是操作在量子極限的訊號增益元件，亦是透過超導材料實現量子層級的增益。
                                           當回傳訊號通過增益後，須避免反向回傳到量子位元，故需要隔離器使訊號單向往外傳輸。
                                           Ref: IBM，作者譯。原圖見<a href="./Image/LEPbw.jpg">此</a>。
+                                          <br>
+                                          <br>
                                         </p>
                             
                             
@@ -213,6 +217,8 @@
                                         <p style="text-align:justify" class="dark-background">
                                           ▲IQM公司亦推出超導量子電腦整機產品，繪製出量子電腦低溫腔內的設計圖。可見類似的分階段設計與走線佈置。
                                           Ref: IQM，作者譯。原圖見<a href="./Image/IQM QPU.webp">此</a>。
+                                          <br>
+                                          <br>
                                         </a>
                             
                                       
@@ -290,6 +296,16 @@
                                     <li><a href="#">Development</a></li>
                                 </ul>
                             </div>/.widget-tags -->
+                            <div id="sidebar-container"></div>
+<script>
+  fetch("sidebar.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("sidebar-container").innerHTML = data;
+    })
+    .catch(err => console.error("錯誤：", err));
+</script>
+
                         </div><!-- /.sidebar -->
                         
                     </aside>
