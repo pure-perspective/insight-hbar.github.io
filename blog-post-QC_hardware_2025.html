@@ -291,18 +291,7 @@
                                 </ul>
                             </div>/.widget-tags -->
                         </div><!-- /.sidebar -->
-                        <div id="sidebar-container" class="widget widget-recent-posts"></div>
-                            <script>
-                            fetch("sidebar.html")
-                                .then(res => res.text())
-                                .then(data => {
-                                document.getElementById("sidebar-container").innerHTML = data;
-                                })
-                                .catch(err => {
-                                console.error("Sidebar 載入錯誤：", err);
-                                });
-                            </script>
-
+                        
                     </aside>
                 </div>
             </div>
