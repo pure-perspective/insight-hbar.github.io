@@ -338,10 +338,27 @@
                                 .then(pages => {
                                     const current = location.pathname.split("/").pop();
                                     const list = pages.map(p => {
-                                    const active = p.file === current ? ' style="font-weight:bold;"' : "";
-                                    return `${active}<a href="${p.file}">${p.title}</a>`;
+                                        const active = p.file === current ? ' style="font-weight:bold;"' : "";
+                                        return `<li${active}><a href="${p.file}">${p.title}</a></li>`;
                                     }).join("");
-                                    document.getElementById("lesson-list").innerHTML = `${list}`;
+                                    document.getElementById("lesson-list").innerHTML = `<ul>${list}</ul>`;
+                                });
+                            </script>
+
+                            <div class="widget">
+                                <h4 class="widget-title">量子課程目錄</h4>
+                                <div id="lesson-list_2"></div>
+                            </div>
+                            <script>
+                            fetch("lessons.json")
+                                .then(res => res.json())
+                                .then(pages => {
+                                const current = location.pathname.split("/").pop();
+                                const list = pages.map(p => {
+                                    const isActive = p.file === current ? "active" : "";
+                                    return `<div class="lesson-link ${isActive}"><a href="${p.file}">${p.title}</a></div>`;
+                                }).join("");
+                                document.getElementById("lesson-list_2").innerHTML = list;
                                 });
                             </script>
   
