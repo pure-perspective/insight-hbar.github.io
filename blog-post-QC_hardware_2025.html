@@ -297,14 +297,14 @@
                                 </ul>
                             </div>/.widget-tags -->
                             <div id="sidebar-container"></div>
-<script>
-  fetch("sidebar.html")
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById("sidebar-container").innerHTML = data;
-    })
-    .catch(err => console.error("錯誤：", err));
-</script>
+                            <script>
+                            fetch("sidebar.html")
+                                .then(res => res.text())
+                                .then(data => {
+                                document.getElementById("sidebar-container").innerHTML = data;
+                                })
+                                .catch(err => console.error("錯誤：", err));
+                            </script>
 
                         </div><!-- /.sidebar -->
                         
