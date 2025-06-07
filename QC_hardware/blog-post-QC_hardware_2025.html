@@ -240,6 +240,26 @@
                                         <a href=""><i class="fa fa-folder" aria-hidden="true"></i> Web Design</a>
                                     </span>
                                 </div><!-- /.post-meta -->
+                            
+                                <div id="prev-next-nav" class="text-center"></div>
+                                <script>
+                                fetch("./lessons.json")
+                                    .then(res => res.json())
+                                    .then(pages => {
+                                    const current = location.pathname.split("/").pop();
+                                    const index = pages.findIndex(p => p.file === current);
+                                    let html = "";
+                                    if (index > 0) {
+                                        const prev = pages[index - 1];
+                                        html += `<a class="btn btn-gray" href="${prev.file}">← 上一頁：${prev.title}</a> `;
+                                    }
+                                    if (index < pages.length - 1) {
+                                        const next = pages[index + 1];
+                                        html += `<a class="btn btn-gray" href="${next.file}">下一頁：${next.title} →</a>`;
+                                    }
+                                    document.getElementById("prev-next-nav").innerHTML = html;
+                                    });
+                                </script>
                             </div><!-- /.post-content -->
                         </article><!-- /.blog-post -->
                         <!--<div id="PostComments" class="post-comments">
@@ -296,9 +316,7 @@
                                     <li><a href="#">Development</a></li>
                                 </ul>
                             </div>/.widget-tags -->
-                            <div id="sidebar-container">
-                                <h4 class="widget-title">硬體技術與廠商</h4>
-                            </div>
+                            <div id="sidebar-container"></div>
                             <script>
                             fetch("./sidebar.html")
                                 .then(res => res.text())
@@ -308,6 +326,25 @@
                                 .catch(err => console.error("錯誤：", err));
                             </script>
 
+
+                            <div class="widget">
+                                <h4 class="widget-title">量子課程目錄</h4>
+                                <div id="lesson-list"></div>
+                            </div>
+                            
+                            <script>
+                                fetch("./lessons.json")
+                                .then(res => res.json())
+                                .then(pages => {
+                                    const current = location.pathname.split("/").pop();
+                                    const list = pages.map(p => {
+                                    const active = p.file === current ? ' style="font-weight:bold;"' : "";
+                                    return `<li${active}><a href="${p.file}">${p.title}</a></li>`;
+                                    }).join("");
+                                    document.getElementById("lesson-list").innerHTML = `<ul>${list}</ul>`;
+                                });
+                            </script>
+  
                         </div><!-- /.sidebar -->
                         
                     </aside>
