@@ -35,7 +35,7 @@
     <link href="../assets/css/style.css" rel="stylesheet">
     <link href="../assets/css/responsive.css" rel="stylesheet">
 
-    <title>超導量子電腦硬體指南 (2025) | 量子位元、組件與廠商全解析</title>
+    <title>超導量子位元(科普版)</title>
     <meta name="description" content="深入解析2025年超導量子電腦的構建，涵蓋量子處理器(QPU)、稀釋製冷機、控制電子、低溫佈線等核心硬體。提供全球主要製造商、價格範圍、技術挑戰與未來趨勢的詳細指引。">
     <meta name="keywords" content="超導量子電腦, 量子位元, Qubit, QPU, 稀釋製冷機, IBM, Google, QuantWare, Bluefors, 低溫系統, 控制電子, Josephson Junction, Transmon, Fluxonium, 量子計算硬體, SEO">
     <link rel="canonical" href="https://www.insight-ihbar.com/QC_hardware_2025.html" />
@@ -67,13 +67,13 @@
                         <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">科普介紹<i class="fa fa-caret-down hidden-xs" aria-hidden="true"></i></a>
 
                             <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                              <li><a href="../SCQ_elementary/main.html">超導量子位元(科普版)</a></li>
+                              <li class="active"><a href="../SCQ_elementary/main.html">超導量子位元(科普版)</a></li>
                               <li><a href="../SCQ_advanced/main.html">超導量子位元(進階版)</a></li>
                             </ul>
 
                         </li>
                         <!--<li class="active"><a href="../SCQ_elementary/main.html">科普介紹</a></li>-->
-                        <li class="active"><a href="../QC_hardware/main.html">硬體導論</a></li>
+                        <li><a href="../QC_hardware/main.html">硬體導論</a></li>
                         
                     </ul>
 
@@ -86,11 +86,11 @@
     <div id="hero" class="hero overlay subpage-hero blog-hero">
         <div class="hero-content">
             <div class="hero_2-text">
-                <h1>Blog</h1>
+                <h1>科普介紹</h1>
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
-                  <li class="breadcrumb-item"><a href="blog.html">Blog</a></li>
-                  <li class="breadcrumb-item active">Blog post</li>
+                  <li class="breadcrumb-item"><a href="../SCQ_elementary/main.html">超導量子位元(科普版)</a></li>
+                  <li class="breadcrumb-item active">超導量子位元是什麼呢？</li>
                 </ol>
             </div><!-- /.hero-text -->
         </div><!-- /.hero-content -->
@@ -101,49 +101,55 @@
         <section class="site-section subpage-site-section section-blog">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-9">
                         <article class="blog-post">
                             <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="">-->
                             <div class="post-content">
                                 <div style="text-align: center;">
-                                    <h2>超導量子電腦-硬體技術與廠商指引(2025)</h2>
-                                    <h3>構建超導量子電腦：關鍵部件、廠商、與技術挑戰深度解析</h3>
-                                  </div>
-                                    <p style="text-align:justify">
-                                      本文針對想進入超導量子計算硬體研究、開發人員的角度，提供當前超導量子電腦的硬體架構、相關元件的功能、當前市面上的廠商、技術發展瓶頸、與未來發展方向的參考。
-                                    </p>
-                                    <!-- 超導量子計算原理簡介 -->
-                                    <div class="post-content">
-                                        <h4 class="widget-title">量子課程目錄</h4>
-                                        <div id="lesson-list_2"></div>
-                                    </div>
+                                    <h2>超導量子位元是什麼呢？</h2>
+                                    <h3>解析約瑟夫森節如何變成量子位元</h3>
+                                </div>
+                                
+                                <p style="text-align:justify">
+                                    在古典計算中，一系列古典位元以0或1兩個狀態來紀錄資訊，同樣的，量子位元也是利用不同的量子狀態來記錄資訊和計算。最簡單的量子能階概念即為量子簡諧震盪(Quantum Simple Harmonic Oscillator)。想要用電子電路來實踐簡諧震盪，最簡單的方式就是一個\(LC\)電路，由一個電感\(L\)與一個電容\(C\)組成，可以見下圖（a）。古典的簡諧震盪是連續的，但在量子世界裡能階簡諧震盪是不連續的，可以利用不同能階來記錄訊息，我們習慣以\( \ket{0} \)、\(\ket{1}\)、\(\ket{2}\)...或\( \ket{g} \)、\(\ket{e}\)、\(\ket{f}\)...代表不同能量的能階，可以參考下圖（b）。可以看到圖（b）每個能階的差距是相同的，都是\(\hbar \omega_r\)。然而當我們要操作量子位元則的時侯，會希望系統被限制在\( \ket{0} \)和\(\ket{1}\)之間作轉換就好，此時就需要非線性元件來區分\( \ket{0} \)和\(\ket{1}\)與其他不想要的能階。約瑟夫森節就是良好的非線性電感元件，如圖（c）。圖（d）可以看到能階差距發生變化，就可以利用能階不圖的特性，來操作量子位元。故最基本的超導量子位元即為一個超導電容與一個約瑟夫森節組成！
+                                    <br>
+                                    <br>
+                                </p>
+                                
+                                
+                                <div style="text-align: center;">
+                                    <a href="../Image/SCQubit state.jpg">
+                                    <img src="../Image/SCQubit state.jpg" alt="取代文字" style="width: 100%; height: auto;">
+                                    </a>
+                                </div>
+                                <p style="text-align:justify" class="dark-background">
+                                    <span style="font-size: 0.7em; line-height: 0.8;">Ref: 10.1063/1.5089550 </span>
+                                <br>
+                                <br>
+                                </p>
+                                
+                                <div style="text-align: center;">
+                                    <a href="../Image/Transmon state.png">
+                                    <img src="../Image/Transmon state.png" alt="取代文字" style="width: 70%; height: auto;">
+                                    </a>
+                                </div>
+                                <p style="text-align:justify" class="dark-background">
+                                ▲此圖也可以很明顯展示超導量子位元能階變化，第二激發態\(\ket{f}\)(或\(\ket{2}\))能量較低。<br>
+                                <span style="font-size: 0.7em; line-height: 0.8;">Ref: 10.1103/RevModPhys.93.025005</span>
+                                
+                                </p>
+                                
 
 
-                                    <script>
-                                    fetch("lessons.json")
-                                        .then(res => res.json())
-                                        .then(pages => {
-                                        const current = location.pathname.split("/").pop();
-                                        const list = pages.map(p => {
-                                            const isActive = p.file === current ? "active" : "";
-                                            return `<div class="lesson-link ${isActive}" style="font-size: 18px;"><a href="${p.file}">${p.title}</a></div>`;
-                                        }).join("");
-                                        document.getElementById("lesson-list_2").innerHTML = list;
-                                        });
-                                    </script>
-                            
                                 <div class="post-meta">
                                     <span class="post-author">
                                         <a href="#"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="">王培儒</a>
                                     </span>
-                                    <span class="post-date">
-                                        <a href="https://www.quantum-perspectives.com/ihbar_ch.html"><i class="fa fa-handshake" aria-hidden="true"></i>量子遠見科技 贊助提供</a>
-                                    </span>
                                     <span class="post-category">
-                                        <a href="../QC_hardware/main.html"><i class="fa fa-folder" aria-hidden="true"></i> 硬體導論</a>
+                                        <a href="../SCQ_elementary/main.html"><i class="fa fa-folder" aria-hidden="true"></i> 超導量子位元(科普版)</a>
                                     </span>
                                 </div><!-- /.post-meta -->
-                                
+                            
                                 <div id="prev-next-nav" class="text-center"></div>
                                 <script>
                                 fetch("lessons.json")
@@ -154,7 +160,7 @@
                                     let html = "";
                                     if (index > 0) {
                                         const prev = pages[index - 1];
-                                        html += `<a class="btnx btn-gray" href="${prev.file}">← 上一頁</a> `;
+                                        html += `<a class="btn btn-gray" href="${prev.file}">← 上一頁</a> `;
                                     }
                                     if (index < pages.length - 1) {
                                         const next = pages[index + 1];
@@ -180,7 +186,47 @@
                             </form>    
                         </div> /.respond -->
                     </div>
-                    
+                    <aside class="col-md-3">
+                        <div class="sidebar">
+                            <!--<div class="widget search-form">
+                                <h4 class="widget-title">Search the blog</h4>
+                                <form class="form-group">
+                                    <input type="text" class="form-control" placeholder="Search" required>
+                                    <button class="btn btn-green" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                </form>
+                            </div> /.search-form -->
+                            <!--<div class="widget widget-recent-posts">
+                                <h4 class="widget-title">Recent posts</h4>
+                                <ul class="list-unstyled">
+                                    <li><a href="#">Inside The Lipsum</a></li>
+                                    <li><a href="#">Oscar Wilde</a></li>
+                                    <li><a href="#">Jeffrey Ween</a></li>
+                                    <li><a href="#">Responsive Design</a></li>
+                                    <li><a href="#">Development</a></li>
+                                </ul>
+                            </div> /.widget-recent-posts -->
+                            
+
+                            <div class="widget">
+                                <h4 class="widget-title">科普版：目錄</h4>
+                                <div id="lesson-list_2"></div>
+                            </div>
+                            <script>
+                            fetch("lessons.json")
+                                .then(res => res.json())
+                                .then(pages => {
+                                const current = location.pathname.split("/").pop();
+                                const list = pages.map(p => {
+                                    const isActive = p.file === current ? "active" : "";
+                                    return `<div class="lesson-link ${isActive}"><a href="${p.file}">${p.title}</a></div>`;
+                                }).join("");
+                                document.getElementById("lesson-list_2").innerHTML = list;
+                                });
+                            </script>
+  
+                        </div><!-- /.sidebar -->
+                        
+                    </aside>
                 </div>
             </div>
         </section><!-- /.section-portfolio -->
@@ -192,7 +238,7 @@
             <div class="row">
                 <div class="col-md-3 col-sm-4 col-xs-6">
                     <a class="site-title">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</a>
-                    <p>一起走進新時代的前沿科學、科技</p>
+                    <p>一起走進新時代的前沿科學與量子科技</p>
                     </div>
                 <div class="col-lg-offset-4 col-md-3 col-sm-4 col-md-offset-2 col-sm-offset-0 col-xs-6 ">
                     <h3>Keep in touch</h3>

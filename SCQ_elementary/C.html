@@ -35,7 +35,7 @@
     <link href="../assets/css/style.css" rel="stylesheet">
     <link href="../assets/css/responsive.css" rel="stylesheet">
 
-    <title>超導量子電腦硬體指南 (2025) | 量子位元、組件與廠商全解析</title>
+    <title>超導量子位元(科普版)</title>
     <meta name="description" content="深入解析2025年超導量子電腦的構建，涵蓋量子處理器(QPU)、稀釋製冷機、控制電子、低溫佈線等核心硬體。提供全球主要製造商、價格範圍、技術挑戰與未來趨勢的詳細指引。">
     <meta name="keywords" content="超導量子電腦, 量子位元, Qubit, QPU, 稀釋製冷機, IBM, Google, QuantWare, Bluefors, 低溫系統, 控制電子, Josephson Junction, Transmon, Fluxonium, 量子計算硬體, SEO">
     <link rel="canonical" href="https://www.insight-ihbar.com/QC_hardware_2025.html" />
@@ -67,13 +67,13 @@
                         <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">科普介紹<i class="fa fa-caret-down hidden-xs" aria-hidden="true"></i></a>
 
                             <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                              <li><a href="../SCQ_elementary/main.html">超導量子位元(科普版)</a></li>
+                              <li class="active"><a href="../SCQ_elementary/main.html">超導量子位元(科普版)</a></li>
                               <li><a href="../SCQ_advanced/main.html">超導量子位元(進階版)</a></li>
                             </ul>
 
                         </li>
                         <!--<li class="active"><a href="../SCQ_elementary/main.html">科普介紹</a></li>-->
-                        <li class="active"><a href="../QC_hardware/main.html">硬體導論</a></li>
+                        <li><a href="../QC_hardware/main.html">硬體導論</a></li>
                         
                     </ul>
 
@@ -86,11 +86,11 @@
     <div id="hero" class="hero overlay subpage-hero blog-hero">
         <div class="hero-content">
             <div class="hero_2-text">
-                <h1>Blog</h1>
+                <h1>科普介紹</h1>
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
-                  <li class="breadcrumb-item"><a href="blog.html">Blog</a></li>
-                  <li class="breadcrumb-item active">Blog post</li>
+                  <li class="breadcrumb-item"><a href="../SCQ_elementary/main.html">超導量子位元(科普版)</a></li>
+                  <li class="breadcrumb-item active">淺談超導電路量子位元的種類</li>
                 </ol>
             </div><!-- /.hero-text -->
         </div><!-- /.hero-content -->
@@ -101,49 +101,76 @@
         <section class="site-section subpage-site-section section-blog">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-9">
                         <article class="blog-post">
                             <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="">-->
                             <div class="post-content">
                                 <div style="text-align: center;">
-                                    <h2>超導量子電腦-硬體技術與廠商指引(2025)</h2>
-                                    <h3>構建超導量子電腦：關鍵部件、廠商、與技術挑戰深度解析</h3>
-                                  </div>
-                                    <p style="text-align:justify">
-                                      本文針對想進入超導量子計算硬體研究、開發人員的角度，提供當前超導量子電腦的硬體架構、相關元件的功能、當前市面上的廠商、技術發展瓶頸、與未來發展方向的參考。
-                                    </p>
-                                    <!-- 超導量子計算原理簡介 -->
-                                    <div class="post-content">
-                                        <h4 class="widget-title">量子課程目錄</h4>
-                                        <div id="lesson-list_2"></div>
-                                    </div>
+                                    <h2>淺談超導電路量子位元的種類</h2>
+                                    <h3>不同型態的超導量子位元</h3>
+                                </div>
+                                <p style="text-align:justify">
+                                以超導為基礎的量子位元可以區分為兩大類：
+                                </p>
+                                <ul>
+                                    <li>以超導電路為基礎，採用約瑟夫森節，有時候稱為人造原子（Artificial Atom），單一Qubit尺寸為約為微米\( \left( \mu m \right) \)等級。本文討論即為此類的Qubit。</li>
+                                    <li>拓墣量子位元，採用超導體為基底，表面放置奈米線，因為鄰近效應的關係，奈米線會被底層的超導體影響成超導性。施加磁場破壞時間反演對稱性，奈米線兩端會形成特殊的Majorana State。未來會有機會討論\(^a\)。</li>
+                                </ul>
+                                <p style="text-align:justify">
+                                    <span style="font-size: 0.7em; line-height: 0.8;">\(^a\)10.1038/s41586-022-05585-1</span><br>
+                                    以約瑟夫森節構成的超導電路，可以參考下圖呈現不同名稱的超導Qubit:
+                                </p>
+                                
+                                <div style="text-align: center;">
+                                <a href="../Image/SC Qubit type 1.png">
+                                    <img src="../Image/SC Qubit type 1.png" alt="取代文字" style="width: 100%; height: auto;">
+                                </a>
+                                </div>
+                                <p style="text-align:justify" class="dark-background">
+                                A區表示組成一個Qubit最基本的單元，箭頭為概念的延伸方向，我自己會分為四大類：
+                                <ul>
+                                
+                                <li>Type A: A1，以單一約瑟夫森節JJ作為量子位元，為較早期的Qubit設計。</li>
+                                <li>Type B: A2~A8，以電容並聯(C-shunt)一個JJ為基礎。後期為了更進一步增加Qubit的相干時間，朝向並聯大電感、縮小電容，來減緩雜訊的影響。</li>
+                                <li>Type C: A9~A10，此類Qubit針對其中一側的JJ性質做變化\(^{j}\)，使得其基態相位差不為0。實現的方式可以利用較複雜的電路設計\(^{a,b,c}\)、或是將絕緣層替換為磁性材料\(^{d,i}\)、或是採用s-wave搭配d-wave的異質JJ\(^{g,h}\)。</li>
+                                <li>Type Hybrid: A11，這類是以超導位元結合自旋量子點（Spin Quantum Dot, Spin QD）的複合\(^{k}\)。此外可以與超流氦形成複合Qubit\(^{e,f}\)、離子井等，可以參考\(^l\)。</li>
+                                </ul>
+                                
+                                <span style="font-size: 0.7em; line-height: 0.8;">\(^a\)10.1038/s41534-019-0231-2<br>
+                                \(^b\)10.1088/1367-2630/aab7cd<br>
+                                \(^c\)10.1088/1367-2630/ab09b0<br>
+                                \(^d\)10.1038/s43246-024-00659-1<br>
+                                \(^e\)10.1103/PhysRevA.101.012336<br>
+                                \(^f\)10.1038/s41467-019-13335-7<br>
+                                <!--\(^g\)10.1088/0953-2048/20/2/S02<br> d wave JJ-->
+                                \(^g\)10.1109/TASC.2019.2892078<br>
+                                \(^h\)10.1088/1361-6668/ab7053<br>
+                                \(^i\)10.1103/PhysRevApplied.8.054028<br>
+                                \(^j\)10.1088/0953-2048/21/3/034011<br>
+                                \(^k\)10.1038/s41567-023-02071-x<br>
+                                \(^l\)arXiv: 1204.2137<br>
+                                (A8) https://www.ntt-review.jp/archive/ntttechnical.php?contents=ntr201209fa2.html
+                                </span>
+                                </p>
+                                
+                                <p style="text-align:justify" class="dark-background">
+                                B區為Type A Qubit搭配控制電路，利用不同控制電路的方式，有不同的名稱，可以參考<a href="./D.html"><早年超導量子位元的種類></a>
+                                。<br>
+                                C區為Type B Qubit搭配控制電路的範例。
+                                </p>
+                                      
+                                  
 
 
-                                    <script>
-                                    fetch("lessons.json")
-                                        .then(res => res.json())
-                                        .then(pages => {
-                                        const current = location.pathname.split("/").pop();
-                                        const list = pages.map(p => {
-                                            const isActive = p.file === current ? "active" : "";
-                                            return `<div class="lesson-link ${isActive}" style="font-size: 18px;"><a href="${p.file}">${p.title}</a></div>`;
-                                        }).join("");
-                                        document.getElementById("lesson-list_2").innerHTML = list;
-                                        });
-                                    </script>
-                            
                                 <div class="post-meta">
                                     <span class="post-author">
                                         <a href="#"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="">王培儒</a>
                                     </span>
-                                    <span class="post-date">
-                                        <a href="https://www.quantum-perspectives.com/ihbar_ch.html"><i class="fa fa-handshake" aria-hidden="true"></i>量子遠見科技 贊助提供</a>
-                                    </span>
                                     <span class="post-category">
-                                        <a href="../QC_hardware/main.html"><i class="fa fa-folder" aria-hidden="true"></i> 硬體導論</a>
+                                        <a href="../SCQ_elementary/main.html"><i class="fa fa-folder" aria-hidden="true"></i> 超導量子位元(科普版)</a>
                                     </span>
                                 </div><!-- /.post-meta -->
-                                
+                            
                                 <div id="prev-next-nav" class="text-center"></div>
                                 <script>
                                 fetch("lessons.json")
@@ -154,7 +181,7 @@
                                     let html = "";
                                     if (index > 0) {
                                         const prev = pages[index - 1];
-                                        html += `<a class="btnx btn-gray" href="${prev.file}">← 上一頁</a> `;
+                                        html += `<a class="btn btn-gray" href="${prev.file}">← 上一頁</a> `;
                                     }
                                     if (index < pages.length - 1) {
                                         const next = pages[index + 1];
@@ -180,7 +207,47 @@
                             </form>    
                         </div> /.respond -->
                     </div>
-                    
+                    <aside class="col-md-3">
+                        <div class="sidebar">
+                            <!--<div class="widget search-form">
+                                <h4 class="widget-title">Search the blog</h4>
+                                <form class="form-group">
+                                    <input type="text" class="form-control" placeholder="Search" required>
+                                    <button class="btn btn-green" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                </form>
+                            </div> /.search-form -->
+                            <!--<div class="widget widget-recent-posts">
+                                <h4 class="widget-title">Recent posts</h4>
+                                <ul class="list-unstyled">
+                                    <li><a href="#">Inside The Lipsum</a></li>
+                                    <li><a href="#">Oscar Wilde</a></li>
+                                    <li><a href="#">Jeffrey Ween</a></li>
+                                    <li><a href="#">Responsive Design</a></li>
+                                    <li><a href="#">Development</a></li>
+                                </ul>
+                            </div> /.widget-recent-posts -->
+                            
+
+                            <div class="widget">
+                                <h4 class="widget-title">科普版：目錄</h4>
+                                <div id="lesson-list_2"></div>
+                            </div>
+                            <script>
+                            fetch("lessons.json")
+                                .then(res => res.json())
+                                .then(pages => {
+                                const current = location.pathname.split("/").pop();
+                                const list = pages.map(p => {
+                                    const isActive = p.file === current ? "active" : "";
+                                    return `<div class="lesson-link ${isActive}"><a href="${p.file}">${p.title}</a></div>`;
+                                }).join("");
+                                document.getElementById("lesson-list_2").innerHTML = list;
+                                });
+                            </script>
+  
+                        </div><!-- /.sidebar -->
+                        
+                    </aside>
                 </div>
             </div>
         </section><!-- /.section-portfolio -->
@@ -192,7 +259,7 @@
             <div class="row">
                 <div class="col-md-3 col-sm-4 col-xs-6">
                     <a class="site-title">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</a>
-                    <p>一起走進新時代的前沿科學、科技</p>
+                    <p>一起走進新時代的前沿科學與量子科技</p>
                     </div>
                 <div class="col-lg-offset-4 col-md-3 col-sm-4 col-md-offset-2 col-sm-offset-0 col-xs-6 ">
                     <h3>Keep in touch</h3>
