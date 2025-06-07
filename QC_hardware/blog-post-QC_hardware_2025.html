@@ -243,7 +243,7 @@
                             
                                 <div id="prev-next-nav" class="text-center"></div>
                                 <script>
-                                fetch("./lessons.json")
+                                fetch("lessons.json")
                                     .then(res => res.json())
                                     .then(pages => {
                                     const current = location.pathname.split("/").pop();
@@ -323,7 +323,7 @@
                                 <div id="lesson-list_2"></div>
                             </div>
                             <script>
-                            fetch("./lessons.json")
+                            fetch("lessons.json")
                                 .then(res => res.json())
                                 .then(pages => {
                                 const current = location.pathname.split("/").pop();
