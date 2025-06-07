@@ -251,15 +251,15 @@
                                     let html = "";
                                     if (index > 0) {
                                         const prev = pages[index - 1];
-                                        html += `<a class="btn btn-gray" href="${prev.file}">← 上一頁：${prev.title}</a> `;
+                                        html += `<a class="btn btn-gray" href="${prev.file}">← 上一頁</a> `;
                                     }
                                     if (index < pages.length - 1) {
                                         const next = pages[index + 1];
-                                        html += `<a class="btn btn-gray" href="${next.file}">下一頁：${next.title} →</a>`;
+                                        html += `<a class="btn btn-gray" href="${next.file}">下一頁 →</a>`;
                                     }
                                     document.getElementById("prev-next-nav").innerHTML = html;
                                     });
-                                </script>
+                                </script><!--  ${prev.title}   ${next.title}-->
                             </div><!-- /.post-content -->
                         </article><!-- /.blog-post -->
                         <!--<div id="PostComments" class="post-comments">
@@ -339,9 +339,9 @@
                                     const current = location.pathname.split("/").pop();
                                     const list = pages.map(p => {
                                     const active = p.file === current ? ' style="font-weight:bold;"' : "";
-                                    return `<li${active}><a href="${p.file}">${p.title}</a></li>`;
+                                    return `${active}<a href="${p.file}">${p.title}</a>`;
                                     }).join("");
-                                    document.getElementById("lesson-list").innerHTML = `<ul>${list}</ul>`;
+                                    document.getElementById("lesson-list").innerHTML = `${list}`;
                                 });
                             </script>
   
