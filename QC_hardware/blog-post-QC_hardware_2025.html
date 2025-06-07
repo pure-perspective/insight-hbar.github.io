@@ -296,9 +296,12 @@
                                     <li><a href="#">Development</a></li>
                                 </ul>
                             </div>/.widget-tags -->
-                            <div id="sidebar-container"></div>
+                            <div id="sidebar-container">
+                                <h4 class="widget-title">硬體技術與廠商</h4>
+
+                            </div>
                             <script>
-                            fetch("../sidebar.html")
+                            fetch("./sidebar.html")
                                 .then(res => res.text())
                                 .then(data => {
                                 document.getElementById("sidebar-container").innerHTML = data;
