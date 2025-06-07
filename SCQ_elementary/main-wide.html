@@ -89,8 +89,7 @@
                 <h1>科普介紹</h1>
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
-                  <li class="breadcrumb-item"><a href="../SCQ_elementary/main.html">超導量子位元(科普版)</a></li>
-                  <li class="breadcrumb-item active">早年超導量子位元的種類</li>
+                  <li class="breadcrumb-item">超導量子位元(科普版)</li>
                 </ol>
             </div><!-- /.hero-text -->
         </div><!-- /.hero-content -->
@@ -101,38 +100,35 @@
         <section class="site-section subpage-site-section section-blog">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-9">
+                    <div class="col-md-12">
                         <article class="blog-post">
                             <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="">-->
                             <div class="post-content">
                                 <div style="text-align: center;">
-                                    <h2>早年超導量子位元的種類</h2>
-                                    <h3></h3>
-                                </div>
-                                
-
-                                <p style="text-align:justify">
-                                    基本上所有的超導量子位元都奠基在約瑟夫森節為基礎，搭配電容和電感做組合。早年的超導量子位元可以見下圖：
-                                </p>
-
-                                <div style="text-align: center;">
-                                <a href="../Image/Early SCQ.png">
-                                    <img src="../Image/Early SCQ.png" alt="取代文字" style="width: 100%; height: auto;">
-                                </a>
-                                </div>
-                                <p style="text-align:justify" class="dark-background">
-                                ▲早期的超導量子位元分成三大類：Charge Qubit、Flux Qubit和Phase Qubit。簡易的概念差別在於主要控制Qubit的手段差異(途中黃色框框)：
-                                <br>
-                                \(\to\)(a)用電壓控制:因為電壓可以改變電容的儲電量，故稱為Charge Qubit<br>
-                                \(\to\)(b)用磁通量控制:磁通量會改變約瑟夫森節的儲能，稱為Flux Qubit<br>
-                                \(\to\)(c)用感應電流控制:感應電流會改變約瑟夫森節的相位，稱為Phase Qubit<br>
-
-                                <span style="font-size: 0.7em; line-height: 0.8;">Ref: 10.7498/aps.71.20211865 </span>
-                                </p>
-                                      
-                                  
-
-
+                                    <h2>超導量子位元(科普版)</h2>
+                                    <h3>構建超導量子電腦：關鍵部件、廠商、與技術挑戰深度解析</h3>
+                                  </div>
+                                    <p style="text-align:justify">
+                                      本文針對想進入超導量子計入門，做科普面的介紹，提供關於超導量子電腦原理、種類、性質做一個廣泛的介紹。一起開始研究吧！
+                                    </p>
+                                    <!-- 超導量子計算原理簡介 -->
+                                    <div class="post-content">
+                                        <h4 class="widget-title">超導量子位元(科普版):目錄</h4>
+                                        <div id="lesson-list_2"></div>
+                                    </div>
+                                    <script>
+                                    fetch("lessons.json")
+                                        .then(res => res.json())
+                                        .then(pages => {
+                                        const current = location.pathname.split("/").pop();
+                                        const list = pages.map(p => {
+                                            const isActive = p.file === current ? "active" : "";
+                                            return `<div class="lesson-link ${isActive}" style="font-size: 18px;"><a href="${p.file}">${p.title}</a></div>`;
+                                        }).join("");
+                                        document.getElementById("lesson-list_2").innerHTML = list;
+                                        });
+                                    </script>
+                            
                                 <div class="post-meta">
                                     <span class="post-author">
                                         <a href="#"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="">王培儒</a>
@@ -141,7 +137,8 @@
                                         <a href="../SCQ_elementary/main.html"><i class="fa fa-folder" aria-hidden="true"></i> 超導量子位元(科普版)</a>
                                     </span>
                                 </div><!-- /.post-meta -->
-                            
+
+
                                 <div id="prev-next-nav" class="text-center"></div>
                                 <script>
                                 fetch("lessons.json")
@@ -152,7 +149,7 @@
                                     let html = "";
                                     if (index > 0) {
                                         const prev = pages[index - 1];
-                                        html += `<a class="btn btn-gray" href="${prev.file}">← 上一頁</a> `;
+                                        html += `<a class="btnx btn-gray" href="${prev.file}">← 上一頁</a> `;
                                     }
                                     if (index < pages.length - 1) {
                                         const next = pages[index + 1];
@@ -178,47 +175,7 @@
                             </form>    
                         </div> /.respond -->
                     </div>
-                    <aside class="col-md-3">
-                        <div class="sidebar">
-                            <!--<div class="widget search-form">
-                                <h4 class="widget-title">Search the blog</h4>
-                                <form class="form-group">
-                                    <input type="text" class="form-control" placeholder="Search" required>
-                                    <button class="btn btn-green" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
-                                </form>
-                            </div> /.search-form -->
-                            <!--<div class="widget widget-recent-posts">
-                                <h4 class="widget-title">Recent posts</h4>
-                                <ul class="list-unstyled">
-                                    <li><a href="#">Inside The Lipsum</a></li>
-                                    <li><a href="#">Oscar Wilde</a></li>
-                                    <li><a href="#">Jeffrey Ween</a></li>
-                                    <li><a href="#">Responsive Design</a></li>
-                                    <li><a href="#">Development</a></li>
-                                </ul>
-                            </div> /.widget-recent-posts -->
-                            
-
-                            <div class="widget">
-                                <!--<h4 class="widget-title"><a href="./main.html">科普版：目錄</a></h4>-->
-                                <div id="lesson-list_2"></div>
-                            </div>
-                            <script>
-                            fetch("lessons.json")
-                                .then(res => res.json())
-                                .then(pages => {
-                                const current = location.pathname.split("/").pop();
-                                const list = pages.map(p => {
-                                    const isActive = p.file === current ? "active" : "";
-                                    return `<div class="lesson-link ${isActive}"><a href="${p.file}">${p.title}</a></div>`;
-                                }).join("");
-                                document.getElementById("lesson-list_2").innerHTML = list;
-                                });
-                            </script>
-  
-                        </div><!-- /.sidebar -->
-                        
-                    </aside>
+                    
                 </div>
             </div>
         </section><!-- /.section-portfolio -->
