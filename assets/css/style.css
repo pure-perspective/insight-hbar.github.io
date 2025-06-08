@@ -1481,7 +1481,7 @@ a.linkedin-bg:hover {
 }
 
 .post-content a {
-    color: #26292c;   
+    color: #8c8f94;   
 }
 
 .post-content .read-more {
@@ -1512,7 +1512,7 @@ a.linkedin-bg:hover {
 
 .blog-post a:hover + .post-content .post-title a,
 .post-content a:hover {
-    color: #499afe;
+    color: #26292c;
 }
 
 .post-meta {
