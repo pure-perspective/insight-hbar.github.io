@@ -53,30 +53,22 @@
         <nav id="primary-navigation" class="site-navigation">
             <div class="container">
 
-                <div class="navbar-header">
-                   
+                <div class="navbar-header">                   
                     <a href="../index.html" class="site-title">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</a>
-
                 </div><!-- /.navbar-header -->
 
                 <div class="collapse navbar-collapse" id="agency-navbar-collapse">
-
                     <ul class="nav navbar-nav navbar-right">
-
                         <li><a href="../index.html">Home</a></li>
                         <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">科普介紹<i class="fa fa-caret-down hidden-xs" aria-hidden="true"></i></a>
-
                             <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                              <li class="active"><a href="../SCQ_elementary/main.html">超導量子位元(科普版)</a></li>
-                              <li><a href="../SCQ_advanced/main.html">超導量子位元(進階版)</a></li>
+                              <li><a href="../SCQ_elementary/main.html">超導量子位元(科普版)</a></li>
+                              <li class="active"><a href="../SCQ_advanced/main.html">超導量子位元(進階版)</a></li>
                             </ul>
-
                         </li>
                         <!--<li class="active"><a href="../SCQ_elementary/main.html">科普介紹</a></li>-->
-                        <li><a href="../QC_hardware/main.html">硬體導論</a></li>
-                        
+                        <li><a href="../QC_hardware/main.html">硬體導論</a></li>                        
                     </ul>
-
                 </div>
 
             </div>   
@@ -89,7 +81,8 @@
                 <h1>科普介紹</h1>
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
-                  <li class="breadcrumb-item">超導量子位元(科普版)</li>
+                  <li class="breadcrumb-item"><a href="./main.html">超導量子位元(進階版)</a></li>
+                  <!--<li class="breadcrumb-item active">約瑟夫森節</li>-->
                 </ol>
             </div><!-- /.hero-text -->
         </div><!-- /.hero-content -->
@@ -105,25 +98,165 @@
                             <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="">-->
                             <div class="post-content">
                                 <div style="text-align: center;">
-                                    <h2>超導量子位元(科普版)</h2>
+                                    <h2>驅動 LC 電路</h2>
                                     <h3></h3>
-                                  </div>
-                                    <p style="text-align:justify">
-                                      本文針對想進入超導量子計入門，做科普面的介紹，提供關於超導量子電腦原理、種類、性質做一個廣泛的介紹。一起開始研究吧！
-                                    </p>
-                                    <!-- 超導量子計算原理簡介 -->
-                                    
+                                </div>
+                                
+                              
+                        <div style="text-align: center;">
+                          <a href="../Image/LC drived.png">
+                            <img src="../Image/LC drived.png" alt="取代文字" style="width: 70%; height: auto;">
+                          </a>
+                        </div>
+                            <p style="text-align:justify">
+                              現在我們來討論如何驅動 LC 電路與 Transmon。透過耦合電容 \( C_d \) 與外部電壓源 \( V_d \) 耦合，系統的 Lagrangian 為：
+                            </p>
+                        
+                            <p style="text-align: center;">
+                              \[
+                              \mathcal{L}_d(\dot{Q}, Q) = T - U = \frac{L\dot{Q}^2}{2} - \frac{Q^2}{2C} - \frac{Q_d^2}{2C_d}
+                              \]
+                            </p>
+                        
+                            <p style="text-align:justify">
+                              其中耦合電容 \( C_d \) 所攜帶的能量為：
+                            </p>
+                        
+                            <p style="text-align: center;">
+                              \[
+                              \frac{Q_d^2}{2C_d} = \frac{C_d (V - V_d)^2}{2} = \frac{C_d \left(\frac{Q}{C} - V_d\right)^2}{2} \]
+                        \[
+                              = \frac{C_d Q^2}{2C^2} - \frac{C_d Q}{C}V_d + \frac{C_d V_d^2}{2}
+                              \]
+                            </p>
+                        
+                            <p style="text-align:justify">
+                              將上述式子代入並整理得：
+                            </p>
+                        
+                            <p style="text-align: center;">
+                              \[
+                              \mathcal{L}_d(\dot{Q}, Q) = \frac{L\dot{Q}^2}{2} - \frac{Q^2}{2C} - \frac{C_d}{C} \frac{Q^2}{2C} + \frac{C_d}{C} QV_d - \frac{C_d V_d^2}{2}
+                              \]
+                        \[
+                        = \frac{L\dot{Q}^2}{2} - \frac{Q^2}{2C_\Sigma} + \frac{C_d}{C} QV_d - \frac{C_d V_d^2}{2}
+                              \]
+                            </p>
+                        
+                            <p style="text-align:justify">
+                              其中 \( C_\Sigma = \frac{C^2}{C + C_d} \)。定義正則動量：
+                            </p>
+                        
+                            <p style="text-align: center;">
+                              \[
+                              \Phi = -\frac{\partial \mathcal{L}_d}{\partial \dot{Q}} = -L\dot{Q} \quad \rightarrow \quad \dot{Q} = -\frac{\Phi}{L}
+                              \]
+                            </p>
+                        
+                            <p style="text-align:justify">
+                              接著計算 Hamiltonian：
+                            </p>
+                        
+                            <p style="text-align: center;">
+                              \[
+                              \bar{\mathcal{H}}_d = -\mathcal{L}_d - \Phi \dot{Q}\]
+                        \[ = -\frac{L\dot{Q}^2}{2} + \frac{Q^2}{2C_\Sigma} - \frac{C_d}{C} QV_d + \frac{\Phi^2}{L}\]
+                        \[
+                              = \frac{\Phi^2}{2L} + \frac{Q^2}{2C_\Sigma} - \frac{C_d}{C} QV_d
+                              \]
+                            </p>
+                        
                             
+                            </p>
+                        
+                        
+                        
+                        
+                         <details class="dark-background">
+                              <summary>完整推導過程</summary>
+                              <div style="margin-left: 20px;">
+                        <p style="text-align:justify">
+                              接著進行正則量子化：
+                            </p>
+                        
+                            <p style="text-align: center;">
+                              \[
+                              \begin{aligned}
+                              &a_d = \sqrt{\frac{1}{2\hbar} \sqrt{\frac{L}{C_\Sigma}}} \left(\sqrt{\frac{C_\Sigma}{L}} \Phi + iQ\right) \\
+                              &a_d^\dagger = \sqrt{\frac{1}{2\hbar} \sqrt{\frac{L}{C_\Sigma}}} \left(\sqrt{\frac{C_\Sigma}{L}} \Phi - iQ\right)
+                              \end{aligned}
+                              \]
+                        \[\quad \leftrightarrow \quad
+                              \begin{aligned}
+                              &\Phi_d = \sqrt{\frac{\hbar}{2} \sqrt{\frac{L}{C_\Sigma}}} (a_d^\dagger + a_d) \\
+                              &Q_d = i\sqrt{\frac{\hbar}{2} \sqrt{\frac{C_\Sigma}{L}}} (a_d^\dagger - a_d)
+                              \end{aligned}
+                              \]
+                        
+                        
+                        </p>
+                        
+                        
+                         <p style="text-align:justify">
+                        將上述代換代入
+                        </p>
+                        
+                        
+                                <p style="text-align:center">
+                                  
+                        \[
+                        =\hbar \sqrt{\frac{1}{LC_\Sigma}} \left( a_d^\dagger a_d + \frac{1}{2} \right) 
+                        - \frac{C_d}{C} \sqrt{\frac{\hbar}{2 C_\Sigma \sqrt{LC_\Sigma}}} \cdot i (a_d^\dagger - a_d) V_d
+                        \]
+                        </p>
+                        
+                        
+                         <p style="text-align:justify">
+                        定義頻率\(\omega_\Sigma = \frac{1}{\sqrt{L C_\Sigma}}\)
+                        </p>
+                        
+                        
+                                <p style="text-align:center">
+                        
+                        
+                        \[
+                        = \hbar \omega_\Sigma \left( a_d^\dagger a_d + \frac{1}{2} \right) 
+                        - C_d V_d \sqrt{\frac{\omega_\Sigma}{2\hbar (C + C_d)}} \cdot i (a_d^\dagger - a_d) 
+                        \]
+                                </p>
+                        
+                                <!-- 更多推導步驟 -->
+                        
+                              </div>
+                            </details>
+                        
+                            <p style="text-align:justify">
+                        
+                        
+                        
+                              最後結果為：
+                            </p>
+                        
+                            <p style="text-align: center;">
+                              \[
+                              \bar{\mathcal{H}} _d = \hbar \omega_\Sigma \left(a_d^\dagger a_d + \frac{1}{2}\right) -  i \Omega (a_d^\dagger - a_d)
+                              \]
+                            </p>
+                        
+                            <p style="text-align:justify">
+                              其中 \( \Omega = C_d V_d \sqrt{\frac{\omega_\Sigma}{2\hbar (C + C_d)}} \) 稱為拉比頻率（Rabi Frequency）。
+                            </p>
+
+
                                 <div class="post-meta">
                                     <span class="post-author">
                                         <a href="#"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="">王培儒</a>
                                     </span>
                                     <span class="post-category">
-                                        <a href="../SCQ_elementary/main.html"><i class="fa fa-folder" aria-hidden="true"></i> 超導量子位元(科普版)</a>
+                                        <a href="./main.html"><i class="fa fa-folder" aria-hidden="true"></i> 超導量子位元(進階版)</a>
                                     </span>
                                 </div><!-- /.post-meta -->
-
-
+                            
                                 <div id="prev-next-nav" class="text-center"></div>
                                 <script>
                                 fetch("lessons.json")
@@ -134,7 +267,7 @@
                                     let html = "";
                                     if (index > 0) {
                                         const prev = pages[index - 1];
-                                        html += `<a class="btnx btn-gray" href="${prev.file}">← 上一頁</a> `;
+                                        html += `<a class="btn btn-gray" href="${prev.file}">← 上一頁</a> `;
                                     }
                                     if (index < pages.length - 1) {
                                         const next = pages[index + 1];
@@ -211,7 +344,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3 col-sm-4 col-xs-6">
-                    <a class="site-title">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</a>
+                    <a href="../index.html" class="site-title">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</a>
                     <p>一起走進新時代的前沿科學與量子科技</p>
                     </div>
                 <div class="col-lg-offset-4 col-md-3 col-sm-4 col-md-offset-2 col-sm-offset-0 col-xs-6 ">
@@ -272,6 +405,20 @@
     <script src="../assets/js/jquery.shuffle.min.js"></script>
     <script src="../assets/js/script.js"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-  
+    <style>
+        details.dark-background {
+          background-color: #f5f5f5;
+          border: 1px solid #ddd;
+          padding: 10px;
+          border-radius: 5px;
+        }
+        details.dark-background summary {
+          cursor: pointer;
+          font-weight: bold;
+          background-color: #e0e0e0;
+          padding: 5px;
+          border-radius: 3px;
+        }
+      </style>
 </body>
 </html>

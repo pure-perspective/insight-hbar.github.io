@@ -53,30 +53,22 @@
         <nav id="primary-navigation" class="site-navigation">
             <div class="container">
 
-                <div class="navbar-header">
-                   
+                <div class="navbar-header">                   
                     <a href="../index.html" class="site-title">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</a>
-
                 </div><!-- /.navbar-header -->
 
                 <div class="collapse navbar-collapse" id="agency-navbar-collapse">
-
                     <ul class="nav navbar-nav navbar-right">
-
                         <li><a href="../index.html">Home</a></li>
                         <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">科普介紹<i class="fa fa-caret-down hidden-xs" aria-hidden="true"></i></a>
-
                             <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                              <li class="active"><a href="../SCQ_elementary/main.html">超導量子位元(科普版)</a></li>
-                              <li><a href="../SCQ_advanced/main.html">超導量子位元(進階版)</a></li>
+                              <li><a href="../SCQ_elementary/main.html">超導量子位元(科普版)</a></li>
+                              <li class="active"><a href="../SCQ_advanced/main.html">超導量子位元(進階版)</a></li>
                             </ul>
-
                         </li>
                         <!--<li class="active"><a href="../SCQ_elementary/main.html">科普介紹</a></li>-->
-                        <li><a href="../QC_hardware/main.html">硬體導論</a></li>
-                        
+                        <li><a href="../QC_hardware/main.html">硬體導論</a></li>                        
                     </ul>
-
                 </div>
 
             </div>   
@@ -89,7 +81,8 @@
                 <h1>科普介紹</h1>
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
-                  <li class="breadcrumb-item">超導量子位元(科普版)</li>
+                  <li class="breadcrumb-item"><a href="./main.html">超導量子位元(進階版)</a></li>
+                  <!--<li class="breadcrumb-item active">約瑟夫森節</li>-->
                 </ol>
             </div><!-- /.hero-text -->
         </div><!-- /.hero-content -->
@@ -105,25 +98,121 @@
                             <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="">-->
                             <div class="post-content">
                                 <div style="text-align: center;">
-                                    <h2>超導量子位元(科普版)</h2>
-                                    <h3></h3>
-                                  </div>
-                                    <p style="text-align:justify">
-                                      本文針對想進入超導量子計入門，做科普面的介紹，提供關於超導量子電腦原理、種類、性質做一個廣泛的介紹。一起開始研究吧！
-                                    </p>
-                                    <!-- 超導量子計算原理簡介 -->
-                                    
-                            
+                                    <h2>雙約瑟夫森節（SQUID）的非線性電感性質</h2>
+                                    <h3>頻率可調式量子位元</h3>
+                                </div>
+                                
+                    
+                    <div style="text-align: center;">
+                      <a href="../Image/SQUID.png">
+                        <img src="../Image/SQUID.png" alt="取代文字" style="width: 50%; height: auto;">
+                      </a>
+                    </div>
+                    
+                    
+                            <p style="text-align:justify">
+                                將兩組約瑟夫森節 \(J_1\)、\(J_2\) 相組，中間形成一個閉環，通入磁通 \( \Phi_B \) 與電壓 \( V \)。在前一節中，超導函數的相位對閉環的積分需滿足：
+                                \[
+                                \oint \nabla \theta(r) \cdot d\vec{l} - \frac{q}{\hbar} \Phi_B = 2\pi N
+                                \]
+                                因為在接面不連續會貢獻 \( \Delta\theta_1 \)、\( \Delta\theta_2 \)，\( q = -2e \)，帶入得：
+                                \[
+                                \Delta\theta_2 - \Delta\theta_1 + 2\pi \frac{\Phi_B}{\Phi_0} = 2\pi N
+                                \]
+                                \[
+                                \Delta\theta_2 = \Delta\theta_1 - 2\pi \frac{\Phi_B}{\Phi_0} + 2\pi N
+                                \]
+                            </p>
+                            <p style="text-align:justify">
+                                當整個 SQUID 通入電流 \( I = I_1 + I_2 \)，並使用前一節約瑟夫森節電流的關係式（這裡考慮對稱的 SQUID，即兩個約瑟夫森節的特性 \( I_c \) 相同），計算得：
+                                \[
+                                I = I_1 + I_2 = I_0 (\sin\Delta\theta_1 + \sin\Delta\theta_2)
+                                \]
+                                \[
+                                I = I_0 \left[\sin\Delta\theta_1 + \sin\left(\Delta\theta_1 - 2\pi \frac{\Phi_B}{\Phi_0} + 2\pi N\right)\right]
+                                \]
+                                \[
+                                I = I_0 \left[\sin\Delta\theta_1 + \sin\left(\Delta\theta_1 - 2\pi \frac{\Phi_B}{\Phi_0}\right)\right]
+                                \]
+                                利用三角恆等式化簡：
+                                \[
+                                I = I_0 \left[2 \sin\left(\frac{\Delta\theta_1 + \Delta\theta_1 - 2\pi \frac{\Phi_B}{\Phi_0}}{2}\right) 
+                                \cos\left(\frac{\Delta\theta_1 - \Delta\theta_1 + 2\pi \frac{\Phi_B}{\Phi_0}}{2}\right)\right]
+                                \]
+                                \[
+                                I = 2I_0 \cos\left(\frac{\Phi_B}{\Phi_0} \pi\right) \sin\left(\Delta\theta_1 - \frac{\Phi_B}{\Phi_0} \pi\right)
+                                \]
+                            </p>
+                            <p style="text-align:justify">
+                                前一節提到約瑟夫森節具有電感的性質，同理我們可以討論 SQUID 的電感性質。將電流對時間微分：
+                                \[
+                                \dot{I} = 2I_0 \cos\left(\frac{\Phi_B}{\Phi_0} \pi\right) \cos\left(\Delta\theta_1 - \frac{\Phi_B}{\Phi_0} \pi\right) \dot{\Delta\theta_1}
+                                \]
+                                而 \( \dot{\Delta\theta_1} \) 與電壓 \( V \) 的關係為：
+                                \[
+                                V = \frac{\hbar}{2e} \dot{\Delta\theta_1} = \frac{\Phi_0}{2\pi} \dot{\Delta\theta_1}
+                                \]
+                                帶入後可得電感值：
+                                \[
+                                L_{\text{SQUID}}(\Delta\theta_1, \Phi_B) = \left[\frac{2\pi}{\Phi_0} \cdot 2I_0 \cos\left(\frac{\Phi_B}{\Phi_0} \pi\right) 
+                                \cos\left(\Delta\theta_1 - \frac{\Phi_B}{\Phi_0} \pi\right)\right]
+                                \]
+                            </p>
+                            <p style="text-align:justify">
+                                可以注意到 \( L_{\text{SQUID}} \) 的值會受到外加磁通 \( \Phi_B \) 的影響，這為後來 Tunable Transmon 調整頻率的關鍵。定義變數 \( \Phi \)：
+                                \[
+                                \Phi \equiv \frac{\Delta\theta_1}{\pi} \Phi_0 - \Phi_B = \frac{\Phi_0}{\pi} \left(\Delta\theta_1 - \frac{\Phi}{\Phi_0} \pi\right)
+                                \]
+                                並有：
+                                \[
+                                \dot{\Phi} = \frac{\Phi_0}{\pi} \dot{\Delta\theta_1}
+                                \]
+                                電壓 \( V \) 和電流 \( I \) 分別為：
+                                \[
+                                V = \frac{1}{2} \dot{\Phi}, \quad I = 2I_0 \cos\left(\frac{\Phi_B}{\Phi_0} \pi\right) \sin\left(\frac{\Phi}{\Phi_0} \pi\right)
+                                \]
+                            </p>
+                            <p style="text-align:justify">
+                                固定外場 \( \Phi_B \) 下，一組 SQUID 儲存的能量為：
+                                \[
+                                E = \int IV \, dt = \int \left[2I_0 \cos\left(\frac{\Phi_B}{\Phi_0} \pi\right) \sin\left(\frac{\Phi}{\Phi_0} \pi\right) \cdot \frac{1}{2} \dot{\Phi}\right] dt
+                                \]
+                                化簡得：
+                                \[
+                                E = I_0 \cos\left(\frac{\Phi_B}{\Phi_0} \pi\right) \int \sin\left(\frac{\Phi}{\Phi_0} \pi\right) d\Phi
+                                \]
+                                \[
+                                E = -\frac{I_0 \Phi_0}{\pi} \cos\left(\frac{\Phi_B}{\Phi_0} \pi\right) \cos\left(\frac{\pi}{\Phi_0} \Phi\right)
+                                \]
+                            </p>
+                    
+                    
+                    
+                    
+                    <div style="text-align: center;">
+                      <a href="../Image/SQUID transmon.png">
+                        <img src="../Image/SQUID transmon.png" alt="取代文字" style="width:60%; height: auto;">
+                      </a>
+                    </div>
+                    <p style="text-align:justify">
+                    ▲由兩個約瑟夫森節組合成可調電感值的\(LC\)電路。
+                    
+                    </p>
+
+
+
+
+
+
                                 <div class="post-meta">
                                     <span class="post-author">
                                         <a href="#"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="">王培儒</a>
                                     </span>
                                     <span class="post-category">
-                                        <a href="../SCQ_elementary/main.html"><i class="fa fa-folder" aria-hidden="true"></i> 超導量子位元(科普版)</a>
+                                        <a href="./main.html"><i class="fa fa-folder" aria-hidden="true"></i> 超導量子位元(進階版)</a>
                                     </span>
                                 </div><!-- /.post-meta -->
-
-
+                            
                                 <div id="prev-next-nav" class="text-center"></div>
                                 <script>
                                 fetch("lessons.json")
@@ -134,7 +223,7 @@
                                     let html = "";
                                     if (index > 0) {
                                         const prev = pages[index - 1];
-                                        html += `<a class="btnx btn-gray" href="${prev.file}">← 上一頁</a> `;
+                                        html += `<a class="btn btn-gray" href="${prev.file}">← 上一頁</a> `;
                                     }
                                     if (index < pages.length - 1) {
                                         const next = pages[index + 1];
@@ -211,7 +300,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3 col-sm-4 col-xs-6">
-                    <a class="site-title">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</a>
+                    <a href="../index.html" class="site-title">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</a>
                     <p>一起走進新時代的前沿科學與量子科技</p>
                     </div>
                 <div class="col-lg-offset-4 col-md-3 col-sm-4 col-md-offset-2 col-sm-offset-0 col-xs-6 ">
@@ -272,6 +361,20 @@
     <script src="../assets/js/jquery.shuffle.min.js"></script>
     <script src="../assets/js/script.js"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-  
+    <style>
+        details.dark-background {
+          background-color: #f5f5f5;
+          border: 1px solid #ddd;
+          padding: 10px;
+          border-radius: 5px;
+        }
+        details.dark-background summary {
+          cursor: pointer;
+          font-weight: bold;
+          background-color: #e0e0e0;
+          padding: 5px;
+          border-radius: 3px;
+        }
+      </style>
 </body>
 </html>

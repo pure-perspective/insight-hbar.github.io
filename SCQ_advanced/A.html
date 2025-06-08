@@ -53,30 +53,22 @@
         <nav id="primary-navigation" class="site-navigation">
             <div class="container">
 
-                <div class="navbar-header">
-                   
+                <div class="navbar-header">                   
                     <a href="../index.html" class="site-title">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</a>
-
                 </div><!-- /.navbar-header -->
 
                 <div class="collapse navbar-collapse" id="agency-navbar-collapse">
-
                     <ul class="nav navbar-nav navbar-right">
-
                         <li><a href="../index.html">Home</a></li>
                         <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">科普介紹<i class="fa fa-caret-down hidden-xs" aria-hidden="true"></i></a>
-
                             <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                              <li class="active"><a href="../SCQ_elementary/main.html">超導量子位元(科普版)</a></li>
-                              <li><a href="../SCQ_advanced/main.html">超導量子位元(進階版)</a></li>
+                              <li><a href="../SCQ_elementary/main.html">超導量子位元(科普版)</a></li>
+                              <li class="active"><a href="../SCQ_advanced/main.html">超導量子位元(進階版)</a></li>
                             </ul>
-
                         </li>
                         <!--<li class="active"><a href="../SCQ_elementary/main.html">科普介紹</a></li>-->
-                        <li><a href="../QC_hardware/main.html">硬體導論</a></li>
-                        
+                        <li><a href="../QC_hardware/main.html">硬體導論</a></li>                        
                     </ul>
-
                 </div>
 
             </div>   
@@ -89,7 +81,8 @@
                 <h1>科普介紹</h1>
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
-                  <li class="breadcrumb-item">超導量子位元(科普版)</li>
+                  <li class="breadcrumb-item"><a href="./main.html">超導量子位元(進階版)</a></li>
+                  <!--<li class="breadcrumb-item active">約瑟夫森節</li>-->
                 </ol>
             </div><!-- /.hero-text -->
         </div><!-- /.hero-content -->
@@ -105,25 +98,132 @@
                             <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="">-->
                             <div class="post-content">
                                 <div style="text-align: center;">
-                                    <h2>超導量子位元(科普版)</h2>
-                                    <h3></h3>
-                                  </div>
-                                    <p style="text-align:justify">
-                                      本文針對想進入超導量子計入門，做科普面的介紹，提供關於超導量子電腦原理、種類、性質做一個廣泛的介紹。一起開始研究吧！
-                                    </p>
-                                    <!-- 超導量子計算原理簡介 -->
-                                    
+                                    <h2>量子計算硬體基礎</h2>
+                                    <h3>從控制面看超導量子電腦</h3>
+                                </div>
+
+                                <p style="text-align:justify">
+                                量子計算在特定問題上蘊含遠超古典電腦的運算潛力，其硬體卻也面臨控制困難、操作時間過短的問題。量子計算的硬體以量子位元作為的核心元件，還需搭配操控量子位元狀態的驅動元件、量子位元狀態的讀取元件。此外，因為量子位元容易受到外界干擾的特性，量子位元的校正/微調元件、量子糾錯元件等。簡而言之可以包含以下：
+                                </p>
                             
+                                <ul>
+                                <li>量子位元</li>
+                                <li>驅動</li>
+                                <li>讀取</li>
+                                <li>校正</li>
+                                <li>糾錯</li>
+                                </ul>
+                            
+                                <p style="text-align:justify">
+                                事實上，在現今的記憶體中，其實也包含以上不同的硬體分工，只是在量子計算裡面，以上不同元件需要整體考慮。更具體一點的講法，因為不同元件會互相交互作用，當我們利用量子物理學，寫下其整個量子電路的 Hamiltonian（或薛丁格方程式），其交互作用像會去"修正"量子位元本身的特性，一方面我們利用"修正"的特性來操作和讀取量子位元的資訊，然而另一方面卻也導致量子位元受到影響，偏離理想狀態、導致錯誤產生。
+                                </p>
+                            
+                                <p style="text-align:justify">
+                                本文專注在超導量子電路，量子電路中包含的元件分類如下（兩種切入點）：
+                                </p>
+                            
+                                <table style="width: 100%; border-collapse: collapse; text-align: left; border: 1px solid black;">
+                                    <tr>
+                                        <th style="border: 1px solid black; padding: 10px;">以功能性為觀點</th>
+                                        <td style="border: 1px solid black; padding: 10px;">
+                                        1. 量子位元（資料儲存）<br>
+                                        2. 驅動：耦合電路或 LC 共振器（作運算）<br>
+                                        3. 讀取（readout）：LC 共振器與饋線<br>
+                                        4. 校正：Flux line（改變量子位元頻率）<br>
+                                        5. 糾錯：量子位元（糾錯用）
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                    <th style="border: 1px solid black; padding: 10px;">以元件種類為觀點</th>
+                                        
+                                        <td style="border: 1px solid black; padding: 10px;">
+                                        1. LC 電路<br>
+                                        &nbsp;&nbsp;&nbsp;<b>a.</b> LC 共振器（線性 LC 電路）：用作讀取量子位元狀態（readout resonator），有時也可以作為量子位元間耦合（間接耦合）<br>
+                                        &nbsp;&nbsp;&nbsp;<b>b.</b> 量子位元（非線性 LC 電路）：部分作為資料儲存、部分作為糾錯用位元<br><br>
+                                        2. 饋線（feedline）：外部訊號送入與讀出<br><br>
+                                        3. 耦合元件：<br>
+                                        &nbsp;&nbsp;&nbsp;<b>a.</b> 操作、改變量子位元狀態<br>
+                                        &nbsp;&nbsp;&nbsp;<b>b.</b> 量子位元之間的直接耦合<br>
+                                        &nbsp;&nbsp;&nbsp;<b>c.</b> 將外部訊號與各元件交換訊號<br><br>
+                                        4. Flux line：調整改變量子位元頻率，讓量子位元在指定頻率運作
+                                        </td>
+                                    </tr>
+                                </table>
+                            
+                            
+                                <div style="text-align: center;">
+                                <a href="../Image/SIngle Qubit circuit.png">
+                                    <img src="../Image/SIngle Qubit circuit.png" alt="取代文字" style="width: 100%; height: auto;">
+                                </a>
+                                </div>
+                                
+                                    <p style="text-align:justify">
+                                    ▲首先可以先欣賞一下單量子位元的 layout。（a）顯微鏡底下的電路圖，（b）對應的電路圖，此圖中有一個 Qubit（紅色 Transmon）、一個 readout resonator（天藍色），兩條 feedline 個別驅動（Drive）量子位元與 readout resonator。各元件間利用電容作耦合。另外有一條 Flux line 連到 Qubit 旁，會產生磁場來改變 Transmon 的操作頻率。（c）readout resonator 因為與量子位元耦合，會受到量子位元在 \(|0\rangle\) 或 \(|1\rangle\) 狀態的差異產生頻譜的位移，利用 readout resonator 頻譜的位移的特性來得知量子位元的狀態。
+                                    <br><span style="font-size: 0.7em; line-height: 0.8;">Ref:arxiv.org/pdf/2106.11352</span><br><br>
+                                    </p>
+                                
+                                <div style="text-align: center;">
+                                <a href="../Image/2 qubit 1 resonator.png">
+                                    <img src="../Image/2 qubit 1 resonator.png" alt="取代文字" style="width: 100%; height: auto;">
+                                </a>
+                                </div>
+                                    <p style="text-align:justify">
+                                    ▲這張圖是兩個量子位元（Transmon）藉由一個 resonator 耦合在一起（間接耦合），可以注意的是下方一行文字寫這個 resonator 兼具耦合兩個量子位元的功能。
+                                    <br><span style="font-size: 0.7em; line-height: 0.8;">Ref:doi.org/10.1038/nature08121</span><br><br>
+                                </p>
+                                
+                                
+                                <div style="text-align: center;">
+                                <a href="../Image/4 qubit.png">
+                                    <img src="../Image/4 qubit.png" alt="取代文字" style="width: 100%; height: auto;">
+                                </a>
+                                </div>
+                                <p style="text-align:justify">
+                                    ▲這張圖是四個 Qubit，中間由 bus resonator 串連耦合四個 Qubit。其中四個接頭直通 Qubit，是 flux-line，另外左上跟右下各有一條 readout feedline I/O，各自連結到兩個 readout resonator 並與 Qubit 耦合（等於說一條 readout feedline 會同時讀取兩個 Qubit）。
+                                </p>
+                                
+                                
+                                <div style="text-align: center;">
+                                <a href="../Image/5Q.png">
+                                    <img src="../Image/5Q.png" alt="取代文字" style="width: 80%; height: auto;">
+                                </a>
+                                </div>
+                                <p style="text-align:justify">
+                                    
+                                
+                                    ▲這張是另一種 5 qubit layout 的示意圖。其中 Z 是 flux line，XY 是 Drive line，5 個 Qubit 是直接電容耦合。此外，每個 qubit 都有自己的 readout resonator，在上方併入（此圖顯是是電感耦合）到 readout line。
+                                    <br><span style="font-size: 0.7em; line-height: 0.8;">doi.org/10.1038/nature13171</span><br><br>
+                                </p>
+                                
+                                <p style="font-weight: bold; font-size: 1.2em;">邁向多 Qubit 模組</p>
+                                <div style="text-align: center;">
+                                <a href="./17 surface.png">
+                                    <img src="../Image/17 surface.png" alt="取代文字" style="width: 43%; height: auto;">
+                                </a>
+                                <a href="./Starmon.png">
+                                    <img src="../Image/Starmon.png" alt="取代文字" style="width: 55%; height: auto;">
+                                </a>
+                                </div>
+                                <p style="text-align:justify">
+                                    ▲要達到量子計算，需要同時操作許多 Qubit，同時因為糾錯的關係，也需要額外的 Qubit 來進行糾錯。下圖是一個 17 位元的實驗性量子晶片，排列方式是一種稱為 surface code（表面碼）的量子糾錯型態，圓形為 Qubit，粉色及紅色是 Data Qubit，天藍色及綠色是 Check Qubit。每個 Qubit 都連接 7 條線（暱稱為 Starmon），其中 4 條為 Qubit 間耦合、1 條 Flux line、1 條 Drive line、1 條 Readout resonator。Readout resonator 分別併入到三條 feedline。
+                                    <br><span style="font-size: 0.7em; line-height: 0.8;">https://arxiv.org/pdf/1612.08208</span><br><br>
+                                </p>
+
+
+
+
+
+
+
                                 <div class="post-meta">
                                     <span class="post-author">
                                         <a href="#"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="">王培儒</a>
                                     </span>
                                     <span class="post-category">
-                                        <a href="../SCQ_elementary/main.html"><i class="fa fa-folder" aria-hidden="true"></i> 超導量子位元(科普版)</a>
+                                        <a href="./main.html"><i class="fa fa-folder" aria-hidden="true"></i> 超導量子位元(進階版)</a>
                                     </span>
                                 </div><!-- /.post-meta -->
-
-
+                            
                                 <div id="prev-next-nav" class="text-center"></div>
                                 <script>
                                 fetch("lessons.json")
@@ -134,7 +234,7 @@
                                     let html = "";
                                     if (index > 0) {
                                         const prev = pages[index - 1];
-                                        html += `<a class="btnx btn-gray" href="${prev.file}">← 上一頁</a> `;
+                                        html += `<a class="btn btn-gray" href="${prev.file}">← 上一頁</a> `;
                                     }
                                     if (index < pages.length - 1) {
                                         const next = pages[index + 1];
@@ -211,7 +311,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3 col-sm-4 col-xs-6">
-                    <a class="site-title">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</a>
+                    <a href="../index.html" class="site-title">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</a>
                     <p>一起走進新時代的前沿科學與量子科技</p>
                     </div>
                 <div class="col-lg-offset-4 col-md-3 col-sm-4 col-md-offset-2 col-sm-offset-0 col-xs-6 ">
@@ -272,6 +372,21 @@
     <script src="../assets/js/jquery.shuffle.min.js"></script>
     <script src="../assets/js/script.js"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        details.dark-background {
+          background-color: #f5f5f5;
+          border: 1px solid #ddd;
+          padding: 10px;
+          border-radius: 5px;
+        }
+        details.dark-background summary {
+          cursor: pointer;
+          font-weight: bold;
+          background-color: #e0e0e0;
+          padding: 5px;
+          border-radius: 3px;
+        }
+      </style>
   
 </body>
 </html>

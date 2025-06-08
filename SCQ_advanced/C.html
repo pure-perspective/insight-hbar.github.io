@@ -53,30 +53,22 @@
         <nav id="primary-navigation" class="site-navigation">
             <div class="container">
 
-                <div class="navbar-header">
-                   
+                <div class="navbar-header">                   
                     <a href="../index.html" class="site-title">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</a>
-
                 </div><!-- /.navbar-header -->
 
                 <div class="collapse navbar-collapse" id="agency-navbar-collapse">
-
                     <ul class="nav navbar-nav navbar-right">
-
                         <li><a href="../index.html">Home</a></li>
                         <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">科普介紹<i class="fa fa-caret-down hidden-xs" aria-hidden="true"></i></a>
-
                             <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                              <li class="active"><a href="../SCQ_elementary/main.html">超導量子位元(科普版)</a></li>
-                              <li><a href="../SCQ_advanced/main.html">超導量子位元(進階版)</a></li>
+                              <li><a href="../SCQ_elementary/main.html">超導量子位元(科普版)</a></li>
+                              <li class="active"><a href="../SCQ_advanced/main.html">超導量子位元(進階版)</a></li>
                             </ul>
-
                         </li>
                         <!--<li class="active"><a href="../SCQ_elementary/main.html">科普介紹</a></li>-->
-                        <li><a href="../QC_hardware/main.html">硬體導論</a></li>
-                        
+                        <li><a href="../QC_hardware/main.html">硬體導論</a></li>                        
                     </ul>
-
                 </div>
 
             </div>   
@@ -89,7 +81,8 @@
                 <h1>科普介紹</h1>
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
-                  <li class="breadcrumb-item">超導量子位元(科普版)</li>
+                  <li class="breadcrumb-item"><a href="./main.html">超導量子位元(進階版)</a></li>
+                  <!--<li class="breadcrumb-item active">約瑟夫森節</li>-->
                 </ol>
             </div><!-- /.hero-text -->
         </div><!-- /.hero-content -->
@@ -105,25 +98,104 @@
                             <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="">-->
                             <div class="post-content">
                                 <div style="text-align: center;">
-                                    <h2>超導量子位元(科普版)</h2>
-                                    <h3></h3>
-                                  </div>
+                                    <h2>LC電路的正則量子化</h2>
+                                    <h3>量子化古典LC電路</h3>
+                                </div>
+                                
+
                                     <p style="text-align:justify">
-                                      本文針對想進入超導量子計入門，做科普面的介紹，提供關於超導量子電腦原理、種類、性質做一個廣泛的介紹。一起開始研究吧！
-                                    </p>
-                                    <!-- 超導量子計算原理簡介 -->
+                                    正則量子化是針對古典系統引入量子結構的一套方法，其核心是將 Hamiltonian 的 Poisson 結構替換為對易關係（commutator relation）。在前一節中，我們已經給出了 Lagrangian，現在透過 Lagendre 變換即可得到 Hamiltonian。
+                                        </p>
                                     
-                            
+                                        <p style="text-align:justify">
+                                          正則動量 \(\Phi_\#\) 定義為：
+                                          \[
+                                          \Phi_\# \equiv \frac{\partial \mathcal{L}}{\partial \dot{Q}} = \mathcal{L}\dot{Q} \leftrightarrow \dot{Q} = \frac{\Phi_\#}{L}.
+                                          \]
+                                          此處 \(\Phi_\#\) 的單位與磁通量相同，可以視為電感內部的磁通量。Hamiltonian \(H(\Phi_\#, Q)\) 定義為：
+                                          \[
+                                          \mathcal{H} \equiv \Phi_\# \dot{Q} - \mathcal{L} = \frac{\Phi_\#^2}{2L} + \frac{Q^2}{2C}.
+                                          \]
+                                        </p>
+                                    
+                                        <p style="text-align:justify">
+                                          在量子系統中，正則座標 \(q\) 和正則動量 \(p\) 滿足對易關係：
+                                          \[
+                                          [x, p] = i\hbar.
+                                          \]
+                                          對於本文中的參數，量子化條件為：
+                                          \[
+                                          [Q, \Phi_\#] = i\hbar.
+                                          \]
+                                    </p>
+                                    
+                                        <p style="text-align:justify; color:blue;">
+                                          本文目前採用 \(\Phi_\#\) 作為記號，這是因為與傳統文章採用的方式相反。傳統文章中，Hamiltonian 對於 \(\Phi_\#\) 與 \(Q\) 的地位是對稱的，定義誰是正則座標、誰是正則動量「似乎」是可以對換的（然而，Lagrangian 中動能和位能是反對稱的）。因此，本文直接反過來，將磁通量的部分作為廣義坐標，記為 \(\Phi\)，而 \(Q\) 作為廣義動量。
+                                        </p>
+                                    
+                                        <p style="text-align:justify; color:blue;">
+                                          在這種情況下，量子化條件變為：
+                                          \[
+                                          [\Phi, Q] = i\hbar,
+                                          \]
+                                          與本文的選擇差一個負號，即：
+                                          \[
+                                          \Phi = -\Phi_\#.
+                                          \]
+                                          這個負號也可以由 Lagrangian 的反對稱性進一步解釋。
+                                        </p>
+                                    
+                                        <p style="text-align:justify">
+                                    有一種說法是因為後續會利用非線性的電感元件:約瑟夫森節（Josephson junction）取代線性電感，此非線性項如果出現在位能項比較好理解。不過，後面在驅動量子位元的時候，也是施加電容電壓來驅動，此時卻反而像驅動動能而不是驅動位能。以計算而言，誰是動能誰是位能是沒有差的。
+                                    </p>
+                                    
+                                        <p style="text-align:justify">
+                                    
+                                          我們引入新的變量 \(a\)、\(a^\dagger\)：
+                                          \[
+                                          a = \sqrt{\frac{1}{2\hbar} \sqrt{\frac{L}{C}}} \left( Q + i\sqrt{\frac{C}{L}} \Phi_\# \right), \quad
+                                          a^\dagger = \sqrt{\frac{1}{2\hbar} \sqrt{\frac{L}{C}}} \left( Q - i\sqrt{\frac{C}{L}} \Phi_\# \right).
+                                          \]
+                                          反之，可以表示為：
+                                          \[
+                                          Q = \sqrt{\frac{\hbar}{2} \sqrt{\frac{C}{L}}} (a^\dagger + a), \quad
+                                          \Phi_\# = i\sqrt{\frac{\hbar}{2} \sqrt{\frac{L}{C}}} (a^\dagger - a).
+                                          \]
+                                        </p>
+                                    
+                                        <p style="text-align:justify">
+                                          易證 \([a, a^\dagger] = 1\)：
+                                          \[
+                                          [a, a^\dagger] = aa^\dagger - a^\dagger a = \frac{1}{2\hbar} \sqrt{\frac{L}{C}} \left[ Q, \Phi_\# \right] = 1.
+                                          \]
+                                          我們可以利用 \(a\)、\(a^\dagger\) 重寫 Hamiltonian \(H(\Phi_\#, Q)\)：
+                                          \[
+                                          \mathcal{H} = \frac{\Phi_\#^2}{2L} + \frac{Q^2}{2C} = \frac{\hbar \omega}{4} \left[ - (a^\dagger - a)^2 + (a^\dagger + a)^2 \right],
+                                          \]
+                                          其中 \(\omega = \frac{1}{\sqrt{LC}}\)。
+                                          展開後可得：
+                                          \[
+                                          \mathcal{H} = \frac{\hbar \omega}{2} \left[ a^\dagger a + a^\dagger a + 1 \right] = \hbar \omega \left[ a^\dagger a + \frac{1}{2} \right].
+                                          \]
+                                        </p>
+                                    
+                                        <p style="text-align:justify">
+                                          最終得到量子化後的 Hamiltonian，每個能階差為 \(\hbar \omega\)。
+                                    </p>
+
+
+
+
+
                                 <div class="post-meta">
                                     <span class="post-author">
                                         <a href="#"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="">王培儒</a>
                                     </span>
                                     <span class="post-category">
-                                        <a href="../SCQ_elementary/main.html"><i class="fa fa-folder" aria-hidden="true"></i> 超導量子位元(科普版)</a>
+                                        <a href="./main.html"><i class="fa fa-folder" aria-hidden="true"></i> 超導量子位元(進階版)</a>
                                     </span>
                                 </div><!-- /.post-meta -->
-
-
+                            
                                 <div id="prev-next-nav" class="text-center"></div>
                                 <script>
                                 fetch("lessons.json")
@@ -134,7 +206,7 @@
                                     let html = "";
                                     if (index > 0) {
                                         const prev = pages[index - 1];
-                                        html += `<a class="btnx btn-gray" href="${prev.file}">← 上一頁</a> `;
+                                        html += `<a class="btn btn-gray" href="${prev.file}">← 上一頁</a> `;
                                     }
                                     if (index < pages.length - 1) {
                                         const next = pages[index + 1];
@@ -211,7 +283,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3 col-sm-4 col-xs-6">
-                    <a class="site-title">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</a>
+                    <a href="../index.html" class="site-title">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</a>
                     <p>一起走進新時代的前沿科學與量子科技</p>
                     </div>
                 <div class="col-lg-offset-4 col-md-3 col-sm-4 col-md-offset-2 col-sm-offset-0 col-xs-6 ">
@@ -272,6 +344,21 @@
     <script src="../assets/js/jquery.shuffle.min.js"></script>
     <script src="../assets/js/script.js"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        details.dark-background {
+          background-color: #f5f5f5;
+          border: 1px solid #ddd;
+          padding: 10px;
+          border-radius: 5px;
+        }
+        details.dark-background summary {
+          cursor: pointer;
+          font-weight: bold;
+          background-color: #e0e0e0;
+          padding: 5px;
+          border-radius: 3px;
+        }
+      </style>
   
 </body>
 </html>
