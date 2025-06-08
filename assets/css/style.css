@@ -1747,3 +1747,15 @@ a.linkedin-bg:hover {
   }
   
 
+  @media (max-width: 768px) {
+    .dropdown.open .dropdown-menu {
+      display: block !important;
+      position: static;
+      float: none;
+      width: 100%;
+      background-color: #fff;
+      box-shadow: none;
+      margin: 0;
+    }
+  }
+  

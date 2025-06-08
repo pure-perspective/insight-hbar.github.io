@@ -220,6 +220,17 @@
             container.innerHTML = list;
           });
       </script>
+      <script>
+        // 手機點擊展開 dropdown（支援觸控裝置）
+        document.addEventListener("DOMContentLoaded", function () {
+          const dropdown = document.querySelector('.dropdown-toggle');
+          const parentLi = dropdown.parentElement;
       
+          dropdown.addEventListener("click", function (e) {
+            e.preventDefault(); // 阻止 href="#"
+            parentLi.classList.toggle("open");
+          });
+        });
+      </script>
 </body>
 </html>
