@@ -220,20 +220,17 @@
             container.innerHTML = list;
           });
       </script>
-      <script>
-        // 手機點擊展開 dropdown（支援觸控裝置）
-        document.addEventListener("DOMContentLoaded", function () {
-          const dropdown = document.querySelector('.dropdown-toggle');
-          const parentLi = dropdown.parentElement;
-      
-          dropdown.addEventListener("click", function (e) {
-            e.preventDefault(); // 阻止 href="#"
-            parentLi.classList.toggle("open");
-          });
-        });
-      </script>
-      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <style>
+        @media (max-width: 767px) {
+          li.dropdown:hover > .dropdown-menu,
+          li.dropdown.open > .dropdown-menu {
+            display: block !important;
+            position: static !important;
+            float: none;
+          }
+        }
+        </style>
+        
       
 </body>
 </html>
