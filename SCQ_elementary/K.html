@@ -130,22 +130,24 @@
                                             <li><b>脈衝的頻率（Frequency \( \omega_d \)）：</b> 決定是否能精確驅動 Qubit</li>
                                             <li><b>脈衝的包絡（Envelop \( F(t, \tau) \)）：</b> 影響漏態（Leakage）</li>
                                         </ul>
-                                        <p style="font-weight: bold; font-size: 1.2em;">
-                                        一個完整的脈衝可以表達為：
-                                        \[
-                                            P(t) = A \cdot F(t, \tau) \cdot \sin(\omega_q t)
-                                        \]
+                                <p style="text-align:justify">
+                                一個完整的脈衝可以表達為：
+                                \[
+                                    P(t) = A \cdot F(t, \tau) \cdot \sin(\omega_q t)
+                                \]
 
 
-                                        舉例如下：
-                                    </p>
+                                舉例如下：
+                                </p>
+
+                                
                                 <div style="text-align: center;">
                                 <a href="../Image/pulse.png">
                                     <img src="../Image/pulse.png" alt="取代文字" style="width: 100%; height: auto;">
                                 </a>
                                 </div>
 
-                                    </p>
+                                    
                                 <p style="text-align:justify">
                                 一般來說因為Qubit相干時間很短，會希望盡可能短的時間操作完Qubit的運算，以超導量子位元而言，相干時間能維持達微秒（μs）當前的技術而言已經很久了，故超導量子位元脈衝多半固定在奈秒等級（\(ns\)）。故操作Qubit的狀態一般採用調控脈衝的振幅的大小來決定轉角。 <br>
                                 (實驗中驅動大約\(10ns\)左右\(^a\))<br>
