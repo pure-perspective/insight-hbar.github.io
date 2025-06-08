@@ -128,7 +128,7 @@ button.btn:focus {
 .btn-gray:hover,
 .btn-gray:focus {
     background-color: #499afe;
-    color: #26272d;   
+    color: #fff;    
 }
 
 
