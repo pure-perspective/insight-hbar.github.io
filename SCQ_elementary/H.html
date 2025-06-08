@@ -90,7 +90,7 @@
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
                   <li class="breadcrumb-item"><a href="../SCQ_elementary/main.html">超導量子位元(科普版)</a></li>
-                  <!--<li class="breadcrumb-item active">淺談超導電路量子位元的種類</li>-->
+                  <!--<li class="breadcrumb-item active">早年超導量子位元的種類</li>-->
                 </ol>
             </div><!-- /.hero-text -->
         </div><!-- /.hero-content -->
@@ -106,59 +106,94 @@
                             <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="">-->
                             <div class="post-content">
                                 <div style="text-align: center;">
-                                    <h2>淺談超導電路量子位元的種類</h2>
-                                    <h3>不同型態的超導量子位元</h3>
+                                    <h2>超導量子電腦長什麼樣子？</h2>
+                                    <h3>目前建造超導量子電腦的複雜性</h3>
                                 </div>
-                                <p style="text-align:justify">
-                                以超導為基礎的量子位元可以區分為兩大類：
-                                </p>
-                                <ul>
-                                    <li>以超導電路為基礎，採用約瑟夫森節，有時候稱為人造原子（Artificial Atom），單一Qubit尺寸為約為微米\( \left( \mu m \right) \)等級。本文討論即為此類的Qubit。</li>
-                                    <li>拓墣量子位元，採用超導體為基底，表面放置奈米線，因為鄰近效應的關係，奈米線會被底層的超導體影響成超導性。施加磁場破壞時間反演對稱性，奈米線兩端會形成特殊的Majorana State。未來會有機會討論\(^a\)。</li>
-                                </ul>
-                                <p style="text-align:justify">
-                                    <span style="font-size: 0.7em; line-height: 0.8;">\(^a\)10.1038/s41586-022-05585-1</span><br>
-                                    以約瑟夫森節構成的超導電路，可以參考下圖呈現不同名稱的超導Qubit:
-                                </p>
                                 
+                                <p style="text-align:justify">
+                                    完整的超導量子電腦至少需包含：氦3極低溫真空環境、冷卻系統、大量的射頻訊號控制與讀取儀器等，故當前的超導量子電腦非常的巨大。此外，一個量子位元至少需要四條線路：
+                                    <ul>
+                                    <li>控制頻率*1：挑控磁通量的Fluxline。</li>
+                                    <li>控制狀態*1：Driveline。</li>
+                                    <li>讀取狀態*2：Readout line一進一出。</li>
+                                    </ul>
+                                    可以參考下圖：
+                                </p>
+                                    
                                 <div style="text-align: center;">
-                                <a href="../Image/SC Qubit type 1.png">
-                                    <img src="../Image/SC Qubit type 1.png" alt="取代文字" style="width: 100%; height: auto;">
-                                </a>
+                                    <a href="../Image/17 surface.png">
+                                        <img src="../Image/17 surface.png" alt="取代文字" style="width: 43%; height: auto;">
+                                    </a>
+                                    <a href="../Image/Starmon.png">
+                                        <img src="../Image/Starmon.png" alt="取代文字" style="width: 55%; height: auto;">
+                                    </a>
+                                </div>
+                                <p style="text-align:justify">
+                                    ▲要達到量子計算，需要同時操作許多 Qubit，同時因為糾錯的關係，也需要額外的 Qubit 來進行糾錯。上圖是一個 17 位元的實驗性量子晶片，排列方式是一種稱為 surface code（表面碼）的量子糾錯型態，原形為 Qubit，粉色及紅色是 Data Qubit，天藍色及綠色是 Check Qubit。每個 Qubit 都連接 7 條線（暱稱為 Starmon），其中 4 條為 Qubit 間耦合、1 條 Flux line、1 條 Drive line、1 條 Readout resonator。Readout resonator 分別併入到三條 feedline。雖然當前的技術可以將多個Qubit的Readout line整合在一起，透過頻率隔離的技術共用同一條Readout line（所謂Feedline），但我們還需要考慮控制量子位元間交互作用的Resonator，一個100位元的量子電腦原型就需要400條線路從外部送入，故目前常見的超導量子電腦可以看見大量的線路。
+                                    <br><span style="font-size: 0.7em; line-height: 0.8;">https://arxiv.org/pdf/1612.08208</span>
+                                    <br><br>
+                                </p>
+                                    
+                                <div style="text-align: center;">
+                                    <a href="../Image/IQM Tunable.png">
+                                        <img src="../Image/IQM Tunable.png" alt="取代文字" style="width: 60%; height: auto;">
+                                    </a>
+                                </div>
+                                
+                                <p style="text-align:justify">
+                                    量子位元間交互作用的Resonator/Coupler可以是可調控的，可進一步調控不同Qubit之間的耦合強度，但亦會增加控制電路的複雜度。
+                                    <br><span style="font-size: 0.7em; line-height: 0.8;">arxiv: 2408.12433</span>
+                                    <br><br>
+                                </p>
+                                    
+                                <div style="text-align: center;">
+                                    <a href="../Image/IBM Q.jpg">
+                                        <img src="../Image/IBM Q.jpg" alt="取代文字" style="width: 100%; height: auto;">
+                                    </a>
                                 </div>
                                 <p style="text-align:justify" class="dark-background">
-                                A區表示組成一個Qubit最基本的單元，箭頭為概念的延伸方向，我自己會分為四大類：
-                                <ul>
-                                
-                                <li>Type A: A1，以單一約瑟夫森節JJ作為量子位元，為較早期的Qubit設計。</li>
-                                <li>Type B: A2~A8，以電容並聯(C-shunt)一個JJ為基礎。後期為了更進一步增加Qubit的相干時間，朝向並聯大電感、縮小電容，來減緩雜訊的影響。</li>
-                                <li>Type C: A9~A10，此類Qubit針對其中一側的JJ性質做變化\(^{j}\)，使得其基態相位差不為0。實現的方式可以利用較複雜的電路設計\(^{a,b,c}\)、或是將絕緣層替換為磁性材料\(^{d,i}\)、或是採用s-wave搭配d-wave的異質JJ\(^{g,h}\)。</li>
-                                <li>Type Hybrid: A11，這類是以超導位元結合自旋量子點（Spin Quantum Dot, Spin QD）的複合\(^{k}\)。此外可以與超流氦形成複合Qubit\(^{e,f}\)、離子井等，可以參考\(^l\)。</li>
-                                </ul>
-                                
-                                <span style="font-size: 0.7em; line-height: 0.8;">\(^a\)10.1038/s41534-019-0231-2<br>
-                                \(^b\)10.1088/1367-2630/aab7cd<br>
-                                \(^c\)10.1088/1367-2630/ab09b0<br>
-                                \(^d\)10.1038/s43246-024-00659-1<br>
-                                \(^e\)10.1103/PhysRevA.101.012336<br>
-                                \(^f\)10.1038/s41467-019-13335-7<br>
-                                <!--\(^g\)10.1088/0953-2048/20/2/S02<br> d wave JJ-->
-                                \(^g\)10.1109/TASC.2019.2892078<br>
-                                \(^h\)10.1088/1361-6668/ab7053<br>
-                                \(^i\)10.1103/PhysRevApplied.8.054028<br>
-                                \(^j\)10.1088/0953-2048/21/3/034011<br>
-                                \(^k\)10.1038/s41567-023-02071-x<br>
-                                \(^l\)arXiv: 1204.2137<br>
-                                (A8) https://www.ntt-review.jp/archive/ntttechnical.php?contents=ntr201209fa2.html
-                                </span>
+                                    <span style="font-size: 0.7em; line-height: 0.8;">Ref: <a href="https://www.forschungsfabrik-mikroelektronik.de/en/focus-topics/next-generation-computing/ibm-q-system-one.html">
+                                    IBM
+                                    </a></span><br><br>
                                 </p>
-                                
+                                    
+                                    
+                                <div style="text-align: center;">
+                                    <a href="../Image/Googlw Q.webp">
+                                        <img src="../Image/Googlw Q.webp" alt="取代文字" style="width: 100%; height: auto;">
+                                    </a>
+                                </div>
                                 <p style="text-align:justify" class="dark-background">
-                                B區為Type A Qubit搭配控制電路，利用不同控制電路的方式，有不同的名稱，可以參考<a href="./D.html"><早年超導量子位元的種類></a>
-                                。<br>
-                                C區為Type B Qubit搭配控制電路的範例。
+                                    <span style="font-size: 0.7em; line-height: 0.8;">Ref: <a href="https://www.newscientist.com/article/2283945-google-demonstrates-vital-step-towards-large-scale-quantum-computers/">
+                                    Google
+                                    </a></span><br><br>
                                 </p>
-                                      
+                                    
+                                    
+                                    
+                                    
+                                <div style="text-align: center;">
+                                    <a href="../Image/IQCC QC.png">
+                                        <img src="../Image/IQCC QC.png" alt="取代文字" style="width: 100%; height: auto;">
+                                    </a>
+                                </div>
+                                <p style="text-align:justify" class="dark-background">
+                                        <span style="font-size: 0.7em; line-height: 0.8;">Ref: IQCC and Quantum Machines</span><br><br>
+                                </p>
+                                    
+                                <div style="text-align: center;">
+                                    <a href="../Image/IQM QPU.webp">
+                                        <img src="../Image/IQM QPU.webp" alt="取代文字" style="width: 100%; height: auto;">
+                                    </a>
+                                </div>
+                                <p style="text-align:justify" class="dark-background">
+                                    ▲IQM公司繪製出量子電腦低溫腔內的細節設計圖。<br>
+                                    <span style="font-size: 0.7em; line-height: 0.8;">Ref: <a href="https://www.meetiqm.com/technology/our-approach">
+                                    IQM
+                                    </a></span><br><br>
+                                </p>
+                        
+                        
                                   
 
 

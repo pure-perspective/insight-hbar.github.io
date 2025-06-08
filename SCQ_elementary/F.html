@@ -90,7 +90,7 @@
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
                   <li class="breadcrumb-item"><a href="../SCQ_elementary/main.html">超導量子位元(科普版)</a></li>
-                  <!--<li class="breadcrumb-item active">淺談超導電路量子位元的種類</li>-->
+                  <!--<li class="breadcrumb-item active">早年超導量子位元的種類</li>-->
                 </ol>
             </div><!-- /.hero-text -->
         </div><!-- /.hero-content -->
@@ -106,59 +106,64 @@
                             <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="">-->
                             <div class="post-content">
                                 <div style="text-align: center;">
-                                    <h2>淺談超導電路量子位元的種類</h2>
-                                    <h3>不同型態的超導量子位元</h3>
+                                    <h2>電子顯微鏡下的超導量子位元</h2>
+                                    <h3>看看超導量子電路實際長什麼樣子</h3>
                                 </div>
-                                <p style="text-align:justify">
-                                以超導為基礎的量子位元可以區分為兩大類：
-                                </p>
-                                <ul>
-                                    <li>以超導電路為基礎，採用約瑟夫森節，有時候稱為人造原子（Artificial Atom），單一Qubit尺寸為約為微米\( \left( \mu m \right) \)等級。本文討論即為此類的Qubit。</li>
-                                    <li>拓墣量子位元，採用超導體為基底，表面放置奈米線，因為鄰近效應的關係，奈米線會被底層的超導體影響成超導性。施加磁場破壞時間反演對稱性，奈米線兩端會形成特殊的Majorana State。未來會有機會討論\(^a\)。</li>
-                                </ul>
-                                <p style="text-align:justify">
-                                    <span style="font-size: 0.7em; line-height: 0.8;">\(^a\)10.1038/s41586-022-05585-1</span><br>
-                                    以約瑟夫森節構成的超導電路，可以參考下圖呈現不同名稱的超導Qubit:
-                                </p>
                                 
+
                                 <div style="text-align: center;">
-                                <a href="../Image/SC Qubit type 1.png">
-                                    <img src="../Image/SC Qubit type 1.png" alt="取代文字" style="width: 100%; height: auto;">
+                                <a href="../Image/SIngle Qubit circuit.png">
+                                    <img src="../Image/SIngle Qubit circuit.png" alt="取代文字" style="width: 100%; height: auto;">
                                 </a>
                                 </div>
-                                <p style="text-align:justify" class="dark-background">
-                                A區表示組成一個Qubit最基本的單元，箭頭為概念的延伸方向，我自己會分為四大類：
-                                <ul>
-                                
-                                <li>Type A: A1，以單一約瑟夫森節JJ作為量子位元，為較早期的Qubit設計。</li>
-                                <li>Type B: A2~A8，以電容並聯(C-shunt)一個JJ為基礎。後期為了更進一步增加Qubit的相干時間，朝向並聯大電感、縮小電容，來減緩雜訊的影響。</li>
-                                <li>Type C: A9~A10，此類Qubit針對其中一側的JJ性質做變化\(^{j}\)，使得其基態相位差不為0。實現的方式可以利用較複雜的電路設計\(^{a,b,c}\)、或是將絕緣層替換為磁性材料\(^{d,i}\)、或是採用s-wave搭配d-wave的異質JJ\(^{g,h}\)。</li>
-                                <li>Type Hybrid: A11，這類是以超導位元結合自旋量子點（Spin Quantum Dot, Spin QD）的複合\(^{k}\)。此外可以與超流氦形成複合Qubit\(^{e,f}\)、離子井等，可以參考\(^l\)。</li>
-                                </ul>
-                                
-                                <span style="font-size: 0.7em; line-height: 0.8;">\(^a\)10.1038/s41534-019-0231-2<br>
-                                \(^b\)10.1088/1367-2630/aab7cd<br>
-                                \(^c\)10.1088/1367-2630/ab09b0<br>
-                                \(^d\)10.1038/s43246-024-00659-1<br>
-                                \(^e\)10.1103/PhysRevA.101.012336<br>
-                                \(^f\)10.1038/s41467-019-13335-7<br>
-                                <!--\(^g\)10.1088/0953-2048/20/2/S02<br> d wave JJ-->
-                                \(^g\)10.1109/TASC.2019.2892078<br>
-                                \(^h\)10.1088/1361-6668/ab7053<br>
-                                \(^i\)10.1103/PhysRevApplied.8.054028<br>
-                                \(^j\)10.1088/0953-2048/21/3/034011<br>
-                                \(^k\)10.1038/s41567-023-02071-x<br>
-                                \(^l\)arXiv: 1204.2137<br>
-                                (A8) https://www.ntt-review.jp/archive/ntttechnical.php?contents=ntr201209fa2.html
-                                </span>
+
+                                <p style="text-align:justify">
+                                    ▲首先可以先欣賞一下Transmon的 layout。（a）顯微鏡底下的電路圖，（b）對應的電路圖，此圖中有一個 Qubit（紅色 Transmon）、一個 readout resonator（天藍色），兩條 feed\mathcal{L}ine 個別驅動（Drive）量子位元與 readout resonator。各元件間利用電容作耦合。另外有一條 Flux line 連到 Qubit 旁，會產生磁場來改變 Transmon 的操作頻率。（c）readout resonator 因為與量子位元耦合，會受到量子位元在 \(|0\rangle\) 或 \(|1\rangle\) 狀態的差異產生頻譜的位移，利用 readout resonator 頻譜的位移的特性來得知量子位元的狀態。
+                                    <br><span style="font-size: 0.7em; line-height: 0.8;">arxiv.org/pdf/2106.11352</span><br><br>
                                 </p>
-                                
-                                <p style="text-align:justify" class="dark-background">
-                                B區為Type A Qubit搭配控制電路，利用不同控制電路的方式，有不同的名稱，可以參考<a href="./D.html"><早年超導量子位元的種類></a>
-                                。<br>
-                                C區為Type B Qubit搭配控制電路的範例。
+
+
+
+                                <div style="text-align: center;">
+                                <a href="../Image/Fluxonium.png">
+                                    <img src="../Image/Fluxonium.png" alt="取代文字" style="width: 60%; height: auto;">
+                                </a>
+                                </div>
+                                <p style="text-align:justify">
+                                    ▲從其中一側的約瑟夫森節著手，改成串連許多約瑟夫森節構成一個電感\(L\)，稱為Fluxonium。
+                                    <br><span style="font-size: 0.7em; line-height: 0.8;">Ref: 10.1038/s41467-021-26686-x</span>
+                                    <br><br>
+                                        
                                 </p>
-                                      
+
+                                <div style="text-align: center;">
+                                <a href="../Image/Blochnium.png">
+                                    <img src="../Image/Blochnium.png" alt="取代文字" style="width: 100%; height: auto;">
+                                </a>
+                                </div>
+                                <p style="text-align:justify">
+                                    ▲Blochnium可以說是電感進一步串連的Fluxonium。其立體結構非常有趣。
+                                    <br><span style="font-size: 0.7em; line-height: 0.8;">Ref: 10.1038/s41586-020-2687-9</span><br>
+                                    <br><br>
+                                        
+                                </p>
+
+
+
+                                <div style="text-align: center;">
+                                <a href="../Image/JJ Array.png">
+                                    <img src="../Image/JJ Array.png" alt="取代文字" style="width: 100%; height: auto;">
+                                </a>
+                                </div>
+                                <p style="text-align:justify">
+                                    ▲另一張Fluxonium/Blochnium中的約瑟夫森節陣列蝕刻製程的圖片。此圖可以很明顯地看出捲鬚結構是由一連串的約瑟夫森節串連而成。
+                                    <br><span style="font-size: 0.7em; line-height: 0.8;">Ref: arxiv: 2411.10396</span>
+                                    <br><br>
+                                </p>
+
+
+
+
                                   
 
 

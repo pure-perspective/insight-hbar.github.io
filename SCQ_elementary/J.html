@@ -90,7 +90,7 @@
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
                   <li class="breadcrumb-item"><a href="../SCQ_elementary/main.html">超導量子位元(科普版)</a></li>
-                  <!--<li class="breadcrumb-item active">淺談超導電路量子位元的種類</li>-->
+                  <!--<li class="breadcrumb-item active">早年超導量子位元的種類</li>-->
                 </ol>
             </div><!-- /.hero-text -->
         </div><!-- /.hero-content -->
@@ -106,60 +106,28 @@
                             <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="">-->
                             <div class="post-content">
                                 <div style="text-align: center;">
-                                    <h2>淺談超導電路量子位元的種類</h2>
-                                    <h3>不同型態的超導量子位元</h3>
+                                    <h2>QPU拓墣</h2>
+                                    <h3>量子位元間的排列方式</h3>
                                 </div>
-                                <p style="text-align:justify">
-                                以超導為基礎的量子位元可以區分為兩大類：
-                                </p>
-                                <ul>
-                                    <li>以超導電路為基礎，採用約瑟夫森節，有時候稱為人造原子（Artificial Atom），單一Qubit尺寸為約為微米\( \left( \mu m \right) \)等級。本文討論即為此類的Qubit。</li>
-                                    <li>拓墣量子位元，採用超導體為基底，表面放置奈米線，因為鄰近效應的關係，奈米線會被底層的超導體影響成超導性。施加磁場破壞時間反演對稱性，奈米線兩端會形成特殊的Majorana State。未來會有機會討論\(^a\)。</li>
-                                </ul>
-                                <p style="text-align:justify">
-                                    <span style="font-size: 0.7em; line-height: 0.8;">\(^a\)10.1038/s41586-022-05585-1</span><br>
-                                    以約瑟夫森節構成的超導電路，可以參考下圖呈現不同名稱的超導Qubit:
-                                </p>
                                 
+
+                                <p style="text-align:justify">
+                                    在這邊簡單提一下量子處理器QPU設計。當前量子電路是二維電路，Qubit間的交互作用在電路上常只能與鄰近的Qubit連接。再搭配目前常見的糾錯設計（QEC）是表面碼（Surface code）採用四邊形的設計，所以當前的QPU，每個Qubit僅需四個coupler與鄰近Qubit耦合。製造商IQM亦提供新的QPU設計，試圖加入Computational Resonator，構造出更進階的量子計算方式，未來有機會可以撰文解說。
+                                </p>
                                 <div style="text-align: center;">
-                                <a href="../Image/SC Qubit type 1.png">
-                                    <img src="../Image/SC Qubit type 1.png" alt="取代文字" style="width: 100%; height: auto;">
+                                <a href="../Image/IQM QPU Topo.JPG">
+                                    <img src="../Image/IQM QPU Topo.JPG" alt="取代文字" style="width: 100%; height: auto;">
                                 </a>
                                 </div>
-                                <p style="text-align:justify" class="dark-background">
-                                A區表示組成一個Qubit最基本的單元，箭頭為概念的延伸方向，我自己會分為四大類：
-                                <ul>
-                                
-                                <li>Type A: A1，以單一約瑟夫森節JJ作為量子位元，為較早期的Qubit設計。</li>
-                                <li>Type B: A2~A8，以電容並聯(C-shunt)一個JJ為基礎。後期為了更進一步增加Qubit的相干時間，朝向並聯大電感、縮小電容，來減緩雜訊的影響。</li>
-                                <li>Type C: A9~A10，此類Qubit針對其中一側的JJ性質做變化\(^{j}\)，使得其基態相位差不為0。實現的方式可以利用較複雜的電路設計\(^{a,b,c}\)、或是將絕緣層替換為磁性材料\(^{d,i}\)、或是採用s-wave搭配d-wave的異質JJ\(^{g,h}\)。</li>
-                                <li>Type Hybrid: A11，這類是以超導位元結合自旋量子點（Spin Quantum Dot, Spin QD）的複合\(^{k}\)。此外可以與超流氦形成複合Qubit\(^{e,f}\)、離子井等，可以參考\(^l\)。</li>
-                                </ul>
-                                
-                                <span style="font-size: 0.7em; line-height: 0.8;">\(^a\)10.1038/s41534-019-0231-2<br>
-                                \(^b\)10.1088/1367-2630/aab7cd<br>
-                                \(^c\)10.1088/1367-2630/ab09b0<br>
-                                \(^d\)10.1038/s43246-024-00659-1<br>
-                                \(^e\)10.1103/PhysRevA.101.012336<br>
-                                \(^f\)10.1038/s41467-019-13335-7<br>
-                                <!--\(^g\)10.1088/0953-2048/20/2/S02<br> d wave JJ-->
-                                \(^g\)10.1109/TASC.2019.2892078<br>
-                                \(^h\)10.1088/1361-6668/ab7053<br>
-                                \(^i\)10.1103/PhysRevApplied.8.054028<br>
-                                \(^j\)10.1088/0953-2048/21/3/034011<br>
-                                \(^k\)10.1038/s41567-023-02071-x<br>
-                                \(^l\)arXiv: 1204.2137<br>
-                                (A8) https://www.ntt-review.jp/archive/ntttechnical.php?contents=ntr201209fa2.html
-                                </span>
+                                <p style="text-align:justify">                            
+                                    <span style="font-size: 0.7em; line-height: 0.8;">Ref: <a href="https://www.meetiqm.com/products/iqm-resonance">
+                                    IQM
+                                </a>
+                                    <br>
+                                    Ref: Arxiv: 2408.12433 <br></span>
+                                    <br><br>
                                 </p>
-                                
-                                <p style="text-align:justify" class="dark-background">
-                                B區為Type A Qubit搭配控制電路，利用不同控制電路的方式，有不同的名稱，可以參考<a href="./D.html"><早年超導量子位元的種類></a>
-                                。<br>
-                                C區為Type B Qubit搭配控制電路的範例。
-                                </p>
-                                      
-                                  
+                            
 
 
                                 <div class="post-meta">
