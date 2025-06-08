@@ -128,7 +128,7 @@ button.btn:focus {
 .btn-gray:hover,
 .btn-gray:focus {
     background-color: #499afe;
-    color: #fff;    
+    color: #26272d;   
 }
 
 
@@ -1512,7 +1512,7 @@ a.linkedin-bg:hover {
 
 .blog-post a:hover + .post-content .post-title a,
 .post-content a:hover {
-    color: #26292c;
+    color: #499afe;
 }
 
 .post-meta {
