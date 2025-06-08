@@ -1746,24 +1746,3 @@ a.linkedin-bg:hover {
     background-color: #eefdfb;
   }
   
-  @media (max-width: 768px) {
-    /* 強制顯示 dropdown-menu */
-    .navbar-nav .open .dropdown-menu {
-      display: block !important;
-      position: static !important;
-      float: none;
-      background-color: white;
-      box-shadow: none;
-      margin-top: 0;
-    }
-  
-    .dropdown-menu > li > a {
-      padding: 10px 20px;
-      font-size: 16px;
-    }
-  
-    /* 確保 toggle 不會關閉 dropdown */
-    .navbar-nav .dropdown.open > a {
-      pointer-events: none;
-    }
-  }
