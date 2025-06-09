@@ -201,7 +201,7 @@ Finally, the quantized Hamiltonian is obtained, with each energy level separated
                                     // 上一頁按鈕
                                     if (index > 0) {
                                     const prev = pages[index - 1];
-                                    html += `<a class="btn btn-gray" href="${prev.file}">← 上一頁</a> `;
+                                    html += `<a class="btn btn-gray" href="${prev.file}">← Previous</a> `;
                                     }
 
                                     // 英文版按鈕
@@ -210,7 +210,7 @@ Finally, the quantized Hamiltonian is obtained, with each energy level separated
                                     // 下一頁按鈕
                                     if (index < pages.length - 1) {
                                     const next = pages[index + 1];
-                                    html += `<a class="btn btn-gray" href="${next.file}">下一頁 →</a>`;
+                                    html += `<a class="btn btn-gray" href="${next.file}">Next →</a>`;
                                     }
 
                                     document.getElementById("prev-next-nav").innerHTML = html;
