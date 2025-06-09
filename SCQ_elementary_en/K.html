@@ -99,20 +99,81 @@
                             <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="">-->
                             <div class="post-content">
                                 <div style="text-align: center;">
-                                    <h2>Superconducting Qubits (Elementary)</h2>
+                                    <h2>How to Control a Superconducting Qubit</h2>
                                     <h3></h3>
                                 </div>
 
                                 
+    <p style="text-align:justify">
+      The most common method is Rabi oscillation, achieved by applying an oscillating pulse \( P(t) \) with a specific frequency. Let’s first visualize a Qubit undergoing a \( \pi \)-pulse transition from \( |\ 0\rangle \rightarrow |\ 1\rangle \) using the Bloch sphere:
+    </p>
+
+    <div style="text-align: center;">
+      <a href="../Image/pi pulse.gif">
+        <img src="../Image/pi pulse.gif" alt="Pulse Example" style="width: 100%; height: auto;">
+      </a>
+    </div>
+
+    <p style="font-weight: bold; font-size: 1.2em;">Main Parameters for Controlling a Qubit</p>
+
+    <ul>
+      <li><b>Pulse Amplitude (\( A \)):</b> Determines the state of the Qubit (the rotation angle on the Bloch sphere)</li>
+      <li><b>Pulse Duration (\( T \)):</b> Determines the state of the Qubit (the rotation angle on the Bloch sphere)</li>
+      <li><b>Pulse Frequency (\( \omega_d \)):</b> Ensures precise driving of the Qubit</li>
+      <li><b>Pulse Envelope (\( F(t, \tau) \)):</b> Affects leakage</li>
+    </ul>
+
+    <p>
+      A complete pulse can be expressed as:
+      \[
+      P(t) = A \cdot F(t, \tau) \cdot \sin(\omega_q t)
+      \]
+    </p>
+
+    <p>Here’s an example:</p>
+    <div style="text-align: center;">
+      <a href="../Image/pulse.png">
+        <img src="../Image/pulse.png" alt="Pulse Visualization" style="width: 100%; height: auto;">
+      </a>
+    </div>
+
+    <p style="text-align:justify">
+      Generally, because the coherence time of a Qubit is very short, we aim to complete Qubit operations as quickly as possible. For superconducting qubits, the coherence time can reach microseconds (\(\mu s\)), which is already considered long in current technology. Therefore, pulses for superconducting qubits are typically in the nanosecond (\(ns\)) range. Consequently, the Qubit state is usually controlled by adjusting the pulse amplitude to determine the rotation angle.<br>
+      (For example\(^a\), the driving duration is approximately \( 10ns \)).
+      <span style="font-size: 0.7em; line-height: 0.8;">\(^a\): Ref: DOI: 10.1103/PRXQuantum.5.030353</span><br><br>
+    </p>
+
+    <p style="text-align:justify">
+      The process can be visualized using the Bloch sphere, as shown here for rotations around the \( X \)-axis by \(0.25\pi\), \(0.5\pi\), \(0.75\pi\), and a full \( \pi \)-pulse. It can be observed that the rotation angle is determined by the pulse amplitude.
+    </p>
+
+    <div style="text-align: center;">
+      <a href="../Image/4 amplitude.gif">
+        <img src="../Image/4 amplitude.gif" alt="Amplitude Example" style="width: 100%; height: auto;">
+      </a>
+    </div>
+
+    <p style="text-align:justify">
+      Similarly, we can discuss achieving the same \( \pi \)-pulse transition from \( |\ 0\rangle \rightarrow |\ 1\rangle \) using different pulse durations (\( T \)).
+    </p>
+
+    <div style="text-align: center;">
+      <a href="../Image/4 duration compare.gif">
+        <img src="../Image/4 duration compare.gif" alt="Duration Comparison" style="width: 100%; height: auto;">
+      </a>
+    </div>
+
+    <p style="text-align:justify">
+      Naively, one might think that since superconducting qubits have a short coherence time, the shorter the pulse duration (\( T \)), the better. In the next section, we will discuss how shorter pulses introduce more irrelevant oscillation frequencies, leading to errors in Qubit operations. In practice, determining the appropriate pulse duration (\( T \)) and amplitude (\( A \)) is a crucial part of regular Qubit calibration. Good calibration ensures high-quality quantum computation, whereas poor calibration can result in errors that make quantum computation less accurate than classical computation.
+    </p>
+
                                 
                                 
-                                <p style="text-align:justify">
-                                    This article offers an introductory, popular-science overview for those interested in getting started with superconducting quantum computing. It provides a broad introduction to the principles, types, and key characteristics of superconducting quantum computers. Let’s begin exploring together!
-                                    <br><br>
-                                </p>
-                                
-                                
-                              
+
+
+
+
+
                                 <div class="post-meta">
                                     <span class="post-author">
                                         <a href="#"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="">Peir-Ru Wang</a>

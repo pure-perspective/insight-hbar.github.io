@@ -99,20 +99,108 @@
                             <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="">-->
                             <div class="post-content">
                                 <div style="text-align: center;">
-                                    <h2>Superconducting Qubits (Elementary)</h2>
+                                    <h2>Other Types of Qubits</h2>
                                     <h3></h3>
                                 </div>
+                                
+                            <div style="text-align: center;">
+                              <a href="../Image/Qubit type.png">
+                                <img src="../Image/Qubit type.png" alt="Types of Qubits" style="width: 100%; height: auto;">
+                              </a>
+                            </div>
+                            <p style="text-align:justify" class="dark-background">
+                              Previous discussions covered composite superconducting qubits. Here, we briefly introduce other types of qubits. In applications, qubits must strike a balance between easy controllability and resistance to noise, extending decoherence time. However, these two demands often conflict; ease of control means greater susceptibility to noise, while higher stability implies difficulty in control. 
+                              Developing hybrid systems that integrate different qubit types or composite qubits is a viable direction.
+                              <br>
+                              <span style="font-size: 0.7em; line-height: 0.8;">Ref: arxiv: 2303.04061</span><br><br>
+                            </p>
+                        
+                            <p style="text-align:justify">
+                              <strong>(a) Superconducting Quantum Processor</strong><br>
+                              Composed of artificial atom arrays using Josephson Junctions and capacitors, controlled via microwave electronics.<br>
+                              Qubit Count: ~100<br>
+                              Quantum Gate Fidelity: 
+                              Single Qubit Gate \(F_1 > 99\%\), Two Qubit Gate \(F_2 > 99\%\)<br>
+                              <b>Pros:</b> Fast operation, high controllability, excellent scalability<br>
+                              <b>Cons:</b> Crosstalk, low-temperature requirement, challenges in large-scale expansion<br><br><br>
+                            </p>
+                        
+                            <p style="text-align:justify">
+                              <strong>(b) Trapped Ion Quantum Computing</strong><br>
+                              Utilizing laser-cooled atomic ions, trapped with RF electric fields and manipulated with lasers.<br>
+                              Qubit Count: 20–30<br>
+                              Quantum Gate Fidelity:
+                              Single Qubit Gate \(F_1 > 99.9\%\), Two Qubit Gate \(F_2 > 99\%\)<br>
+                              <b>Pros:</b> Long coherence time, high gate precision, reconfigurable qubit links<br>
+                              <b>Cons:</b> Difficult to scale up technically<br><br><br>
+                            </p>
+                        
+                            <p style="text-align:justify">
+                              <strong>(c) Semiconductor Spin-Based Quantum Computing</strong><br>
+                              Utilizing the electron or hole spin within semiconductor quantum dots as qubits.<br>
+                              Qubit Count: 6<br>
+                              Quantum Gate Fidelity:
+                              Single Qubit Gate \(F_1 \approx 99.99\%\), Two Qubit Gate \(F_2 \approx 99.5\%\)<br>
+                              <b>Pros:</b> Mature technology, long coherence time, compact footprint<br>
+                              <b>Cons:</b> Requires nanoscale manufacturing precision<br><br><br>
+                            </p>
+                        
+                            <p style="text-align:justify">
+                              <strong>(d) NV Center Quantum Computing</strong><br>
+                              Quantum operations using the long coherence time of electron and nuclear spins at point defects in diamonds (NV centers).<br>
+                              Qubit Count: 10<br>
+                              Quantum Gate Fidelity:
+                              Single Qubit Gate \(F_1 \approx 99.995\%\), Two Qubit Gate \(F_2 \approx 99.2\%\)<br>
+                              <b>Pros:</b> Room-temperature operation, high sensitivity, suitable for quantum networks<br>
+                              <b>Cons:</b> Difficult to scale up<br><br><br>
+                            </p>
+                        
+                            <p style="text-align:justify">
+                              <strong>(e) Neutral Atom Array Quantum Computing</strong><br>
+                              Utilizing optical tweezers to trap neutral atoms and controlling interatomic interactions via Rydberg effects.<br>
+                              Qubit Count:
+                              Digital Processor: 24<br>
+                              Analog Simulator: 289<br>
+                              <b>Pros:</b> Supports both digital computation and analog simulation, highly scalable<br>
+                              <b>Cons:</b> Needs improvement in two-qubit gate fidelity<br><br><br>
+                            </p>
+                        
+                            <p style="text-align:justify">
+                              <strong>(f) NMR Quantum Computing</strong><br>
+                              Using nuclear spins in molecules for quantum operations.<br>
+                              Qubit Count: 12<br>
+                              Quantum Gate Fidelity:
+                              Single Qubit Gate \(F_1 \approx 99.98\%\), Two Qubit Gate \(F_2 \approx 99.3\%\)<br>
+                              <b>Pros:</b> Room-temperature operation, long coherence time, suitable for digital simulations<br>
+                              <b>Cons:</b> Difficult to scale up to large systems<br><br><br>
+                            </p>
+                        
+                            <p style="text-align:justify">
+                              <strong>(g) Photonic Quantum Computing</strong><br>
+                              Manipulating quantum information using single photons or conjugate variables of electromagnetic field modes.<br>
+                              Qubit Count: 18 (individual control), 255 (Jiuzhang 3.0)<br>
+                              Quantum Gate Fidelity:
+                              Single Qubit Gate \(F_1 \approx 99.84\%\), Two Qubit Gate \(F_2 \approx 99.69\%\)<br>
+                              <b>Pros:</b> Resistance to decoherence, room-temperature operation, suitable for distributed quantum computing<br>
+                              <b>Cons:</b> Photon-photon gates are challenging to implement<br><br><br>
+                            </p>
+                        
+                            <p style="text-align:justify">
+                              <strong>(h) Topological Quantum Computing</strong><br>
+                              Based on topological encoding using non-Abelian anyons, performing operations through braiding.<br>
+                              Qubit Count: Experimental stage<br>
+                              Quantum Gate Fidelity: N/A<br>
+                              <b>Pros:</b> Intrinsic topological protection, potential for large-scale error correction<br>
+                              <b>Cons:</b> Still in development<br><br><br>
+                            </p>
+                                
 
-                                
-                                
-                                
-                                <p style="text-align:justify">
-                                    This article offers an introductory, popular-science overview for those interested in getting started with superconducting quantum computing. It provides a broad introduction to the principles, types, and key characteristics of superconducting quantum computers. Let’s begin exploring together!
-                                    <br><br>
-                                </p>
-                                
-                                
-                              
+
+
+
+
+
+
                                 <div class="post-meta">
                                     <span class="post-author">
                                         <a href="#"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="">Peir-Ru Wang</a>

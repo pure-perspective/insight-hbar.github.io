@@ -99,20 +99,63 @@
                             <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="">-->
                             <div class="post-content">
                                 <div style="text-align: center;">
-                                    <h2>Superconducting Qubits (Elementary)</h2>
+                                    <h2>A Brief Overview of Superconducting Circuit Qubit Types</h2>
                                     <h3></h3>
                                 </div>
 
                                 
                                 
                                 
-                                <p style="text-align:justify">
-                                    This article offers an introductory, popular-science overview for those interested in getting started with superconducting quantum computing. It provides a broad introduction to the principles, types, and key characteristics of superconducting quantum computers. Let’s begin exploring together!
-                                    <br><br>
-                                </p>
+                            <p style="text-align:justify">
+                              Superconducting-based quantum bits can be classified into two main types:
+                              <ul>
+                                <li>Qubits based on superconducting circuits using Josephson Junctions, sometimes referred to as artificial atoms. A single qubit size is about the micrometer (\( \mu m \)) scale. This article focuses on this type of qubit.</li>
+                                <li>Topological qubits, using superconductors as the substrate, with nanowires placed on the surface. Due to the proximity effect, the nanowires are influenced by the substrate's superconductivity. Applying a magnetic field to break time-reversal symmetry forms special Majorana states at both ends of the nanowires. This topic may be discussed in the future. \(^a\)</li>
+                              </ul>
+                              \(^a\)10.1038/s41586-022-05585-1<br>
+                              Superconducting circuits made of Josephson Junctions can refer to the figure below, showing different superconducting qubit types:
+                            </p>
+                        
+                            <div style="text-align: center;">
+                              <a href="../Image/SC Qubit type 1.png">
+                                <img src="../Image/SC Qubit type 1.png" alt="Superconducting Qubit Types" style="width: 100%; height: auto;">
+                              </a>
+                            </div>
+                            <p style="text-align:justify" class="dark-background">
+                              The A series represents the most basic unit to form a single qubit. The arrows indicate the conceptual extension directions. I categorize them into four main types:
+                              <ul>
+                                <li>Type A: A1 represents a single Josephson Junction (JJ) as a qubit, an earlier qubit design.</li>
+                                <li>Type B: A2–A8, based on a single JJ shunted with a capacitor (C-shunt). Later designs aimed to increase coherence time by connecting large inductors in parallel or reducing capacitance to mitigate noise effects.</li>
+                                <li>Type C: A9–A10, qubits with modifications on one side of the JJ<sup>j</sup>, making the ground state phase difference non-zero. These can be achieved through complex circuit designs<sup>a,b,c</sup>, replacing the insulating layer with magnetic materials<sup>d,i</sup>, or using s-wave with d-wave heterostructure JJs<sup>g,h</sup>.</li>
+                                <li>Type Hybrid: A11, representing superconducting qubits combined with spin quantum dots (Spin Quantum Dot, Spin QD)<sup>k</sup>. Other types include combinations with superfluid helium<sup>e,f</sup>, ion traps, and more.<sup>l</sup></li>
+                              </ul>
+                              <span style="font-size: 0.7em; line-height: 0.8;">\(^a\)10.1038/s41534-019-0231-2<br>
+                              \(^b\)10.1088/1367-2630/aab7cd<br>
+                              \(^c\)10.1088/1367-2630/ab09b0<br>
+                              \(^d\)10.1038/s43246-024-00659-1<br>
+                              \(^e\)10.1103/PhysRevA.101.012336<br>
+                              \(^f\)10.1038/s41467-019-13335-7<br>
+                              \(^g\)10.1109/TASC.2019.2892078<br>
+                              \(^h\)10.1088/1361-6668/ab7053<br>
+                              \(^i\)10.1103/PhysRevApplied.8.054028<br>
+                              \(^j\)10.1088/0953-2048/21/3/034011<br>
+                              \(^k\)10.1038/s41567-023-02071-x<br>
+                              \(^l\)arXiv: 1204.2137<br>
+                              (A8) https://www.ntt-review.jp/archive/ntttechnical.php?contents=ntr201209fa2.html</span><br><br>
+                            </p>
+                        
+                            <p style="text-align:justify" class="dark-background">
+                              The B series represents examples of Type A qubits paired with control circuits, using different control circuit techniques. More details can be found in <a href="./D.html">Early Types of Superconducting Qubits</a>.<br>
+                              The C series represents examples of Type B qubits paired with control circuits.
+                              <br><br>
+                            </p>
                                 
                                 
-                              
+
+
+
+
+
                                 <div class="post-meta">
                                     <span class="post-author">
                                         <a href="#"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="">Peir-Ru Wang</a>
