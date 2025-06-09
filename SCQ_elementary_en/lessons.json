@@ -1,0 +1,16 @@
+[
+    { "title": "Superconducting Qubits (Elementary Version)", "file": "main.html" },
+    { "title": "Josephson Junction", "file": "A.html" },
+    { "title": "What is a Superconducting Qubit?", "file": "B.html" },
+    { "title": "Overview of Superconducting Circuit Qubit Types", "file": "C.html" },
+    { "title": "Early Types of Superconducting Qubits", "file": "D.html" },
+    { "title": "Modern Mainstream Superconducting Qubits", "file": "E.html" },
+    { "title": "Superconducting Qubits under Electron Microscopy", "file": "F.html" },
+    { "title": "Other Types of Qubits", "file": "G.html" },
+    { "title": "What Does a Superconducting Quantum Computer Look Like?", "file": "H.html" },
+    { "title": "How Are Signals Delivered to Qubits?", "file": "I.html" },
+    { "title": "QPU Topology", "file": "J.html" },
+    { "title": "How to Control a Superconducting Qubit", "file": "K.html" },
+    { "title": "Control Error 1 - Frequency Detuning", "file": "L.html" }
+
+]

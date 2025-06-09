@@ -67,7 +67,8 @@
                             </ul>
                         </li>
                         <!--<li class="active"><a href="../SCQ_elementary/main.html">科普介紹</a></li>-->
-                        <li><a href="../QC_hardware/main.html">硬體導論</a></li>                        
+                        <li><a href="../QC_hardware/main.html">硬體導論</a></li>
+                        <li><a href="../index_en.html">English</a></li>                        
                     </ul>
                 </div>
 
@@ -160,8 +161,8 @@ fetch("lessons.json")
       html += `<a class="btn btn-gray" href="${prev.file}">← 上一頁</a> `;
     }
 
-    // 英文版按鈕（根據檔名自動連到 ../ele_en/A.html）
-    html += `<a class="btn btn-gray" href="../ele_en/${current}" style="margin: 0 10px;">English Version</a>`;
+    // 英文版按鈕
+    html += `<a class="btn btn-gray" href="../SCQ_advanced_en/${current}" style="margin: 0 10px;">English Version</a>`;
 
     // 下一頁按鈕
     if (index < pages.length - 1) {

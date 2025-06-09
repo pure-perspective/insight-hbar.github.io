@@ -1,0 +1,16 @@
+[
+    { "title": "Superconducting Qubits (Advanced Version)", "file": "main.html" },
+    { "title": "Basics of Quantum Computing Hardware", "file": "A.html" },
+    { "title": "Introduction to Quantum LC Circuits", "file": "B.html" },
+    { "title": "Canonical Quantization of LC Circuits", "file": "C.html" },
+    { "title": "Interchange Between Kinetic and Potential Energy Terms", "file": "D.html" },
+    { "title": "Formalizing the Interchange of Kinetic and Potential Energy in the Lagrangian", "file": "E.html" },
+    { "title": "Nonlinear Inductance of Josephson Junctions", "file": "F.html" },
+    { "title": "Nonlinear Inductance of a Double Josephson Junction (SQUID)", "file": "G.html" },
+    { "title": "Properties of the Transmon", "file": "H.html" },
+    { "title": "Computational Science and Two-Level Systems (TLS)", "file": "I.html" },
+    { "title": "Driving an LC Circuit", "file": "J.html" },
+    { "title": "Coupling Between Two LC Circuits", "file": "K.html" },
+    { "title": "Appendix: Probability Current in Schrödinger Equation Under Electromagnetic Fields", "file": "L.html" },
+    { "title": "Appendix: Energy Level Corrections Using Perturbation Theory", "file": "appA.html" }
+]

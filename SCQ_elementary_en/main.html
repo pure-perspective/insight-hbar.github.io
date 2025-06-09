@@ -35,7 +35,7 @@
     <link href="../assets/css/style.css" rel="stylesheet">
     <link href="../assets/css/responsive.css" rel="stylesheet">
 
-    <title>超導量子位元(進階版)</title>
+    <title>Superconducting Qubits (Elementary)</title>
     <meta name="description" content="深入解析2025年超導量子電腦的構建，涵蓋量子處理器(QPU)、稀釋製冷機、控制電子、低溫佈線等核心硬體。提供全球主要製造商、價格範圍、技術挑戰與未來趨勢的詳細指引。">
     <meta name="keywords" content="超導量子電腦, 量子位元, Qubit, QPU, 稀釋製冷機, IBM, Google, QuantWare, Bluefors, 低溫系統, 控制電子, Josephson Junction, Transmon, Fluxonium, 量子計算硬體, SEO">
     <link rel="canonical" href="https://www.insight-ihbar.com/QC_hardware_2025.html" />
@@ -54,21 +54,21 @@
             <div class="container">
 
                 <div class="navbar-header">                   
-                    <a href="../index.html" class="site-title">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</a>
+                    <a href="../index_en.html" class="site-title">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</a>
                 </div><!-- /.navbar-header -->
 
                 <div class="collapse navbar-collapse" id="agency-navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="../index.html">Home</a></li>
-                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">科普介紹<i class="fa fa-caret-down hidden-xs" aria-hidden="true"></i></a>
+                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Qubit Physics<i class="fa fa-caret-down hidden-xs" aria-hidden="true"></i></a>
                             <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                              <li><a href="../SCQ_elementary/main.html">超導量子位元(科普版)</a></li>
-                              <li class="active"><a href="../SCQ_advanced/main.html">超導量子位元(進階版)</a></li>
+                              <li><a href="../SCQ_elementary_en/main.html">Superconducting Qubits (Elementary)</a></li>
+                              <li class="active"><a href="../SCQ_advanced_en/main.html">Superconducting Qubits (Advanced)</a></li>
                             </ul>
                         </li>
                         <!--<li class="active"><a href="../SCQ_elementary/main.html">科普介紹</a></li>-->
-                        <li><a href="../QC_hardware/main.html">硬體導論</a></li>
-                        <li><a href="../index_en.html">English</a></li>                        
+                        <li><a href="../QC_hardware/main.html">Hardware</a></li>
+                        <li><a href="../index_en.html">中文版</a></li>                        
                     </ul>
                 </div>
 
@@ -79,10 +79,10 @@
     <div id="hero" class="hero overlay subpage-hero blog-hero">
         <div class="hero-content">
             <div class="hero_2-text">
-                <h1>科普介紹</h1>
+                <h1>Qubit Physics</h1>
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
-                  <li class="breadcrumb-item"><a href="./main.html">超導量子位元(進階版)</a></li>
+                  <li class="breadcrumb-item"><a href="./main.html">Superconducting Qubits (Elementary)</a></li>
                   <!--<li class="breadcrumb-item active">約瑟夫森節</li>-->
                 </ol>
             </div><!-- /.hero-text -->
@@ -99,148 +99,61 @@
                             <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="">-->
                             <div class="post-content">
                                 <div style="text-align: center;">
-                                    <h2>動能與位能項的互換</h2>
-                                    <h3>正則座標的選擇</h3>
+                                    <h2>量子計算硬體基礎</h2>
+                                    <h3>從控制面看超導量子電腦</h3>
                                 </div>
+
+                                
+                                
+                                <p style="text-align:justify">
+                                    ▲
+                                    <br><span style="font-size: 0.7em; line-height: 0.8;">Ref:arxiv.org/pdf/2106.11352</span><br><br>
+                                </p>
+                                
+                                
                                 
 
 
-                        
-                            <p style="text-align:justify">
-                              實際上，要正確地透過對易關係（commutator relation）進行量子化，需要嚴格規定 \(x, p\) 的對應關係，否則可能會出現負號上的偏差。承接前一節，我們知道：
-                              \[
-                              \dot{\Phi}_\# = \frac{d}{dt} \frac{\partial \mathcal{L}}{\partial \dot{Q}} = \frac{\partial \mathcal{L}}{\partial Q} = -\frac{Q}{C} \implies Q = -C\dot{\Phi}_\#.
-                              \]
-                              現在，我們將 Lagrangian \(L\) 轉換到動量空間。
-                            </p>
-                        
-                            <p style="text-align:justify">
-                              定義新的 Lagrangian \(\bar{\mathcal{L}}\) 為：
-                              \[
-                              \bar{\mathcal{L}} \equiv \mathcal{L} - \frac{d}{dt} (\Phi_\# Q) = \mathcal{L} - \dot{\Phi}_\# Q - \Phi_\# \dot{Q},
-                              \]
-                              展開後可得：
-                              \[
-                              \bar{\mathcal{L}} = \frac{L\dot{Q}^2}{2} - \frac{Q^2}{2C} - \dot{\Phi}_\# Q - \Phi_\# \dot{Q} = \frac{\Phi_\#^2}{2L} - \frac{C\dot{\Phi}_\#^2}{2} + C\dot{\Phi}_\#^2 - \frac{\Phi_\#^2}{L},
-                              \]
-                              簡化為：
-                              \[
-                              \bar{\mathcal{L}} = \frac{C\dot{\Phi}_\#^2}{2} - \frac{\Phi_\#^2}{2L}.
-                              \]
-                            </p>
-                        
-                            <p style="text-align:justify">
-                              注意，此時 \(\mathcal{L}(Q, \dot{Q}) \to \bar{\mathcal{L}}(\Phi_\#, \dot{\Phi}_\#)\)，動能與位能的角色互換。同時，有 \(\bar{\mathcal{L}} = -\mathcal{L}\)，對應於 Lagrangian 的反對稱性。為吸收這一反對稱性，我們定義新的變量：
-                              \[
-                              \Phi = -\Phi_\#.
-                              \]
-                              這使得：
-                              \[
-                              \bar{\mathcal{L}}(\dot{\Phi}, \Phi) = \frac{C\dot{\Phi}^2}{2} - \frac{\Phi^2}{2L}.
-                              \]
-                            </p>
-                        
-                            <p style="text-align:justify">
-                              對應的正則動量 \(\Pi\)（並利用前述結果與 \(Q\) 進行聯繫）：
-                              \[
-                              \Pi \equiv \frac{\partial \bar{\mathcal{L}}}{\partial \dot{\Phi}} = C\dot{\Phi} = -C\dot{\Phi}_\# = Q \implies \dot{\Phi} = \frac{\Pi}{C} = \frac{Q}{C}.
-                              \]
-                            </p>
-                        
-                            <p style="text-align:justify">
-                              Hamiltonian \(\bar{\mathcal{H}}\) 定義為：
-                              \[
-                              \bar{\mathcal{H}} = \Pi\dot{\Phi} - \bar{\mathcal{L}} = \frac{\Pi^2}{C} - \frac{\Pi^2}{2C} + \frac{\Phi^2}{2L} = \frac{\Pi^2}{2C} + \frac{\Phi^2}{2L},
-                              \]
-                              與先前的 \(\mathcal{H}\) 完全一致。此時的量子化條件為：
-                              \[
-                              [\Phi, \Pi] = [\Phi, Q] = i\hbar,
-                              \]
-                              與傳統條件相同。
-                            </p>
-                        
-                            <p style="text-align:justify">
-                              定義新的變量 \(a\)、\(a^\dagger\)：
-                              \[
-                              a = \sqrt{\frac{1}{2\hbar} \sqrt{\frac{L}{C}}} \left( \sqrt{\frac{C}{L}} \Phi + iQ \right), \quad
-                              a^\dagger = \sqrt{\frac{1}{2\hbar} \sqrt{\frac{L}{C}}} \left( \sqrt{\frac{C}{L}} \Phi - iQ \right).
-                              \]
-                              反之：
-                              \[
-                              \Phi = \sqrt{\frac{\hbar}{2} \sqrt{\frac{L}{C}}} (a^\dagger + a), \quad
-                              Q = i\sqrt{\frac{\hbar}{2} \sqrt{\frac{C}{L}}} (a^\dagger - a).
-                              \]
-                            </p>
-                        
-                            <p style="text-align:justify">
-                              易證 \([a, a^\dagger] = 1\)：
-                              \[
-                              [a, a^\dagger] = aa^\dagger - a^\dagger a = \frac{1}{2\hbar} \sqrt{\frac{L}{C}} \left[ \Phi, Q \right] = 1.
-                              \]
-                              Hamiltonian \(H(\Phi, Q)\) 可改寫為：
-                              \[
-                              \mathcal{H} = \frac{\Phi^2}{2L} + \frac{Q^2}{2C} = \frac{\hbar}{4\sqrt{LC}} \left[ (a^\dagger + a)^2 - (a^\dagger - a)^2 \right].
-                              \]
-                              由於 \(\omega = \frac{1}{\sqrt{LC}}\)，展開後可得：
-                              \[
-                              \mathcal{H} = \frac{\hbar \omega}{4} \left[ (a^\dagger + a)^2 - (a^\dagger - a)^2 \right] = \hbar \omega \left[ a^\dagger a + \frac{1}{2} \right].
-                              \]
-                            </p>
-                        
-                            <p style="text-align:justify">
-                              最終，我們再次得到量子化後的 Hamiltonian，其中每個能階的差異為 \(\hbar \omega\)。
-                            </p>
 
-                        
-                        
-
-
-
-                                <p style="text-align:justify">
-                                    ▲
-                                    <span style="font-size: 0.7em; line-height: 0.8;">
-                                        
-                                    </span><br><br>
-                                </p>
 
 
                                 <div class="post-meta">
                                     <span class="post-author">
-                                        <a href="#"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="">王培儒</a>
+                                        <a href="#"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="">Peir-Ru Wang</a>
                                     </span>
                                     <span class="post-category">
-                                        <a href="./main.html"><i class="fa fa-folder" aria-hidden="true"></i> 超導量子位元(進階版)</a>
+                                        <a href="./main.html"><i class="fa fa-folder" aria-hidden="true"></i>Superconducting Qubits (Elementary)</a>
                                     </span>
                                 </div><!-- /.post-meta -->
                             
                                 <div id="prev-next-nav" class="text-center"></div>
 
-<script>
-fetch("lessons.json")
-  .then(res => res.json())
-  .then(pages => {
-    const current = location.pathname.split("/").pop();
-    const index = pages.findIndex(p => p.file === current);
-    let html = "";
+                                <script>
+                                fetch("lessons.json")
+                                .then(res => res.json())
+                                .then(pages => {
+                                    const current = location.pathname.split("/").pop();
+                                    const index = pages.findIndex(p => p.file === current);
+                                    let html = "";
 
-    // 上一頁按鈕
-    if (index > 0) {
-      const prev = pages[index - 1];
-      html += `<a class="btn btn-gray" href="${prev.file}">← 上一頁</a> `;
-    }
+                                    // 上一頁按鈕
+                                    if (index > 0) {
+                                    const prev = pages[index - 1];
+                                    html += `<a class="btn btn-gray" href="${prev.file}">← 上一頁</a> `;
+                                    }
 
-    // 英文版按鈕
-    html += `<a class="btn btn-gray" href="../SCQ_advanced_en/${current}" style="margin: 0 10px;">English Version</a>`;
+                                    // 英文版按鈕
+                                    html += `<a class="btn btn-gray" href="../SCQ_advanced_en/${current}" style="margin: 0 10px;">English Version</a>`;
 
-    // 下一頁按鈕
-    if (index < pages.length - 1) {
-      const next = pages[index + 1];
-      html += `<a class="btn btn-gray" href="${next.file}">下一頁 →</a>`;
-    }
+                                    // 下一頁按鈕
+                                    if (index < pages.length - 1) {
+                                    const next = pages[index + 1];
+                                    html += `<a class="btn btn-gray" href="${next.file}">下一頁 →</a>`;
+                                    }
 
-    document.getElementById("prev-next-nav").innerHTML = html;
-  });
-</script>
+                                    document.getElementById("prev-next-nav").innerHTML = html;
+                                });
+                                </script>
 
                             </div><!-- /.post-content -->
                         </article><!-- /.blog-post -->
@@ -310,8 +223,8 @@ fetch("lessons.json")
         <div class="container">
             <div class="row">
                 <div class="col-md-3 col-sm-4 col-xs-6">
-                    <a href="../index.html" class="site-title">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</a>
-                    <p>一起走進新時代的前沿科學與量子科技</p>
+                    <a href="../index_en.html" class="site-title">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</a>
+                    <p>Exploring the Quantum Technology Together.</p>
                     </div>
                 <div class="col-lg-offset-4 col-md-3 col-sm-4 col-md-offset-2 col-sm-offset-0 col-xs-6 ">
                     <h3>Keep in touch</h3>

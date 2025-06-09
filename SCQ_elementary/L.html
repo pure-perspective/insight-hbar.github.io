@@ -74,6 +74,7 @@
                         </li>
                         <!--<li class="active"><a href="../SCQ_elementary/main.html">科普介紹</a></li>-->
                         <li><a href="../QC_hardware/main.html">硬體導論</a></li>
+                        <li><a href="../index_en.html">English</a></li>
                         
                     </ul>
 
@@ -152,24 +153,34 @@
                                 </div><!-- /.post-meta -->
                             
                                 <div id="prev-next-nav" class="text-center"></div>
-                                <script>
-                                fetch("lessons.json")
-                                    .then(res => res.json())
-                                    .then(pages => {
-                                    const current = location.pathname.split("/").pop();
-                                    const index = pages.findIndex(p => p.file === current);
-                                    let html = "";
-                                    if (index > 0) {
-                                        const prev = pages[index - 1];
-                                        html += `<a class="btn btn-gray" href="${prev.file}">← 上一頁</a> `;
-                                    }
-                                    if (index < pages.length - 1) {
-                                        const next = pages[index + 1];
-                                        html += `<a class="btn btn-gray" href="${next.file}">下一頁 →</a>`;
-                                    }
-                                    document.getElementById("prev-next-nav").innerHTML = html;
-                                    });
-                                </script><!--  ${prev.title}   ${next.title}-->
+
+<script>
+fetch("lessons.json")
+  .then(res => res.json())
+  .then(pages => {
+    const current = location.pathname.split("/").pop();
+    const index = pages.findIndex(p => p.file === current);
+    let html = "";
+
+    // 上一頁按鈕
+    if (index > 0) {
+      const prev = pages[index - 1];
+      html += `<a class="btn btn-gray" href="${prev.file}">← 上一頁</a> `;
+    }
+
+    // 英文版按鈕
+    html += `<a class="btn btn-gray" href="../SCQ_elementary_en/${current}" style="margin: 0 10px;">English Version</a>`;
+
+    // 下一頁按鈕
+    if (index < pages.length - 1) {
+      const next = pages[index + 1];
+      html += `<a class="btn btn-gray" href="${next.file}">下一頁 →</a>`;
+    }
+
+    document.getElementById("prev-next-nav").innerHTML = html;
+  });
+</script>
+
                             </div><!-- /.post-content -->
                         </article><!-- /.blog-post -->
                         <!--<div id="PostComments" class="post-comments">
