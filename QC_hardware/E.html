@@ -99,17 +99,226 @@
                             <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="">-->
                             <div class="post-content">
                                 <div style="text-align: center;">
-                                    <h2>超導量子電腦-硬體技術與廠商指引(2025)</h2>
+                                    <h2>微波元件解說</h2>
                                     <h3></h3>
                                 </div>
                                 
-                                
-                                <p style="text-align:justify">
-                                    ▲
-                                    <br><span style="font-size: 0.7em; line-height: 0.8;">
-
-                                    </span><br><br>
+                                      <p style="text-align:justify" class="dark-background">在量子運算結束時，需要讀出量子位元的最終狀態以獲得計算結果。對於超導量子位元，這通常是透過測量與量子位元耦合的諧振器的響應來實現的。</p>
+                                      <ol>
+                                        <li>
+                                          <p style="text-align:justify" class="dark-background"><b>功能與重要性</b><br>
+                                          讀出系統的任務是將量子位元的量子態（通常是 \( \ket{0} \) 或 \( \ket{1} \) 的疊加態）以高保真度轉換為經典的數位訊號。測量過程本身具有破壞性，會使量子位元的疊加態塌縮到一個確定的經典狀態。測量保真度直接影響量子糾錯的效率和整體計算結果的準確性。</p>
+                                        </li>
+                                        <li>
+                                          <p style="text-align:justify" class="dark-background"><b>關鍵組件與技術</b></p>
+                                          <ul>
+                                            <li><b>諧振器 (Resonators)：</b> 每個超導量子位元通常耦合到一個微波諧振器。量子位元的狀態會影響諧振器的共振頻率或相位，透過探測諧振器的響應可以推斷出量子位元的狀態。</li>
+                                            <li><b>量子放大器 (Quantum Amplifiers)：</b> 來自諧振器的讀出訊號非常微弱，需要接近量子極限的低雜訊放大器進行放大，才能被後續的經典電子設備檢測到。
+                                              <ul>
+                                                <li><b>約瑟夫森參量放大器 (Josephson Parametric Amplifiers, JPAs)：</b> 利用約瑟夫森結的非線性特性實現微波訊號的低雜訊放大。JPAs可以工作在相位敏感模式（放大單個正交分量而不增加雜訊）或相位保持模式。它們通常具有較窄的帶寬，但可以實現高增益。</li>
+                                                <li><b>行波參量放大器 (Traveling Wave Parametric Amplifiers, TWPAs)：</b> 例如QuantWare的Crescendo-S，是一種基於約瑟夫森結鏈的行波放大器，能夠在較寬的頻寬內提供高增益和接近量子極限的雜訊性能，非常適合多路復用讀出。與JPA不同，TWPA是透射式而非諧振式器件，因此帶寬不受諧振器限制。</li>
+                                              </ul>
+                                            </li>
+                                            <li><b>低雜訊半導體放大器：</b> 通常放置在低溫系統的較高溫級（如4K級），用於進一步放大來自量子放大器的訊號。</li>
+                                            <li><b>混頻器、濾波器和ADC：</b> 用於將放大的微波訊號下變頻到中頻，濾除雜訊，然後由ADC轉換為數位訊號進行處理。</li>
+                                          </ul>
+                                        </li>
+                                      </ol>
+                                      <p style="text-align:justify" class="dark-background">
+                                        前一節針對量子電腦稀釋制冷機內部的部件做一個簡單的綜覽，接下來我們將搭配電路圖，詳細解說各部件的功能。
+                                      </p>
+                                  
+                                      <div style="text-align: center;">
+                                        <a href="../Image/20250531-01.png">
+                                        <img src="../Image/20250531-01.png" alt="取代文字" style="width: 100%; height: auto;">
+                                        </a>
+                                      </div>
+                                      <p style="text-align:justify" class="dark-background">
+                                        ▲透過電路功能圖對照硬體，可進一步了解量子電腦中硬體元件的配置。
+                                        <br>(a) 安裝有 25 條驅動線（drive lines）、25 條磁通線（flux lines）、4 條讀出線（read-out）、6 條讀入線（read-in），以及 5 條泵浦線（pump lines）的 Bluefors XLD 型稀釋制冷機。
+                                        <br>(b) 稀釋制冷機內部電纜配置的示意圖。我們藉由下方表格來解說各個元件及端口的功能：
+                                        <table border="1" cellpadding="8" cellspacing="0">
+                                          <thead>
+                                            <tr>
+                                              <th>I/O端</th>
+                                              <th>中文翻譯</th>
+                                              <th>功能解說</th>
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                            <tr>
+                                              <td>Drive</td>
+                                              <td>驅動端</td>
+                                              <td>用於輸入控制脈衝，操控量子位元的狀態（如進行 X/Y 閘操作），通常是微波頻率訊號。</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Flux</td>
+                                              <td>磁通端</td>
+                                              <td>提供直流或低頻訊號改變 SQUID 迴路的有效磁通量，進而調變量子位元或諧震器的頻率。</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Pump</td>
+                                              <td>泵浦端</td>
+                                              <td>用於激發參數放大器（如 JPA 或 TWPA）所需的能量輸入，通常在特定頻率提供高功率微波。</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Output</td>
+                                              <td>讀出端</td>
+                                              <td>從量子系統中讀出訊號，經由讀出共振腔與放大器鏈路輸出至室溫設備進行量測。</td>
+                                            </tr>
+                                          </tbody>
+                                          <thead>
+                                            <tr>
+                                              <th>區段</th>
+                                              <th></th>
+                                              <th></th>
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                            <tr>
+                                              <td>4K Plate</td>
+                                              <td>4K板</td>
+                                              <td>溫度約4K。<br>此區連接第一級冷卻，安裝 HEMT 放大器、熱沉濾波器等元件。</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Still Plate</td>
+                                              <td>Still板（靜置板）</td>
+                                              <td>溫度約800 mK。稀釋冷卻循環中的「Still」位置，進一步降低熱量傳導，可安裝低頻濾波器或電源線熱沉。</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Cold Plate</td>
+                                              <td>冷板</td>
+                                              <td>溫度約100 mK。<br>進入量子操作區前的緩衝層，常安裝循環器、熱沉的中介點。</td>
+                                            </tr>
+                                            <tr>
+                                              <td>MXC Plate<br>(Mixing Chamber Plate)</td>
+                                              <td>MXC板</td>
+                                              <td>溫度約10–20 mK。<br>最冷的一層，安裝量子位元晶片、TWPA、隔離器等關鍵元件，是核心操作與熱沉層。</td>
+                                            </tr>
+                                          </tbody>
+                                          <thead>
+                                            <tr>
+                                              <th>微波元件</th>
+                                              <th></th>
+                                              <th></th>
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                            <tr>
+                                              <td>Isolator</td>
+                                              <td>隔離器</td>
+                                              <td>允許訊號單向通過，防止反射雜訊干擾敏感元件，如量子位元。</td>
+                                            </tr>
+                                            <tr>
+                                              <td>TWPA</td>
+                                              <td>行波參數放大器</td>
+                                              <td>低溫下使用的量子放大器，具有低雜訊、寬頻帶的特性，可提升微波訊號強度。</td>
+                                            </tr>
+                                            <tr>
+                                              <td>HEMT</td>
+                                              <td>高電子遷移率電晶體</td>
+                                              <td>常用於 4K 級的第一級放大器，提供低雜訊、高增益的訊號讀取。</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Low-pass filter</td>
+                                              <td>低通濾波器</td>
+                                              <td>阻擋高頻雜訊，允許低頻訊號通過，常用於防止熱輻射進入量子元件。</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Band-pass filter</td>
+                                              <td>帶通濾波器</td>
+                                              <td>僅允許某一頻率範圍內的訊號通過，用於選擇特定微波頻率。</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Eccosorb filter</td>
+                                              <td>Eccosorb(品牌)濾波器</td>
+                                              <td>使用 Eccosorb 吸波材料製成的濾波器，能有效吸收高頻熱雜訊與不必要的輻射。</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Circulator</td>
+                                              <td>循環器</td>
+                                              <td>三端口非互易(non-reciprocity)微波元件，訊號僅以順時針或逆時針方式循環，用來分離輸入與回波路徑。</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Dir. Coupler</td>
+                                              <td>定向耦合器</td>
+                                              <td>將一部分微波訊號從主通道引導至旁路，通常用於監測、量測或訊號分離。</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Termination</td>
+                                              <td>終端</td>
+                                              <td>吸收多餘訊號能量，防止訊號反射，常與隔離器、循環器搭配使用。</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Thermalisation of outer conductor</td>
+                                              <td>外導體熱沉（或 外導體熱化）</td>
+                                              <td>將電纜或元件的外導體熱接至冷卻級，降低熱雜訊傳遞至低溫核心元件。</td>
+                                            </tr>
+                                            <thead>
+                                              <tr>
+                                                <th>其他註解</th>
+                                                <th></th>
+                                                <th></th>
+                                              </tr>
+                                            </thead>
+                                            <tr>
+                                              <td>NbTi</td>
+                                              <td>鈮鈦合金同軸電纜</td>
+                                              <td>使用具有超導性質的鈮鈦合金，在 mK 級連接量子位元或諧振器時，使用鈮鈦超導線路可減少耗散與熱傳導。</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Attenuator<br>10dB<br>20dB</td>
+                                              <td>衰減器</td>
+                                              <td>
+                                                <table border="1" cellpadding="8" cellspacing="0">
+                                                  <thead>
+                                                    <tr>
+                                                      <th>溫區</th>
+                                                      <th>衰減器值（常見）</th>
+                                                      <th>目的</th>
+                                                    </tr>
+                                                  </thead>
+                                                  <tbody>
+                                                    <tr>
+                                                      <td>300K → 4K</td>
+                                                      <td>20 dB</td>
+                                                      <td>阻斷熱雜訊主源</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td>4K → 100 mK</td>
+                                                      <td>10–20 dB</td>
+                                                      <td>細調訊號強度與進一步降噪</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td>100 mK → 10 mK</td>
+                                                      <td>10 dB（可選）</td>
+                                                      <td>控制微波脈衝精細度</td>
+                                                    </tr>
+                                                  </tbody>
+                                                </table>
+                                              </td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                        <br><span style="font-size: 0.7em; line-height: 0.8;">Ref: Engineering cryogenic setups for 100-qubit scale superconducting circuit systems, DOI:10.1140/epjqt/s40507-019-0072-0
+                                        </span><br><br>
+                                        </p>
+                          
+                          
+                                      <div style="text-align: center;">
+                                        <a href="../Image/20250531-03.png">
+                                        <img src="../Image/20250531-03.png" alt="取代文字" style="width: 70%; height: auto;">
+                                        </a>
+                                      </div>
+                                      <p style="text-align:justify" class="dark-background">
+                                        ▲在制冷機最底端、也是最冷的部分，稱為混合室（Mixing Chamber，MXC）。此區的溫度維持在10mK以下，以操作超導量子電路。
+                                        (a) 安裝於 MXC 板上的元件：來自量子處理器的讀出訊號首先經過右側的第一組四通道磁屏蔽隔離器陣列，再通過定向耦合器、行波參數放大器（TWPA），以及左側的第二組相同的隔離器陣列。
+                                        (b) 安裝於 4K 板上的四顆 HEMT 放大器。
+                                        (c)下方為帶通濾波器安裝（搭配熱沉）於 MXC 板上，上方為安裝於冷板(100mK區段)上的四個循環器。
+                                        <br><span style="font-size: 0.7em; line-height: 0.8;">Ref: Engineering cryogenic setups for 100-qubit scale superconducting circuit systems, DOI:10.1140/epjqt/s40507-019-0072-0
+                                        </span><br><br>
                                     </p>
+                                
 
 
                                 <div class="post-meta">
