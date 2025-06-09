@@ -9,8 +9,9 @@
     { "title": "Nonlinear Inductance of a Double Josephson Junction (SQUID)", "file": "G.html" },
     { "title": "Properties of the Transmon", "file": "H.html" },
     { "title": "Computational Science and Two-Level Systems (TLS)", "file": "I.html" },
-    { "title": "Driving an LC Circuit", "file": "J.html" },
-    { "title": "Coupling Between Two LC Circuits", "file": "K.html" },
-    { "title": "Appendix: Probability Current in Schrödinger Equation Under Electromagnetic Fields", "file": "L.html" },
-    { "title": "Appendix: Energy Level Corrections Using Perturbation Theory", "file": "appA.html" }
+    { "title": "Understanding Qubits through the Bloch Sphere", "file": "J.html" },
+    { "title": "Driving an LC Circuit", "file": "K.html" },
+    { "title": "Coupling Between Two LC Circuits", "file": "L.html" },
+    { "title": "Appendix: Probability Current in Schrödinger Equation Under Electromagnetic Fields", "file": "appA.html" },
+    { "title": "Appendix: Energy Level Corrections Using Perturbation Theory", "file": "appB.html" }
 ]
