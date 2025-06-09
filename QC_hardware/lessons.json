@@ -1,5 +1,11 @@
 [
     { "title": "超導量子電腦硬體指南 (2025)：目錄", "file": "main.html" },
-    { "title": "第二講：量子疊加", "file": "blog-post-QC_hardware_2025.html" },
-    { "title": "第三講：量子測量", "file": "03.html" }
+    { "title": "超導量子電腦當前的應用模式", "file": "A.html" },
+    { "title": "超導量子電腦-硬體解構", "file": "B.html" },
+    { "title": "", "file": "C.html" },
+    { "title": "", "file": "D.html" },
+    { "title": "", "file": "E.html" },
+    { "title": "", "file": "F.html" },
+    { "title": "", "file": "G.html" },
+    { "title": "", "file": "03.html" }
 ]
