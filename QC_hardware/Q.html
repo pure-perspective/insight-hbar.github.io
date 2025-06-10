@@ -99,184 +99,134 @@
                             <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="">-->
                             <div class="post-content">
                                 <div style="text-align: center;">
-                                    <h2>核心硬體組件</h2>
+                                    <h2>射頻終端器製造商</h2>
                                     <h3></h3>
                                 </div>
                                 
-
-
-                                  
-                                  
-                                  
-                                  <!--核心硬體組件-->
-                                  <p style="text-align:justify" class="dark-background">超導量子電腦的硬體系統是一個複雜的集成，各個組件協同工作以實現量子運算。下表首先概述了核心硬體組件及其關鍵特性。</p>
-                                  
-                                  <p style="text-align:justify" class="dark-background"><b>表1：核心硬體組件概覽</b></p>
-                                    <table>
-                                      <thead>
-                                        <tr>
-                                          <th>組件名稱</th>
-                                          <th>主要功能</th>
-                                          <th>代表性廠商/機構</th>
-                                          <th>主要技術門檻</th>
-                                        </tr>
-                                      </thead>
-                                      <tbody>
-                                        <tr>
-                                          <td>量子處理器 (QPU)</td>
-                                          <td>執行量子運算；包含實體量子位元</td>
-                                          <td>IBM, Google Quantum AI, Intel, Rigetti Computing, SpinQ, QuantWare, 中國科學院 (CAS)</td>
-                                          <td>量子位元品質與一致性、擴展性、相干時間、閘保真度、製造變異性、串擾</td>
-                                        </tr>
-                                        <tr>
-                                          <td>低溫系統 (稀釋製冷機)</td>
-                                          <td>提供QPU所需的mK等級的極低溫環境，維持量子位元的超導態與相干性</td>
-                                          <td>Bluefors, Oxford Instruments, ULVAC, Leiden Cryogenics</td>
-                                          <td>冷卻功率、尺寸與成本、可擴展性、震動隔離、熱負載管理、與控制電子整合</td>
-                                        </tr>
-                                        <tr>
-                                          <td>控制電子系統</td>
-                                          <td>產生並傳送精確的微波脈衝以操控量子位元的狀態，執行量子閘操作</td>
-                                          <td>Tabor Quantum Solutions, Zurich Instruments, Quantum Machines, Keysight, Rohde & Schwarz, Intel (Cryo-CMOS)</td>
-                                          <td>脈衝精度與同步、可擴展性、低延遲、低雜訊、低溫整合 (Cryo-CMOS)</td>
-                                        </tr>
-                                        <tr>
-                                          <td>微波元件</td>
-                                          <td>測量量子位元的最終狀態以獲取運算結果；通常涉及量子放大器</td>
-                                          <td>QuantWare (TWPA), Yale University (JPA 研究), Fermilab (低成本系統研究)</td>
-                                          <td>測量保真度、速度、多路復用能力、量子極限放大、串擾、破壞性測量</td>
-                                        </tr>
-                                        <tr>
-                                          <td>低溫佈線與互連</td>
-                                          <td>在室溫控制電子與低溫QPU之間傳輸控制和讀出訊號，同時最小化熱洩漏</td>
-                                          <td>Delft Circuits (Cri/oFlex®), CryoCoax (Intelliconnect)</td>
-                                          <td>熱導率、訊號完整性、可擴展性 (密度)、機械可靠性 (熱循環)、阻抗匹配</td>
-                                        </tr>
-                                      </tbody>
-                                    </table>
+                                <p style="text-align:justify" class="dark-background">射頻終端器（或負載）用於吸收不必要的射頻功率並減少敏感低溫系統中的反射。本節將區分通用供應商和提供專為低溫環境設計的終端器的廠商。</p>
                       
+                                <h3>11.1 成熟射頻組件供應商</h3>
+                                <p style="text-align:justify" class="dark-background">市場上存在大量製造商提供各種功率等級、頻率範圍和連接器類型的終端器，用於通用射頻應用。</p>
+                                <p style="text-align:justify" class="dark-background">主要供應商包括：</p>
+                                <ul>
+                                    <li><strong>MECA:</strong> 提供多種終端器產品 <sup>21</sup>。</li>
+                                    <li><strong>Mini Circuits:</strong> 產品線包含終端器 <sup>21</sup>。</li>
+                                    <li><strong>Inmet by Spectrum Control (API Technologies):</strong> 提供多種終端器 <sup>21</sup>。</li>
+                                    <li><strong>Microlab:</strong> 提供終端器 <sup>21</sup>。</li>
+                                    <li><strong>Narda-ATM / Narda-MITEQ:</strong> 提供同軸終端器 <sup>21</sup>。</li>
+                                    <li><strong>Pasternack Enterprises Inc.:</strong> 提供多種終端器，包括部分低溫型號 <sup>21</sup>。</li>
+                                    <li><strong>KRYTAR:</strong> 提供終端器 <sup>21</sup>。</li>
+                                    <li><strong>HYPERLABS:</strong> 提供寬頻終端器 <sup>21</sup>。</li>
+                                    <li><strong>Innovative Power Products:</strong> 提供高功率終端器 <sup>21</sup>。</li>
+                                    <li><strong>Broadwave Technologies:</strong> 提供多種終端器，包括 50 歐姆、75 歐姆、失配和傳導冷卻型，頻率高達 40 GHz，功率高達 1000W <sup>154</sup>。</li>
+                                    <li><strong>Barry Industries (現為 Vishay):</strong> 製造包括終端器在內的被動電阻組件 <sup>156</sup>。</li>
+                                    <li><strong>XMA Corporation (Omni Spectra):</strong> 擁有終端器產品線，並明確提供低溫型號 <sup>144</sup>。</li>
+                                    <li><strong>SV Microwave:</strong> 也是終端器供應商之一 <sup>158</sup>。</li>
+                                    <li>其他供應商如 <strong>A-Info, Amphenol RF, Bird, Cernex, Fairview Microwave, JFW Industries, KYOCERA AVX, MCLI, Mesa Microwave, MOLEX, Qotana, Qualwave, Radiall</strong> 等也在 EverythingRF 的廣泛列表中 <sup>21</sup>。</li>
+                                </ul>
                       
-                                    <title>超導量子電腦主要部件與廠商選項</title>
-                                
-                                    <h1>超導量子電腦主要部件與廠商選項</h1>
-                                  
-                                    <table>
-                                      <thead>
+                                <h3>11.2 專業及低溫終端器供應商</h3>
+                                <p style="text-align:justify" class="dark-background">低溫終端器對於在量子運算裝置中正確端接未使用的埠或吸收訊號以防止反射和管理熱雜訊至關重要。它們必須在 mK 溫度下可靠工作，通常需要無磁性並提供良好的熱錨固。</p>
+                                <p style="text-align:justify" class="dark-background">主要供應商和產品特性：</p>
+                                <ul>
+                                    <li><strong>XMA Corporation (Omni Spectra):</strong> 明確提供可在 20mK 下工作的低溫終端器，採用其專有的薄膜電阻技術和專利製造工藝以確保熱穩定性 <sup>151</sup>。例如：6701-7100-02-CRYO (DC-65 GHz)。</li>
+                                    <li><strong>Quantum Microwave:</strong> 提供低溫終端器，例如 QMC-CRYOTERMF-DC18NM (DC-18 GHz，無磁性) 和 QMC-CRYOTERM-0412 (4-12 GHz，熱沉同軸終端器) <sup>21</sup>。</li>
+                                    <li><strong>Pasternack Enterprises Inc.:</strong> 列有低溫終端器，例如 PE6TR1200 (DC-18 GHz，2W，用於低溫應用) <sup>149</sup>。</li>
+                                    <li><strong>Talent Microwave Inc.:</strong> 提供低溫 SMA 同軸終端器 (DC-18 GHz) <sup>153</sup>。</li>
+                                    <li><strong>Radiall:</strong> 其低溫組件 <sup>65</sup> 可能包括或需要相容的終端器，特別是針對其系統中的熱沉層。</li>
+                                    <li><strong>Low Noise Factory:</strong> 其配件可能包括用於其低溫 LNA 裝置的專用終端器 <sup>15</sup>。</li>
+                                </ul>
+                                <p style="text-align:justify" class="dark-background">與其他低溫被動組件類似，一個專業的製造商群體（XMA、Quantum Microwave）和一些成熟的參與者（Pasternack）明確提供低溫終端器。標準終端器在低溫下電阻和阻抗可能發生變化，導致匹配不良和反射。所用材料也可能出現問題（例如磁化率）。專業的低溫終端器解決了這些問題，正如 XMA 強調其產品在低至 20mK 時仍具有熱穩定性 <sup>151</sup>。</p>
+                                <p style="text-align:justify" class="dark-background">一個重要的趨勢是開發能夠在低溫階段有效耗散少量射頻功率而不會顯著加熱環境的良好熱沉的終端器。即使終端器吸收的少量射頻功率，如果沒有適當熱沉到冷板，也可能導致局部發熱。Quantum Microwave 的「低溫熱沉同軸終端器」<sup>153</sup> 正是針對這一需求。</p>
+                                <p style="text-align:justify" class="dark-background">對於量子和低溫射頻系統，使用專為低溫操作設計或驗證的終端器至關重要。使用標準的室溫終端器可能會影響系統性能和熱穩定性。</p>
+                      
+                                <table>
+                                    <caption>表 10：主要射頻終端器製造商 (通用射頻及低溫/量子應用)</caption>
+                                    <thead>
                                         <tr>
-                                          <th>部件名稱</th>
-                                          <th>功能簡介</th>
-                                          <th>代表性廠商</th>
-                                          <th>技術門檻</th>
+                                            <th>製造商名稱</th>
+                                            <th>國家/地區</th>
+                                            <th>終端器類型/技術</th>
+                                            <th>專業領域 (通用射頻, 低溫, 高功率)</th>
+                                            <th>企業類型 (新創/成熟)</th>
+                                            <th>備註/範例產品</th>
                                         </tr>
-                                      </thead>
-                                      <tbody>
+                                    </thead>
+                                    <tbody>
                                         <tr>
-                                          <td>稀釋制冷機</td>
-                                          <td>提供&nbsp;≈10 mK 的超低溫環境，維持超導量子位元的相干與運作。</td>
-                                          <td>
-                                            <ul>
-                                              <li><a href="https://bluefors.com" target="_blank">Bluefors</a></li>
-                                              <li><a href="https://nanoscience.oxinst.com" target="_blank">Oxford Instruments</a></li>
-                                              <li><a href="https://www.qdusa.com/product/dilution-refrigerators" target="_blank">Janis/Quantum Design</a></li>
-                                            </ul>
-                                          </td>
-                                          <td>高 – 低溫技術與長週期製造能力僅少數廠商具備，難以自製。</td>
+                                            <td><strong>XMA Corporation (Omni Spectra)</strong></td>
+                                            <td>美國</td>
+                                            <td>同軸, 薄膜電阻</td>
+                                            <td>低溫 (20mK), 通用射頻</td>
+                                            <td>成熟</td>
+                                            <td>6701-7100-02-CRYO (DC-65 GHz) <sup>151</sup></td>
                                         </tr>
-                                  
                                         <tr>
-                                          <td>量子晶片（超導量子處理器）</td>
-                                          <td>核心「CPU」，包含量子位元與耦合電路，決定計算能力與保真度。</td>
-                                          <td>
-                                            <ul>
-                                              <li><a href="https://www.ibm.com/quantum" target="_blank">IBM</a></li>
-                                              <li><a href="https://quantumai.google" target="_blank">Google</a></li>
-                                              <li><a href="https://quantware.nl" target="_blank">QuantWare</a></li>
-                                            </ul>
-                                          </td>
-                                          <td>高 – 需奈米製程與超導薄膜技術，技術壁壘極高。</td>
+                                            <td><strong>Quantum Microwave</strong></td>
+                                            <td>美國</td>
+                                            <td>同軸</td>
+                                            <td>低溫, 量子, 無磁性, 熱沉</td>
+                                            <td>成熟 (專業利基)</td>
+                                            <td>QMC-CRYOTERMF-DC18NM, QMC-CRYOTERM-0412 <sup>153</sup></td>
                                         </tr>
-                                  
                                         <tr>
-                                          <td>微波／脈衝產生器<br />(含任意波形發生器)</td>
-                                          <td>產生 4–8 GHz 微波脈衝，精準控制量子位元閘操作。</td>
-                                          <td>
-                                            <ul>
-                                              <li><a href="https://www.keysight.com" target="_blank">Keysight</a></li>
-                                              <li><a href="https://www.rohde-schwarz.com" target="_blank">Rohde &amp; Schwarz</a></li>
-                                              <li><a href="https://www.tek.com" target="_blank">Tektronix</a></li>
-                                            </ul>
-                                          </td>
-                                          <td>中 – 高頻電子成熟，但需低相噪與多通道同步。</td>
+                                            <td><strong>Pasternack Enterprises Inc.</strong></td>
+                                            <td>美國</td>
+                                            <td>同軸</td>
+                                            <td>通用射頻, 部分低溫</td>
+                                            <td>成熟</td>
+                                            <td>PE6TR1200 (DC-18 GHz, 低溫) <sup>149</sup></td>
                                         </tr>
-                                  
                                         <tr>
-                                          <td>讀出與測量設備</td>
-                                          <td>解調並量化量子位元輸出信號，判定 \( \ket{0} \) / \( \ket{1} \) 狀態。</td>
-                                          <td>
-                                            <ul>
-                                              <li><a href="https://www.zhinst.com" target="_blank">Zurich Instruments</a></li>
-                                              <li><a href="https://www.alazartech.com" target="_blank">AlazarTech</a></li>
-                                              <li><a href="https://www.keysight.com" target="_blank">Keysight</a></li>
-                                            </ul>
-                                          </td>
-                                          <td>中 – 需高速數位化與即時信號處理。</td>
+                                            <td><strong>Talent Microwave Inc</strong></td>
+                                            <td>中國</td>
+                                            <td>同軸 (SMA)</td>
+                                            <td>低溫</td>
+                                            <td>未明確</td>
+                                            <td>TT2-18-SM-Cryo (DC-18 GHz) <sup>153</sup></td>
                                         </tr>
-                                  
                                         <tr>
-                                          <td>低溫低雜訊放大器<br />(HEMT)</td>
-                                          <td>安裝於 4 K 級，用於低雜訊放大微波讀出信號。</td>
-                                          <td>
-                                            <ul>
-                                              <li><a href="https://www.lownoisefactory.com" target="_blank">Low Noise Factory</a></li>
-                                              <li><a href="https://miteq.com" target="_blank">MITEQ</a></li>
-                                              <li><a href="https://www.qwquantumtech.com" target="_blank">扩维科技</a></li>
-                                            </ul>
-                                          </td>
-                                          <td>高 – 量子極限雜訊性能製造難度大，全球供應有限。</td>
+                                            <td><strong>Broadwave Technologies</strong></td>
+                                            <td>美國</td>
+                                            <td>同軸 (多種連接器), 傳導冷卻</td>
+                                            <td>通用射頻, 高功率 (達 1000W)</td>
+                                            <td>未明確</td>
+                                            <td>592-401-005 (600 歐姆, N 型) <sup>154</sup></td>
                                         </tr>
-                                  
                                         <tr>
-                                          <td>超導參量放大器<br />(JPA / JTWPA)</td>
-                                          <td>工作於 10 mK，提供量子極限前置放大，提高讀出 SNR。</td>
-                                          <td>
-                                            <ul>
-                                              <li><a href="https://quantware.nl" target="_blank">QuantWare</a></li>
-                                              <li>（耶魯、MIT 等自研）</li>
-                                            </ul>
-                                          </td>
-                                          <td>高 – 設計與調試複雜，商用供應剛起步。</td>
+                                            <td><strong>Barry Industries (Vishay)</strong></td>
+                                            <td>美國</td>
+                                            <td>電阻式</td>
+                                            <td>通用射頻</td>
+                                            <td>成熟 (被收購)</td>
+                                            <td><sup>156</sup></td>
                                         </tr>
-                                  
                                         <tr>
-                                          <td>微波無源元件<br />(衰減器、隔離器、循環器)</td>
-                                          <td>控制信號路徑並隔離回波雜訊，保護量子位元免受干擾。</td>
-                                          <td>
-                                            <ul>
-                                              <li><a href="https://www.ditom.com" target="_blank">DiTom Microwave</a></li>
-                                              <li><a href="https://www.quinstar.com" target="_blank">QuinStar</a></li>
-                                              <li>天靈微波</li>
-                                            </ul>
-                                          </td>
-                                          <td>中 – 標準微波技術，需低溫兼容設計。</td>
+                                            <td><strong>MECA</strong></td>
+                                            <td>美國</td>
+                                            <td>同軸</td>
+                                            <td>通用射頻</td>
+                                            <td>成熟</td>
+                                            <td>417-17WWP (DC-4 GHz, 10W) <sup>21</sup></td>
                                         </tr>
-                                  
                                         <tr>
-                                          <td>低溫連接與封裝<br />(線纜、連接器、樣品盒)</td>
-                                          <td>將信號引入量子晶片並屏蔽雜訊，支持高密度布線。</td>
-                                          <td>
-                                            <ul>
-                                              <li><a href="https://qdevil.com" target="_blank">QDevil</a></li>
-                                              <li><a href="https://www.intelliconnectusa.com" target="_blank">CryoCoax</a></li>
-                                              <li><a href="https://www.lakeshore.com" target="_blank">Lake Shore Cryotronics</a></li>
-                                            </ul>
-                                          </td>
-                                          <td>中 – 以工程整合為主，需考慮串擾與散熱。</td>
+                                            <td><strong>Mini-Circuits</strong></td>
+                                            <td>美國/全球</td>
+                                            <td>同軸, 表面黏著</td>
+                                            <td>通用射頻</td>
+                                            <td>成熟</td>
+                                            <td>ANNE-50W+ (DC-110 GHz) <sup>21</sup></td>
                                         </tr>
-                                      </tbody>
-                                    </table>
-
-
-                                
+                                        <tr>
+                                            <td><strong>Inmet by Spectrum Control</strong></td>
+                                            <td>美國</td>
+                                            <td>晶片, 同軸</td>
+                                            <td>通用射頻</td>
+                                            <td>成熟</td>
+                                            <td>KACH375-375AZ-1000J (晶片終端器) <sup>21</sup></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                                 <p style="text-align:justify">
                                     ▲
                                     <br><span style="font-size: 0.7em; line-height: 0.8;">
