@@ -347,31 +347,31 @@
                                 <div id="prev-next-nav" class="text-center"></div>
 
                                 <script>
-                                fetch("lessons.json")
-                                .then(res => res.json())
-                                .then(pages => {
-                                    const current = location.pathname.split("/").pop();
-                                    const index = pages.findIndex(p => p.file === current);
-                                    let html = "";
+fetch("lessons.json")
+  .then(res => res.json())
+  .then(pages => {
+    // 過濾掉 disabled 的頁面
+    pages = pages.filter(p => p.enabled !== false);
 
-                                    // 上一頁按鈕
-                                    if (index > 0) {
-                                    const prev = pages[index - 1];
-                                    html += `<a class="btn btn-gray" href="${prev.file}">← 上一頁</a> `;
-                                    }
+    const current = location.pathname.split("/").pop();
+    const index = pages.findIndex(p => p.file === current);
+    let html = "";
 
-                                    // 英文版按鈕
-                                    html += `<a class="btn btn-gray" href="../QC_hardware_en/${current}" style="margin: 0 10px;">English Version</a>`;
+    if (index > 0) {
+      const prev = pages[index - 1];
+      html += `<a class="btn btn-gray" href="${prev.file}">← Previous</a> `;
+    }
 
-                                    // 下一頁按鈕
-                                    if (index < pages.length - 1) {
-                                    const next = pages[index + 1];
-                                    html += `<a class="btn btn-gray" href="${next.file}">下一頁 →</a>`;
-                                    }
+    html += `<a class="btn btn-gray" href="../QC_hardware_en/${current}" style="margin: 0 10px;">English Version</a>`;
 
-                                    document.getElementById("prev-next-nav").innerHTML = html;
-                                });
-                                </script>
+    if (index < pages.length - 1) {
+      const next = pages[index + 1];
+      html += `<a class="btn btn-gray" href="${next.file}">Next →</a>`;
+    }
+
+    document.getElementById("prev-next-nav").innerHTML = html;
+  });
+</script>
 
                             </div><!-- /.post-content -->
                         </article><!-- /.blog-post -->
