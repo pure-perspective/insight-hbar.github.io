@@ -397,17 +397,21 @@
                                 <div id="lesson-list_2"></div>
                             </div>
                             <script>
-                            fetch("lessons.json")
-                                .then(res => res.json())
-                                .then(pages => {
-                                const current = location.pathname.split("/").pop();
-                                const list = pages.map(p => {
-                                    const isActive = p.file === current ? "active" : "";
-                                    return `<div class="lesson-link ${isActive}"><a href="${p.file}">${p.title}</a></div>`;
-                                }).join("");
-                                document.getElementById("lesson-list_2").innerHTML = list;
-                                });
-                            </script>
+fetch("lessons.json")
+  .then(res => res.json())
+  .then(pages => {
+    const current = location.pathname.split("/").pop();
+    const list = pages
+      .filter(p => p.enabled !== false) // ← 這行：只顯示 enabled 沒被關閉的項目
+      .map(p => {
+        const isActive = p.file === current ? "active" : "";
+        return `<div class="lesson-link ${isActive}"><a href="${p.file}">${p.title}</a></div>`;
+      })
+      .join("");
+    document.getElementById("lesson-list_2").innerHTML = list;
+  });
+</script>
+
   
                         </div><!-- /.sidebar -->
                         
