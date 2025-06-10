@@ -136,14 +136,14 @@ fetch("lessons.json")
 
     if (index > 0) {
       const prev = pages[index - 1];
-      html += `<a class="btn btn-gray" href="${prev.file}">← Previous</a> `;
+      html += `<a class="btn btn-gray" href="${prev.file}">← 上一頁</a> `;
     }
 
     html += `<a class="btn btn-gray" href="../QC_hardware_en/${current}" style="margin: 0 10px;">English Version</a>`;
 
     if (index < pages.length - 1) {
       const next = pages[index + 1];
-      html += `<a class="btn btn-gray" href="${next.file}">Next →</a>`;
+      html += `<a class="btn btn-gray" href="${next.file}">下一頁 →</a>`;
     }
 
     document.getElementById("prev-next-nav").innerHTML = html;
@@ -255,7 +255,7 @@ fetch("lessons.json")
                             <!--<<a class="facebook-bg" href="https://www.facebook.com/people/Quantum-Perspectives/61576446849628/"><i class="fab fa-facebook"></i></a>-->
                             <!--<a class="facebook-bg" href="https://www.facebook.com/people/%E9%87%8F%E5%AD%90%E9%81%A0%E8%A6%8BQuantum-Perspectives/61576883632888/"><i class="fab fa-facebook-f"></i></a>-->
                             <!--<a class="pinterest" href="#"><i class="fa-solid fa-microscope"></i></a>-->
-                            <a class="facebook-bg" href="https://www.facebook.com/people/Insight-hbar/61576811775374/"><i class="fab fa-facebook-f"></i></a>
+                            <!--<a class="facebook-bg" href="https://www.facebook.com/people/Insight-hbar/61576811775374/"><i class="fab fa-facebook-f"></i></a>-->
                             <a class="linkedin-bg" href="https://www.linkedin.com/company/insight-ihbar"><i class="fab fa-linkedin"></i></a>
                         </div><!-- /.social-links -->
                     </div>
