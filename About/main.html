@@ -35,7 +35,7 @@
     <link href="../assets/css/style.css" rel="stylesheet">
     <link href="../assets/css/responsive.css" rel="stylesheet">
 
-    <title>超導量子位元(進階版)</title>
+    <title>𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</title>
     <meta name="description" content="深入解析2025年超導量子電腦的構建，涵蓋量子處理器(QPU)、稀釋製冷機、控制電子、低溫佈線等核心硬體。提供全球主要製造商、價格範圍、技術挑戰與未來趨勢的詳細指引。">
     <meta name="keywords" content="超導量子電腦, 量子位元, Qubit, QPU, 稀釋製冷機, IBM, Google, QuantWare, Bluefors, 低溫系統, 控制電子, Josephson Junction, Transmon, Fluxonium, 量子計算硬體, SEO">
     <link rel="canonical" href="https://www.insight-ihbar.com/QC_hardware_2025.html" />
@@ -63,12 +63,12 @@
                         <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">科普介紹<i class="fa fa-caret-down hidden-xs" aria-hidden="true"></i></a>
                             <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
                               <li><a href="../SCQ_elementary/main.html">超導量子位元(科普版)</a></li>
-                              <li class="active"><a href="../SCQ_advanced/main.html">超導量子位元(進階版)</a></li>
+                              <li><a href="../SCQ_advanced/main.html">超導量子位元(進階版)</a></li>
                             </ul>
                         </li>
                         <!--<li class="active"><a href="../SCQ_elementary/main.html">科普介紹</a></li>-->
-                        <li>a href="../QC_hardware/main.html">硬體導論</a></li>
-                        <li><a href="../About/main.html">關於我們</a></li>
+                        <li><a href="../QC_hardware/main.html">硬體導論</a></li>
+                        <li class="active"><a href="../About/main.html">關於我們</a></li>
                         <li><a href="../index_en.html">English</a></li>                        
                     </ul>
                 </div>
@@ -80,10 +80,10 @@
     <div id="hero" class="hero overlay subpage-hero blog-hero">
         <div class="hero-content">
             <div class="hero_2-text">
-                <h1>科普介紹</h1>
+                <h1>𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</h1>
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
-                  <li class="breadcrumb-item"><a href="./main.html">超導量子位元(進階版)</a></li>
+                  <li class="breadcrumb-item"><a href="./main.html">關於我們</a></li>
                   <!--<li class="breadcrumb-item active">約瑟夫森節</li>-->
                 </ol>
             </div><!-- /.hero-text -->
@@ -95,135 +95,74 @@
         <section class="site-section subpage-site-section section-blog">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-9">
+                    <div class="col-md-12">
                         <article class="blog-post">
                             <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="">-->
                             <div class="post-content">
                                 <div style="text-align: center;">
-                                    <h2>附錄：電磁場下薛丁格方程式的機率流</h2>
-                                    <h3></h3>
+                                    <h2>關於𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</h2>
+                                    <h3>深入的量子科技知識平台</h3>
                                 </div>
                                 
 
-   
-                            <p style="text-align:justify">
-                              帶電荷 \(q\) 的粒子波函數 \(\Psi\) 滿足薛丁格方程式：
-                              \[
-                              i\hbar \partial_t \Psi = \frac{\hat{p}^2}{2m} \Psi + V\Psi,
-                              \]
-                              其中動量算符 \(\hat{p}\) 在電磁勢 \((\phi, \mathbf{A})\) 的作用下，表達為（SI 單位）：
-                              \[
-                              \hat{p} = \frac{\hbar}{i} \nabla - q\mathbf{A}.
-                              \]
-                              將其代入薛丁格方程式，我們得到：
-                              \[
-                              i\hbar \partial_t \Psi = \frac{1}{2m} \left( \frac{\hbar}{i} \nabla - q\mathbf{A} \right) \left( \frac{\hbar}{i} \nabla \Psi - q\mathbf{A}\Psi \right) + V\Psi.
-                              \]
-                              展開後為：
-                              \[
-                              i\hbar \partial_t \Psi = -\frac{\hbar^2}{2m} \nabla^2 \Psi - \frac{q}{2m} \frac{\hbar}{i} \nabla \cdot (\mathbf{A}\Psi) - \frac{q}{2m} \frac{\hbar}{i} \mathbf{A} \cdot \nabla \Psi + \frac{q^2 A^2}{2m} \Psi + \phi\Psi.
-                              \]
-                            </p>
-                        
-                            <p style="text-align:justify">
-                              共軛方程為：
-                              \[
-                              -i\hbar \partial_t \Psi^* = -\frac{\hbar^2}{2m} \nabla^2 \Psi^* + \frac{q}{2m} \frac{\hbar}{i} \nabla \cdot (\mathbf{A} \Psi^*) + \frac{q}{2m} \frac{\hbar}{i} \mathbf{A} \cdot \nabla \Psi^* + \frac{q^2 A^2}{2m} \Psi^* + \phi \Psi^*.
-                              \]
-                            </p>
-                        
-                            <p style="text-align:justify">
-                              將兩式分別乘以 \(\Psi^*\) 和 \(\Psi\)，再相減，得到：
-                              \[
-                              i\hbar (\Psi^* \partial_t \Psi + \Psi \partial_t \Psi^*) = -\frac{\hbar^2}{2m} (\Psi^* \nabla^2 \Psi - \Psi \nabla^2 \Psi^*) - \frac{q}{2m} \frac{\hbar}{i} \left[ \Psi^* \nabla \cdot (\mathbf{A}\Psi) + \Psi \nabla \cdot (\mathbf{A}\Psi^*) + \Psi^* \mathbf{A} \cdot \nabla \Psi + \Psi \mathbf{A} \cdot \nabla \Psi^* \right].
-                              \]
-                              簡化後得到：
-                              \[
-                              i\hbar \partial_t (\Psi^* \Psi) = -\frac{\hbar^2}{2m} \nabla \cdot (\Psi^* \nabla \Psi - \Psi \nabla \Psi^*) - \frac{q}{2m} \frac{\hbar}{i} \nabla \cdot (2\mathbf{A} \Psi^* \Psi).
-                              \]
-                            </p>
-                        
-                            <p style="text-align:justify">
-                              除以 \(i\hbar\)，得：
-                              \[
-                              \partial_t (\Psi^* \Psi) = -\nabla \cdot \left[ \frac{\hbar}{2mi} (\Psi^* \nabla \Psi - \Psi \nabla \Psi^*) - \frac{q\mathbf{A}}{m} \Psi^* \Psi \right].
-                              \]
-                              比較連續性方程式：
-                              \[
-                              \partial_t \rho + \nabla \cdot \mathbf{J} = 0,
-                              \]
-                              其中 \(\rho = \Psi^* \Psi\) 為機率密度，可得機率流：
-                              \[
-                              \mathbf{J} = \frac{\hbar}{2mi} (\Psi^* \nabla \Psi - \Psi \nabla \Psi^*) - \frac{q\mathbf{A}}{m} \Psi^* \Psi.
-                              \]
-                            </p>
-                        
-                            <p style="text-align:justify">
-                              對於帶電粒子，其電流密度 \(\mathbf{J}_q\) 為：
-                              \[
-                              \mathbf{J}_q = q \mathbf{J} = q \left[ \frac{\hbar}{2mi} (\Psi^* \nabla \Psi - \Psi \nabla \Psi^*) - \frac{q\mathbf{A}}{m} \Psi^* \Psi \right].
-                              \]
-                              若波函數以粒子密度 \(n(\mathbf{r})\) 和相位 \(\theta(\mathbf{r})\) 表示，即 \(\Psi \sim \sqrt{n(\mathbf{r})} e^{i\theta(\mathbf{r})}\)，則有：
-                              \[
-                              \mathbf{J}_q = q\frac{\hbar}{m} n(\mathbf{r}) \left[ \nabla \theta(\mathbf{r}) - \frac{q\mathbf{A}}{\hbar} \right].
-                              \]
-                            </p>
-                        <div style="text-align: center;">
-                          <a href="../Image/LOOP.png">
-                            <img src="../Image/LOOP.png" alt="取代文字" style="width: 50%; height: auto;">
-                          </a>
-                        </div>
-                            <p style="text-align:justify">
-                              在拓樸條件下，根據斯托克斯定理：
-                              \[
-                              \int \nabla \times \left[ \nabla \theta(\mathbf{r}) - \frac{q\mathbf{A}}{\hbar} \right] \cdot d\mathbf{S} = \int \nabla \times (\nabla \theta(\mathbf{r})) \cdot d\mathbf{S} - \frac{q}{\hbar} \int (\nabla \times \mathbf{A}) \cdot d\mathbf{S},
-                              \]
-                              簡化為：
-                              \[
-                              \oint \nabla \theta(\mathbf{r}) \cdot d\mathbf{l} - \frac{q}{\hbar} \Phi_B = \begin{cases} 
-                              0, & \text{若環路無孔洞}, \\
-                              2\pi N, & \text{若環路有孔洞}.
-                              \end{cases}
-                              \]
-                            </p>
+
+                                <h3>🔷 𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ 的理念</h3>
+                                <p style="text-align:justify">
+                                    
+                                    𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ 是一個「研究、教育、諮詢」量子科技平台。在 insight ihbar的我們深信：量子科技不僅是未來的技術基礎，更是對自然法則理解方式的根本革新。我們身處於一個關鍵轉折點，量子科技正從實驗室走向工程化應用，從理論研究，走向跨領域、多元化的應用場景。
+                                </p>
+                                <h3>🔬 研究｜𝑅𝑒𝑠𝑒𝑎𝑟𝑐ℎ：量子系統的理論與實作前沿</h3>
+                                <p style="text-align:justify">
+                                    
+                                    我們致力於探索量子控制、量子測量、誤差修正機制與量子元件設計等關鍵課題，聚焦於具有工程實現潛力的架構，例如超導量子位元、自旋系統、與混合量子機械平台。我們相信，真正的創新來自理論與實驗的對話。因此，𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ 不僅參與純粹的學術探索，也積極尋求跨領域的系統整合與原型開發合作。
+                                </p>
+                                <h3>📘 教育｜𝐸𝑑𝑢𝑐𝑎𝑡𝑖𝑜𝑛：建構清晰、進階的量子知識路徑</h3>
+                                <p style="text-align:justify">
+                                    
+                                    我們針對不同背景（學生、工程師、研究人員）的學習者，設計模組化、層次化的課程與教學資源。我們側重於從硬體層面來切入量子科技，試圖結合物理模型與硬體設計的角度。我們希望讓量子科技從艱深知識轉化為能被理解、掌握、應用的見識。
+                                </p>
+                                <h3>🤝 諮詢｜𝐶𝑜𝑛𝑠𝑢𝑙𝑡：成為量子科技轉譯與整合的橋樑</h3>
+                                <p style="text-align:justify">
+                                    
+                                    面對快速成長的量子產業，新創公司、實驗室與教育機構都需要可靠的內容策略與技術顧問。我們可以提供合作夥伴諮詢、教學、研究導入、整合諮詢，加速量子科技與產業發展。我們擅長於「跨語言 × 跨領域」的科技轉譯，我們的目標是：讓正確的知識與美好的願景，被更多人學習、理解並實踐。
+                                </p>
+                                <h3>✨ 𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ 的願景</h3>
+                                <p style="text-align:justify">
+                                
+                                    𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ 的願景，是成為量子科技世界中的一座橋樑：串連基礎與應用、教育與產業、理論與工程。我們相信，一場深刻的科技變革，必須伴隨一場理解力與表達力的革命。讓我們共同打造量子時代的知識與對話平台。
+
+                                    </p>
 
 
-
-
-
-
-            
-
-
-                                <div class="post-meta">
+                                <!-- <div class="post-meta">
                                     <span class="post-author">
                                         <a href="#"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="">王培儒</a>
                                     </span>
                                     <span class="post-category">
-                                        <a href="./main.html"><i class="fa fa-folder" aria-hidden="true"></i> 超導量子位元(進階版)</a>
+                                        <a href="./main.html"><i class="fa fa-folder" aria-hidden="true"></i>硬體導論</a>
                                     </span>
-                                </div><!-- /.post-meta -->
+                                </div>/.post-meta -->
                             
                                 <div id="prev-next-nav" class="text-center"></div>
 
-<script>
+                                <script>
 fetch("lessons.json")
   .then(res => res.json())
   .then(pages => {
+    // 過濾掉 disabled 的頁面
+    pages = pages.filter(p => p.enabled !== false);
+
     const current = location.pathname.split("/").pop();
     const index = pages.findIndex(p => p.file === current);
     let html = "";
 
-    // 上一頁按鈕
     if (index > 0) {
       const prev = pages[index - 1];
       html += `<a class="btn btn-gray" href="${prev.file}">← 上一頁</a> `;
     }
 
-    // 英文版按鈕
-    html += `<a class="btn btn-gray" href="../SCQ_advanced_en/${current}" style="margin: 0 10px;">English Version</a>`;
+    html += `<a class="btn btn-gray" href="../About_en/${current}" style="margin: 0 10px;">English Version</a>`;
 
-    // 下一頁按鈕
     if (index < pages.length - 1) {
       const next = pages[index + 1];
       html += `<a class="btn btn-gray" href="${next.file}">下一頁 →</a>`;
@@ -250,47 +189,7 @@ fetch("lessons.json")
                             </form>    
                         </div> /.respond -->
                     </div>
-                    <aside class="col-md-3">
-                        <div class="sidebar">
-                            <!--<div class="widget search-form">
-                                <h4 class="widget-title">Search the blog</h4>
-                                <form class="form-group">
-                                    <input type="text" class="form-control" placeholder="Search" required>
-                                    <button class="btn btn-green" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
-                                </form>
-                            </div> /.search-form -->
-                            <!--<div class="widget widget-recent-posts">
-                                <h4 class="widget-title">Recent posts</h4>
-                                <ul class="list-unstyled">
-                                    <li><a href="#">Inside The Lipsum</a></li>
-                                    <li><a href="#">Oscar Wilde</a></li>
-                                    <li><a href="#">Jeffrey Ween</a></li>
-                                    <li><a href="#">Responsive Design</a></li>
-                                    <li><a href="#">Development</a></li>
-                                </ul>
-                            </div> /.widget-recent-posts -->
-                            
-
-                            <div class="widget">
-                                <!--<h4 class="widget-title"><a href="./main.html">科普版：目錄</a></h4>-->
-                                <div id="lesson-list_2"></div>
-                            </div>
-                            <script>
-                            fetch("lessons.json")
-                                .then(res => res.json())
-                                .then(pages => {
-                                const current = location.pathname.split("/").pop();
-                                const list = pages.map(p => {
-                                    const isActive = p.file === current ? "active" : "";
-                                    return `<div class="lesson-link ${isActive}"><a href="${p.file}">${p.title}</a></div>`;
-                                }).join("");
-                                document.getElementById("lesson-list_2").innerHTML = list;
-                                });
-                            </script>
-  
-                        </div><!-- /.sidebar -->
-                        
-                    </aside>
+                    
                 </div>
             </div>
         </section><!-- /.section-portfolio -->
@@ -362,20 +261,6 @@ fetch("lessons.json")
     <script src="../assets/js/jquery.shuffle.min.js"></script>
     <script src="../assets/js/script.js"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <style>
-        details.dark-background {
-          background-color: #f5f5f5;
-          border: 1px solid #ddd;
-          padding: 10px;
-          border-radius: 5px;
-        }
-        details.dark-background summary {
-          cursor: pointer;
-          font-weight: bold;
-          background-color: #e0e0e0;
-          padding: 5px;
-          border-radius: 3px;
-        }
-      </style>
+  
 </body>
 </html>
