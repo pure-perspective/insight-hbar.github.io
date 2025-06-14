@@ -35,7 +35,7 @@
     <link href="../assets/css/style.css" rel="stylesheet">
     <link href="../assets/css/responsive.css" rel="stylesheet">
 
-    <title>超導量子位元(科普版)</title>
+    <title>𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</title>
     <meta name="description" content="深入解析2025年超導量子電腦的構建，涵蓋量子處理器(QPU)、稀釋製冷機、控制電子、低溫佈線等核心硬體。提供全球主要製造商、價格範圍、技術挑戰與未來趨勢的詳細指引。">
     <meta name="keywords" content="超導量子電腦, 量子位元, Qubit, QPU, 稀釋製冷機, IBM, Google, QuantWare, Bluefors, 低溫系統, 控制電子, Josephson Junction, Transmon, Fluxonium, 量子計算硬體, SEO">
     <link rel="canonical" href="https://www.insight-ihbar.com/QC_hardware_2025.html" />
@@ -53,32 +53,24 @@
         <nav id="primary-navigation" class="site-navigation">
             <div class="container">
 
-                <div class="navbar-header">
-                   
+                <div class="navbar-header">                   
                     <a href="../index.html" class="site-title">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</a>
-
                 </div><!-- /.navbar-header -->
 
                 <div class="collapse navbar-collapse" id="agency-navbar-collapse">
-
                     <ul class="nav navbar-nav navbar-right">
-
                         <li><a href="../index.html">Home</a></li>
                         <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">科普介紹<i class="fa fa-caret-down hidden-xs" aria-hidden="true"></i></a>
-
                             <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                              <li class="active"><a href="../SCQ_elementary/main.html">超導量子位元(科普版)</a></li>
+                              <li><a href="../SCQ_elementary/main.html">超導量子位元(科普版)</a></li>
                               <li><a href="../SCQ_advanced/main.html">超導量子位元(進階版)</a></li>
                             </ul>
-
                         </li>
                         <!--<li class="active"><a href="../SCQ_elementary/main.html">科普介紹</a></li>-->
                         <li><a href="../QC_hardware/main.html">硬體導論</a></li>
-                        <li><a href="../About/main.html">關於我們</a></li>
-                        <li><a href="../index_en.html">English</a></li>
-                        
+                        <li class="active"><a href="../About/main.html">關於我們</a></li>
+                        <li><a href="../index_en.html">English</a></li>                        
                     </ul>
-
                 </div>
 
             </div>   
@@ -88,11 +80,11 @@
     <div id="hero" class="hero overlay subpage-hero blog-hero">
         <div class="hero-content">
             <div class="hero_2-text">
-                <h1>科普介紹</h1>
+                <h1>𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</h1>
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
-                  <li class="breadcrumb-item"><a href="../SCQ_elementary/main.html">超導量子位元(科普版)</a></li>
-                  <!--<li class="breadcrumb-item active">早年超導量子位元的種類</li>-->
+                  <li class="breadcrumb-item"><a href="./main.html">關於我們</a></li>
+                  <!--<li class="breadcrumb-item active">約瑟夫森節</li>-->
                 </ol>
             </div><!-- /.hero-text -->
         </div><!-- /.hero-content -->
@@ -103,151 +95,74 @@
         <section class="site-section subpage-site-section section-blog">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-9">
+                    <div class="col-md-12">
                         <article class="blog-post">
                             <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="">-->
                             <div class="post-content">
                                 <div style="text-align: center;">
-                                    <h2>其他種類的Qubit</h2>
-                                    <h3>除了超導量子位元之外，還有什麼量子位元的種類呢？</h3>
+                                    <h2>關於𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</h2>
+                                    <h3>深入的量子科技知識平台</h3>
                                 </div>
                                 
 
- 
 
-                            <div style="text-align: center;">
-                            <a href="../Image/Qubit type.png">
-                                <img src="../Image/Qubit type.png" alt="取代文字" style="width: 100%; height: auto;">
-                            </a>
-                            </div>
-                            <p style="text-align:justify" class="dark-background">
-                            前文提到複合形式的超導量子位元，這邊簡述一些其他的量子位元。量子位元的應用上，一方面要求量子位元要容易控制，一方面也希望量子位元不容易受到雜訊干擾、延長退相干時間。然而目前這兩個需求是衝突的，容易控制意味著易受影響、反之穩定度高意味著難以控制。
-                            因為不同量子位元的種類有不同的特性，發展在同一個整合不同的量子位元、甚至是複合量子位元，便是一個可行的方向。
-                            <br>
-                            <span style="font-size: 0.7em; line-height: 0.8;">Ref: arxiv: 2303.04061</span>
-                            <br><br>
-                            </p>
-
-                            <p style="text-align:justify">
-                                <strong>(a) 超導量子處理器 (Superconducting Quantum Processor)</strong><br>
-                                由約瑟夫森結與電容組成的人工原子陣列，透過微波電子學進行控制。<br>
-                                Qubit數量：~100<br>
-                                Quantum Gate保真度：
-                                Single Qubit Gate \( F_1 > 99\% \)，2 Qubit Gate \( F_2 > 99\% \)<br>
-                                <b>優勢：</b>快速操作、高度可控性與良好可擴展性<br>
-                                <b>挑戰：</b>串擾、高冷卻需求、大規模擴展挑戰<br>
-                                <br><br>
-                                </p>
-
+                                <h3>𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ 的理念</h3>
                                 <p style="text-align:justify">
-                                <strong>(b) 捕獲離子量子計算 (Trapped Ion Quantum Computing)</strong><br>
-                                利用雷射冷卻的原子離子，透過射頻電場捕獲，並用雷射操控。<br>
-                                Qubit數量：20–30<br>
-                                Quantum Gate保真度：
-                                Single Qubit Gate \( F_1 > 99.9\% \)，2 Qubit Gate \( F_2 > 99\% \)<br>
-                                <b>優勢：</b>超長相干時間、高精確度、可重新配置連結<br>
-                                <b>挑戰：</b>技術上難以進行大規模整合<br>
-                                <br><br>
+                                    
+                                    𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ 是一個「研究、教育、諮詢」量子科技平台。在 insight ihbar的我們深信：量子科技不僅是未來的技術基礎，更是對自然法則理解方式的根本革新。我們身處於一個關鍵轉折點，量子科技正從實驗室走向工程化應用，從理論研究，走向跨領域、多元化的應用場景。
                                 </p>
-
+                                <h3>研究｜𝑅𝑒𝑠𝑒𝑎𝑟𝑐ℎ：量子系統的理論與實作前沿</h3>
                                 <p style="text-align:justify">
-                                <strong>(c) 半導體自旋量子計算 (Semiconductor Spin-Based Quantum Computing)</strong><br>
-                                利用半導體量子點中的電子或空穴自旋作為Qubit。<br>
-                                Qubit數量：6<br>
-                                Quantum Gate保真度：
-                                Single Qubit Gate \( F_1 \approx 99.99\% \)，2 Qubit Gate \( F_2 \approx 99.5\% \)<br>
-                                <b>優勢：</b>技術成熟、相干時間長、小占用空間<br>
-                                <b>挑戰：</b>需納米級製造精度<br>
-                                <br><br>
+                                    
+                                    我們致力於探索量子控制、量子測量、誤差修正機制與量子元件設計等關鍵課題，聚焦於具有工程實現潛力的架構，例如超導量子位元、自旋系統、與混合量子機械平台。我們相信，真正的創新來自理論與實驗的對話。因此，𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ 不僅參與純粹的學術探索，也積極尋求跨領域的系統整合與原型開發合作。
                                 </p>
-
+                                <h3>教育｜𝐸𝑑𝑢𝑐𝑎𝑡𝑖𝑜𝑛：建構清晰、進階的量子知識路徑</h3>
                                 <p style="text-align:justify">
-                                <strong>(d) NV 中心量子計算 (NV Center Quantum Computing)</strong><br>
-                                在鑽石中的點缺陷，利用電子與核自旋的長相干時間進行運算。<br>
-                                Qubit數量：10<br>
-                                Quantum Gate保真度：
-                                Single Qubit Gate \( F_1 \approx 99.995\% \)，2 Qubit Gate \( F_2 \approx 99.2\% \)<br>
-                                <b>優勢：</b>可在室溫操作、高靈敏度、適用於量子網路<br>
-                                <b>挑戰：</b>難以大規模擴展<br>
-                                <br><br>
+                                    
+                                    我們針對不同背景（學生、工程師、研究人員）的學習者，設計模組化、層次化的課程與教學資源。我們側重於從硬體層面來切入量子科技，試圖結合物理模型與硬體設計的角度。我們希望讓量子科技從艱深知識轉化為能被理解、掌握、應用的見識。
                                 </p>
-
+                                <h3>諮詢｜𝐶𝑜𝑛𝑠𝑢𝑙𝑡：成為量子科技轉譯與整合的橋樑</h3>
                                 <p style="text-align:justify">
-                                <strong>(e) 中性原子陣列量子計算 (Neutral Atom Array Quantum Computing)</strong><br>
-                                利用光鑷捕獲中性原子，透過 Rydberg 作用控制原子相互作用。<br>
-                                Qubit數量：<br>
-                                數位處理器：24<br>
-                                類比模擬器：289<br>
-                                <b>優勢：</b>同時支持數位運算與類比模擬，具良好擴展性<br>
-                                <b>挑戰：</b>2 Qubit Gate保真度需提升<br>
-                                <br><br>
+                                    
+                                    面對快速成長的量子產業，新創公司、實驗室與教育機構都需要可靠的內容策略與技術顧問。我們可以提供合作夥伴諮詢、教學、研究導入、整合諮詢，加速量子科技與產業發展。我們擅長於「跨語言 × 跨領域」的科技轉譯，我們的目標是：讓正確的知識與美好的願景，被更多人學習、理解並實踐。
                                 </p>
-
+                                <h3>𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ 的願景</h3>
                                 <p style="text-align:justify">
-                                <strong>(f) 核磁共振 (NMR) 量子計算</strong><br>
-                                使用分子中的核自旋進行運算。<br>
-                                Qubit數量：12<br>
-                                Quantum Gate保真度：
-                                Single Qubit Gate \( F_1 \approx 99.98\% \)，2 Qubit Gate \( F_2 \approx 99.3\% \)<br>
-                                <b>優勢：</b>室溫操作、長相干時間、適用於數位模擬<br>
-                                <b>挑戰：</b>難以擴展至大規模系統<br>
-                                <br><br>
-                                </p>
+                                
+                                    𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ 的願景，是成為量子科技世界中的一座橋樑：串連基礎與應用、教育與產業、理論與工程。我們相信，一場深刻的科技變革，必須伴隨一場理解力與表達力的革命。讓我們共同打造量子時代的知識與對話平台。
 
-                                <p style="text-align:justify">
-                                <strong>(g) 光量子計算 (Photonic Quantum Computing)</strong><br>
-                                透過單光子或電磁場模式的共軛變數來操控量子資訊。<br>
-                                Qubit數量：18（具個別控制）、255（九章 3.0）<br>
-                                Quantum Gate保真度：
-                                Single Qubit Gate \( F_1 \approx 99.84\% \)，2 Qubit Gate \( F_2 \approx 99.69\% \)<br>
-                                <b>優勢：</b>抗退相干能力、室溫操作、適用於分佈式計算<br>
-                                <b>挑戰：</b>光子-光子閘難以實現<br>
-                                <br><br>
-                                </p>
-
-                                <p style="text-align:justify">
-                                <strong>(h) 拓撲量子計算 (Topological Quantum Computing)</strong><br>
-                                基於non-abelian Anyon 的拓撲編碼，透過編織操作進行運算。<br>
-                                Qubit數量：實驗中<br>
-                                Quantum Gate保真度：N/A<br>
-                                <b>優勢：</b>天然拓撲保護機制、大規模糾錯潛力<br>
-                                <b>挑戰：</b>尚在發展中<br>
-                                <br><br>
-                                </p>
+                                    </p>
 
 
-
-
-
-                                <div class="post-meta">
+                                <!-- <div class="post-meta">
                                     <span class="post-author">
                                         <a href="../About/Wang.html"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="">王培儒</a>
                                     </span>
                                     <span class="post-category">
-                                        <a href="../SCQ_elementary/main.html"><i class="fa fa-folder" aria-hidden="true"></i> 超導量子位元(科普版)</a>
+                                        <a href="./main.html"><i class="fa fa-folder" aria-hidden="true"></i>硬體導論</a>
                                     </span>
-                                </div><!-- /.post-meta -->
+                                </div>/.post-meta -->
                             
                                 <div id="prev-next-nav" class="text-center"></div>
 
-<script>
+                                <script>
 fetch("lessons.json")
   .then(res => res.json())
   .then(pages => {
+    // 過濾掉 disabled 的頁面
+    pages = pages.filter(p => p.enabled !== false);
+
     const current = location.pathname.split("/").pop();
     const index = pages.findIndex(p => p.file === current);
     let html = "";
 
-    // 上一頁按鈕
     if (index > 0) {
       const prev = pages[index - 1];
       html += `<a class="btn btn-gray" href="${prev.file}">← 上一頁</a> `;
     }
 
-    // 英文版按鈕
-    html += `<a class="btn btn-gray" href="../SCQ_elementary_en/${current}" style="margin: 0 10px;">English Version</a>`;
+    html += `<a class="btn btn-gray" href="../About_en/${current}" style="margin: 0 10px;">English Version</a>`;
 
-    // 下一頁按鈕
     if (index < pages.length - 1) {
       const next = pages[index + 1];
       html += `<a class="btn btn-gray" href="${next.file}">下一頁 →</a>`;
@@ -274,47 +189,7 @@ fetch("lessons.json")
                             </form>    
                         </div> /.respond -->
                     </div>
-                    <aside class="col-md-3">
-                        <div class="sidebar">
-                            <!--<div class="widget search-form">
-                                <h4 class="widget-title">Search the blog</h4>
-                                <form class="form-group">
-                                    <input type="text" class="form-control" placeholder="Search" required>
-                                    <button class="btn btn-green" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
-                                </form>
-                            </div> /.search-form -->
-                            <!--<div class="widget widget-recent-posts">
-                                <h4 class="widget-title">Recent posts</h4>
-                                <ul class="list-unstyled">
-                                    <li><a href="#">Inside The Lipsum</a></li>
-                                    <li><a href="#">Oscar Wilde</a></li>
-                                    <li><a href="#">Jeffrey Ween</a></li>
-                                    <li><a href="#">Responsive Design</a></li>
-                                    <li><a href="#">Development</a></li>
-                                </ul>
-                            </div> /.widget-recent-posts -->
-                            
-
-                            <div class="widget">
-                                <!--<h4 class="widget-title"><a href="./main.html">科普版：目錄</a></h4>-->
-                                <div id="lesson-list_2"></div>
-                            </div>
-                            <script>
-                            fetch("lessons.json")
-                                .then(res => res.json())
-                                .then(pages => {
-                                const current = location.pathname.split("/").pop();
-                                const list = pages.map(p => {
-                                    const isActive = p.file === current ? "active" : "";
-                                    return `<div class="lesson-link ${isActive}"><a href="${p.file}">${p.title}</a></div>`;
-                                }).join("");
-                                document.getElementById("lesson-list_2").innerHTML = list;
-                                });
-                            </script>
-  
-                        </div><!-- /.sidebar -->
-                        
-                    </aside>
+                    
                 </div>
             </div>
         </section><!-- /.section-portfolio -->
@@ -325,7 +200,7 @@ fetch("lessons.json")
         <div class="container">
             <div class="row">
                 <div class="col-md-3 col-sm-4 col-xs-6">
-                    <a class="site-title">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</a>
+                    <a href="../index.html" class="site-title">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</a>
                     <p>一起走進新時代的前沿科學與量子科技</p>
                     </div>
                 <div class="col-lg-offset-4 col-md-3 col-sm-4 col-md-offset-2 col-sm-offset-0 col-xs-6 ">
