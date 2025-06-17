@@ -105,8 +105,32 @@
                                   </div>
                                   
                                   <p style="text-align:justify" class="dark-background">
-                                    The previous section provided a general overview of components inside a dilution refrigerator for quantum computers. In this section, we will use a circuit diagram to explain the functions of each component in detail.
-                                  </p>
+                                    The previous section provided a brief overview of the components inside a quantum computer's dilution refrigerator. Next, we will focus on the microwave components and explain the function of each part in detail.
+                                </p>
+                                  
+                                <h3>Key Components and Technologies</h3>
+                                <p style="text-align:justify" class="dark-background">
+                                    Microwave components act as a bridge, sending control signals from external instruments to the QPU while also being responsible for amplifying the post-computation signals and transmitting them back to the instruments. They include the following components:
+                                </p>
+                                <ul>
+                                    <li><b>Resonators:</b> Each superconducting qubit is typically coupled to a microwave resonator. The state of the qubit affects the resonant frequency or phase of the resonator, and by probing the resonator's response, the state of the qubit can be inferred.</li>
+                                    <li><b>Quantum Amplifiers:</b> The readout signal from the resonator is extremely weak and needs to be amplified by a low-noise amplifier operating near the quantum limit before it can be detected by subsequent classical electronics.
+                                      <ul>
+                                        <li><b>Josephson Parametric Amplifiers (JPAs):</b> These utilize the nonlinear properties of Josephson junctions to achieve low-noise amplification of microwave signals. JPAs can operate in a phase-sensitive mode (amplifying a single quadrature without adding noise) or a phase-preserving mode. They typically have a narrow bandwidth but can achieve high gain.</li>
+                                        <li><b>Traveling Wave Parametric Amplifiers (TWPAs):</b> For example, QuantWare's Crescendo-S is a traveling-wave amplifier based on a chain of Josephson junctions. It can provide high gain and near-quantum-limited noise performance over a wide bandwidth, making it ideal for multiplexed readout. Unlike JPAs, TWPAs are transmission-type, not resonant, devices, so their bandwidth is not limited by a resonator.</li>
+                                      </ul>
+                                    </li>
+                                    <li><b>Low-Noise Amplifier (LNA):</b> Usually placed at a higher temperature stage of the cryogenic system (such as the 4K stage), it is used to further amplify the signal from the quantum amplifier.</li>
+                                        <ul>
+                                            <li><b>HEMT (High Electron Mobility Transistor):</b> Due to its unique physical structure (utilizing a two-dimensional electron gas), electrons within a HEMT can move at high speeds with a low probability of collision. This "high electron mobility" characteristic directly translates into extremely low noise and excellent high-frequency performance.</li>
+                                            
+                                        </ul>
+                                    <li><b>Mixers, Filters, and ADCs:</b> These are used to down-convert the amplified microwave signal to an intermediate frequency (IF), filter out noise, and then convert it into a digital signal via an ADC for processing.</li>
+                                </ul>
+                                
+                                <p style="text-align:justify" class="dark-background">
+                                   <br>Next, we will use circuit diagrams to explain the function of each component in detail.<br><br>
+                                </p>
                                   
                                   <div style="text-align: center;">
                                     <a href="../Image/20250531-01.png">
@@ -277,6 +301,57 @@
                                     </span>
                                   <br><br>
                                     </p>
+
+                                    <h3>Technical Challenges</h3>
+                                                                          
+                                    <table width="100%" border="1" cellpadding="10" cellspacing="0" style="border-collapse: collapse; font-family: sans-serif; border-color: #cccccc;">
+                                    
+                                        <thead>
+                                            <tr bgcolor="#f2f2f2" align="center">
+                                                <th width="25%">Key Challenge</th>
+                                                <th>Description</th>
+                                            </tr>
+                                        </thead>
+                                    
+                                        <tbody>
+                                            <tr>
+                                                <td><b>Readout Speed</b></td>
+                                                <td>Readout speed must be fast enough to support quantum algorithms requiring real-time conditional feedback (such as quantum error correction) and to maximize the number of logic gates that can be executed per unit time.</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Multiplexing</b></td>
+                                                <td>Developing efficient multiplexing techniques to simultaneously and independently measure the states of a large number of qubits using a single readout chain is fundamental for system scaling.</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Quantum-Limited Amplification</b></td>
+                                                <td>The first-stage amplifier in the amplification chain must be quantum-limited, meaning the amount of noise it adds reaches the physical lower bound set by the Heisenberg uncertainty principle, in order to protect the faint quantum signal.</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Crosstalk</b></td>
+                                                <td>Minimizing measurement crosstalk. The microwave pulse used to read out a target qubit should not inadvertently affect or alter the frequency or state of neighboring qubits.</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Measurement Backaction</b></td>
+                                                <td>Managing measurement backaction. Standard projective measurements collapse the quantum superposition, thus requiring the development of Quantum Non-Demolition (QND) measurement techniques to acquire information without destroying a specific quantum state.</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Scalability & Integration</b></td>
+                                                <td>The design of the readout architecture must be able to scale with the size of the quantum processing unit (QPU) and be tightly and efficiently integrated with complex cryogenic wiring and packaging.</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Systematic Errors</b></td>
+                                                <td>As the number of qubits increases, small errors within the measurement system (such as signal distortion and timing jitter) can accumulate and amplify, becoming a bottleneck that limits overall computational fidelity.</td>
+                                            </tr>
+                                        </tbody>
+                                    
+                                    </table>
+                                    
+                                    <p style="text-align:justify" class="dark-background">
+                                        The development of readout systems is closely linked to the advancement of QPUs and control systems. Achieving high-fidelity, fast, and scalable readout is crucial for practical quantum computing. The emergence of broadband quantum amplifiers, such as TWPAs, offers a promising path to solving the multiplexed readout problem for large-scale qubit systems.
+                                    </p>
+                                    
+
+
 
 
                                 <p>

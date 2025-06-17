@@ -3,7 +3,7 @@
     { "title": "Current Application Models of Superconducting Quantum Computers", "file": "A.html" },
     { "title": "Superconducting Quantum Computers – Hardware Dissection", "file": "B.html" },
     { "title": "Microwave Components Overview", "file": "C.html" },
-    { "title": "微波元件廠商", "file": "H.html" ,"enabled": false},
+    { "title": "Microwave Component Vendors", "file": "H.html"},
     { "title": "核心硬體組件", "file": "D.html" ,"enabled": false},
     { "title": "量子處理器 (QPU)", "file": "E.html" ,"enabled": false},
     { "title": "稀釋製冷機", "file": "F.html" ,"enabled": false},
