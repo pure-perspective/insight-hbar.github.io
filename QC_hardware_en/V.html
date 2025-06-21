@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Favicon
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/20250525-icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/20250525-icon.png">
+
+    <!-- Stylesheets
+    ================================================== -->
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../assets/css/style.css" rel="stylesheet">
+    <link href="../assets/css/responsive.css" rel="stylesheet">
+
+    <title>Hardware Introduction</title>
+    <meta name="description" content="深入解析2025年超導量子電腦的構建，涵蓋量子處理器(QPU)、稀釋製冷機、控制電子、低溫佈線等核心硬體。提供全球主要製造商、價格範圍、技術挑戰與未來趨勢的詳細指引。">
+    <meta name="keywords" content="超導量子電腦, 量子位元, Qubit, QPU, 稀釋製冷機, IBM, Google, QuantWare, Bluefors, 低溫系統, 控制電子, Josephson Junction, Transmon, Fluxonium, 量子計算硬體, SEO">
+    <link rel="canonical" href="https:///www.insight-ihbar.com/QC_hardware_en/V.html" />
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+    <header id="masthead" class="site-header">
+        <nav id="primary-navigation" class="site-navigation">
+            <div class="container">
+
+                <div class="navbar-header">                   
+                    <a href="../index_en.html" class="site-title">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</a>
+                </div><!-- /.navbar-header -->
+
+                <div class="collapse navbar-collapse" id="agency-navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="../index_en.html">Home</a></li>
+                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Qubit Physics<i class="fa fa-caret-down hidden-xs" aria-hidden="true"></i></a>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                              <li><a href="../SCQ_elementary_en/main.html">Superconducting Qubits (Elementary)</a></li>
+                              <li><a href="../SCQ_advanced_en/main.html">Superconducting Qubits (Advanced)</a></li>
+                            </ul>
+                        </li>
+                        <!--<li class="active"><a href="../SCQ_elementary/main.html">科普介紹</a></li>-->
+                        <li class="active"><a href="../QC_hardware_en/main.html">Hardware</a></li>
+                        <li><a href="../About_en/main.html">About Us</a></li>
+                        <li><a href="../index.html">中文版</a></li>                        
+                    </ul>
+                </div>
+
+            </div>   
+        </nav><!-- /.site-navigation -->
+    </header><!-- /#mastheaed -->
+
+    <div id="hero" class="hero overlay subpage-hero blog-hero">
+        <div class="hero-content">
+            <div class="hero_2-text">
+                <h1>Hardware Guide</h1>
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="../index_en.html">Home</a></li>
+                  <li class="breadcrumb-item"><a href="./main.html">Hardware Guide (2025)</a></li>
+                  <!--<li class="breadcrumb-item active">約瑟夫森節</li>-->
+                </ol>
+            </div><!-- /.hero-text -->
+        </div><!-- /.hero-content -->
+    </div><!-- /.hero -->
+
+    <main id="main" class="site-main">
+
+        <section class="site-section subpage-site-section section-blog">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                        <article class="blog-post">
+                            <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="">-->
+                            <div class="post-content">
+                                <div style="text-align: center;">
+                                    <h2>Towards a Scalable QPU - Quantum Chip Design</h2>
+                                    <h3></h3>
+                                </div>
+                                
+                                <p style="text-align:justify">
+                                    On the path to quantum computing, integrating thousands or even tens of thousands of qubits is the current direction of effort. However, when multiple superconducting qubits are integrated on a quantum chip, crosstalk between them becomes a severe challenge for quantum computation.
+                                </p>
+                                
+                                <h3>Quantum Computer Development at Academia Sinica</h3>
+                                <div style="text-align: center;">
+                                    <a href="../Image/Sinica-QC.png">
+                                      <img src="../Image/Sinica-QC.png" alt="Deconstruction of Academia Sinica's quantum computer" style="width: 100%; height: auto;">
+                                    </a>
+                                </div>
+                                <p style="text-align:justify">
+                                    ▲ A deconstruction diagram of Academia Sinica's quantum computer. On the <b>left</b> are the external control and analysis hardware, responsible for converting digital signals from classical computers into analog microwave signals to control the superconducting quantum computer, and vice versa. On the <b>right</b> are the relevant microwave components, the quantum chip, and shielding components inside the dilution refrigerator used by Academia Sinica.
+                                    <br><span style="font-size: 0.7em; line-height: 0.8;">
+                                        Ref: Sinica
+                                    </span><br><br>
+                                </p>
+                                  
+                                <div style="text-align: center;">
+                                    <a href="../Image/Sinica-QPU.png">
+                                      <img src="../Image/Sinica-QPU.png" alt="Academia Sinica's 5-qubit chip design" style="width: 100%; height: auto;">
+                                    </a>
+                                </div>
+                                <p style="text-align:justify">
+                                    ▲ The previous generation 5-qubit chip design from Academia Sinica (it is said a 20-qubit QPU is currently under development).
+                                
+                                    <br><span style="font-size: 0.7em; line-height: 0.8;">
+                                        Ref: Sinica
+                                    </span><br><br>
+                                </p>
+                                
+                                <table width="100%" border="1" cellpadding="8" cellspacing="0" align="center">
+                                    <thead>
+                                        <tr bgcolor="#f2f2f2" align="center">
+                                            <th width="10%">I/O Port</th>
+                                            <th width="20%">Similar Terminology</th>
+                                            <th>Functional Description</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><b>XY</b></td>
+                                            <td>Drive line</td>
+                                            <td>Used to input control pulses to manipulate the qubit's state (e.g., performing X/Y gates), typically <b>microwave RF signals</b>.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Z</b></td>
+                                            <td>Flux line</td>
+                                            <td>Provides <b>DC or low-frequency signals</b> to change the effective magnetic flux in a SQUID loop, thereby tuning the frequency of the qubit or resonator.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>ROin</b></td>
+                                            <td>Readout drive/input</td>
+                                            <td>Inputs a microwave pulse to interact with the Readout Resonator. Typically a <b>microwave RF signal</b>.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>ROout</b></td>
+                                            <td>Readout output</td>
+                                            <td>The transmission of the readout resonator changes depending on the qubit's state. The returned signal's amplitude/phase is analyzed by external instruments to determine the qubit state.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Pumping</b></td>
+                                            <td></td>
+                                            <td>Used to supply the energy needed to excite parametric amplifiers (like JPAs or TWPAs) to boost the signal returning to external instruments, typically providing high-power microwaves at a specific frequency.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <br><br>
+                                  
+                                <div style="text-align: center;">
+                                    <a href="../Image/Sinica-Qubit.png">
+                                      <img src="../Image/Sinica-Qubit.png" alt="Micrograph of a qubit circuit" style="width: 100%; height: auto;">
+                                    </a>
+                                </div>
+                                <p style="text-align:justify">
+                                    <span style="font-size: 0.7em; line-height: 0.8;">
+                                        Ref: Sinica
+                                    </span><br>
+                                    ▲ A micrograph of a qubit circuit and a Josephson junction. The design dimensions of the qubit, the length of the resonator, etc., are all part of the design know-how. For example, the natural frequency of a traditional Transmon is around 5-9 GHz, which is determined by two considerations:
+                                </p>
+                                <ul>
+                                    <li><b>Upper Limit:</b> The superconducting temperature of the material determines the upper limit. Currently, due to the advantages of aluminum in the fabrication process and its excellent yield, most Josephson Junctions (JJs) use an \(Al-Al_2 O_3-Al\) SIS structure (for a related explanation, see <a href="https://www.insight-ihbar.com/SCQ_elementary_en/A.html">"Superconducting Qubits (Advanced): Josephson Junctions"</a>). The critical temperature of aluminum is 1.2K, meaning its superconducting Cooper pair energy gap \( \Delta \) is \( \Delta=1.76 k_B T_c\). From quantum mechanics, the corresponding frequency is about 40 GHz. If the operating frequency approaches or exceeds this, it can cause quasiparticle excitation or destroy superconductivity, leading to decoherence.</li>
+                                    <li><b>Lower Limit:</b> This is determined by the background temperature of the quantum computer's operation. Current superconducting quantum computers operate at 10-20 mK, corresponding to a thermal excitation frequency of about 400 MHz (calculated at 20mK). If the qubit's operating frequency is close to this thermal noise, it can be easily excited from its ground state, causing errors. The qubit's design frequency must minimize interference from the thermal background, so the ambient temperature determines the lower limit.
+                                    </li>
+                                </ul>
+                                <p style="text-align:justify">
+                                    Based on these two requirements, the operating frequency for aluminum-based superconducting qubits is set in the 1-10 GHz range. (Of course, for non-superconducting qubits, the operating frequency can be in different ranges. For example, silicon-based spin qubits can operate at 1K, and photonic qubits can operate at room temperature, thus their upper and lower limits differ.)
+                                    The capacitance energy \(E_C\) of the superconducting qubit is designed according to the operating frequency, and its dimensions and geometry are determined through electromagnetic simulations to achieve the design shown in the figure. The length of the resonator is also determined by its operating frequency.
+                                </p>
+                                
+                                <h3>Problems to Face When Moving Towards Multi-Qubit Systems</h3>
+                                <p style="text-align:justify">
+                                    To achieve a fundamental quantum advantage, one popular notion is that at least 50 logical qubits are needed. This is based on the idea that the computational space represented by 50 logical qubits is \(2^{50}\) dimensions, and \(2^{50}\approx 1024 TB\), which is enough to represent the data volume of most classical computer calculations.
+                                    This sounds simple, but in reality, it requires over a thousand physical qubits, which involves the topic of Quantum Error Correction. For example, using the Shor's 9-qubit code, one logical qubit requires 9 physical qubits + 8 ancilla qubits = 17 qubits. Thus, 50 logical qubits would involve at least 850 qubits in the computation process. (Of course, Shor's 9-qubit code is an early, relatively "inefficient" method of error correction, but it was a groundbreaking achievement. In recent years, codes like the Surface code, Color code, and Bacon-Shor code have emerged to increase qubit utilization efficiency.)
+                                    To design a QPU, the following issues must be considered:
+                                </p>
+                                <ul>
+                                    <li><p style="text-align:justify"><a href="#A">Signal input/output</a></p></li>
+                                    <li><p style="text-align:justify"><a href="#B">Connectivity and Layout</a></p></li>
+                                    <li><p style="text-align:justify">Classical crosstalk</p></li>
+                                    <li><p style="text-align:justify">Quantum crosstalk</p></li>
+                                </ul>
+                                
+                                <div id="A">
+                                    <br><br><br>
+                                </div>
+                                
+                                <h3>Signal Input/Output</h3>
+                                <p style="text-align:justify">
+                                    Simply put, a single superconducting qubit currently requires at least two control lines (one for XY control, one for Z control). Considering the readout lines (one in, one out) and a pump line for amplification, and further hoping for tunable coupling between qubits (one more control line), one roughly needs five times the number of qubits in external RF signal lines, which is astounding.<br><br>
+                                </p>
+                                
+                                <div id="B"><br><br><br></div>
+                                <h3>Connectivity and Layout</h3>
+                                <p style="text-align:justify">
+                                    Designing a superconducting quantum chip involves considering the type of superconducting qubits used, the form of coupling between them, the requirements of the readout lines, and the arrangement of all components. Here, we discuss the design requirements for a Transmon-based QPU:
+                                </p>
+                                <ul>
+                                    <li><p style="text-align:justify"><a href="#B1">Are the qubits frequency-tunable?</a></p></li>
+                                    <li><p style="text-align:justify"><a href="#B2">Is the qubit coupling direct or indirect (via a resonator)? If indirect, is the coupling strength tunable? Is the coupling topology variable?</a></p></li>
+                                    <li><p style="text-align:justify"><a href="#B3">Frequency allocation of readout resonators and their coupling to the bus.</a></p></li>
+                                    <li><p style="text-align:justify"><a href="#B4">Line crossovers, chip layering, and packaging.</a></p></li>
+                                </ul>
+                                <p style="text-align:justify">
+                                    On these issues, the two famous camps, IBM and Google, have adopted completely different strategies. IBM has followed a non-tunable route, while Google has adopted an almost fully tunable route. Below, we analyze the reasons for these differing approaches from a circuit design perspective.
+                                </p>
+                                <ol>
+                                    <div id="B1"><br><br><br></div>
+                                    <h3><li>Are the qubits frequency-tunable?</li></h3>
+                                
+                                    <div style="text-align: center;">
+                                        <a href="../Image/Transmon-1.png">
+                                          <img src="../Image/Transmon-1.png" alt="Fixed-frequency vs. Tunable Transmon" style="width: 100%; height: auto;">
+                                        </a>
+                                      </div>
+                                      <p style="text-align:justify">
+                                        <span style="font-size: 0.7em; line-height: 0.8;">
+                                            Ref: Drawn by the author
+                                        </span><br>
+                                        ▲ <b>Left:</b> A fixed-frequency Transmon, with one JJ as a nonlinear inductor. <b>Right:</b> A frequency-tunable Transmon, where a SQUID formed by two JJs allows its dynamic inductance to be controlled by an external magnetic field \(\Phi_B\), thereby tuning its frequency.
+                                        <br><br>
+                                        </p>
+                                
+                                        <div style="text-align: center;">
+                                            <a href="../Image/TT-flux.png">
+                                              <img src="../Image/TT-flux.png" alt="Tunable Transmon with Flux line" style="width: 70%; height: auto;">
+                                            </a>
+                                          </div>
+                                          <p style="text-align:justify">
+                                            ▲ Academia Sinica's Tunable Transmon with a Flux line (Z-Control) under an electron microscope, with a schematic of current flow. By controlling the current magnitude, a magnetic field is generated to tune the Transmon's frequency.
+                                            
+                                            <br><span style="font-size: 0.7em; line-height: 0.8;">
+                                                Ref: Modified by the author, original image from "How to Build a Quantum Computer" (Physics Institute, Academia Sinica / Researcher Chi-Dong Chen) <a href="https://www.youtube.com/watch?v=wceckog180U&t=3420s">https://www.youtube.com/watch?v=wceckog180U&t=3420s</a>
+                                            </span>
+                                            <br><br>
+                                            </p>
+                                        
+                                
+                                        <div id="B2"><br><br><br></div>
+                                    <h3><li>Qubit Coupling Schemes</li></h3>
+                                    <div style="text-align: center;">
+                                        <a href="../Image/QQ-Coupling.png">
+                                          <img src="../Image/QQ-Coupling.png" alt="Fixed vs. Tunable Qubit Coupling" style="width: 100%; height: auto;">
+                                        </a>
+                                      </div>
+                                      <p style="text-align:justify">
+                                        ▲ Qubit-qubit coupling schemes. Left is fixed coupling (qubits have fixed frequencies, direct capacitive coupling). Right is fully tunable (qubits have tunable frequencies, coupled via a tunable resonator).
+                                        In IBM's fixed design, as shown on the left, each qubit only needs one XY-control line, for a total of two control lines.
+                                        In Google's fully tunable design, as on the right, each qubit needs both XY & Z control lines, plus one control line for the tunable resonator, requiring five control lines in total, 2.5 times that of the fixed design.
+                                
+                                        <br><span style="font-size: 0.7em; line-height: 0.8;">
+                                            Ref: Drawn by the author
+                                        </span><br><br>
+                                        </p>
+                                
+                                        <div style="text-align: center;">
+                                            <a href="../Image/20250620-01.png">
+                                              <img src="../Image/20250620-01.png" alt="Fixed coupling design needs frequency separation" style="width: 70%; height: auto;">
+                                            </a>
+                                          </div>
+                                          <p style="text-align:justify">
+                                            ▲ Fixed coupling designs must consider frequency separation between different qubits to avoid unintended crosstalk.
+                                            <br><span style="font-size: 0.7em; line-height: 0.8;">
+                                                Ref: doi.org/10.1007/s10948-021-06104-5
+                                            </span><br><br>
+                                            
+                                            </p>
+                                            <div style="text-align: center;">
+                                                <a href="../Image/20250620-10.png">
+                                                  <img src="../Image/20250620-10.png" alt="Suppression of Qubit Crosstalk in a Tunable Coupling Superconducting Circuit" style="width: 100%; height: auto;">
+                                                </a>
+                                            </div>
+                                            <p style="text-align:justify">
+                                              ▲ In contrast, tunable designs can control the coupling strength by changing the frequency difference.
+                                              When not performing an operation, the coupling resonator's frequency can be set far from the qubits' frequencies. Since coupling strength is inversely proportional to the frequency difference (detuning), the two qubits can be considered isolated.
+                                              When a gate operation is needed, the frequency difference is reduced to enable qubit coupling. Tunable designs allow for post-fabrication adjustability, which can correct for fabrication errors and also enable variable QPU topologies, meaning the connectivity between qubits can be changed according to computational needs.
+                                    
+                                              <br><span style="font-size: 0.7em; line-height: 1.2;">
+                                                  Ref: Suppression of Qubit Crosstalk in a Tunable Coupling Superconducting Circuit<br>
+                                                  DOI: <a href="https://doi.org/10.1103/PhysRevApplied.12.054023" target="_blank" rel="noopener noreferrer">10.1103/PhysRevApplied.12.054023</a>
+                                              </span><br><br>
+                                            </p>
+                                
+                                    <p style="text-align:justify">
+                                        IBM's non-tunable approach can greatly simplify the complexity of circuit design, making it easier to increase fabrication yield. At the same time, fewer external lines mean less incoming noise. IBM believes this approach allows for a faster path to achieving quantum advantage. However, it is forced to face the issues of crosstalk from direct coupling and the complete lack of post-fabrication adjustability.
+                                        Google's almost fully tunable approach must confront complex wiring design, more noise interference, and the need for extensive parameter calibration due to the many control parameters. However, because the fully tunable route offers high flexibility, various parameters can be corrected with external instruments to gradually approach optimization. Currently (in 2025), Google is leading, most vendors are adopting tunable designs, and even IBM is slowly moving towards tunability.
+                                        <br><br>
+                                    </p>
+                                
+                                    <div style="text-align: center;">
+                                        <a href="../Image/medium (1).png">
+                                          <img src="../Image/medium (1).png" alt="10-Qubit Entanglement via a Quantum Bus" style="width: 100%; height: auto;">
+                                        </a>
+                                    </div>
+                                    <p style="text-align:justify">
+                                      ▲ Is it possible to have multiple qubits share the same coupling resonator? There is related research on this. Here, 10 qubits are shown sharing a single coupler (B, Quantum Bus), achieving a form of all-to-all connectivity. A feasible operation could be to park the coupler's frequency far from the qubits'. When two specific qubits need to interact, their frequencies are moved close to the coupler's frequency. After the operation, their frequencies are moved away again.
+                                      <br><span style="font-size: 0.7em; line-height: 1.2;">
+                                          10-Qubit Entanglement and Parallel Logic Operations with a Superconducting Circuit<br>
+                                          DOI: <a href="https://doi.org/10.1103/PhysRevLett.119.180511" target="_blank" rel="noopener noreferrer">10.1103/PhysRevLett.119.180511</a>
+                                      </span><br><br>
+                                    </p>
+                                    
+                                
+                                    <div id="B3"><br><br><br></div>
+                                    <h3><li>Readout Resonator Frequency Allocation and Coupling to the Bus</li></h3>
+                                    <div style="text-align: center;">
+                                        <a href="../Image/readout.jpeg">
+                                          <img src="../Image/readout.jpeg" alt="Qubit readout schemes" style="width: 100%; height: auto;">
+                                        </a>
+                                      </div>
+                                      <p style="text-align:justify">
+                                        ▲ A simplified understanding of qubit readout.
+                                        <br><b>(a)</b> In early days, direct readout was used, where external circuits directly measured the qubit. This easily introduced unwanted noise and was a destructive measurement.
+                                        <br><b>(b)</b> Coupling the qubit to a resonator allows for indirect measurement of the qubit's state by measuring changes in the resonator's frequency, which is a QND measurement that allows for repeated measurements to increase fidelity.
+                                        <br><b>(c)</b> Further pairing with a Purcell filter increases fidelity. The function of the Purcell filter is explained in the next figure.<br>
+                                        To learn more about superconducting qubit readout, refer to <a href="https://www.insight-ihbar.com/SCQ_advanced_en/A.html">Superconducting Qubits (Advanced): Quantum Computing Hardware Basics</a>
+                                        <br><span style="font-size: 0.7em; line-height: 0.8;">
+                                            Ref: A quantum engineer's guide to superconducting qubits<br>
+                                            DOI: 10.1063/1.5089550                                                
+                                        </span><br><br>
+                                
+                                        </p>
+                                
+                                        <div style="text-align: center;">
+                                            <a href="../Image/Purcell.jpeg">
+                                              <img src="../Image/Purcell.jpeg" alt="Purcell filter transmission vs. frequency" style="width: 70%; height: auto;">
+                                            </a>
+                                          </div>
+                                          <p style="text-align:justify">
+                                            ▲ Design consideration for a Purcell Filter's transmission versus frequency. Although pairing a qubit with a coupling resonator can increase measurement fidelity, the qubit's state can still leak out through the resonator, causing decoherence. The Purcell filter's transmission is designed to align with the resonator's frequency, ensuring good input and output of the readout signal, while being suppressed at the qubit's natural frequency. This ensures the qubit's energy cannot leak out, thus enhancing its coherence time.
+                                            <br><span style="font-size: 0.7em; line-height: 0.8;">
+                                                Ref: A quantum engineer's guide to superconducting qubits<br>
+                                                DOI: 10.1063/1.5089550                                                
+                                            </span><br><br>
+                                
+                                            </p>
+                                            <p style="text-align:justify">
+                                            Currently, in quantum chip design, it is common for individual qubits' readouts to share a single readout line (Readout Bus or feedline). As long as each readout resonator's frequency is distinct, the data can be effectively analyzed through frequency multiplexing. Below are two examples:
+                                        </p>
+                                
+                                            <div style="text-align: center;">
+                                                <a href="../Image/5Q.png">
+                                                    <img src="../Image/5Q.png" alt="5-qubit layout schematic" style="width: 80%; height: auto;">
+                                                </a>
+                                                </div>
+                                                <p style="text-align:justify">
+                                                    ▲ This is a schematic of a 5-qubit layout. Z is the flux line, XY is the drive line, and the 5 qubits are directly capacitively coupled. Additionally, each qubit has its own readout resonator, which is coupled (inductively in this diagram) to the readout line at the top.
+                                                    <br><span style="font-size: 0.7em; line-height: 0.8;">Ref: doi.org/10.1038/nature13171</span><br><br>
+                                                </p>
+                                                 
+                                
+                                        
+                                    
+                                        <div style="text-align: center;">
+                                            <a href="../Image/20250620-11.png">
+                                              <img src="../Image/20250620-11.png" alt="5-qubit layout with entanglement stabilization" style="width: 100%; height: auto;">
+                                            </a>
+                                        </div>
+                                        <p style="text-align:justify">
+                                          ▲ This is also a 5-qubit layout schematic. The "charge line" represents XY control, and the qubits are coupled via fixed-frequency coupling resonators. Comparing this to the previous diagram, you can see a Purcell filter between the readout resonator and the bus line.
+                                          <br><span style="font-size: 0.7em; line-height: 1.2;">
+                                              Entanglement stabilization using ancilla-based parity detection and real-time feedback in superconducting circuits<br>
+                                              DOI: <a href="https://doi.org/10.1038/s41534-019-0185-4" target="_blank" rel="noopener noreferrer">10.1038/s41534-019-0185-4</a>
+                                          </span><br><br>
+                                        </p>
+                                
+                                        <div id="B4"><br><br><br></div>
+                                    <h3><li>Line Crossovers, Chip Layering, and Packaging</li></h3>
+                                    <div style="text-align: center;">
+                                        <a href="../Image/Picture2-5.webp">
+                                          <img src="../Image/Picture2-5.webp" alt="Schematic representation of different QPU topologies" style="width: 100%; height: auto;">
+                                        </a>
+                                    </div>
+                                    <p style="text-align:justify">
+                                        ▲ QPU topology represents the connectivity between qubits. To achieve a quantum algorithmic advantage, implementing all-to-all connectivity between qubits is an important goal. However, for solid-state qubit systems (like superconducting or semiconductor qubits), they are mostly arranged in a planar fashion due to fabrication constraints. This means that without 3D wiring, a qubit can only couple to its nearest neighbors. The figure on the right shows IBM's current QPU topology.
+                                        In contrast, for non-solid-state systems like ion trap quantum computers, remote coupling can be achieved through the dipole-dipole interaction of ions, thus realizing all-to-all connectivity.
+                                    </p>
+                                    <p>
+                                      <br><span style="font-size: 0.7em; line-height: 1.2;">
+                                        Ref: https://thequantuminsider.com/2022/08/12/a-guide-to-quantum-computing-benchmarking-and-certification/ <br>
+                                        Schematic representation of different QPU topologies. (Top-left: IonQ, Top-center: OXC, Bottom-left: Rigetti, Right: IBM). Images compiled from AWS Braket and IBM Quantum Experience sites.
+                                      </span><br><br>
+                                    </p>
+                                    
+                                    <div style="text-align: center;">
+                                        <a href="../Image/Sinica-packing.png">
+                                          <img src="../Image/Sinica-packing.png" alt="Flip-chip packaging for quantum chips" style="width: 100%; height: auto;">
+                                        </a>
+                                      </div>
+                                      <p style="text-align:justify">
+                                        ▲ Firstly, since solid-state qubit systems are mostly planar, the complex routing of various control lines inevitably leads to crossover issues. This requires careful design for crossovers between components (e.g., a control line can cross over a resonator/coupler, but not vice versa) or to avoid crossovers entirely (no line can cross over a qubit).
+                                        Secondly, quantum chips also require significant effort in packaging. Currently, flip-chip packaging is mainly used. To maintain qubit fidelity from interference from other components, the chip can be split into two layers: the high-quality region for the qubits, and another layer for control lines, readout lines, etc., which are then stacked together.
+                                        <br><span style="font-size: 0.7em; line-height: 0.8;">
+                                            Ref: How to Build a Quantum Computer (Physics Institute, Academia Sinica / Researcher Chi-Dong Chen) <a href="https://www.youtube.com/watch?v=wceckog180U&t=3420s">https://www.youtube.com/watch?v=wceckog180U&t=3420s</a>
+                                        </span><br><br>
+                                        </p>
+                                        
+                                        <div style="text-align: center;">
+                                            <a href="../Image/IBM-Eagle.png">
+                                              <img src="../Image/IBM-Eagle.png" alt="IBM Eagle processor multi-layer design" style="width: 100%; height: auto;">
+                                            </a>
+                                          </div>
+                                          <p style="text-align:justify">
+                                            ▲ In addition to two-layer stacking, there is a trend towards distributing different functional components onto separate chip layers. The figure shows IBM Eagle's design, which separates qubits, control lines, and resonators onto different chip layers to reduce interference.
+                                            <br><span style="font-size: 0.7em; line-height: 0.8;">
+                                                Ref: IBM quantum computers: evolution, performance, and future directions<br>
+                                                DOI: 10.1007/s11227-025-07047-7
+                                            </span><br><br>
+                                            </p>
+                                        
+                                        <div style="text-align: center;">
+                                            <a href="../Image/20250620-08.png">
+                                              <img src="../Image/20250620-08.png" alt="Modular superconducting-qubit architecture with a multichip tunable coupler" style="width: 49%; height: auto;">
+                                            </a>
+                                            <a href="../Image/20250620-09.png">
+                                                <img src="../Image/20250620-09.png" alt="Modular superconducting-qubit architecture with a multichip tunable coupler" style="width: 49%; height: auto;">
+                                              </a>
+                                        </div>
+                                        <p style="text-align:justify">
+                                          ▲ Due to fabrication constraints and the non-trivial size of superconducting qubits, it is difficult to fit a large number of qubits on a single chip. Therefore, achieving inter-chip coupling between superconducting qubits while maintaining their quantum properties is a significant experimental and packaging challenge.
+                                          <br><span style="font-size: 0.7em; line-height: 1.2;">
+                                              Modular superconducting-qubit architecture with a multichip tunable coupler<br>
+                                              DOI: <a href="https://doi.org/10.1103/PhysRevApplied.21.054063" target="_blank" rel="noopener noreferrer">10.1103/PhysRevApplied.21.054063</a>
+                                          </span><br><br>
+                                        </p>
+                                        
+                                
+                                </ol>
+                                
+                                <h3>The Issue of Crosstalk: Classical and Quantum</h3>
+                                <p style="text-align:justify">
+                                    In the current stage of quantum computer development, the system is strictly a semi-classical, semi-quantum hybrid. Classical computers send microwave signals carrying classical information, which interact with the qubits. The qubits then return classical signals carrying quantum information, which are analyzed by the classical computer.
+                                    This characteristic allows us to roughly categorize crosstalk into classical and quantum crosstalk.
+                                    Unintended effects caused by control signals and gate operations are classified as classical crosstalk. Quantum crosstalk, on the other hand, arises when the state of other qubits causes the control of a specific target qubit to be less precise than expected. This will be discussed in the next section.
+                                </p>
+
+
+                                <p>
+                                    <span style="font-size: 0.5em; line-height: 0.8;">
+                                        Originally written in Chinese by the author, these articles are translated into English to invite cross-language resonance.
+                                    </span>
+                                </p>
+                                <div class="post-meta">
+                                    <span class="post-author">
+                                        <a href="../About_en/Wang.html"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="">Peir-Ru Wang</a>
+                                    </span>
+                                    <span class="post-category">
+                                        <a href="./main.html"><i class="fa fa-folder" aria-hidden="true"></i>Hardware Guide (2025)</a>
+                                    </span>
+                                </div><!-- /.post-meta -->
+                            
+                                <div id="prev-next-nav" class="text-center"></div>
+
+                                <script>
+fetch("lessons.json")
+  .then(res => res.json())
+  .then(pages => {
+    // 過濾掉 disabled 的頁面
+    pages = pages.filter(p => p.enabled !== false);
+
+    const current = location.pathname.split("/").pop();
+    const index = pages.findIndex(p => p.file === current);
+    let html = "";
+
+    if (index > 0) {
+      const prev = pages[index - 1];
+      html += `<a class="btn btn-gray" href="${prev.file}">← Previous</a> `;
+    }
+
+    html += `<a class="btn btn-gray" href="../QC_hardware/${current}" style="margin: 0 10px;">中文版</a>`;
+
+    if (index < pages.length - 1) {
+      const next = pages[index + 1];
+      html += `<a class="btn btn-gray" href="${next.file}">Next →</a>`;
+    }
+
+    document.getElementById("prev-next-nav").innerHTML = html;
+  });
+</script>
+
+                            </div><!-- /.post-content -->
+                        </article><!-- /.blog-post -->
+                        <!--<div id="PostComments" class="post-comments">
+                            
+                            
+                            
+                        </div> /#PostComments -->
+                        <!--<div class="respond">
+                            <h3>Post a Comment</h3>
+                            <form class="form-horizontal">
+                                <input class="form-control" type="text" placeholder="Your Name*" required>
+                                <input class="form-control" type="email" placeholder="Your Email" required>
+                                <textarea class="form-control form-control-comment" type="text" placeholder="Your Comment*" required></textarea>
+                                <button class="btn btn-green">Add a comment</button>
+                            </form>    
+                        </div> /.respond -->
+                    </div>
+                    <aside class="col-md-3">
+                        <div class="sidebar">
+                            <!--<div class="widget search-form">
+                                <h4 class="widget-title">Search the blog</h4>
+                                <form class="form-group">
+                                    <input type="text" class="form-control" placeholder="Search" required>
+                                    <button class="btn btn-green" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                </form>
+                            </div> /.search-form -->
+                            <!--<div class="widget widget-recent-posts">
+                                <h4 class="widget-title">Recent posts</h4>
+                                <ul class="list-unstyled">
+                                    <li><a href="#">Inside The Lipsum</a></li>
+                                    <li><a href="#">Oscar Wilde</a></li>
+                                    <li><a href="#">Jeffrey Ween</a></li>
+                                    <li><a href="#">Responsive Design</a></li>
+                                    <li><a href="#">Development</a></li>
+                                </ul>
+                            </div> /.widget-recent-posts -->
+                            
+
+                            <div class="widget">
+                                <!--<h4 class="widget-title"><a href="./main.html">科普版：目錄</a></h4>-->
+                                <div id="lesson-list_2"></div>
+                            </div>
+                            <script>
+fetch("lessons.json")
+  .then(res => res.json())
+  .then(pages => {
+    const current = location.pathname.split("/").pop();
+    const list = pages
+      .filter(p => p.enabled !== false) // ← 這行：只顯示 enabled 沒被關閉的項目
+      .map(p => {
+        const isActive = p.file === current ? "active" : "";
+        return `<div class="lesson-link ${isActive}"><a href="${p.file}">${p.title}</a></div>`;
+      })
+      .join("");
+    document.getElementById("lesson-list_2").innerHTML = list;
+  });
+</script>
+
+  
+                        </div><!-- /.sidebar -->
+                        
+                    </aside>
+                </div>
+            </div>
+        </section><!-- /.section-portfolio -->
+
+    </main><!-- /#main -->
+
+    <footer id="colophon" class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-4 col-xs-6">
+                    <a href="../index.html" class="site-title">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</a>
+                    <p>Exploring the Quantum Technology Together.</p>
+                    </div>
+                <div class="col-lg-offset-4 col-md-3 col-sm-4 col-md-offset-2 col-sm-offset-0 col-xs-6 ">
+                    <p class="site-title">𝐾𝐸𝐸𝑃 𝐼𝑁 𝑇𝑂𝑈𝐶𝐻</p>
+                    <ul class="list-unstyled contact-links">
+                        <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@insight-ihbar.com">info@insight-ihbar.com</a></li>
+                        <!--<li><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+37400800000">+374 (00) 80 00 00 </a></li>
+                        <li><i class="fa fa-fax" aria-hidden="true"></i><a href="+37400900000">+374 (00) 90 00 00</a></li>
+                        <li><i class="fa-solid fa-location-dot"></i><p>Hsinchu 300, Taiwan (R.O.C.)</p></li>-->
+                    </ul>
+                </div>
+                <!--<div class="clearfix visible-xs"></div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+                    <h3>Featured links</h3>
+                    <ul class="list-unstyled">
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="portfolio.html">Porfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>-->
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-8">
+                        <div class="social-links">
+                            <!--<a class="twitter-bg" href="#"><i class="fab fa-twitter"></i></a>-->
+                            <!--<<a class="facebook-bg" href="https://www.facebook.com/people/Quantum-Perspectives/61576446849628/"><i class="fab fa-facebook"></i></a>-->
+                            <!--<a class="facebook-bg" href="https://www.facebook.com/people/%E9%87%8F%E5%AD%90%E9%81%A0%E8%A6%8BQuantum-Perspectives/61576883632888/"><i class="fab fa-facebook-f"></i></a>-->
+                            <!--<a class="pinterest" href="#"><i class="fa-solid fa-microscope"></i></a>-->
+                            <!--<a class="facebook-bg" href="https://www.facebook.com/people/Insight-hbar/61576811775374/"><i class="fab fa-facebook-f"></i></a>-->
+                            <a class="linkedin-bg" href="https://www.linkedin.com/company/insight-ihbar"><i class="fab fa-linkedin"></i></a>
+                        </div><!-- /.social-links -->
+                    </div>
+                    <div class="col-xs-4">
+                        <div class="text-right">
+                            <p><span style="font-size: 16px;">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</span></p>
+                            <p>All Rights Reserved</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.copyright -->
+    </footer><!-- /#footer -->
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/bootstrap-select.min.js"></script>
+    <script src="../assets/js/jquery.slicknav.min.js"></script>
+    <script src="../assets/js/jquery.countTo.min.js"></script>
+    <script src="../assets/js/jquery.shuffle.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
+</body>
+</html>

@@ -8,7 +8,7 @@
     { "title": "量子處理器 (QPU)", "file": "E.html" ,"enabled": false},
     { "title": "稀釋製冷機", "file": "F.html" ,"enabled": false},
     { "title": "控制電子系統", "file": "G.html" ,"enabled": false},    
-    { "title": "特殊導線與接頭", "file": "I.html" ,"enabled": false},
+    { "title": "Cryogenic Wiring and Connectors", "file": "I.html" },
     { "title": "輔助系統與零部件", "file": "J.html" ,"enabled": false},
     { "title": "微波元件廠商-TWPA", "file": "K.html" ,"enabled": false},
     { "title": "微波元件廠商-隔離器", "file": "L.html" ,"enabled": false},
@@ -22,6 +22,6 @@
     { "title": "低通濾波器製造商", "file": "S.html" ,"enabled": false},
     { "title": "循環器製造商", "file": "T.html" ,"enabled": false},
     { "title": "", "file": "U.html" ,"enabled": false},
-    { "title": "", "file": "V.html" ,"enabled": false},
+    { "title": "Towards a Scalable QPU - Quantum Chip Design", "file": "V.html"},
     { "title": "", "file": "W.html" ,"enabled": false}
 ]
