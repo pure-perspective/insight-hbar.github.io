@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Favicon
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/20250525-icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/20250525-icon.png">
+
+    <!-- Stylesheets
+    ================================================== -->
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../assets/css/style.css" rel="stylesheet">
+    <link href="../assets/css/responsive.css" rel="stylesheet">
+
+    <title>超導量子電腦硬體指南 (2025) | 量子位元、組件與廠商全解析</title>
+    <meta name="description" content="深入解析2025年超導量子電腦的構建，涵蓋量子處理器(QPU)、稀釋製冷機、控制電子、低溫佈線等核心硬體。提供全球主要製造商、價格範圍、技術挑戰與未來趨勢的詳細指引。">
+    <meta name="keywords" content="超導量子電腦, 量子位元, Qubit, QPU, 稀釋製冷機, IBM, Google, QuantWare, Bluefors, 低溫系統, 控制電子, Josephson Junction, Transmon, Fluxonium, 量子計算硬體, SEO">
+    <link rel="canonical" href="https:///www.insight-ihbar.com/QC_hardware/模板.html" />
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+    <header id="masthead" class="site-header">
+        <nav id="primary-navigation" class="site-navigation">
+            <div class="container">
+
+                <div class="navbar-header">                   
+                    <a href="../index.html" class="site-title">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</a>
+                </div><!-- /.navbar-header -->
+
+                <div class="collapse navbar-collapse" id="agency-navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="../index.html">Home</a></li>
+                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">科普介紹<i class="fa fa-caret-down hidden-xs" aria-hidden="true"></i></a>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                              <li><a href="../SCQ_elementary/main.html">超導量子位元(科普版)</a></li>
+                              <li><a href="../SCQ_advanced/main.html">超導量子位元(進階版)</a></li>
+                            </ul>
+                        </li>
+                        <!--<li class="active"><a href="../SCQ_elementary/main.html">科普介紹</a></li>-->
+                        <li class="active"><a href="../QC_hardware/main.html">硬體導論</a></li>
+                        <li><a href="../About/main.html">關於我們</a></li>
+                        <li><a href="../index_en.html">English</a></li>                        
+                    </ul>
+                </div>
+
+            </div>   
+        </nav><!-- /.site-navigation -->
+    </header><!-- /#mastheaed -->
+
+    <div id="hero" class="hero overlay subpage-hero blog-hero">
+        <div class="hero-content">
+            <div class="hero_2-text">
+                <h1>硬體導論</h1>
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                  <li class="breadcrumb-item"><a href="./main.html">硬體導論</a></li>
+                  <!--<li class="breadcrumb-item active">約瑟夫森節</li>-->
+                </ol>
+            </div><!-- /.hero-text -->
+        </div><!-- /.hero-content -->
+    </div><!-- /.hero -->
+
+    <main id="main" class="site-main">
+
+        <section class="site-section subpage-site-section section-blog">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                        <article class="blog-post">
+                            <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="">-->
+                            <div class="post-content">
+                                <div style="text-align: center;">
+                                    <h2>超導量子電腦-硬體技術與廠商指引(2025)</h2>
+                                    <h3></h3>
+                                </div>
+                                
+
+                                <div style="text-align: center;">
+                                    <a href="../Image/Sinica-Qubit-fluxline.png">
+                                      <img src="../Image/Sinica-Qubit-fluxline.png" alt="取代文字" style="width: 70%; height: auto;">
+                                    </a>
+                                  </div>
+                                  <p style="text-align:justify">
+                                    ▲
+                                    <br><span style="font-size: 0.7em; line-height: 0.8;">
+                                        Ref: 如何打造一台量子電腦 (中央研究院物理研究所/陳啟東研究員) <a href="https://www.youtube.com/watch?v=wceckog180U&t=3420s">https://www.youtube.com/watch?v=wceckog180U&t=3420s</a>
+                                    </span><br><br>
+                                    </p>
+                                    ，個別量子位元的操作、量子位元間的連接性
+                                  <div style="text-align: center;">
+                                    <a href="../Image/Sinica-Qubit.png">
+                                      <img src="../Image/Sinica-Qubit.png" alt="取代文字" style="width: 70%; height: auto;">
+                                    </a>
+                                  </div>
+                                  <p style="text-align:justify">
+                                    ▲
+                                    <br><span style="font-size: 0.7em; line-height: 0.8;">
+                                        Ref: 如何打造一台量子電腦 (中央研究院物理研究所/陳啟東研究員) <a href="https://www.youtube.com/watch?v=wceckog180U&t=3420s">https://www.youtube.com/watch?v=wceckog180U&t=3420s</a>
+                                    </span><br><br>
+                                    </p>
+                                  
+                                  <div style="text-align: center;">
+                                    <a href="../Image/Sinica-Qubit-3.png">
+                                      <img src="../Image/Sinica-Qubit-3.png" alt="取代文字" style="width: 70%; height: auto;">
+                                    </a>
+                                  </div>
+                                  <p style="text-align:justify">
+                                    ▲
+                                    <br><span style="font-size: 0.7em; line-height: 0.8;">
+                                        Ref: 如何打造一台量子電腦 (中央研究院物理研究所/陳啟東研究員) <a href="https://www.youtube.com/watch?v=wceckog180U&t=3420s">https://www.youtube.com/watch?v=wceckog180U&t=3420s</a>
+                                    </span><br><br>
+                                    </p>
+                                  
+                                    
+                                        
+
+                                    
+                                    
+                            
+
+                                    
+
+                                        <div style="text-align: center;">
+                                            <a href="../Image/20250620-02.png">
+                                              <img src="../Image/20250620-02.png" alt="取代文字" style="width: 70%; height: auto;">
+                                            </a>
+                                          </div>
+                                          <p style="text-align:justify">
+                                            ▲
+                                            <br><span style="font-size: 0.7em; line-height: 0.8;">
+                                                Ref: doi.org/10.1007/s10948-021-06104-5                                                    
+                                            </span><br><br>
+                                            </p>
+
+                                            <div style="text-align: center;">
+                                                <a href="../Image/20250620-03.png">
+                                                  <img src="../Image/20250620-03.png" alt="取代文字" style="width: 70%; height: auto;">
+                                                </a>
+                                              </div>
+                                              <p style="text-align:justify">
+                                                ▲
+                                                <br><span style="font-size: 0.7em; line-height: 0.8;">
+                                                    Ref: doi.org/10.1038/s41467-022-34727-2<br>
+                                                    Engineering superconducting qubits to reduce quasiparticles and charge noise
+                                                   
+                                                </span><br><br>
+                                                Floating Qubit
+                                                </p>
+                                    
+                                                <div style="text-align: center;">
+                                                    <a href="../Image/20250620-04.png">
+                                                      <img src="../Image/20250620-04.png" alt="取代文字" style="width: 70%; height: auto;">
+                                                    </a>
+                                                  </div>
+                                                  <p style="text-align:justify">
+                                                    ▲
+                                                    <br><span style="font-size: 0.7em; line-height: 0.8;">
+                                                        doi.org/10.1038/s41467-024-48230-3<br>
+                                                        Mechanically induced correlated errors on superconducting qubits with relaxation times exceeding 0.4 ms
+
+                                                    </span><br><br>
+                                                    Floating Qubit
+                                                    </p>
+                                                    <div style="text-align: center;">
+                                                        <a href="../Image/20250620-05.png">
+                                                          <img src="../Image/20250620-05.png" alt="取代文字" style="width: 70%; height: auto;">
+                                                        </a>
+                                                      </div>
+                                                      <p style="text-align:justify">
+                                                        ▲
+                                                        <br><span style="font-size: 0.7em; line-height: 0.8;">
+                                                            doi.org/10.1038/s41467-024-48230-3<br>
+                                                        Mechanically induced correlated errors on superconducting qubits with relaxation times exceeding 0.4 ms
+
+                                                        </span><br><br>
+                                                        Floating Qubit
+                                                        </p>
+
+                                                        <div style="text-align: center;">
+                                                            <a href="../Image/20250620-06.png">
+                                                              <img src="../Image/20250620-06.png" alt="取代文字" style="width: 70%; height: auto;">
+                                                            </a>
+                                                          </div>
+                                                          <p style="text-align:justify">
+                                                            ▲
+                                                            <br><span style="font-size: 0.7em; line-height: 0.8;">
+                                                                doi.org/10.1038/s41467-023-39249-z<br>
+                                                                Quantum bath suppression in a superconducting circuit by immersion cooling
+                                                            </span><br><br>
+                                                            </p>
+
+                                                        
+                                                            <div style="text-align: center;">
+                                                                <a href="../Image/20250620-07.png">
+                                                                  <img src="../Image/20250620-07.png" alt="取代文字" style="width: 70%; height: auto;">
+                                                                </a>
+                                                              </div>
+                                                              <p style="text-align:justify">
+                                                                ▲
+                                                                <br><span style="font-size: 0.7em; line-height: 0.8;">
+                                                                    doi.org/10.1038/s41467-023-39682-0<br>Phononic bath engineering of a
+superconducting qubit
+                                                                </span><br><br>
+                                                                Phononic bath engineering of a superconducting qubit  探討了將超導量子位元耦合到聲學表面波（SAW
+                                                                </p>
+
+                                                                
+
+
+
+                                                                <div style="text-align: center;">
+                                                                    <a href="../Image/20250620-30.png">
+                                                                      <img src="../Image/20250620-30.png" alt="取代文字" style="width: 70%; height: auto;">
+                                                                    </a>
+                                                                  </div>
+                                                                  <p style="text-align:justify">
+                                                                    ▲
+                                                                    <br><span style="font-size: 0.7em; line-height: 0.8;">
+                                                                        10.1038/s41598-024-57248-y<br>
+                                                                Wiring surface loss of a superconducting transmon qubit
+
+
+                                                                    </span><br><br>
+                                                                    </p>
+
+                                                               
+                                                                    <div style="text-align: center;">
+                                                                        <a href="../Image/20260620-07.png">
+                                                                          <img src="../Image/20260620-07.png" alt="Gate-Efficient Simulation of Molecular Eigenstates on a Quantum Computer" style="width: 70%; height: auto;">
+                                                                        </a>
+                                                                    </div>
+                                                                    <p style="text-align:justify">
+                                                                      ▲
+                                                                      <br><span style="font-size: 0.7em; line-height: 1.2;">
+                                                                          Gate-Efficient Simulation of Molecular Eigenstates on a Quantum Computer<br>
+                                                                          DOI: <a href="https://doi.org/10.1103/PhysRevApplied.11.044092" target="_blank" rel="noopener noreferrer">10.1103/PhysRevApplied.11.044092</a>
+                                                                      </span><br><br>
+                                                                    </p>
+                                                                    
+                                                     
+                                                                    
+                                                                    <div style="text-align: center;">
+                                                                        <a href="../Image/20250620-14.png">
+                                                                          <img src="../Image/20250620-14.png" alt="Deep-Neural-Network Discrimination of Multiplexed Superconducting-Qubit States" style="width: 70%; height: auto;">
+                                                                        </a>
+                                                                    </div>
+                                                                    <p style="text-align:justify">
+                                                                      ▲
+                                                                      <br><span style="font-size: 0.7em; line-height: 1.2;">
+                                                                          Deep-Neural-Network Discrimination of Multiplexed Superconducting-Qubit States<br>
+                                                                          DOI: <a href="https://doi.org/10.1103/PhysRevApplied.17.014024" target="_blank" rel="noopener noreferrer">10.1103/PhysRevApplied.17.014024</a>
+                                                                      </span><br><br>
+                                                                    </p>
+                                                                    
+                                                                    <hr>
+                                                                    
+                                                                    
+                                                                    
+                                                                    <hr>
+                                                                    
+                                                                    <div style="text-align: center;">
+                                                                        <a href="../Image/Picture2-5.webp">
+                                                                          <img src="../Image/Picture2-5.webp" alt="Schematic representation of different QPU topologies" style="width: 70%; height: auto;">
+                                                                        </a>
+                                                                    </div>
+                                                                    <p style="text-align:justify">
+                                                                      ▲
+                                                                      <br><span style="font-size: 0.7em; line-height: 1.2;">
+                                                                          Schematic representation of different QPU topologies. (Top-left: IonQ, Top-center: OXC, Bottom-left: Rigetti, Right: IBM). Images compiled from AWS Braket and IBM Quantum Experience sites.
+                                                                      </span><br><br>
+                                                                    </p>
+                                                                    
+                                                                    <hr>
+                                                                    
+                                                                    <div style="text-align: center;">
+                                                                        <a href="../Image/20250620-19.png">
+                                                                          <img src="../Image/20250620-19.png" alt="IQM Star quantum processor architecture benefits" style="width: 70%; height: auto;">
+                                                                        </a>
+                                                                    </div>
+                                                                    <p style="text-align:justify">
+                                                                      ▲
+                                                                      <br><span style="font-size: 0.7em; line-height: 1.2;">
+                                                                          The IQM Star architecture connects all qubits through a central resonator, enabling effective all-to-all connectivity, which improves error resilience and algorithm efficiency.
+                                                                      </span><br><br>
+                                                                    </p>
+
+
+
+
+                                                                    補上的項目 (Additional Items)
+20250620-12.png
+
+
+<div style="text-align: center;">
+<a href="../Image/20250620-12.png">
+  <img src="../Image/20250620-12.png" alt="Entanglement stabilization using ancilla-based parity detection" style="width: 70%; height: auto;">
+</a>
+</div>
+<p style="text-align:justify">
+▲
+<br><span style="font-size: 0.7em; line-height: 1.2;">
+  Entanglement stabilization using ancilla-based parity detection and real-time feedback in superconducting circuits<br>
+  DOI: <a href="https://doi.org/10.1038/s41534-019-0185-4" target="_blank" rel="noopener noreferrer">10.1038/s41534-019-0185-4</a>
+</span><br><br>
+</p>
+
+
+20250620-13.png
+
+
+<div style="text-align: center;">
+<a href="../Image/20250620-13.png">
+  <img src="../Image/20250620-13.png" alt="Entanglement stabilization using ancilla-based parity detection" style="width: 70%; height: auto;">
+</a>
+</div>
+<p style="text-align:justify">
+▲
+<br><span style="font-size: 0.7em; line-height: 1.2;">
+  Entanglement stabilization using ancilla-based parity detection and real-time feedback in superconducting circuits<br>
+  DOI: <a href="https://doi.org/10.1038/s41534-019-0185-4" target="_blank" rel="noopener noreferrer">10.1038/s41534-019-0185-4</a>
+</span><br><br>
+</p>
+
+
+20250620-15.png
+
+
+<div style="text-align: center;">
+<a href="../Image/20250620-15.png">
+  <img src="../Image/20250620-15.png" alt="Decay-protected superconducting qubit" style="width: 70%; height: auto;">
+</a>
+</div>
+<p style="text-align:justify">
+▲
+<br><span style="font-size: 0.7em; line-height: 1.2;">
+  Decay-protected superconducting qubit with fast control enabled by integrated onchip filters<br>
+  DOI: <a href="https://doi.org/10.1038/s42005-024-01733-3" target="_blank" rel="noopener noreferrer">10.1038/s42005-024-01733-3</a>
+</span><br><br>
+</p>
+
+
+20250620-16.png
+
+
+<div style="text-align: center;">
+<a href="../Image/20250620-16.png">
+  <img src="../Image/20250620-16.png" alt="On-premises superconducting quantum computer" style="width: 70%; height: auto;">
+</a>
+</div>
+<p style="text-align:justify">
+▲
+<br><span style="font-size: 0.7em; line-height: 1.2;">
+  On-premises superconducting quantum computer for education and research<br>
+  DOI: <a href="https://doi.org/10.1140/epjqt/s40507-024-00243-z" target="_blank" rel="noopener noreferrer">10.1140/epjqt/s40507-024-00243-z</a>
+</span><br><br>
+</p>
+
+
+Resonance-24Qubit_Blog.jpg
+
+
+<div style="text-align: center;">
+<a href="../Image/Resonance-24Qubit_Blog.jpg">
+  <img src="../Image/Resonance-24Qubit_Blog.jpg" alt="IQM Resonance 24-Qubit Processor" style="width: 70%; height: auto;">
+</a>
+</div>
+<p style="text-align:justify">
+▲
+<br><span style="font-size: 0.7em; line-height: 1.2;">
+  Ref: <a href="https://meetiqm.com/blog/jumping-off-the-grid-in-quantum-processor-innovation-introducing-iqm-star/" target="_blank" rel="noopener noreferrer">https://meetiqm.com/blog/jumping-off-the-grid-in-quantum-processor-innovation-introducing-iqm-star/</a>
+</span><br><br>
+</p>
+
+
+20250620-20.png
+
+<div style="text-align: center;">
+<a href="../Image/Resonance-54Qubit_Blog.jpg">
+  <img src="../Image/Resonance-54Qubit_Blog.jpg" alt="IQM Resonance 54-Qubit Processor" style="width: 70%; height: auto;">
+</a>
+</div>
+<p style="text-align:justify">
+▲
+<br><span style="font-size: 0.7em; line-height: 1.2;">
+  Ref: <a href="https://meetiqm.com/blog/jumping-off-the-grid-in-quantum-processor-innovation-introducing-iqm-star/" target="_blank" rel="noopener noreferrer">IQM Blog - Jumping off the grid in quantum processor innovation</a>
+</span><br><br>
+</p>
+
+<div style="text-align: center;">
+<a href="../Image/20250620-20.png">
+  <img src="../Image/20250620-20.png" alt="IQM Quantum Computers" style="width: 70%; height: auto;">
+</a>
+</div>
+<p style="text-align:justify">
+▲
+<br><span style="font-size: 0.7em; line-height: 1.2;">
+  IQM crystal, 5Q, 20Q, 54Q, 150Q<br>
+  Ref: <a href="https://cdn.prod.website-files.com/6523f13a748909d3e1bbb657/66840c982cc873f725237cbc_IQM%20Garnet%2020Q%20Whitepaper%202024%20sm.pdf" target="_blank" rel="noopener noreferrer">Technology and Performance Benchmarks of IQM’s 20-Qubit Quantum Computer</a> (PDF)
+</span><br><br>
+</p>
+
+
+20250620-21.png
+
+
+<div style="text-align: center;">
+<a href="../Image/20250620-21.png">
+  <img src="../Image/20250620-21.png" alt="IQM Quantum Computers" style="width: 70%; height: auto;">
+</a>
+</div>
+<p style="text-align:justify">
+▲
+<br><span style="font-size: 0.7em; line-height: 1.2;">
+  IQM crystal, 5Q, 20Q, 54Q, 150Q<br>
+  Ref: <a href="https://cdn.prod.website-files.com/6523f13a748909d3e1bbb657/66840c982cc873f725237cbc_IQM%20Garnet%2020Q%20Whitepaper%202024%20sm.pdf" target="_blank" rel="noopener noreferrer">Technology and Performance Benchmarks of IQM’s 20-Qubit Quantum Computer</a> (PDF)
+</span><br><br>
+</p>
+
+
+20250620-22.png
+
+
+<div style="text-align: center;">
+<a href="../Image/20250620-22.png">
+  <img src="../Image/20250620-22.png" alt="IQM Quantum Computers" style="width: 70%; height: auto;">
+</a>
+</div>
+<p style="text-align:justify">
+▲
+<br><span style="font-size: 0.7em; line-height: 1.2;">
+  IQM crystal, 5Q, 20Q, 54Q, 150Q<br>
+  Ref: <a href="https://cdn.prod.website-files.com/6523f13a748909d3e1bbb657/66840c982cc873f725237cbc_IQM%20Garnet%2020Q%20Whitepaper%202024%20sm.pdf" target="_blank" rel="noopener noreferrer">Technology and Performance Benchmarks of IQM’s 20-Qubit Quantum Computer</a> (PDF)
+</span><br><br>
+</p>
+
+
+20250620-23.png
+
+
+<div style="text-align: center;">
+<a href="../Image/20250620-23.png">
+  <img src="../Image/20250620-23.png" alt="IQM Quantum Computers" style="width: 70%; height: auto;">
+</a>
+</div>
+<p style="text-align:justify">
+▲
+<br><span style="font-size: 0.7em; line-height: 1.2;">
+  IQM crystal, 5Q, 20Q, 54Q, 150Q<br>
+  Ref: <a href="https://cdn.prod.website-files.com/6523f13a748909d3e1bbb657/66840c982cc873f725237cbc_IQM%20Garnet%2020Q%20Whitepaper%202024%20sm.pdf" target="_blank" rel="noopener noreferrer">Technology and Performance Benchmarks of IQM’s 20-Qubit Quantum Computer</a> (PDF)
+</span><br><br>
+</p>
+
+
+20250620-24.png
+
+
+<div style="text-align: center;">
+<a href="../Image/20250620-24.png">
+  <img src="../Image/20250620-24.png" alt="Coherent microwave-photon-mediated coupling" style="width: 70%; height: auto;">
+</a>
+</div>
+<p style="text-align:justify">
+▲
+<br><span style="font-size: 0.7em; line-height: 1.2;">
+  Coherent microwave-photon-mediated coupling between a semiconductor and a superconducting qubit<br>
+  DOI: <a href="https://doi.org/10.1038/s41467-019-10798-6" target="_blank" rel="noopener noreferrer">10.1038/s41467-019-10798-6</a>
+</span><br><br>
+</p>
+
+
+medium (1).png
+
+
+
+
+
+20250620-18.png
+
+
+<div style="text-align: center;">
+<a href="../Image/20250620-18.png">
+  <img src="../Image/20250620-18.png" alt="Coherent Josephson Qubit Suitable for Scalable Quantum Integrated Circuits" style="width: 70%; height: auto;">
+</a>
+</div>
+<p style="text-align:justify">
+▲
+<br><span style="font-size: 0.7em; line-height: 1.2;">
+  Coherent Josephson Qubit Suitable for Scalable Quantum Integrated Circuits<br>
+  DOI: <a href="https://doi.org/10.1103/PhysRevLett.111.080502" target="_blank" rel="noopener noreferrer">10.1103/PhysRevLett.111.080502</a>
+</span><br><br>
+</p>
+
+
+20250620-25.png
+
+
+<div style="text-align: center;">
+<a href="../Image/20250620-25.png">
+  <img src="../Image/20250620-25.png" alt="Superconducting quantum computing: a review" style="width: 70%; height: auto;">
+</a>
+</div>
+<p style="text-align:justify">
+▲
+<br><span style="font-size: 0.7em; line-height: 1.2;">
+  Superconducting quantum computing: a review<br>
+  DOI: <a href="https://doi.org/10.1007/s11432-020-2881-9" target="_blank" rel="noopener noreferrer">10.1007/s11432-020-2881-9</a>
+</span><br><br>
+</p>
+
+
+20260620-26.png
+
+
+<div style="text-align: center;">
+<a href="../Image/20260620-26.png">
+  <img src="../Image/20260620-26.png" alt="Superconducting quantum computing: a review" style="width: 70%; height: auto;">
+</a>
+</div>
+<p style="text-align:justify">
+▲
+<br><span style="font-size: 0.7em; line-height: 1.2;">
+  Superconducting quantum computing: a review<br>
+  DOI: <a href="https://doi.org/10.1007/s11432-020-2881-9" target="_blank" rel="noopener noreferrer">10.1007/s11432-020-2881-9</a>
+</span><br><br>
+</p>
+
+
+20260620-27.png
+
+
+<div style="text-align: center;">
+<a href="../Image/20260620-27.png">
+  <img src="../Image/20260620-27.png" alt="Superconducting quantum computing: a review" style="width: 70%; height: auto;">
+</a>
+</div>
+<p style="text-align:justify">
+▲
+<br><span style="font-size: 0.7em; line-height: 1.2;">
+  Superconducting quantum computing: a review<br>
+  DOI: <a href="https://doi.org/10.1007/s11432-020-2881-9" target="_blank" rel="noopener noreferrer">10.1007/s11432-020-2881-9</a>
+</span><br><br>
+</p>
+
+
+20260620-28.png
+
+
+<div style="text-align: center;">
+<a href="../Image/20260620-28.png">
+  <img src="../Image/20260620-28.png" alt="Superconducting quantum computing: a review" style="width: 70%; height: auto;">
+</a>
+</div>
+<p style="text-align:justify">
+▲
+<br><span style="font-size: 0.7em; line-height: 1.2;">
+  Superconducting quantum computing: a review<br>
+  DOI: <a href="https://doi.org/10.1007/s11432-020-2881-9" target="_blank" rel="noopener noreferrer">10.1007/s11432-020-2881-9</a>
+</span><br><br>
+</p>
+
+                                                                
+                                                            
+                                                                20260620-07.png
+                                            
+                                                                Gate-Efficient Simulation of Molecular Eigenstates on a Quantum Computer
+                                                                DOI: 10.1103/PhysRevApplied.11.044092
+
+                                                                
+                                                                20250620-08.png
+                                                                Modular superconducting-qubit architecture with a multichip tunable coupler
+                                                                DOI: 10.1103/PhysRevApplied.21.054063
+                                                                
+
+                                                                20250620-09.png
+                                                                Modular superconducting-qubit architecture with a multichip tunable coupler
+                                                                DOI: 10.1103/PhysRevApplied.21.054063
+
+
+                                                                20250620-10.png
+                                                                Suppression of Qubit Crosstalk in a Tunable Coupling Superconducting Circuit
+                                                                DOI: 10.1103/PhysRevApplied.12.054023
+
+
+
+
+                                                                20250620-11.png
+                                                                10.1038/s41534-019-0185-4
+                                                                Entanglement stabilization using ancilla-based parity detection and real-time feedback in superconducting circuits
+
+                                                                20250620-12.png
+                                                                10.1038/s41534-019-0185-4
+                                                                Entanglement stabilization using ancilla-based parity detection and real-time feedback in superconducting circuits
+
+                                                                20250620-13.png
+                                                                10.1038/s41534-019-0185-4
+                                                                Entanglement stabilization using ancilla-based parity detection and real-time feedback in superconducting circuits
+
+
+                                                                20250620-14.png
+                                                                Deep-Neural-Network Discrimination of Multiplexed Superconducting-Qubit States
+                                                                DOI: 10.1103/PhysRevApplied.17.014024
+
+                                                                20250620-15.png
+                                                                10.1038/s42005-024-01733-3
+Decay-protected superconducting qubit with fast control enabled by integrated onchip filters
+
+20250620-17.png
+10.1140/epjqt/s40507-024-00243-z
+On-premises superconducting quantum computer for education and research
+
+
+
+20250620-16.png
+10.1140/epjqt/s40507-024-00243-z
+On-premises superconducting quantum computer for education and research
+
+
+Resonance-54Qubit_Blog.jpg
+Ref:https://meetiqm.com/blog/jumping-off-the-grid-in-quantum-processor-innovation-introducing-iqm-star/
+
+Resonance-24Qubit_Blog.jpg
+Ref:https://meetiqm.com/blog/jumping-off-the-grid-in-quantum-processor-innovation-introducing-iqm-star/
+
+Picture2-5.webp 
+Images compiled from AWS Braket and IBM Quantum Experience sites. Fig. 2. Schematic representation of different QPU topologies. The top left corner shows the all-to-all connectivity of the 11-qubit trapped ion system by IonQ, demonstrating the fully connected nature of this technology. The other circuits are representatives of superconducting QPUs available on the cloud, the top central schematic of the octagonal configuration of the 8-qubit QPU Lucy from OXC, the bottom left figure is also based on octagonal configuration (Rigetti) but with octagon vertices linked through three neighbor links, the largest offering currently accessible through AWS bracket is an 80-qubit system. The schematic on the right shows a typical superconducting layout of IBMs superconducting processor. At the time of compiling this report, IBM hold the record of largest superconducting QPU with 127 qubits.
+
+20250620-20.png
+IQM crystal, 5Q, 20Q, 54Q, 150Q
+https://cdn.prod.website-files.com/6523f13a748909d3e1bbb657/66840c982cc873f725237cbc_IQM%20Garnet%2020Q%20Whitepaper%202024%20sm.pdf
+Technology and Performance Benchmarks of IQM’s 20-Qubit Quantum Computer.pdf
+
+20250620-23.png
+IQM crystal, 5Q, 20Q, 54Q, 150Q
+https://cdn.prod.website-files.com/6523f13a748909d3e1bbb657/66840c982cc873f725237cbc_IQM%20Garnet%2020Q%20Whitepaper%202024%20sm.pdf
+Technology and Performance Benchmarks of IQM’s 20-Qubit Quantum Computer.pdf
+
+
+20250620-22.png
+IQM crystal, 5Q, 20Q, 54Q, 150Q
+https://cdn.prod.website-files.com/6523f13a748909d3e1bbb657/66840c982cc873f725237cbc_IQM%20Garnet%2020Q%20Whitepaper%202024%20sm.pdf
+Technology and Performance Benchmarks of IQM’s 20-Qubit Quantum Computer.pdf
+
+20250620-21.png
+IQM crystal, 5Q, 20Q, 54Q, 150Q
+https://cdn.prod.website-files.com/6523f13a748909d3e1bbb657/66840c982cc873f725237cbc_IQM%20Garnet%2020Q%20Whitepaper%202024%20sm.pdf
+Technology and Performance Benchmarks of IQM’s 20-Qubit Quantum Computer.pdf
+
+
+20250620-24.png
+10.1038/s41467-019-10798-6 
+Coherent microwave-photon-mediated coupling between a semiconductor and a superconducting qubit
+
+
+20250620-19.png
+The IQM Star addresses a lot of these issues. It effectively connects all qubits through a resonator, which is rare in superconducting technology. This resonator acts as a computational element, enabling direct, high-fidelity interactions between all qubits.
+A Departure from Tradition: How IQM Star Stands Apart 
+Effective all-to-all connectivity: Any qubit can interact with any other qubit, eliminating the need for noisy SWAP gates.
+Improved error resilience: The shared resonator allows for more efficient quantum error detection and correction.
+Efficient quantum algorithm execution: Algorithms that require high qubit connectivity, such as quantum simulations and variational quantum eigensolvers (VQEs), can run more efficiently.
+
+
+
+medium (1).png
+10-Qubit Entanglement and Parallel Logic Operations with a Superconducting Circuit
+10.1103/PhysRevLett.119.180511
+
+20250620-18.png
+Coherent Josephson Qubit Suitable for Scalable Quantum Integrated Circuits
+10.1103/PhysRevLett.111.080502
+
+
+
+20260620-28.png
+10.1007/s11432-020-2881-9
+Superconducting quantum computing: a review
+31.Superconductingquantumcomputing_areview.pdf
+
+
+20260620-27.png
+10.1007/s11432-020-2881-9
+Superconducting quantum computing: a review
+31.Superconductingquantumcomputing_areview.pdf
+
+
+20260620-26.png
+10.1007/s11432-020-2881-9
+Superconducting quantum computing: a review
+31.Superconductingquantumcomputing_areview.pdf
+
+
+20250620-25.png
+10.1007/s11432-020-2881-9
+Superconducting quantum computing: a review
+31.Superconductingquantumcomputing_areview.pdf
+
+
+                                                                <div class="section">
+<ul>
+    <li><strong>基本元件：</strong> gate line、readout line、flux bias line、resonator</li>
+    <li><strong>構成：</strong> qubit 多採 XY gate + Z gate 線控制，resonator 作為 readout 或耦合中介</li>
+    <li><strong>尺寸考量：</strong> qubit 約 100 µm，resonator（6 GHz）約 4 mm</li>
+</ul>
+
+                                <p style="text-align:justify">
+                                ▲
+                                <br><span style="font-size: 0.7em; line-height: 0.8;">
+
+                                </span><br><br>
+                                </p>
+</div>
+
+<div class="section">
+<h2>2. 低溫操作條件</h2>
+<ul>
+    <li>使用 dilution fridge 降至 0.02 K 以下，抑制黑體輻射</li>
+    <li>操作頻率須滿足 GHz ≫ kT 條件，常見為 5–7 GHz</li>
+    <li>超導 gap Δ ≈ 1.76 T<sub>c</sub></li>
+</ul>
+</div>
+
+<div class="section">
+<h2>3. Qubit 頻率設計：IBM vs Google</h2>
+<ul>
+    <li><strong>IBM：</strong> fixed-frequency SQUID，穩定但難調控</li>
+    <li><strong>Google：</strong> tunable-frequency SQUID，可調但易受 flux noise 影響</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>4. Crosstalk 串音問題與解法</h2>
+<ul>
+    <li><strong>Classical crosstalk：</strong> gate 線之 signal 串擾</li>
+    <li><strong>Quantum crosstalk：</strong> readout 或 flux 線干擾 nearby qubit</li>
+    <li><strong>解法：</strong> 拉距離、隔離接地、加 shielding/filter、設計雙層佈線</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>5. Tunable Coupler 與 Parasitic 元件</h2>
+<ul>
+    <li>可調耦合器支援關閉 qubit 間 interaction（gate on-demand）</li>
+    <li>parasitic element（雜散電容/電感）會造成殘餘耦合</li>
+    <li>避免共振腔載 photon 時未清空（需 reset）</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>6. 回流電流與 Residual 耦合問題</h2>
+<ul>
+    <li>flux 控制電流回流路徑造成非預期耦合</li>
+    <li>設計 qubit array 時避免產生意外 residual interaction</li>
+    <li>tunable coupler 可有效 suppress 不必要耦合</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>7. Gate Propagation 與 off-resonance 操作</h2>
+<ul>
+    <li>off-resonance 控制方式可透過 detuning 處理</li>
+    <li>操作時需規劃 gate 的時間排列以避免重疊（propagate diagram）</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>8. 模擬 Hamiltonian 與分解策略</h2>
+<ul>
+    <li>量子模擬關鍵為實現 <code>e<sup>-iHt</sup></code></li>
+    <li>使用 Suzuki-Trotter 或變分方式分解為 gate</li>
+    <li>Free evolution 中的 undesired coupling 需插入 cancel 序列（如 echo、Z gate）</li>
+</ul>
+</div>
+                                
+                                <p style="text-align:justify">
+                                    ▲
+                                    <br><span style="font-size: 0.7em; line-height: 0.8;">
+
+                                    </span><br><br>
+                                    </p>
+
+
+                                <div class="post-meta">
+                                    <span class="post-author">
+                                        <a href="../About/Wang.html"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="">王培儒</a>
+                                    </span>
+                                    <span class="post-category">
+                                        <a href="./main.html"><i class="fa fa-folder" aria-hidden="true"></i>硬體導論</a>
+                                    </span>
+                                </div><!-- /.post-meta -->
+                            
+                                <div id="prev-next-nav" class="text-center"></div>
+
+                                <script>
+fetch("lessons.json")
+  .then(res => res.json())
+  .then(pages => {
+    // 過濾掉 disabled 的頁面
+    pages = pages.filter(p => p.enabled !== false);
+
+    const current = location.pathname.split("/").pop();
+    const index = pages.findIndex(p => p.file === current);
+    let html = "";
+
+    if (index > 0) {
+      const prev = pages[index - 1];
+      html += `<a class="btn btn-gray" href="${prev.file}">← 上一頁</a> `;
+    }
+
+    html += `<a class="btn btn-gray" href="../QC_hardware_en/${current}" style="margin: 0 10px;">English Version</a>`;
+
+    if (index < pages.length - 1) {
+      const next = pages[index + 1];
+      html += `<a class="btn btn-gray" href="${next.file}">下一頁 →</a>`;
+    }
+
+    document.getElementById("prev-next-nav").innerHTML = html;
+  });
+</script>
+
+                            </div><!-- /.post-content -->
+                        </article><!-- /.blog-post -->
+                        <!--<div id="PostComments" class="post-comments">
+                            
+                            
+                            
+                        </div> /#PostComments -->
+                        <!--<div class="respond">
+                            <h3>Post a Comment</h3>
+                            <form class="form-horizontal">
+                                <input class="form-control" type="text" placeholder="Your Name*" required>
+                                <input class="form-control" type="email" placeholder="Your Email" required>
+                                <textarea class="form-control form-control-comment" type="text" placeholder="Your Comment*" required></textarea>
+                                <button class="btn btn-green">Add a comment</button>
+                            </form>    
+                        </div> /.respond -->
+                    </div>
+                    <aside class="col-md-3">
+                        <div class="sidebar">
+                            <!--<div class="widget search-form">
+                                <h4 class="widget-title">Search the blog</h4>
+                                <form class="form-group">
+                                    <input type="text" class="form-control" placeholder="Search" required>
+                                    <button class="btn btn-green" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                </form>
+                            </div> /.search-form -->
+                            <!--<div class="widget widget-recent-posts">
+                                <h4 class="widget-title">Recent posts</h4>
+                                <ul class="list-unstyled">
+                                    <li><a href="#">Inside The Lipsum</a></li>
+                                    <li><a href="#">Oscar Wilde</a></li>
+                                    <li><a href="#">Jeffrey Ween</a></li>
+                                    <li><a href="#">Responsive Design</a></li>
+                                    <li><a href="#">Development</a></li>
+                                </ul>
+                            </div> /.widget-recent-posts -->
+                            
+
+                            <div class="widget">
+                                <!--<h4 class="widget-title"><a href="./main.html">科普版：目錄</a></h4>-->
+                                <div id="lesson-list_2"></div>
+                            </div>
+                            <script>
+fetch("lessons.json")
+  .then(res => res.json())
+  .then(pages => {
+    const current = location.pathname.split("/").pop();
+    const list = pages
+      .filter(p => p.enabled !== false) // ← 這行：只顯示 enabled 沒被關閉的項目
+      .map(p => {
+        const isActive = p.file === current ? "active" : "";
+        return `<div class="lesson-link ${isActive}"><a href="${p.file}">${p.title}</a></div>`;
+      })
+      .join("");
+    document.getElementById("lesson-list_2").innerHTML = list;
+  });
+</script>
+
+  
+                        </div><!-- /.sidebar -->
+                        
+                    </aside>
+                </div>
+            </div>
+        </section><!-- /.section-portfolio -->
+
+    </main><!-- /#main -->
+
+    <footer id="colophon" class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-4 col-xs-6">
+                    <a href="../index.html" class="site-title">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</a>
+                    <p>一起走進新時代的前沿科學與量子科技</p>
+                    </div>
+                <div class="col-lg-offset-4 col-md-3 col-sm-4 col-md-offset-2 col-sm-offset-0 col-xs-6 ">
+                    <p class="site-title">𝐾𝐸𝐸𝑃 𝐼𝑁 𝑇𝑂𝑈𝐶𝐻</p>
+                    <ul class="list-unstyled contact-links">
+                        <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@insight-ihbar.com">info@insight-ihbar.com</a></li>
+                        <!--<li><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+37400800000">+374 (00) 80 00 00 </a></li>
+                        <li><i class="fa fa-fax" aria-hidden="true"></i><a href="+37400900000">+374 (00) 90 00 00</a></li>
+                        <li><i class="fa-solid fa-location-dot"></i><p>Hsinchu 300, Taiwan (R.O.C.)</p></li>-->
+                    </ul>
+                </div>
+                <!--<div class="clearfix visible-xs"></div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+                    <h3>Featured links</h3>
+                    <ul class="list-unstyled">
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="portfolio.html">Porfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>-->
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-8">
+                        <div class="social-links">
+                            <!--<a class="twitter-bg" href="#"><i class="fab fa-twitter"></i></a>-->
+                            <!--<<a class="facebook-bg" href="https://www.facebook.com/people/Quantum-Perspectives/61576446849628/"><i class="fab fa-facebook"></i></a>-->
+                            <!--<a class="facebook-bg" href="https://www.facebook.com/people/%E9%87%8F%E5%AD%90%E9%81%A0%E8%A6%8BQuantum-Perspectives/61576883632888/"><i class="fab fa-facebook-f"></i></a>-->
+                            <!--<a class="pinterest" href="#"><i class="fa-solid fa-microscope"></i></a>-->
+                            <!--<a class="facebook-bg" href="https://www.facebook.com/people/Insight-hbar/61576811775374/"><i class="fab fa-facebook-f"></i></a>-->
+                            <a class="linkedin-bg" href="https://www.linkedin.com/company/insight-ihbar"><i class="fab fa-linkedin"></i></a>
+                        </div><!-- /.social-links -->
+                    </div>
+                    <div class="col-xs-4">
+                        <div class="text-right">
+                            <p><span style="font-size: 16px;">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</span></p>
+                            <p>All Rights Reserved</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.copyright -->
+    </footer><!-- /#footer -->
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/bootstrap-select.min.js"></script>
+    <script src="../assets/js/jquery.slicknav.min.js"></script>
+    <script src="../assets/js/jquery.countTo.min.js"></script>
+    <script src="../assets/js/jquery.shuffle.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
+</body>
+</html>

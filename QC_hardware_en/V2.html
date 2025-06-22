@@ -35,10 +35,10 @@
     <link href="../assets/css/style.css" rel="stylesheet">
     <link href="../assets/css/responsive.css" rel="stylesheet">
 
-    <title>超導量子電腦硬體指南 (2025) | 量子位元、組件與廠商全解析</title>
+    <title>Hardware Introduction</title>
     <meta name="description" content="深入解析2025年超導量子電腦的構建，涵蓋量子處理器(QPU)、稀釋製冷機、控制電子、低溫佈線等核心硬體。提供全球主要製造商、價格範圍、技術挑戰與未來趨勢的詳細指引。">
     <meta name="keywords" content="超導量子電腦, 量子位元, Qubit, QPU, 稀釋製冷機, IBM, Google, QuantWare, Bluefors, 低溫系統, 控制電子, Josephson Junction, Transmon, Fluxonium, 量子計算硬體, SEO">
-    <link rel="canonical" href="https:///www.insight-ihbar.com/QC_hardware/模板.html" />
+    <link rel="canonical" href="https:///www.insight-ihbar.com/QC_hardware_en/模板_en拷貝.html" />
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -54,22 +54,22 @@
             <div class="container">
 
                 <div class="navbar-header">                   
-                    <a href="../index.html" class="site-title">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</a>
+                    <a href="../index_en.html" class="site-title">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</a>
                 </div><!-- /.navbar-header -->
 
                 <div class="collapse navbar-collapse" id="agency-navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="../index.html">Home</a></li>
-                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">科普介紹<i class="fa fa-caret-down hidden-xs" aria-hidden="true"></i></a>
+                        <li><a href="../index_en.html">Home</a></li>
+                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Qubit Physics<i class="fa fa-caret-down hidden-xs" aria-hidden="true"></i></a>
                             <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                              <li><a href="../SCQ_elementary/main.html">超導量子位元(科普版)</a></li>
-                              <li><a href="../SCQ_advanced/main.html">超導量子位元(進階版)</a></li>
+                              <li><a href="../SCQ_elementary_en/main.html">Superconducting Qubits (Elementary)</a></li>
+                              <li><a href="../SCQ_advanced_en/main.html">Superconducting Qubits (Advanced)</a></li>
                             </ul>
                         </li>
                         <!--<li class="active"><a href="../SCQ_elementary/main.html">科普介紹</a></li>-->
-                        <li class="active"><a href="../QC_hardware/main.html">硬體導論</a></li>
-                        <li><a href="../About/main.html">關於我們</a></li>
-                        <li><a href="../index_en.html">English</a></li>                        
+                        <li class="active"><a href="../QC_hardware_en/main.html">Hardware</a></li>
+                        <li><a href="../About_en/main.html">About Us</a></li>
+                        <li><a href="../index.html">中文版</a></li>                        
                     </ul>
                 </div>
 
@@ -80,10 +80,10 @@
     <div id="hero" class="hero overlay subpage-hero blog-hero">
         <div class="hero-content">
             <div class="hero_2-text">
-                <h1>硬體導論</h1>
+                <h1>Hardware Guide</h1>
                 <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
-                  <li class="breadcrumb-item"><a href="./main.html">硬體導論</a></li>
+                  <li class="breadcrumb-item"><a href="../index_en.html">Home</a></li>
+                  <li class="breadcrumb-item"><a href="./main.html">Hardware Guide (2025)</a></li>
                   <!--<li class="breadcrumb-item active">約瑟夫森節</li>-->
                 </ol>
             </div><!-- /.hero-text -->
@@ -100,175 +100,136 @@
                             <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="">-->
                             <div class="post-content">
                                 <div style="text-align: center;">
-                                    <h2>邁向Scalable QPU-串擾議題</h2>
+                                    <h2>Towards a Scalable QPU - The Issue of Crosstalk</h2>
                                     <h3></h3>
                                 </div>
                                 
                                 <p style="text-align:justify">
-                                    在當前的量子電腦發展上，嚴格來說其實是半古典、半量子的綜合體，利用古典電腦發送帶有古典資訊的微波訊號，進入到量子位元後，
-                                    因為量子位元與微波耦合，會回傳帶有量子資訊的古典信號，再由古典電腦分析結果。
-                                    此特性可以稍微將串擾議題分類為古典串擾與量子串擾。
-                                    不過讀者也無需過度在意確切的定義，實務上不同類型的串擾常會同時發生，物理學家和工程師藉由假設串擾模型來預測串擾的發生，再進行優化。
+                                    In the current stage of quantum computer development, the system is, strictly speaking, a semi-classical, semi-quantum hybrid. Classical computers are used to send microwave signals carrying classical information, which then interact with the qubits. The qubits, in turn, return classical signals carrying quantum information, which are then analyzed by the classical computer. This characteristic allows us to roughly categorize the issue of crosstalk into classical crosstalk and quantum crosstalk. However, the reader need not worry too much about the exact definitions, as in practice, different types of crosstalk often occur simultaneously. Physicists and engineers use hypothetical crosstalk models to predict their occurrence and then perform optimizations.
                                 </p>
-
-
+                                
                                 <div id="C"><br><br><br></div>
-                                <h3>古典串擾</h3>
+                                <h3>Classical Crosstalk</h3>
                                 
                                 <p style="text-align:justify">
-                                  由控制訊號、閘操作、量子位元間非預期的耦合項造成的非預期影響，大體上歸類為古典串擾。可以簡單從Hamiltonian來思考：
+                                  Unintended effects caused by control signals, gate operations, or unexpected coupling terms between qubits are generally classified as classical crosstalk. This can be simply understood from the Hamiltonian:
                                   \[
                                   \hat{H}=\hat{H}_{qubits}+\hat{H}_{coupling}+V_{control}+\color{red}{\hat{H}_{unexpected}}
                                   \]
-
-                                  因為量子Hamiltonian常由古典Hamiltonian量子化而來，故此類串擾常可用古典模型來模擬。<br><br>
-                                  </p>
-
-                                  <div style="text-align: center;">
+                                  Since quantum Hamiltonians are often derived by quantizing classical Hamiltonians, this type of crosstalk can often be simulated using classical models.<br><br>
+                                </p>
+                                
+                                <div style="text-align: center;">
                                     <a href="../Image/control-crosstalk.png">
-                                      <img src="../Image/control-crosstalk.png" alt="取代文字" style="width: 100%; height: auto;">
+                                      <img src="../Image/control-crosstalk.png" alt="Crosstalk caused by leaking electromagnetic fields from control signals" style="width: 100%; height: auto;">
                                     </a>
-                                  </div>
-                                  <p style="text-align:justify">
-                                    ▲由控制訊號的電磁場洩漏造成其他量子位元的影響。
-                                    
-  
+                                </div>
+                                <p style="text-align:justify">
+                                    ▲ Crosstalk caused by the leakage of electromagnetic fields from control signals affecting other qubits.
                                   <br><span style="font-size: 0.7em; line-height: 0.8;">
-                                      Ref: 作者繪製
+                                      Ref: Drawn by the author
                                   </span><br><br>
-                                  </p>
-
-
-
-                                  <div style="text-align: center;">
+                                </p>
+                                
+                                <div style="text-align: center;">
                                     <a href="../Image/Unexpected-static-coupling.png">
-                                      <img src="../Image/Unexpected-static-coupling.png" alt="取代文字" style="width: 100%; height: auto;">
+                                      <img src="../Image/Unexpected-static-coupling.png" alt="Unintended static coupling between qubits" style="width: 100%; height: auto;">
                                     </a>
-                                  </div>
-                                  <p style="text-align:justify">
-                                    ▲量子位元間有設計外的耦合項，造成非預期的狀態轉換或退相干。
+                                </div>
+                                <p style="text-align:justify">
+                                    ▲ Unintended coupling terms between qubits cause unexpected state transitions or decoherence.
                                     <br><span style="font-size: 0.7em; line-height: 0.8;">
-                                        Ref: 作者繪製
+                                        Ref: Drawn by the author
                                     </span><br><br>
-                                  </p>
-
-                                  <h3>返回電流 Return Current Focus</h3>
-                                  <div style="text-align: center;">
+                                </p>
+                                
+                                <h3>Return Current Focus</h3>
+                                <div style="text-align: center;">
                                     <a href="../Image/Return_current.png">
-                                      <img src="../Image/Return_current.png" alt="取代文字" style="width: 100%; height: auto;">
+                                      <img src="../Image/Return_current.png" alt="Return current path on a quantum chip" style="width: 100%; height: auto;">
                                     </a>
-                                  </div>
-                                  <p style="text-align:justify">
-                                    ▲ 在現代精密電子電路中，需要注意接地問題。同樣的在量子電路中，電流是否依照理想狀態返回接地，
-                                    如果在晶片上亂竄，會造成Flux crosstalk。此時就需要Return Current Focus的設計
-                                    例如利用空橋將接地的部分盡可能相連，使Flux current盡可能快速離開晶片。                                  
-  
+                                </div>
+                                <p style="text-align:justify">
+                                    ▲ In modern high-precision electronic circuits, grounding issues require careful attention. Similarly, in quantum circuits, it is crucial that the current returns to the ground along the ideal path. If it strays across the chip, it can cause flux crosstalk. This necessitates designs that focus the return current, for example, by using airbridges to connect ground planes as much as possible, allowing the flux current to exit the chip quickly.
                                     <br><span style="font-size: 0.7em; line-height: 0.8;">
-                                        Ref: 左：Sinica<br>
-                                        右：https://i.sstatic.net/3lSUB.png
+                                        Ref: Left: Sinica<br>
+                                        Right: https://i.sstatic.net/3lSUB.png
                                     </span><br><br>
-                                    </p>
-                                  
-                                  
+                                </p>
                                 
+                                <h3>Quantum Crosstalk</h3>
+                                <p style="text-align:justify">
+                                  Quantum crosstalk arises when the control of a specific target qubit is not as expected because other qubits are in different states. In the quantum world, the complete physical evolution involves both the Hamiltonian and the state vector:
+                                  \[
+                                    i\hbar\partial_t \ket{\psi}=\hat{H}\ket{\psi}
+                                  \]
+                                  Since \(\ket{\psi}\) is a characteristic of quantum physics with no classical counterpart, crosstalk related to \(\ket{\psi}\) can be classified as quantum crosstalk.
+                                </p>
                                 
+                                <div style="text-align: center;">
+                                  <a href="../Image/State-propagation.png">
+                                    <img src="../Image/State-propagation.png" alt="State propagation crosstalk" style="width: 100%; height: auto;">
+                                  </a>
+                                </div>
+                                <p style="text-align:justify">
+                                  ▲ State Propagation: A qubit that is not in its ground state may affect other qubits that are.
+                                  <br><span style="font-size: 0.7em; line-height: 0.8;">
+                                      Ref: Drawn by the author
+                                  </span><br><br>
+                                </p>
                                 
-                                    <h3>量子串擾</h3>
-                                    <p style="text-align:justify">
-                                      量子串擾來自於其他量子位元因為處在不同狀態，造成指定的量子位元控制不如預期。在量子世界裡，完整的物理演化包含Hamiltonian和state vector：
-                                      \[
-                                        i\hbar\partial_t \ket{\psi}=\hat{H}\ket{\psi}
-                                      \]
-                                      由於\(\ket{\psi}\)是量子物理的特性，沒有古典對應，故與\(\ket{\psi}\)有關的串擾可被歸類為量子串擾。
-
-                                    </p>
-                                    <div style="text-align: center;">
-                                      <a href="../Image/State-propagation.png">
-                                        <img src="../Image/State-propagation.png" alt="取代文字" style="width: 100%; height: auto;">
-                                      </a>
-                                    </div>
-                                    <p style="text-align:justify">
-                                      ▲ State Propagation，不在基態的量子位元可能會影響到其他處在基態的量子位元。
-                                      <br><span style="font-size: 0.7em; line-height: 0.8;">
-                                          Ref: 作者繪製
-                                      </span><br><br>
-                                      </p>
-  
-                                      <div style="text-align: center;">
-                                        <a href="../Image/Quantum-crosstalk.png">
-                                          <img src="../Image/Quantum-crosstalk.png" alt="取代文字" style="width: 100%; height: auto;">
-                                        </a>
-                                      </div>
-                                      <p style="text-align:justify">
-                                        ▲ 理想的量子晶片，當計算侷限在局部子系統時，理論上操作結果、品質不應與其餘量子位元的狀態有關。但實務上，即便空間位置很遠的量子位元，也有可能會對操作子系統產生影響。
-                                        <br><span style="font-size: 0.7em; line-height: 0.8;">
-                                            Ref: 作者繪製
-                                        </span><br><br>
-                                        </p>
-
-                                        <p style="text-align:justify">
-                                          當然，量子狀態的演化其實跟Hamiltonian有關，不同位元間的狀態改變一定與Hamiltonian是否有交互作用項有關，量子串擾與古典串擾不一定有明確的劃分。
-                                          串擾的修正，可以在製程上進行優化，也可以利用校正的方式，針對運算閘操作進行修正。
-                                        </p>
-                                  
-
-                                    
-
-
-                                      
-
-
-
-
-
-                                
-
-                                
-
-
-
-<table width="100%"  cellpadding="10" cellspacing="0" style="border-collapse: collapse; font-family: sans-serif; border-color: #cccccc;">
-<thead>
-        <tr bgcolor="#f2f2f2" align="center">
-            <th><span style="font-size: 0.9em; line-height: 0.8;">
-                本文參考 由中興大學 郭華丞教授 應 中原大學 徐立義教授 邀請，主講題目：<br><br>
-                    
-                </span>
-                <div style="text-align: center; font-weight: bold;">
-                    <span style="font-size: 1.2em; line-height: 0.8;">Key issues in designing a scalable QPU</span>
-                </div>
-                <span style="font-size: 0.9em; line-height: 0.8;">
-                    <br>Event Date: 2025-06-18
-                    <br>Speaker: Prof. Watson Kuo (Dept. of Physics, National Chung Hsing University) 
-                    <br>Host: Prof. Li-Yi Hsu (CYCU)
-                    <br>Place: R211, Science Building, Chung Yuan Christian University
-                    <br>Time: 14:00
-                </span>
-                <span style="font-size: 0.9em; line-height: 0.8;">
-                    <br>筆者深感啟發，特此致謝。
-                    </span>
-                  
-            </th>
-            
-        </tr>
-    </thead>
-</table>
-
+                                <div style="text-align: center;">
+                                  <a href="../Image/Quantum-crosstalk.png">
+                                    <img src="../Image/Quantum-crosstalk.png" alt="Long-range quantum crosstalk" style="width: 100%; height: auto;">
+                                  </a>
+                                </div>
+                                <p style="text-align:justify">
+                                  ▲ In an ideal quantum chip, when a computation is confined to a local subsystem, the operational result and quality should theoretically not depend on the state of the remaining qubits. In practice, however, even spatially distant qubits can potentially affect the operational subsystem.
+                                  <br><span style="font-size: 0.7em; line-height: 0.8;">
+                                      Ref: Drawn by the author
+                                  </span><br><br>
+                                </p>
                                 
                                 <p style="text-align:justify">
-                                    ▲
-                                    <br><span style="font-size: 0.7em; line-height: 0.8;">
+                                  Of course, the evolution of a quantum state is related to the Hamiltonian. A change in the state between different qubits must be related to whether there are interaction terms in the Hamiltonian. Therefore, the distinction between quantum and classical crosstalk is not always clear-cut. Crosstalk can be corrected through optimizations in the fabrication process, as well as through calibration methods that correct the gate operations.
+                                </p>
+                                
+                                <table width="100%" cellpadding="10" cellspacing="0" style="border-collapse: collapse; font-family: sans-serif; border-color: #cccccc;">
+                                <thead>
+                                    <tr bgcolor="#f2f2f2" align="center">
+                                        <th>
+                                            <span style="font-size: 0.9em; line-height: 0.8;">
+                                                This article is based on a talk given by Prof. Watson Kuo from National Chung Hsing University, at the invitation of Prof. Li-Yi Hsu from Chung Yuan Christian University, on the topic of:<br><br>
+                                            </span>
+                                            <div style="text-align: center; font-weight: bold;">
+                                                <span style="font-size: 1.2em; line-height: 0.8;">Key issues in designing a scalable QPU</span>
+                                            </div>
+                                            <span style="font-size: 0.9em; line-height: 0.8;">
+                                                <br>Event Date: 2025-06-18
+                                                <br>Speaker: Prof. Watson Kuo (Dept. of Physics, National Chung Hsing University) 
+                                                <br>Host: Prof. Li-Yi Hsu (CYCU)
+                                                <br>Place: R211, Science Building, Chung Yuan Christian University
+                                                <br>Time: 14:00
+                                            </span>
+                                            <span style="font-size: 0.9em; line-height: 0.8;">
+                                                <br>The author was deeply inspired and expresses sincere gratitude.
+                                            </span>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                </table>
 
-                                    </span><br><br>
-                                    </p>
-
-
+                                <p>
+                                    <span style="font-size: 0.5em; line-height: 0.8;">
+                                        Originally written in Chinese by the author, these articles are translated into English to invite cross-language resonance.
+                                    </span>
+                                </p>
                                 <div class="post-meta">
                                     <span class="post-author">
-                                        <a href="../About/Wang.html"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="">王培儒</a>
+                                        <a href="../About_en/Wang.html"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="">Peir-Ru Wang</a>
                                     </span>
                                     <span class="post-category">
-                                        <a href="./main.html"><i class="fa fa-folder" aria-hidden="true"></i>硬體導論</a>
+                                        <a href="./main.html"><i class="fa fa-folder" aria-hidden="true"></i>Hardware Guide (2025)</a>
                                     </span>
                                 </div><!-- /.post-meta -->
                             
@@ -287,14 +248,14 @@ fetch("lessons.json")
 
     if (index > 0) {
       const prev = pages[index - 1];
-      html += `<a class="btn btn-gray" href="${prev.file}">← 上一頁</a> `;
+      html += `<a class="btn btn-gray" href="${prev.file}">← Previous</a> `;
     }
 
-    html += `<a class="btn btn-gray" href="../QC_hardware_en/${current}" style="margin: 0 10px;">English Version</a>`;
+    html += `<a class="btn btn-gray" href="../QC_hardware/${current}" style="margin: 0 10px;">中文版</a>`;
 
     if (index < pages.length - 1) {
       const next = pages[index + 1];
-      html += `<a class="btn btn-gray" href="${next.file}">下一頁 →</a>`;
+      html += `<a class="btn btn-gray" href="${next.file}">Next →</a>`;
     }
 
     document.getElementById("prev-next-nav").innerHTML = html;
@@ -374,7 +335,7 @@ fetch("lessons.json")
             <div class="row">
                 <div class="col-md-3 col-sm-4 col-xs-6">
                     <a href="../index.html" class="site-title">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</a>
-                    <p>一起走進新時代的前沿科學與量子科技</p>
+                    <p>Exploring the Quantum Technology Together.</p>
                     </div>
                 <div class="col-lg-offset-4 col-md-3 col-sm-4 col-md-offset-2 col-sm-offset-0 col-xs-6 ">
                     <p class="site-title">𝐾𝐸𝐸𝑃 𝐼𝑁 𝑇𝑂𝑈𝐶𝐻</p>
