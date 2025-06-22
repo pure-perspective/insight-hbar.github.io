@@ -23,5 +23,6 @@
     { "title": "循環器製造商", "file": "T.html" ,"enabled": false},
     { "title": "", "file": "V.html" ,"enabled": false},
     { "title": "Towards a Scalable QPU - Quantum Chip Design", "file": "U.html"},
+    { "title": "Towards a Scalable QPU - The Issue of Crosstalk", "file": "V2.html"},
     { "title": "", "file": "W.html" ,"enabled": false}
 ]
