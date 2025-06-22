@@ -100,78 +100,7 @@
                             <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="">-->
                             <div class="post-content">
                                 
-                                <h3>核心挑戰與設計要求</h3>
-                                <div style="overflow-x: auto;">
-                                <table width="100%" border="1" cellpadding="10" cellspacing="0" style="border-collapse: collapse; font-family: sans-serif; border-color: #cccccc;">
-                                    <thead>
-                                        <tr bgcolor="#f2f2f2" align="center">
-                                            <th width="25%">挑戰領域</th>
-                                            <th>具體要求與說明</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr valign="top">
-                                            <td><b>熱管理<br>(Thermal Management)</b></td>
-                                            <td>
-                                                <b>核心挑戰：</b> 良好的導電材料通常也是良好的導熱材料。
-                                                <ul>
-                                                    <li><b>極低熱導率：</b> 線纜必須具有極低的熱導率，以盡可能減少從室溫 (~300K) 到 mK 級的熱傳。過高的熱負載會超出製冷機的冷卻能力，嚴重限制可支持的量子位元數量。</li>
-                                                    <li><b>熱錨定 (Thermalisation)：</b> 訊號線需在各溫級進行充分的熱化，通常透過熱錨和衰減器將線纜的雜訊溫度降低到接近該級的物理溫度。</li>
-                                                </ul>
-                                            </td>
-                                        </tr>
-                                        <tr valign="top">
-                                            <td><b>訊號完整性<br>(Signal Integrity)</b></td>
-                                            <td>
-                                                <b>核心挑戰：</b> 在長距離和極端溫差下保持訊號不失真。
-                                                <ul>
-                                                    <li><b>寬頻性能：</b> 在寬頻率範圍內（DC 到數 GHz）提供低損耗、低色散的傳輸特性，確保控制脈衝和讀出訊號的保真度。</li>
-                                                    <li><b>阻抗匹配：</b> 在所有溫級都需保持良好的阻抗匹配 (通常為 50Ω)，以減少訊號反射。</li>
-                                                    <li><b>低串擾 (Crosstalk)：</b> 具有高訊號隔離度，防止不同通道間的訊號互相干擾。</li>
-                                                </ul>
-                                            </td>
-                                        </tr>
-                                        <tr valign="top">
-                                            <td><b>雜訊抑制<br>(Noise Mitigation)</b></td>
-                                            <td>
-                                                <b>核心挑戰：</b> 保護量子位元免受雜訊影響而導致去相干。
-                                                <ul>
-                                                    <li><b>抑制熱雜訊：</b> 線纜會產生黑體輻射，需透過熱化和串聯衰減器來抑制這些雜訊光子。</li>
-                                                    <li><b>電磁屏蔽：</b> 線纜需具備優良的屏蔽性能，以阻擋外部環境的電磁干擾 (EMI)。</li>
-                                                    <li><b>紅外濾波：</b> 常整合紅外濾波器，以阻止高頻熱輻射沿介電層傳播。</li>
-                                                </ul>
-                                            </td>
-                                        </tr>
-                                        <tr valign="top">
-                                            <td><b>可擴展性與緊湊性<br>(Scalability & Compact)</b></td>
-                                            <td>
-                                                <b>核心挑戰：</b> 「佈線瓶頸」是擴展量子電腦規模的主要障礙之一。
-                                                <ul>
-                                                    <li><b>高密度整合：</b> 隨著量子位元數增加，線纜和接頭必須具有高密度、小尺寸的特點，以在有限的低溫空間內容納數百至數千條通道。</li>
-                                                </ul>
-                                            </td>
-                                        </tr>
-                                        <tr valign="top">
-                                            <td><b>機械與材料可靠性<br>(Mechanical & Material Reliability)</b></td>
-                                            <td>
-                                                <b>核心挑戰：</b> 材料需承受劇烈的溫差和反覆的熱循環。
-                                                <ul>
-                                                    <li><b>低溫兼容性：</b> 材料不能在低溫下變脆、開裂或性能顯著下降。不同材料的熱膨脹係數差異是設計上的關鍵考量。</li>
-                                                    <li><b>柔韌性：</b> 柔性線纜有助於簡化在複雜製冷機內部耗時且易錯的安裝過程。</li>
-                                                    <li><b>非磁性要求：</b> 需使用磁化率極低的非磁性材料，避免干擾對磁場敏感的量子元件 (如 SQUID)。</li>
-                                                    <li><b>氣密性 (Hermeticity)：</b> 穿過真空外殼的接頭 (Feedthroughs) 必須達到超高真空的氣密性標準。</li>
-                                                </ul>
-                                            </td>
-                                        </tr>
-                                        <tr valign="top">
-                                            <td><b>成本<br>(Cost)</b></td>
-                                            <td>
-                                                <b>核心挑戰：</b> 當前由於特殊的材料、複雜的製造工藝且市場需求尚未完整，高性能低溫線纜和組件非常昂貴。
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                </div>
+                                
                                 
                                 
                                 <h3>低溫佈線的關鍵組件、材料與技術</h3>
