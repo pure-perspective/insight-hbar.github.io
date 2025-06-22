@@ -21,8 +21,8 @@
     { "title": "帶通濾波器製造商", "file": "R.html" ,"enabled": false},
     { "title": "低通濾波器製造商", "file": "S.html" ,"enabled": false},
     { "title": "循環器製造商", "file": "T.html" ,"enabled": false},
-    { "title": "test-U", "file": "U.html" },
-    { "title": "test-V", "file": "U2.html" },
+    { "title": "test-U2", "file": "U.html" },
+    { "title": "test-I2", "file": "U2.html" },
     { "title": "邁向QPU-量子晶片設計", "file": "V.html" },
     { "title": "", "file": "W.html" ,"enabled": false}
 ]
