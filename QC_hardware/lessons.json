@@ -4,7 +4,8 @@
     { "title": "超導量子電腦-硬體解構", "file": "B.html" },
     { "title": "微波元件解說", "file": "C.html" },
     { "title": "微波元件廠商", "file": "H.html" },
-    { "title": "特殊導線與接頭", "file": "I.html" },
+    { "title": "特殊導線與接頭", "file": "U2.html" },
+    { "title": "", "file": "I.html" ,"enabled": false},
     { "title": "低溫佈線與互連-廠商", "file": "O.html" ,"enabled": false},
     { "title": "核心硬體組件", "file": "D.html" ,"enabled": false},
     { "title": "量子處理器 (QPU)", "file": "E.html" ,"enabled": false},
@@ -21,8 +22,6 @@
     { "title": "帶通濾波器製造商", "file": "R.html" ,"enabled": false},
     { "title": "低通濾波器製造商", "file": "S.html" ,"enabled": false},
     { "title": "循環器製造商", "file": "T.html" ,"enabled": false},
-    { "title": "test-U2", "file": "U.html" },
-    { "title": "test-I2", "file": "U2.html" },
-    { "title": "邁向QPU-量子晶片設計", "file": "V.html" },
+    { "title": "邁向QPU-量子晶片設計", "file": "U.html" },
     { "title": "", "file": "W.html" ,"enabled": false}
 ]
