@@ -98,7 +98,7 @@
          
         <section class="site-section subpage-site-section section-portfolio">
             <div class="container">
-                <h3 style="text-align: center;">📌最新更新內容</h3>
+                <h3 style="text-align: center;">📌最新更新</h3>
                 <div id="lesson-updates"></div>
             </div>
             <div class="container">
@@ -243,7 +243,7 @@
         const container = document.getElementById('lesson-updates');
         const badgeMap = {
             new: '🆕 新增：',
-            revise: '🔧 修訂：'
+            revise: '🔧 更新：'
         };
         
         Promise.all(lessonPaths.map(path => fetch(path).then(res => res.json())))
@@ -270,7 +270,8 @@
                 const badge = badgeMap[item.status] || '';
                 const date = item.date ? `（${item.date}）` : '';
                 const entry = document.createElement('div');
-                entry.innerHTML = `<p style="font-size: 16px; margin-bottom: 8px;">${badge} <a href="${resolveFilePath(item.file)}" target="_blank">${item.title}</a> ${date}</p>`;
+                const note = (item.status === 'revise' && item.note) ? `${item.note}` : '';
+                entry.innerHTML = `<p style="font-size: 16px; margin-bottom: 8px;">${badge} <a href="${resolveFilePath(item.file)}" target="_blank">${item.title}</a> ${date}${note}</p>`;
                 container.appendChild(entry);
             });
           })
