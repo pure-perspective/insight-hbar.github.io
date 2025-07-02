@@ -95,14 +95,12 @@
     </div><!-- /.hero -->
 
     <main id="main" class="site-main">
-        <section class="site-section">
-            <div class="container">
-              <h3 style="text-align: center;">📌最新更新內容</h3>
-              <div id="lesson-updates"></div>
-            </div>
-          </section>
-          
+         
         <section class="site-section subpage-site-section section-portfolio">
+            <div class="container">
+                <h3 style="text-align: center;">📌最新更新內容</h3>
+                <div id="lesson-updates"></div>
+            </div>
             <div class="container">
                 <h3 style="text-align: center;">✨如何開始？✨</h3>
                 <p style="text-align:justify">
@@ -163,7 +161,9 @@
                 </div>-->
 
             </div>
+            
         </section><!-- /.section-portfolio -->
+        
 
     </main><!-- /#main -->
 
@@ -241,37 +241,38 @@
         ];
         
         const container = document.getElementById('lesson-updates');
+        const badgeMap = {
+            new: '🆕 新增：',
+            revise: '🔧 修訂：'
+        };
         
         Promise.all(lessonPaths.map(path => fetch(path).then(res => res.json())))
           .then(allLessons => {
             const flatLessons = allLessons.flat();
+            
             const updates = flatLessons.filter(item =>
-                item.enabled !== false && (item.status === 'new' || item.status === 'revise')
+                item.enabled !== false &&
+                (item.status === 'new' || item.status === 'revise')
             );
         
-            if (updates.length === 0) {
+            // 按日期排序（最新在前）
+            updates.sort((a, b) => new Date(b.date || '1970-01-01') - new Date(a.date || '1970-01-01'));
+        
+            // 只取前 5 筆
+            const limitedUpdates = updates.slice(0, 5);
+        
+            if (limitedUpdates.length === 0) {
                 container.innerHTML = "<p style='text-align:center;'>目前沒有新的更新。</p>";
                 return;
             }
         
-            const list = document.createElement('ul');
-            list.style.listStyle = 'none';
-            list.style.paddingLeft = '0';
-        
-            const badgeMap = {
-                new: '🆕 新增：',
-                revise: '🔧 更新：'
-            };
-
-            updates.forEach(item => {
-                const li = document.createElement('li');
+            limitedUpdates.forEach(item => {
                 const badge = badgeMap[item.status] || '';
                 const date = item.date ? `（${item.date}）` : '';
-                li.innerHTML = `<p>${badge} <a href="${resolveFilePath(item.file)}" target="_blank">${item.title}</a> ${date}</p>`;
-                list.appendChild(li);
+                const entry = document.createElement('div');
+                entry.innerHTML = `<p style="font-size: 16px; margin-bottom: 8px;">${badge} <a href="${resolveFilePath(item.file)}" target="_blank">${item.title}</a> ${date}</p>`;
+                container.appendChild(entry);
             });
-        
-            container.appendChild(list);
           })
           .catch(err => {
             console.error("Error loading lessons:", err);
@@ -279,8 +280,8 @@
           });
         
         function resolveFilePath(fileName) {
-            // 根據實際情況調整 prefix 路徑
-            if (fileName.startsWith('A') || fileName === 'main.html') {
+            // 根據檔名判斷所屬子目錄，可依實際命名規則修改
+            if (fileName.startsWith('A') || fileName === 'main.html' || fileName.startsWith('B') || fileName.startsWith('C') || fileName.startsWith('U')) {
                 return `QC_hardware/${fileName}`;
             } else if (fileName.startsWith('S')) {
                 return `SCQ_elementary/${fileName}`;
@@ -289,6 +290,8 @@
             }
         }
         </script>
+        
+        
         
   
 </body>
