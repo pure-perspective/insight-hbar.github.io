@@ -258,10 +258,16 @@
             list.style.listStyle = 'none';
             list.style.paddingLeft = '0';
         
+            const badgeMap = {
+                new: '🆕 新增：',
+                revise: '🔧 更新：'
+            };
+
             updates.forEach(item => {
                 const li = document.createElement('li');
-                const badge = item.status === 'new' ? '🆕' : '🔧';
-                li.innerHTML = `${badge} <a href="${resolveFilePath(item.file)}" target="_blank">${item.title}</a>`;
+                const badge = badgeMap[item.status] || '';
+                const date = item.date ? `（${item.date}）` : '';
+                li.innerHTML = `<p>${badge} <a href="${resolveFilePath(item.file)}" target="_blank">${item.title}</a> ${date}</p>`;
                 list.appendChild(li);
             });
         
