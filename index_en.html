@@ -284,7 +284,7 @@
                 const fullPath = item.basePath + item.file + anchor;
 
                 const entry = document.createElement('div');
-                entry.innerHTML = `<p style="font-size: 16px; margin-bottom: 8px;">${badge} <a href="${fullPath}" target="_blank">${item.title}</a> ${date} ${note}</p>`;
+                entry.innerHTML = `<p style="font-size: 16px; margin-bottom: 8px;">${badge} <a href="${fullPath}">${item.title}</a> ${date} ${note}</p>`;
                 container.appendChild(entry);
             });
         }).catch(err => {
