@@ -22,7 +22,7 @@
     { "title": "低通濾波器製造商", "file": "S.html" ,"enabled": false},
     { "title": "循環器製造商", "file": "T.html" ,"enabled": false},
     { "title": "", "file": "V.html" ,"enabled": false},
-    { "title": "Towards a Scalable QPU - Quantum Chip Design", "file": "U.html"},
-    { "title": "Towards a Scalable QPU - The Issue of Crosstalk", "file": "V2.html"},
+    { "title": "Towards a Scalable QPU - Quantum Chip Design", "file": "U.html" , "status": "revise" , "date": "2025-07-02" , "note": "Add readout resonator frequency spacing in the chip layout."},
+    { "title": "Towards a Scalable QPU - The Issue of Crosstalk", "file": "V2.html", "status": "new" , "date": "2025-06-23"},
     { "title": "", "file": "W.html" ,"enabled": false}
 ]

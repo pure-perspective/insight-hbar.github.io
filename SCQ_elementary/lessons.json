@@ -4,7 +4,7 @@
     { "title": "超導量子位元是什麼呢？", "file": "B.html" },
     { "title": "淺談超導電路量子位元的種類", "file": "C.html" },
     { "title": "早年超導量子位元的種類", "file": "D.html" },
-    { "title": "當前主流超導量子位元的種類", "file": "E.html" },
+    { "title": "當前主流超導量子位元的種類", "file": "E.html" , "status": "new" , "date": "2025-01-23"},
     { "title": "電子顯微鏡下的超導量子位元", "file": "F.html" },
     { "title": "其他種類的Qubit", "file": "G.html" },
     { "title": "超導量子電腦長什麼樣子？", "file": "H.html" },

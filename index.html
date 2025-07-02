@@ -246,19 +246,31 @@
             revise: '🔧 更新：'
         };
         
-        Promise.all(lessonPaths.map(path => fetch(path).then(res => res.json())))
-          .then(allLessons => {
+        Promise.all(
+            lessonPaths.map(path => {
+                const basePath = path.substring(0, path.lastIndexOf('/')) + '/'; // 取得資料夾路徑
+                return fetch(path)
+                    .then(res => res.json())
+                    .then(json => {
+                        // 在每一筆中加上該筆的 basePath
+                        return json.map(entry => ({
+                            ...entry,
+                            basePath
+                        }));
+                    });
+            })
+        ).then(allLessons => {
             const flatLessons = allLessons.flat();
-            
+        
             const updates = flatLessons.filter(item =>
                 item.enabled !== false &&
                 (item.status === 'new' || item.status === 'revise')
             );
         
-            // 按日期排序（最新在前）
+            // 依日期排序（最新優先）
             updates.sort((a, b) => new Date(b.date || '1970-01-01') - new Date(a.date || '1970-01-01'));
         
-            // 只取前 5 筆
+            // 限制只顯示 5 筆
             const limitedUpdates = updates.slice(0, 5);
         
             if (limitedUpdates.length === 0) {
@@ -269,28 +281,19 @@
             limitedUpdates.forEach(item => {
                 const badge = badgeMap[item.status] || '';
                 const date = item.date ? `（${item.date}）` : '';
-                const entry = document.createElement('div');
                 const note = (item.status === 'revise' && item.note) ? `${item.note}` : '';
-                entry.innerHTML = `<p style="font-size: 16px; margin-bottom: 8px;">${badge} <a href="${resolveFilePath(item.file)}" target="_blank">${item.title}</a> ${date}${note}</p>`;
+                const fullPath = item.basePath + item.file;
+        
+                const entry = document.createElement('div');
+                entry.innerHTML = `<p style="font-size: 16px; margin-bottom: 8px;">${badge} <a href="${fullPath}" target="_blank">${item.title}</a> ${date} ${note}</p>`;
                 container.appendChild(entry);
             });
-          })
-          .catch(err => {
+        }).catch(err => {
             console.error("Error loading lessons:", err);
             container.innerHTML = "<p>無法載入更新資料。</p>";
-          });
-        
-        function resolveFilePath(fileName) {
-            // 根據檔名判斷所屬子目錄，可依實際命名規則修改
-            if (fileName.startsWith('A') || fileName === 'main.html' || fileName.startsWith('B') || fileName.startsWith('C') || fileName.startsWith('U')) {
-                return `QC_hardware/${fileName}`;
-            } else if (fileName.startsWith('S')) {
-                return `SCQ_elementary/${fileName}`;
-            } else {
-                return `SCQ_advanced/${fileName}`;
-            }
-        }
+        });
         </script>
+        
         
         
         
