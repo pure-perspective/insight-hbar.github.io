@@ -279,8 +279,10 @@
                 const badge = badgeMap[item.status] || '';
                 const date = item.date ? `（${item.date}）` : '';
                 const note = (item.status === 'revise' && item.note) ? `${item.note}` : '';
-                const fullPath = item.basePath + item.file;
-        
+
+                const anchor = item.anchor ? `#${item.anchor}` : '';
+                const fullPath = item.basePath + item.file + anchor;
+
                 const entry = document.createElement('div');
                 entry.innerHTML = `<p style="font-size: 16px; margin-bottom: 8px;">${badge} <a href="${fullPath}" target="_blank">${item.title}</a> ${date} ${note}</p>`;
                 container.appendChild(entry);
