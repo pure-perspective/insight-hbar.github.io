@@ -22,7 +22,7 @@
     { "title": "帶通濾波器製造商", "file": "R.html" ,"enabled": false},
     { "title": "低通濾波器製造商", "file": "S.html" ,"enabled": false},
     { "title": "循環器製造商", "file": "T.html" ,"enabled": false},
-    { "title": "邁向Scalable QPU-量子晶片設計", "file": "U.html" },
-    { "title": "邁向Scalable QPU-串擾議題", "file": "V2.html" },
+    { "title": "邁向Scalable QPU-量子晶片設計", "file": "U.html" , "status": "revise"},
+    { "title": "邁向Scalable QPU-串擾議題", "file": "V2.html" , "status": "new"},
     { "title": "", "file": "W.html" ,"enabled": false}
 ]
