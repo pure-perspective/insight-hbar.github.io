@@ -14,11 +14,11 @@
 
     <!-- Mobile Specific Metas
     ================================================== -->
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="viewport" content="width=device-width，minimum-scale=1.0，maximum-scale=1.0">
     <meta name="apple-mobile-web-app-capable" content="yes">
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300，300i，400，600，700" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <!-- Favicon
@@ -37,7 +37,7 @@
 
     <title>超導量子電腦硬體指南 (2025) | 量子位元、組件與廠商全解析</title>
     <meta name="description" content="深入解析2025年超導量子電腦的構建，涵蓋量子處理器(QPU)、稀釋製冷機、控制電子、低溫佈線等核心硬體。提供全球主要製造商、價格範圍、技術挑戰與未來趨勢的詳細指引。">
-    <meta name="keywords" content="超導量子電腦, 量子位元, Qubit, QPU, 稀釋製冷機, IBM, Google, QuantWare, Bluefors, 低溫系統, 控制電子, Josephson Junction, Transmon, Fluxonium, 量子計算硬體, SEO">
+    <meta name="keywords" content="超導量子電腦，量子位元，Qubit，QPU，稀釋製冷機，IBM，Google，QuantWare，Bluefors，低溫系統，控制電子，Josephson Junction，Transmon，Fluxonium，量子計算硬體，SEO">
     <link rel="canonical" href="https:///www.insight-ihbar.com/QC_hardware/O.html" />
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -104,267 +104,218 @@
                                     <h3></h3>
                                 </div>
                                 
-                                <!--低溫佈線與互連 (Cryogenic Wiring and Interconnects)-->
-                                
-                                <h3>D.主要供應商</h3>
-                      
-                                <p style="text-align:justify" class="dark-background">匯總來看,低溫導線與接頭領域的主要供應商包括:</p>
-                    
-                                <ul>
-                                    <li><strong>線纜(Wiring):</strong>
-                                        <ul>
-                                            <li><strong>柔性線纜:</strong> Delft Circuits (Cri/oFlex® - Ag/NbTi)<sup>10</sup>, Maybell Quantum (Flexlines)<sup>32</sup>, MIT Lincoln Lab(技術授權)<sup>67</sup>。 </li>
-                                            <li><strong>同軸電纜:</strong> Rosenberger (半剛性/半柔性/特殊低溫組件-SS, CuNi, NbTi)<sup>74</sup>, CryoCoax (SS, BeCu, CuNi)<sup>71</sup>, EZ Form Cable (SS)<sup>71</sup>。</li>
-                                            <li><strong>整合方案:</strong> Bluefors(提供多種線纜選項作為其係統的一部分)<sup>37</sup>。</li>
-                                        </ul>
-                                    </li>
-                                    <li><strong>接頭(Connectors):</strong>
-                                        <ul>
-                                            <li><strong>標準RF(非磁性/低溫):</strong> Quantum Microwave (SMA, SMP family)<sup>76</sup>, Rosenberger (SMA, SMP family, RPC-2.92等)<sup>74</sup>。</li>
-                                            <li><strong>高密度:</strong> Rosenberger (Multiport Mini-Coax,研發中產品)<sup>74</sup>, Ardent Concepts(用於封裝)<sup>79</sup>, Delft Circuits (T2B)<sup>59</sup>。</li>
-                                            <li><strong>氣密接頭/饋通:</strong> Martec<sup>77</sup>, Amphenol Aerospace (Cryo-Seal 38999)<sup>78</sup>, Rosenberger (定製法蘭)<sup>74</sup>, Delft Circuits (KF/ISO 法蘭饋通)<sup>59</sup>。</li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                    
-                                <h3>E.發展趨勢分析</h3>
-                    
-                                <p style="text-align:justify" class="dark-background">超導量子計算對互連技術的需求正在推動兩個核心趨勢。其一,對更高密度和更強整合能力的追求是創新的主要驅動力。隨著量子處理器從幾十個量子位元向數百乃至數千個量子位元擴展<sup>5</sup>,所需的信號線路數量呈爆炸式增長。然而,稀釋製冷機內部,尤其是最冷的mK級,空間極其寶貴<sup>68</sup>。傳統的、相對笨重的同軸電纜和單個接頭很快就會佔滿可用空間,並帶來巨大的熱負載和組裝複雜性<sup>68</sup>。這就迫切需要新的解決方案。柔性帶狀線纜技術(如Delft Circuits 的Cri/oFlex®、Maybell 的Flexlines、MIT LL的方案)應運而生,它們能在極小的橫截面積內容納多個通道,並具有良好的彎曲性,極大提高了佈線密度和安裝便利性<sup>10</sup>。與此同時,高密度連接器技術(如Rosenberger 的多端口系統、Ardent Concepts 的板級連接器、Delft Circuits 的T2B)允許在更小的面積上實現更多連接點,並通過單次插拔操作連接大量線路,簡化了組裝和維護流程<sup>59</sup>。此外,將濾波器、衰減器等無源元件直接整合到柔性線纜上<sup>10</sup>,不僅進一步節省了寶貴的低溫空間,還減少了接點數量,提高了系統的整體可靠性。</p>
-                    
-                                <p style="text-align:justify" class="dark-background">其二,材料科學在平衡多重苛刻需求方面扮演著核心角色。低溫線纜和接頭需要在從室溫到接近絕對零度的極端溫度範圍內可靠工作<sup>15</sup>。這意味著材料必須同時滿足相互衝突的要求:既要導電性好以低損耗傳輸 RF 信號,又要導熱性差以最大限度減少熱傳<sup>16</sup>。同時,材料還需具備良好的機械性能(如低溫下的柔韌性、抗熱循環疲勞)和電磁特性(如非磁性)<sup>10</sup>。為了實現這種精密的平衡,供應商和研究機構正在不斷探索和優化材料體系。例如,採用不銹鋼、銅鎳合金或磷青銅等低熱導合金作為導體基材<sup>67</sup>,並在需要時輔以薄層良導體(如銀)來改善 RF性能。在最冷的溫級,則利用鈮鈦(NbTi)等超導材料的獨特性質,同時實現零電阻和極低熱導<sup>44</sup>。介電材料的選擇(如聚酰亞胺)也需兼顧低溫柔韌性和低損耗特性<sup>59</sup>。尋找能夠在所有這些方面都表現出色的新材料或複合結構,仍然是該領域持續研發的重點。</p>
-                    
-                                <h3>F.潛在表格</h3>
-                    
-                                <p style="text-align:justify" class="dark-background">表4:低溫導線解決方案比較</p>
-                                
-                                <table border="1">
-                                    <thead>
-                                        <tr>
-                                            <th>方案類型 (Solution Type)</th>
-                                            <th>代表供應商/產品 (Representative Supplier/Product)</th>
-                                            <th>主要材料(Key Materials - Conductor/Dielectric)</th>
-                                            <th>主要優點 (Key Advantages)</th>
-                                            <th>主要挑戰/缺點(Key Challenges/Disadvantages)</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>低熱導同軸電纜 (Coax)</td>
-                                            <td>Rosenberger, CryoCoax, EZ Form Cable</td>
-                                            <td>SS, CuNi, NbTi / PTFE</td>
-                                            <td>技術成熟, 屏蔽性好</td>
-                                            <td>密度低,安裝較複雜,柔性有限(半剛性)</td>
-                                        </tr>
-                                        <tr>
-                                            <td>柔性帶狀線纜 (Flex Ribbon) - Ag </td>
-                                            <td>Delft Circuits (Cri/oFlex® Ag), Maybell (Flexlines)</td>
-                                            <td>Ag / Polyimide</td>
-                                            <td>高密度, 極佳柔韌性, 易安裝, 成本相對較低</td>
-                                            <td>熱導率相對 NbTi高, RF損耗相對 NbTi高</td>
-                                        </tr>
-                                        <tr>
-                                            <td>柔性帶狀線纜 (Flex Ribbon) - NbTi</td>
-                                            <td>Delft Circuits (Cri/oFlex® NbTi)</td>
-                                            <td>NbTi / Polyimide</td>
-                                            <td>高密度, 極佳柔韌性, 易安裝, 極低熱導率 (&lt;T<sub>c</sub>), 極低 RF 損耗 (&lt;T<sub>c</sub>), 可整合元件</td>
-                                            <td>成本較高, 僅在低溫下超導</td>
-                                        </tr>
-                                        <tr>
-                                            <td>柔性線纜 (Flex Wiring) - 其他</td>
-                                            <td>MIT LL</td>
-                                            <td>Phosphor Bronze / Flexible Layers</td>
-                                            <td>高密度, 柔韌性好</td>
-                                            <td>RF 性能和熱導率數據不明</td>
-                                        </tr>
-                                        <tr>
-                                            <td>雙絞線 (Twisted Pair)</td>
-                                            <td>Bluefors (Option)</td>
-                                            <td>(銅或合金線) / (絕緣層)</td>
-                                            <td>成本低, 適用於DC/低頻</td>
-                                            <td>RF性能差, 屏蔽性差, 密度不高</td>
-                                        </tr>
-                                        <tr>
-                                            <td>光纖 (Optical Fiber)</td>
-                                            <td>Bluefors (Option)</td>
-                                            <td>Glass / Polymer</td>
-                                            <td>極低熱導, 極高帶寬, 抗電磁干擾</td>
-                                            <td>技術仍在發展中, 光電轉換接口複雜, 成本高</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <p style="text-align:justify" class="dark-background">資料來源:10</p>
-                    
-                                <p style="text-align:justify" class="dark-background">表5:低溫接頭供應商與類型</p>
-                                
-                                <table border="1">
-                                    <thead>
-                                        <tr>
-                                            <th>供應商 (Supplier)</th>
-                                            <th>接頭類型(Connector Type)</th>
-                                            <th>主要特點(Key Features)</th>
-                                            <th>適用線纜 (Compatible Wiring)</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Quantum Microwave</td>
-                                            <td>SMA, SMP, Mini-SMP, SMPM, SMPS</td>
-                                            <td>非磁性, 低溫兼容</td>
-                                            <td>同軸電纜</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Rosenberger</td>
-                                            <td>SMA, RPC-2.92, SMP family, WSMP®, Multiport Mini-Coax (Kovar)</td>
-                                            <td>非磁性選項, 寬頻率範圍(up to 110 GHz), 高密度選項, 可定製氣密法蘭</td>
-                                            <td>同軸電纜, 柔性線纜, 帶狀線纜</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Amphenol Aerospace </td>
-                                            <td>Cryo-Seal Hermetic (38999 Series I, II, III, 2M)</td>
-                                            <td>極低溫(-195°C), 高氣密性(1E-7 He leak rate), 玻璃-金屬密封, 符合軍規標準</td>
-                                            <td>(未說明, 可能為多芯線纜)</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Martec</td>
-                                            <td>Hermetic Connectors/Feedthroughs (Custom, Standard Flanges)</td>
-                                            <td>低溫兼容, 真空友好(低釋氣, 低殘留體積), 氣密性</td>
-                                            <td>(未說明)</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Delft Circuits</td>
-                                            <td>SMA, SMP, Mini-SMP Connectors; Vacuum Feedthroughs (KF, ISO); T2B</td>
-                                            <td>非磁性選項, 與 Cri/oFlex® 匹配, 高密度饋通(up to 256 ch), 高氣密性(1E-9 leak rate)</td>
-                                            <td>Cri/oFlex® 柔性線纜</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Ardent Concepts</td>
-                                            <td>(高密度板級連接器)</td>
-                                            <td>用於QPU 封裝的高密度連接</td>
-                                            <td>(板對板或線對板)</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                
+                                <h3>追求高密度與系統集成</h3>
                                 <p style="text-align:justify" class="dark-background">
-                                  在室溫控制電子設備和位於極低溫環境中的QPU之間可靠地傳輸高頻控制和讀出訊號，同時最大限度地減少熱量洩漏到低溫系統中，是超導量子電腦面臨的關鍵工程挑戰之一，通常被稱為「佈線問題」(wiring problem)。
+                                    隨著量子處理器從幾十個量子位元向數百乃至數千個擴展，所需的信號線路數量呈爆炸式增長。然而，稀釋製冷機內部，尤其是最冷的 mK 級，空間極其寶貴。傳統同軸電纜的體積、熱負載與組裝複雜性使其難以應對此需求，因而推動了新技術的發展。
                                 </p>
+                                <p style="text-align:justify" class="dark-background">
+                                    <b>柔性帶狀線纜技術</b>（如 Delft Circuits 的 Cri/oFlex®、Maybell 的 Flexlines）應運而生，它們能在極小的橫截面積內容納多個通道，並具有良好的彎曲性，極大提高了佈線密度和安裝便利性。與此同時，<b>高密度連接器技術</b>（如 Rosenberger 的多端口系統、Ardent Concepts 的板級連接器）允許在更小的面積上實現更多連接點，並通過單次插拔操作簡化了組裝和維護流程。此外，將濾波器、衰減器等被動元件直接<b>整合到柔性線纜上</b>，不僅進一步節省了寶貴的低溫空間，還減少了接點數量，提高了系統的整體可靠性。
+                                </p>
+                                <br><br>
+                                <h3>材料的工程特性平衡</h3>
+                                <p style="text-align:justify" class="dark-background">
+                                    另一個核心趨勢是透過材料科學來平衡多重且相互衝突的物理要求。低溫線纜和接頭需要在從室溫到接近絕對零度的極端溫度範圍內可靠工作，這意味著材料必須同時滿足以下苛刻條件：
+                                </p>
+                                <p style="text-align:justify" class="dark-background">
+                                    其核心矛盾在於，材料既要具備優良的「導電性」以低損耗傳輸 RF 信號，又要擁有極差的「導熱性」以隔絕熱量。為實現這種精密的平衡，供應商和研究機構不斷探索和優化材料體系。例如，採用不銹鋼、銅鎳合金等低熱導合金作為導體基材，並輔以薄層良導體（如銀）來改善 RF 性能。
+                                    在最冷的溫級，則利用鈮鈦 (NbTi) 等超導材料的獨特性質，同時實現零電阻和極低熱導。
+                                    此外，材料還需具備良好的「機械性能」（如低溫下的柔韌性、抗熱循環疲勞）和「電磁特性」（如非磁性）。尋找能夠在所有這些方面都表現出色的新材料或複合結構，仍然是該領域持續研發的重點。
+                                </p>
+                                <br><br>
+                                <table width="100%" border="1" cellpadding="10" cellspacing="0" style="border-collapse: collapse; border-color: #cccccc;">
+                            
+                                    <thead>
+                                        <tr bgcolor="#e9ecef" align="center">
+                                            <th width="18%" align="center">組件類別</th>
+                                            <th width="18%" align="center">供應商 (Supplier)</th>
+                                            <th width="12%" align="center">國家/地區</th>
+                                            <th width="28%" align="center">主要產品/服務</th>
+                                            <th align="center">關鍵特點/技術</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr valign="top">
+                                            <td rowspan="8" align="center"><b>低溫導線與接頭<br>(Cryogenic Wiring & Connectors)</b></td>
+                                            <td><a href="https://www.delft-circuits.com/" target="_blank" rel="noopener noreferrer">Delft Circuits</a></td>
+                                            <td align="center">荷蘭</td>
+                                            <td>Cri/oFlex® 柔性線纜 (Ag/NbTi)，低溫接頭，氣密饋通，T2B 接口，密度Feedthrough(up to 256 ch)</td>
+                                            <td>高密度、低熱導、可整合元件、超導選項</td>
+                                        </tr>
+                                        <tr valign="top" bgcolor="#f8f9fa">
+                                            <td><a href="https://www.rosenberger.com/" target="_blank" rel="noopener noreferrer">Rosenberger</a></td>
+                                            <td align="center">德國</td>
+                                            <td>低溫同軸電纜 (SS、CuNi，NbTi)，非磁性 RF 接頭 (SMA，SMP)，高密度接頭，柔性線纜，帶狀線纜</td>
+                                            <td>產品線寬廣，可定製氣密法蘭，高頻性能優異、非磁性選項，寬頻率範圍(up to 110 GHz)，高密度解決方案</td>
+                                        </tr>
+                                        <tr valign="top">
+                                            <td><a href="https://www.cryocoax.com/" target="_blank" rel="noopener noreferrer">CryoCoax (Intelliconnect)</a></td>
+                                            <td align="center">英國</td>
+                                            <td>低溫 RF 互連組件與子系統，高密度連接器</td>
+                                            <td>專注於低溫應用的射頻解決方案</td>
+                                        </tr>
+                                        <tr valign="top" bgcolor="#f8f9fa">
+                                            <td><a href="https://www.amphenol-aerospace.com/products/connectors/hermetics" target="_blank" rel="noopener noreferrer">Amphenol Aerospace</a></td>
+                                            <td align="center">美國</td>
+                                            <td>Cryo-Seal™ 氣密接頭 (基於 38999 軍規標準)</td>
+                                            <td>極低溫(-195°C)性能保證，高氣密性，玻璃-金屬密封</td>
+                                        </tr>
+                                        <tr valign="top">
+                                            <td><a href="https://www.martec.ltd.uk/" target="_blank" rel="noopener noreferrer">Martec</a></td>
+                                            <td align="center">英國</td>
+                                            <td>客製化低溫氣密接頭/Feedthroughs</td>
+                                            <td>真空友好，低釋氣 (low-outgassing) 材料</td>
+                                        </tr>
+                                        <tr valign="top" bgcolor="#f8f9fa">
+                                            <td><a href="https://www.quantummicrowave.com/" target="_blank" rel="noopener noreferrer">Quantum Microwave</a></td>
+                                            <td align="center">美國</td>
+                                            <td>非磁性低溫接頭 (SMA，SMP，SMPS 等)</td>
+                                            <td>專為量子實驗室提供各類微波組件</td>
+                                        </tr>
+                                        <tr valign="top">
+                                            <td><a href="https://www.maybellquantum.com/" target="_blank" rel="noopener noreferrer">Maybell Quantum</a></td>
+                                            <td align="center">美國</td>
+                                            <td>Flexlines (柔性帶狀線纜)，低溫平台</td>
+                                            <td>專注於可擴展性的低溫硬體解決方案</td>
+                                        </tr>
+                                        <tr valign="top" bgcolor="#f8f9fa">
+                                            <td><a href="https://ardentconcepts.com/quantum-overview/">Ardent Concepts</a></td>
+                                            <td align="center">美國</td>
+                                            <td>用於QPU 封裝的高密度連接(板對板或線對板)</td>
+                                            <td>高密度板級連接器</td>
+                                            </tr>
+                                            
+                                        <tr valign="top">
+                                            <td rowspan="4" align="center"><b>輔助系統部件<br>(Auxiliary Systems)</b></td>
+                                            <td><a href="https://www.leybold.com/" target="_blank" rel="noopener noreferrer">Leybold</a>，<a href="https://www.edwardsvacuum.com/" target="_blank" rel="noopener noreferrer">Edwards</a>，<a href="https://www.pfeiffer-vacuum.com/" target="_blank" rel="noopener noreferrer">Pfeiffer</a></td>
+                                            <td align="center">(多國)</td>
+                                            <td>各類真空幫浦 (旋片、乾式、渦輪、離子等)</td>
+                                            <td>成熟的真空技術供應商</td>
+                                        </tr>
+                                        <tr valign="top" bgcolor="#f8f9fa">
+                                            <td><a href="https://www.saesgetters.com/" target="_blank" rel="noopener noreferrer">SAES Getters</a></td>
+                                            <td align="center">意大利</td>
+                                            <td>非蒸散型吸氣幫浦 (NEG Pumps)</td>
+                                            <td>對氫氣(H₂)抽速高，無振動、無磁場干擾</td>
+                                        </tr>
+                                        <tr valign="top">
+                                            <td><a href="https://www.amuneal.com/magnetic-shielding" target="_blank" rel="noopener noreferrer">Amuneal</a>，<a href="https://www.magneticshields.co.uk/" target="_blank" rel="noopener noreferrer">Magnetic Shields Ltd.</a></td>
+                                            <td align="center">美國，英國</td>
+                                            <td>磁屏蔽材料與系統 (\(\mu\)-metal)</td>
+                                            <td>高磁導率材料，可定製低溫主動屏蔽、被動屏蔽系統</td>
+                                        </tr>
+                                        <tr valign="top" bgcolor="#f8f9fa">
+                                            <td><a href="https://www.lakeshore.com/" target="_blank" rel="noopener noreferrer">Lake Shore Cryotronics</a></td>
+                                            <td align="center">美國</td>
+                                            <td>低溫溫度/磁場傳感器，測量儀器，探針台</td>
+                                            <td>低溫測量領域的專家</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                                 
-                                  <li>
-                                    <p style="text-align:justify" class="dark-background"><b>代表性製造商與所在國家/地區</b></p>
-                                    <ul>
-                                      <li><b>荷蘭：</b> Delft Circuits 是柔性低溫電纜技術的領導者，其 Cri/oFlex® 產品被全球眾多量子計算研究機構和公司採用。該公司源於QuTech量子技術集群。</li>
-                                      <li><b>英國：</b> CryoCoax (Intelliconnect 的一個部門) 專門製造和供應低溫應用的射頻互連和子系統。他們開發了用於低溫系統的高密度射頻連接器。</li>
-                                      <li><b>美國、中國等：</b> 這些國家在量子計算領域的整體投入也推動了對先進低溫佈線解決方案的需求和研發。</li>
-                                    </ul>
-                                  </li>
+                            
+                                <!--低溫佈線與互連 (Cryogenic Wiring and Interconnects)-->
+                                <br><br>
+                                <table width="100%" border="1" cellpadding="10" cellspacing="0" style="border-collapse: collapse; font-family: sans-serif; border-color: #cccccc;">
+                                    
+                                    <thead>
+                                        <tr bgcolor="#e9ecef">
+                                            <th width="30%" style="text-align: center; vertical-align: middle;">新創公司與產品範例</th>
+                                            <th style="text-align: center; vertical-align: middle;">產品圖例<br>(圖片皆取自官網)</th>
+                                        </tr>
+                                    </thead>
                                 
-                                  <li>
-                                    <p style="text-align:justify" class="dark-background"><b>價格範圍</b><br>低溫佈線和互連組件非常昂貴。</p>
-                                    <ul>
-                                      <li><b>超導同軸電纜：</b> NbTi-NbTi 超導同軸電纜的價格約為每米1500美元。</li>
-                                      <li><b>完整佈線方案：</b> 為一個包含數十到數百量子位元的系統構建完整的低溫佈線方案，成本可能達到數萬甚至數十萬美元。</li>
-                                    </ul>
-                                    <p style="text-align:justify" class="dark-background">這部分成本是構建和升級量子電腦時需要考慮的重要因素。</p>
-                                  </li>
+                                    <tbody>
+                                        <tr valign="middle">
+                                            <td align="center"><strong><a href="https://delft-circuits.com/product-overview/products-cryogenic-cable/#channeltypes" target="_blank" rel="noopener noreferrer">Delft Circuits</a></strong><br>
+                                                </td>
+                                            <td align="left"><div style="text-align: center;">
+                                                <a href="../Image/Delft-circuit-1.png">
+                                                <img src="../Image/Delft-circuit-1.png" alt="取代文字" style="width: 100%; height: auto;">
+                                                </a>
+                                              </div>
+                                              <a href="../Image/Delft-circuit-2.png">
+                                                <img src="../Image/Delft-circuit-2.png" alt="取代文字" style="width: 100%; height: auto;">
+                                                </a>
+                                              </div>
+                                              
+
+                                            </td>
+                                              
+                                        </tr>
+                                        <tr valign="middle">
+
+                                            <td align="center"><strong><a href="https://cryocoax.com/high-density-connectors/" target="_blank" rel="noopener noreferrer">CryoCoax</a></strong><br>
+                                                <br>High Density Connectors
+                                            </td>
+                                            
+                                              
+                                            <td align="left"><div style="text-align: center;">
+                                                <a href="../Image/CryoCoax.jpg">
+                                                <img src="../Image/CryoCoax.jpg" alt="取代文字" style="width: 100%; height: auto;">
+                                                </a>
+                                            </div></td>
+                                        </tr>
+                                        <tr valign="middle">
+
+                                            <td align="center"><strong><a href="https://www.maybellquantum.com/other-wiring" target="_blank" rel="noopener noreferrer">Maybell</a></strong>
+                                                <br><br>
+                                                Wiring<br>Fridge solutions
+                                            </td>
+                                              
+                                            <td align="left"><div style="text-align: center;">
+                                                <a href="../Image/maybell-1.png">
+                                                <img src="../Image/maybell-1.png" alt="取代文字" style="width: 100%; height: auto;">
+                                                </a>
+                                                <a href="../Image/maybell-2.png">
+                                                    <img src="../Image/maybell-2.png" alt="取代文字" style="width: 100%; height: auto;">
+                                                    </a>
+                                            </div></td>
+                                        </tr>
+                                        
+                                        
+                                        <tr valign="middle">
+
+                                            <td align="center"><strong><a href="https://quantummicrowave.com/browse-products/millimeter-wave-products/non-magnetic-products/" target="_blank" rel="noopener noreferrer">Quantum Microwave</a></strong>
+                                                    <br>
+                                                    Magnetic-shielding
+                                                    <br>
+                                                    Cryogenic Breadboard
+                                                    
+                                            </td>
+                                              
+                                            <td align="left"><div style="text-align: center;">
+                                                <a href="../Image/Quantum_microwave-1.png">
+                                                <img src="../Image/Quantum_microwave-1.png" alt="取代文字" style="width: 100%; height: auto;">
+                                                </a>
+                                                <a href="../Image/Quantum_microwave-2.png">
+                                                    <img src="../Image/Quantum_microwave-2.png" alt="取代文字" style="width: 100%; height: auto;">
+                                                    </a>
+                                                
+
+                                            </div></td>
+                                        </tr>
+                                        <tr valign="middle">
+
+                                            <td align="center"><strong><a href="https://ardentconcepts.com/quantum-overview/" target="_blank" rel="noopener noreferrer">Ardent Concepts</a></strong>
+                                                    <br>
+                                                    Plate-to-plate connection
+                                                    
+                                            </td>
+                                              
+                                            <td align="left"><div style="text-align: center;">
+                                                <a href="../Image/ardent-2.webp">
+                                                <img src="../Image/ardent-2.webp" alt="取代文字" style="width: 100%; height: auto;">
+                                                </a>
+                                                
+                                            </div></td>
+                                        </tr>
+
+
+                                    </tbody>
                                 
-                                  <li>
-                                    </li>
-                                </ol>
+                                </table>
                                 
-                              
-                              <table border="1">
-                                <thead>
-                                    <tr>
-                                        <th>供應商 (Supplier)</th>
-                                        <th>國家/地區 (Country/Region)</th>
-                                        <th>主要產品/服務(Key Products/Services)</th>
-                                        <th>關鍵特點/技術(Key Features/Technology)</th>
-                                    </tr>
-                                </thead>
-                                  <tr>
-                                    <td colspan="4"><strong>低溫導線/接頭</strong></td>
-                                </tr>
-                                <tr>
-                                    <td>Delft Circuits</td>
-                                    <td>荷蘭</td>
-                                    <td>Cri/oFlex® 柔性線纜 (Ag/NbTi),低溫接頭,氣密饋通</td>
-                                    <td>高密度,低熱導,可整合元件,超導選項<sup>44</sup></td>
-                                </tr>
-                                <tr>
-                                    <td>Rosenberger</td>
-                                    <td>德國</td>
-                                    <td>低溫同軸電纜(SS, CuNi, NbTi),非磁性 RF 接頭 (SMA, SMP等),高密度接頭,氣密法蘭</td>
-                                    <td>產品線寬,定制能力強<sup>74</sup></td>
-                                </tr>
-                                <tr>
-                                    <td>Amphenol Aerospace </td>
-                                    <td>美國</td>
-                                    <td>Cryo-Seal 氣密接頭(38999)</td>
-                                    <td>極低溫(-195°C)性能保證,高氣密性<sup>78</sup></td>
-                                </tr>
-                                <tr>
-                                    <td>Martec</td>
-                                    <td>英國</td>
-                                    <td>低溫氣密接頭/饋通</td>
-                                    <td>真空友好,低釋氣材料<sup>77</sup></td>
-                                </tr>
-                                <tr>
                     
-                                </tbody>
-                              </table>
-                              <ul>
-                                <li><strong>低溫導線與接頭(Cryogenic Wiring & Connectors):</strong> Delft Circuits, Maybell Quantum, Rosenberger, Amphenol Aerospace, Martec, Quantum Microwave, CryoCoax, EZ Form Cable (詳見 Section III.D)<sup>10</sup>。</li>
-                                <li><strong>真空系統部件(Vacuum System Components):</strong> Leybold, Edwards Vacuum, Pfeiffer Vacuum, SAES Getters, Gamma Vacuum, Busch Vacuum Solutions, Agilent/Varian, Welch, VAT (詳見 Section IV.A)<sup>11</sup>。</li>
-                                <li><strong>磁屏蔽材料/系統(Magnetic Shielding Materials/Systems):</strong> Amuneal Manufacturing Corp., Magnetic Shields Limited (詳見 Section IV.B)<sup>87</sup>。 </li>
-                                <li><strong>低溫測量儀器/感測器(Cryogenic Measurement Instruments/Sensors):</strong> Lake Shore Cryotronics, Paragraf (詳見 Section IV.C)<sup>94</sup>。 </li>
-                            </ul>
-                              
-                              <table border="1">
-                                  <thead>
-                                      <tr>
-                                          <th>供應商 (Supplier)</th>
-                                          <th>國家/地區 (Country/Region)</th>
-                                          <th>主要產品/服務(Key Products/Services)</th>
-                                          <th>關鍵特點/技術(Key Features/Technology)</th>
-                                      </tr>
-                                  </thead>
-                                    <td colspan="4"><strong>輔助系統部件</strong></td>
-                                </tr>
-                                <tr>
-                                    <td>Leybold, Edwards, Pfeiffer, etc.</td>
-                                    <td>(多國)</td>
-                                    <td>各類真空幫浦(旋片,乾式,渦輪,離子等)</td>
-                                    <td>成熟真空技術供應商<sup>11</sup></td>
-                                </tr>
-                                <tr>
-                                    <td>SAES Getters</td>
-                                    <td>意大利</td>
-                                    <td>NEG 真空幫浦</td>
-                                    <td>高H<sub>2</sub> 抽速,無振動/磁場/污染<sup>80</sup></td>
-                                </tr>
-                                <tr>
-                                    <td>Amuneal, Magnetic Shields Ltd.</td>
-                                    <td>美國,英國</td>
-                                    <td>磁屏蔽材料/系統</td>
-                                    <td>高磁導率材料,低溫屏蔽,主動屏蔽<sup>87</sup></td>
-                                </tr>
-                                <tr>
-                                    <td>Lake Shore Cryotronics</td>
-                                    <td>美國</td>
-                                    <td>低溫溫度/磁場傳感器,測量儀器,探針台</td>
-                                    <td>低溫測量專家<sup>94</sup></td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-
-                                
-                                <p style="text-align:justify">
-                                    ▲
-                                    <br><span style="font-size: 0.7em; line-height: 0.8;">
-
-                                    </span><br><br>
-                                    </p>
 
 
                                 <div class="post-meta">
@@ -486,7 +437,7 @@ fetch("lessons.json")
                         <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@insight-ihbar.com">info@insight-ihbar.com</a></li>
                         <!--<li><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+37400800000">+374 (00) 80 00 00 </a></li>
                         <li><i class="fa fa-fax" aria-hidden="true"></i><a href="+37400900000">+374 (00) 90 00 00</a></li>
-                        <li><i class="fa-solid fa-location-dot"></i><p>Hsinchu 300, Taiwan (R.O.C.)</p></li>-->
+                        <li><i class="fa-solid fa-location-dot"></i><p>Hsinchu 300，Taiwan (R.O.C.)</p></li>-->
                     </ul>
                 </div>
                 <!--<div class="clearfix visible-xs"></div>

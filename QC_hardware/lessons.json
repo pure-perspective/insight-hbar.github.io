@@ -6,7 +6,7 @@
     { "title": "微波元件廠商", "file": "H.html" },
     { "title": "特殊導線與接頭", "file": "U2.html" },
     { "title": "", "file": "I.html" ,"enabled": false},
-    { "title": "低溫佈線與互連-廠商", "file": "O.html" ,"enabled": false},
+    { "title": "低溫佈線與互連-廠商", "file": "O.html" , "status": "new" , "date": "2025-07-03"},
     { "title": "核心硬體組件", "file": "D.html" ,"enabled": false},
     { "title": "量子處理器 (QPU)", "file": "E.html" ,"enabled": false},
     { "title": "稀釋製冷機", "file": "F.html" ,"enabled": false},
