@@ -100,17 +100,214 @@
                             <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="">-->
                             <div class="post-content">
                                 <div style="text-align: center;">
-                                    <h2>Hardware Guide (2025)</h2>
+                                    <h2>Thermal Management and Thermal Anchoring</h2>
                                     <h3></h3>
                                 </div>
                                 
+                                <p>
+                                    In experiments exploring the quantum world and superconducting phenomena, dilution refrigerators cool systems to extreme low temperatures below 20mK. However, for the entire system to reach the required temperature and operate stably, thermal management is an indispensable engineering challenge. Any tiny energy disturbance (i.e., heat) can cause qubit decoherence, destroying precious quantum information and increasing the error rate of quantum computations. This excess heat, which we call "Heat Leak," permeates from all directions. One of the main leakage paths is through the signal cables used to control and read out the qubits. If the heat transfer along these cables is not managed, it will lead to:
+                                </p>
+                                <ul>
+                                    <li><p>Continuous heat introduction from high-temperature stages to low-temperature regions, increasing the cooling load at the cold end.</p></li>
+                                    <li><p>Increased thermal noise on RF lines, interfering with qubit read-write operations.</p></li>
+                                    <li><p>Reduced overall cooling efficiency of the system, potentially preventing stable operation.</p></li>
+                                </ul>
+                                <br><br>
+                                <h3>Dilution Refrigerator Structures</h3>
+                                <p style="text-align:justify">
+                                    Here is a brief introduction to wet and dry dilution refrigerators.
+                                </p>
+                                <table width="100%" border="1" cellpadding="10" cellspacing="0" style="border-collapse: collapse; font-family: sans-serif; border-color: #cccccc;">
+                                    
+                                    <thead>
+                                        <tr bgcolor="#e9ecef">
+                                            <th width="42%" style="text-align: center; vertical-align: middle;">Wet System</th>
+                                            <th style="text-align: center; vertical-align: middle;">Dry System</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        
+                                        <tr valign="middle">
+                                            <td align="center">
+                                                <div style="text-align: center;"><a href="../Image/20250704-5.png">
+                                                    <img src="../Image/20250704-5.png" alt="Wet dilution refrigerator schematic" style="width: 100%; height: auto;">
+                                                  </a>
+                                                </div>
+                                            </td>
+                                              
+                                            <td align="left"><div style="text-align: center;">
+                                                <a href="../Image/20250704-4.png">
+                                                    <img src="../Image/20250704-4.png" alt="Dry dilution refrigerator schematic" style="width: 100%; height: auto;">
+                                                  </a>
+                                            </div></td>
+                                        </tr>
+                                        <tr valign="middle">
+                                            <td align="left">
+                                                In a wet system, the entire cryogenic section is immersed in a liquid helium (⁴He) bath at 4K. During instrument assembly and disassembly, liquid helium is lost, making it an open-cycle system.
+                                            </td>
+                                              
+                                            <td align="left">
+                                                In a dry system, the 4K cooling stage uses a closed-cycle cryocooler. It cools the low-temperature section to 4K via heat exchange, significantly reducing liquid helium loss.
+                                            </td>
+                                        </tr>    
+                                </table>
                                 
                                 <p style="text-align:justify">
-                                    ▲
-                                    <br><span style="font-size: 0.7em; line-height: 0.8;">
-
+                                    <span style="font-size: 0.7em; line-height: 0.8;">
+                                        Table Ref: Cao, H. (2021). Refrigeration Below 1 Kelvin. Journal of Low Temperature Physics.
+                                        <br>doi:10.1007/s10909-021-02606-7 
                                     </span><br><br>
-                                    </p>
+                                </p>
+                                
+                                <h3>Multi-Layer Thermal Control: The Cold Plates of a Dilution Refrigerator</h3>
+                                
+                                <p style="text-align:justify;">
+                                    To combat heat leaks, a dilution refrigerator employs multiple platforms (cooling plates/isothermal plates) with progressively decreasing temperatures.
+                                </p>
+                                <table width="100%" border="1" cellpadding="10" cellspacing="0" style="border-collapse: collapse; font-family: sans-serif; border-color: #cccccc;">
+                                        <thead>
+                                            <tr bgcolor="#e8e8e8">
+                                                <th colspan="2" align="center">Dilution Refrigerator Stages</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td align="center" width="30%">60K Plate</td>
+                                                <td>Temperature around 60K-100K.</td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center">4K Plate</td>
+                                                <td>Temperature around 4K.<br>This stage is connected to the first stage of the cryocooler and is where components like HEMT amplifiers and thermalizing filters are mounted.</td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center">Still Plate</td>
+                                                <td>Temperature around 800 mK. This is the "Still" location in the dilution cooling cycle, further reducing heat conduction. Low-frequency filters or DC line heat sinks can be installed here.</td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center">Cold Plate</td>
+                                                <td>Temperature around 100 mK.<br>A buffer layer before the quantum operation zone, often used for mounting circulators and as an intermediate point for heat sinking.</td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center">MXC Plate<br>(Mixing Chamber)</td>
+                                                <td>Temperature around 10–20 mK.<br>The coldest stage, where key components like the qubit chip, TWPAs, and isolators are mounted. It is the core operational and heat-sinking layer.</td>
+                                            </tr>
+                                        </tbody>
+                                </table>
+                                
+                                <p style="text-align:justify;">
+                                    Each cooling plate acts as a heat interception net. The goal is to intercept and absorb heat at each stage before it reaches the core MXC plate. Roughly speaking, each cooling stage is responsible for reducing the temperature by an order of magnitude. With the cooling stages in place, the next step is to absorb the heat from the signal lines, which brings us to the crucial technique of Thermal Anchoring, also known as Heat Sinking or Thermalization.
+                                </p>
+                                <br><br>
+                                <h3>What is Thermal Anchoring?</h3>
+                                <p>
+                                    Thermal Anchoring is a system-level design strategy to securely mount and effectively cool heat-leaking objects (like the outer conductor of coaxial cables, waveguide walls, or structural supports) to the various cooling plates, ensuring their temperature matches that of the stage they are on. The purpose is to prevent heat from leaking from high-temperature regions to low-temperature regions along these structures, which would cause the cold end to overheat or noise levels to rise.
+                                </p>
+                                <p>
+                                    In practice, "Thermal Anchoring" means securely fastening the signal cables (especially the heat-conducting outer conductor) to each cold plate. This is typically done by clamping the cable with a block of high-purity copper, which has excellent thermal conductivity, and then bolting this block to the cold plate. Sometimes, a flexible thermal conductor like a Thermal Strap is used to connect components that cannot be directly mounted.
+                                </p>
+                                <br><br>
+                                <table width="100%" border="1" cellpadding="10" cellspacing="0" style="border-collapse: collapse; font-family: sans-serif; border-color: #cccccc;">
+                                    
+                                    <thead>
+                                        <tr bgcolor="#e9ecef">
+                                            <th width="70%" style="text-align: center; vertical-align: middle;">Thermal Conductivity of OFHC Cu, ETP Cu, and two Aluminum Alloys at various temperatures.</th>
+                                            <th style="text-align: center; vertical-align: middle;">OFHC Copper Thermal Strap</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr valign="middle">
+                                            <td align="center">
+                                                <div style="text-align: center;">
+                                                    <a href="../Image/OFHC_Copper_Therma_Conductivity_Graph.webp">
+                                                        <img src="../Image/OFHC_Copper_Therma_Conductivity_Graph.webp" alt="Graph of thermal conductivity for copper and aluminum alloys" style="width: 100%; height: auto;">
+                                                    </a>
+                                                </div>
+                                            </td>
+                                              
+                                            <td align="center"><div style="text-align: center;">
+                                                <div style="text-align: center;">
+                                                    <a href="../Image/Copper_Foil_Thermal_Strap_CuFS - pre-conductance test.webp">
+                                                        <img src="../Image/Copper_Foil_Thermal_Strap_CuFS - pre-conductance test.webp" alt="Photograph of a copper foil thermal strap" style="width: 100%; height: auto;">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p style="text-align:justify">
+                                    <span style="font-size: 0.7em; line-height: 0.8;">
+                                        Table Ref: Technology Applications, Inc.
+                                        <br>https://www.techapps.com/copper-foil-straps
+                                    </span>
+                                </p>
+                                <br><br>
+                                    
+                                <p>In practice, this typically involves the following components and methods:</p>
+                                <ul>
+                                    <li><p>Using cables with low thermal conductivity and a low coefficient of thermal expansion (e.g., NbTi cables).</p></li>
+                                    <li><p>Installing Heat Sink Blocks at each temperature platform (e.g., 60K, 4K, Still, Mixing Chamber).</p></li>
+                                    <li><p>Ensuring good connection of the outer conductor to the cold head using high-conductivity copper foils, braided straps, or metal clamps.</p></li>
+                                    <li><p>Using thermal grease or cryo-compatible solder to enhance contact thermal conductance.</p></li>
+                                </ul>
+                                
+                                <br><br>
+                                <h3>Thermalization of the Outer Conductor of a Coaxial Cable</h3>
+                                <div style="text-align: center;">
+                                    <a href="../Image/Common Types of Coaxial Cables.png">
+                                        <img src="../Image/Common Types of Coaxial Cables.png" alt="Diagram of common coaxial cable types" style="width: 100%; height: auto;">
+                                    </a>
+                                </div>
+                                <p style="text-align:justify">
+                                    <span style="font-size: 0.7em; line-height: 0.8;">
+                                        Ref: https://www.electricalengineeringtoolbox.com/2016/12/basics-of-coaxial-cables-used-in.html
+                                    </span><br><br>
+                                    ▲ The structure of an RF/microwave coaxial cable. The outer conductor of the cable is also a path for heat transfer. "Thermalization of the outer conductor" means thermally anchoring the coaxial cable to the cooling plates to intercept heat conduction at each stage.
+                                </p>
+                                <br><br>
+                                <div style="text-align: center;">
+                                    <a href="../Image/20250704-7.png">
+                                      <img src="../Image/20250704-7.png" alt="Example design of a coaxial cable thermalized with a thermal strap" style="width: 100%; height: auto;">
+                                    </a>
+                                </div>
+                                <p style="text-align:justify">
+                                    <span style="font-size: 0.7em; line-height: 0.8;">
+                                        Ref: Cryogenic Technology in the Microwave Engineering:
+                                        Application to MIC and MMIC Very Low Noise Amplifier Design<br>
+                                        https://www.tesisenred.net/bitstream/handle/10803/10674/2de9.JLCDcap.2.pdf?sequence=3&isAllowed=y
+                                    </span><br><br>
+                                    ▲ An example design of a coaxial cable being thermally anchored to a plate via a thermal strap.
+                                </p>
+                                
+                                <br><br>
+                                <div style="text-align: center;">
+                                    <a href="../Image/20250704-6.png">
+                                      <img src="../Image/20250704-6.png" alt="Physical model for thermal anchoring heat transfer" style="width: 80%; height: auto;">
+                                    </a>
+                                </div>
+                                <p style="text-align:justify">
+                                    <span style="font-size: 0.7em; line-height: 0.8;">
+                                        Ref: Hust, J. G. (1970). Thermal Anchoring of Wires in Cryogenic Apparatus. Review of Scientific Instruments, 41(5), 622–624. doi:10.1063/1.1684599 <br>
+                                        Ref: Cryogenic Technology in the Microwave Engineering: Application to MIC and MMIC Very Low Noise Amplifier Design<br>
+                                        https://www.tesisenred.net/bitstream/handle/10803/10674/2de9.JLCDcap.2.pdf?sequence=3&isAllowed=y
+                                    </span><br><br>
+                                    ▲ A physical model for heat transfer in thermal anchoring. \(T_1\) is the hot end, and \(T_3\) is the temperature reached after passing the cooling plate (or Heat Sink, at temperature \(T_S\)). The goal is a temperature difference \(T_3-T_S < 1mK\). Achieving this requires considering the dimensions and thermal conductivity of the coaxial line, the contact area with the thermal medium, and the dimensions and conductivity of the thermal medium itself, all of which have recommended design parameters.
+                                </p>
+                                
+                                <br><br>
+                                
+                                <h3>The Trade-off between Electrical and Thermal Conductivity</h3>
+                                <p style="text-align:justify;">
+                                    Generally, good electrical conductors (like copper) are also good thermal conductors. In practice, a quantum computer requires cables that can transmit high-frequency microwave signals without loss (requiring high electrical conductivity) while simultaneously not conducting heat (requiring low thermal conductivity). To solve this dilemma, materials science solutions are needed:
+                                </p>
+                                <ul>
+                                    <li><p><b>Using Special Alloys:</b> Employing materials with "poorer" electrical and thermal conductivity, such as <strong>Stainless Steel</strong> or <strong>CuproNickel (CuNi)</strong>, for parts of the cable structure.</p></li>
+                                    <li><p><b>Utilizing Superconductors:</b> At the coldest stages, using superconducting materials like <strong>Niobium-Titanium (NbTi)</strong>. Below its critical temperature, it becomes a superconductor with zero resistance, allowing for nearly lossless signal transmission. At the same time, its thermal conductivity drops sharply in the superconducting state, making it a nearly perfect signal channel and thermal barrier.</p></li>
+                                </ul>
+                                
+                                <p style="text-align:justify;">
+                                    <strong>Thermal management</strong> in cryogenic experiments is a precision "heat plumbing" engineering discipline. And <strong>thermal anchoring</strong> is the core technique within this discipline. It doesn't refer to a single component but a systematic design approach to ensure that heat is precisely intercepted and managed.
+                                </p>
 
 
                                 <p>
