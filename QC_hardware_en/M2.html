@@ -35,10 +35,10 @@
     <link href="../assets/css/style.css" rel="stylesheet">
     <link href="../assets/css/responsive.css" rel="stylesheet">
 
-    <title>熱沉解決方案 | 超導量子電腦硬體指南 (2025)</title>
+    <title>Thermalization Solutions</title>
     <meta name="description" content="深入解析2025年超導量子電腦的構建，涵蓋量子處理器(QPU)、稀釋製冷機、控制電子、低溫佈線等核心硬體。提供全球主要製造商、價格範圍、技術挑戰與未來趨勢的詳細指引。">
     <meta name="keywords" content="超導量子電腦, 量子位元, Qubit, QPU, 稀釋製冷機, IBM, Google, QuantWare, Bluefors, 低溫系統, 控制電子, Josephson Junction, Transmon, Fluxonium, 量子計算硬體, SEO">
-    <link rel="canonical" href="https:///www.insight-ihbar.com/QC_hardware/M2.html" />
+    <link rel="canonical" href="https:///www.insight-ihbar.com/QC_hardware_en/M2.html" />
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -54,22 +54,22 @@
             <div class="container">
 
                 <div class="navbar-header">                   
-                    <a href="../index.html" class="site-title">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</a>
+                    <a href="../index_en.html" class="site-title">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</a>
                 </div><!-- /.navbar-header -->
 
                 <div class="collapse navbar-collapse" id="agency-navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="../index.html">Home</a></li>
-                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">科普介紹<i class="fa fa-caret-down hidden-xs" aria-hidden="true"></i></a>
+                        <li><a href="../index_en.html">Home</a></li>
+                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Qubit Physics<i class="fa fa-caret-down hidden-xs" aria-hidden="true"></i></a>
                             <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                              <li><a href="../SCQ_elementary/main.html">超導量子位元(科普版)</a></li>
-                              <li><a href="../SCQ_advanced/main.html">超導量子位元(進階版)</a></li>
+                              <li><a href="../SCQ_elementary_en/main.html">Superconducting Qubits (Elementary)</a></li>
+                              <li><a href="../SCQ_advanced_en/main.html">Superconducting Qubits (Advanced)</a></li>
                             </ul>
                         </li>
                         <!--<li class="active"><a href="../SCQ_elementary/main.html">科普介紹</a></li>-->
-                        <li class="active"><a href="../QC_hardware/main.html">硬體導論</a></li>
-                        <li><a href="../About/main.html">關於我們</a></li>
-                        <li><a href="../index_en.html">English</a></li>                        
+                        <li class="active"><a href="../QC_hardware_en/main.html">Hardware</a></li>
+                        <li><a href="../About_en/main.html">About Us</a></li>
+                        <li><a href="../index.html">中文版</a></li>                        
                     </ul>
                 </div>
 
@@ -80,10 +80,10 @@
     <div id="hero" class="hero overlay subpage-hero blog-hero">
         <div class="hero-content">
             <div class="hero_2-text">
-                <h1>硬體導論</h1>
+                <h1>Hardware Guide</h1>
                 <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
-                  <li class="breadcrumb-item"><a href="./main.html">硬體導論</a></li>
+                  <li class="breadcrumb-item"><a href="../index_en.html">Home</a></li>
+                  <li class="breadcrumb-item"><a href="./main.html">Hardware Guide (2025)</a></li>
                   <!--<li class="breadcrumb-item active">約瑟夫森節</li>-->
                 </ol>
             </div><!-- /.hero-text -->
@@ -100,127 +100,129 @@
                             <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="">-->
                             <div class="post-content">
                                 <div style="text-align: center;">
-                                    <h2>熱沉解決方案</h2>
+                                    <h2>Thermalization Solutions</h2>
                                     <h3></h3>
-                                </div>
-
-                                <p style="text-align:justify" class="dark-background">
-                                    在低溫學中，熱沉是一個系統級的設計挑戰，通常並非單一標準組件。
-                                    RF射頻/微波訊號（如同軸電纜或波導）引入低溫環境時會攜帶熱量。
-                                    如果同軸電纜的外導體在每個溫階沒有得到良好熱沉，它就會成為一個熱捷徑，將熱量傳導至系統最冷的部分，從而降低性能並增加低溫負載。
-                                    熱沉設計目標為確保低溫系統中（尤其是稀釋製冷機內）線路的外導體能有效地在各個低溫階段冷卻（熱錨定）至該階段的溫度。
-                                    實現有效的熱沉通常需要結合使用特製的低溫相容電纜、連接器、熱連接/熱導帶以及可能的散熱器。
-                                </p>
-                                
-                                <p style="text-align:justify" class="dark-background">
-                                    熱沉組件可以分為：                                
-                                </p>
-                                <ul>
-                                    <li><p><b>外掛式</b>：由外掛的方式組合到線纜上，如熱導帶。熱導帶對於將組件（包括射頻電纜外導體和連接器）的熱量傳導至低溫恆溫器內的冷板至關重要。
-                                        熱導帶一端連接製冷機的冷卻均溫板，另一端夾住線纜。</p></li>
-                                    <li><p><b>整合式</b>：線纜/接頭自備熱錨功能。一個明顯的趨勢是，專業供應商越來越多地將熱管理功能直接集成到低溫電纜和連接器系統中。
-                                        這簡化了系統組裝並確保了有效的熱錨定。
-                                        隨著量子位元數量的增加和量子實驗的複雜化，需要更多的射頻線路，這使得有效熱沉在管理稀釋製冷機熱負載方面的重要性日益增加。</p></li>
-                                </ul>
-                                <br><br>
-                                <h3>
-                                    廠商範例
-                                </h3>
-                                
-                                <p style="text-align:justify" class="dark-background">
-                                    在<a href="./O.html">前面章節中介紹的線路連接器廠商(按此連結)</a>多半都已朝向推出整合熱錨功能的纜線（熱化連接器 Thermalized connector）。
-                                </p>
-                                
-                                
-                                <table width="100%" border="1" cellpadding="10" cellspacing="0" style="border-collapse: collapse; font-family: sans-serif; border-color: #cccccc;">
-
-                                    
+                                  </div>
+                                  
+                                  <p style="text-align:justify" class="dark-background">
+                                    In cryogenics, thermalization is a system-level design challenge rather than a matter of using standard components.
+                                    RF/microwave signals (e.g., coaxial cables or waveguides) carry heat into cryogenic environments.
+                                    If the outer conductor of a coaxial cable is not well-thermalized at each temperature stage, it becomes a thermal shortcut, conducting heat to the coldest parts of the system, thus degrading performance and increasing the cryogenic load.
+                                    The design goal of thermal anchoring is to ensure that the outer conductors of cables in cryogenic systems—especially within dilution refrigerators—can be effectively cooled (anchored) to the temperature of each stage.
+                                    Achieving efficient thermalization typically requires a combination of specially designed cryo-compatible cables, connectors, thermal links/straps, and possibly heat sinks.
+                                  </p>
+                                  
+                                  <p style="text-align:justify" class="dark-background">
+                                    Thermalization components can be categorized as:
+                                  </p>
+                                  
+                                  <ul>
+                                    <li>
+                                      <p><b>External type</b>: Thermal straps are clamped onto the cables from the outside. These straps are essential for conducting heat from components (such as RF cable outer conductors and connectors) to the cold plate inside the cryostat. One end of the strap connects to the cold stage of the refrigerator, while the other clamps onto the cable.</p>
+                                    </li>
+                                    <li>
+                                      <p><b>Integrated type</b>: The cable or connector itself has built-in thermal anchoring. A growing trend among specialized suppliers is to directly integrate thermal management features into cryogenic cable and connector systems. This simplifies assembly and ensures effective thermal anchoring. As the number of qubits and experimental complexity increase, more RF lines are required, making efficient thermal anchoring ever more critical for managing the heat load of dilution refrigerators.</p>
+                                    </li>
+                                  </ul>
+                                  
+                                  <br><br>
+                                  <h3>Example Vendors</h3>
+                                  
+                                  <p style="text-align:justify" class="dark-background">
+                                    <a href="./O.html">Most of the cable connector vendors introduced in earlier sections (Link)</a> have already begun offering cables with integrated thermalization (thermalized connectors).
+                                  </p>
+                                  
+                                  <table width="100%" border="1" cellpadding="10" cellspacing="0" style="border-collapse: collapse; font-family: sans-serif; border-color: #cccccc;">
                                     <thead>
-                                        <tr bgcolor="#e9ecef">
-                                            <th width="18%" style="text-align: center; vertical-align: middle;">公司名稱<br>(點按連結)</th>
-                                            <th width="12%" style="text-align: center; vertical-align: middle;">國家/地區</th>
-                                            <th width="20%" style="text-align: center; vertical-align: middle;">主要組件焦點</th>
-                                            <th width="25%" style="text-align: center; vertical-align: middle;">關鍵技術/創新</th>
-                                            <th style="text-align: center; vertical-align: middle;">備註</th>
-                                        </tr>
+                                      <tr bgcolor="#e9ecef">
+                                        <th width="18%" style="text-align: center; vertical-align: middle;">Company<br>(Click for link)</th>
+                                        <th width="12%" style="text-align: center; vertical-align: middle;">Country/Region</th>
+                                        <th width="20%" style="text-align: center; vertical-align: middle;">Component Focus</th>
+                                        <th width="25%" style="text-align: center; vertical-align: middle;">Key Technologies/Innovations</th>
+                                        <th style="text-align: center; vertical-align: middle;">Remarks</th>
+                                      </tr>
                                     </thead>
-                                
                                     <tbody>
-                                        <tr valign="middle">
-                                            <td align="center"><strong><a href="https://www.techapps.com/" target="_blank" rel="noopener noreferrer">Technology Applications, Inc.</a></strong></td>
-                                            <td align="center">美國</td>
-                                            <td>低溫熱導帶 (Thermal Straps)</td>
-                                            <td>CuTS<sup>®</sup> 銅熱導帶, 石墨熱導帶</td>
-                                            <td>全球知名的低溫熱導帶供應商</td>
-                                        </tr>
+                                      <tr valign="middle">
+                                        <td align="center"><strong><a href="https://www.techapps.com/" target="_blank" rel="noopener noreferrer">Technology Applications, Inc.</a></strong></td>
+                                        <td align="center">USA</td>
+                                        <td>Thermal Straps</td>
+                                        <td>CuTS<sup>®</sup> copper straps, graphite straps</td>
+                                        <td>Renowned global supplier of cryogenic thermal straps</td>
+                                      </tr>
                                     </tbody>
-                                </table>
-
-                                <br><br><br>
-                                <table width="100%" border="1" cellpadding="10" cellspacing="0" style="border-collapse: collapse; font-family: sans-serif; border-color: #cccccc;">
-                                    
+                                  </table>
+                                  
+                                  <br><br><br>
+                                  <table width="100%" border="1" cellpadding="10" cellspacing="0" style="border-collapse: collapse; font-family: sans-serif; border-color: #cccccc;">
                                     <thead>
-                                        <tr bgcolor="#e9ecef">
-                                            <th width="30%" style="text-align: center; vertical-align: middle;">新創公司與產品範例</th>
-                                            <th style="text-align: center; vertical-align: middle;">產品圖例<br>(圖片皆取自官網)</th>
-                                        </tr>
+                                      <tr bgcolor="#e9ecef">
+                                        <th width="30%" style="text-align: center; vertical-align: middle;">Startup Companies & Products</th>
+                                        <th style="text-align: center; vertical-align: middle;">Product Images<br>(Images from official sites)</th>
+                                      </tr>
                                     </thead>
-                                
                                     <tbody>
-                                        
-                                        <tr valign="middle">
-
-                                            <td align="center"><strong><a href="https://www.techapps.com/" target="_blank" rel="noopener noreferrer">Technology Applications, Inc.</a></strong>
-                                                    <br><br>
-                                                Thermal Straps
-                                            </td>
-                                              
-                                            <td align="left"><div style="text-align: center;">
-                                                <a href="../Image/CuTS.png">
-                                                <img src="../Image/CuTS.png" alt="取代文字" style="width: 100%; height: auto;">
-                                                </a>
-                                            </div></td>
-                                        </tr>
-                                        <tr valign="middle">
-                                            <td align="center"><strong><a href="https://quantummicrowave.com/browse-products/millimeter-wave-products/non-magnetic-products/" target="_blank" rel="noopener noreferrer">Quantum Microwave</a></strong><br>Thermalized Connector Array</td>
-                                            <td align="left">
-                                                <div style="text-align: center;">
-                                                    <a href="../Image/QMC-CRYOBRKT.png">
-                                                        <img src="../Image/QMC-CRYOBRKT.png" alt="Image 20250704-5" style="width: 100%; height: auto;">
-                                                    </a>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        
+                                      <tr valign="middle">
+                                        <td align="center">
+                                          <strong><a href="https://www.techapps.com/" target="_blank" rel="noopener noreferrer">Technology Applications, Inc.</a></strong>
+                                          <br><br>
+                                          Thermal Straps
+                                        </td>
+                                        <td align="left">
+                                          <div style="text-align: center;">
+                                            <a href="../Image/CuTS.png">
+                                              <img src="../Image/CuTS.png" alt="Thermal Strap Example" style="width: 100%; height: auto;">
+                                            </a>
+                                          </div>
+                                        </td>
+                                      </tr>
+                                      <tr valign="middle">
+                                        <td align="center">
+                                          <strong><a href="https://quantummicrowave.com/browse-products/millimeter-wave-products/non-magnetic-products/" target="_blank" rel="noopener noreferrer">Quantum Microwave</a></strong><br>
+                                          Thermalized Connector Array
+                                        </td>
+                                        <td align="left">
+                                          <div style="text-align: center;">
+                                            <a href="../Image/QMC-CRYOBRKT.png">
+                                              <img src="../Image/QMC-CRYOBRKT.png" alt="Image 20250704-5" style="width: 100%; height: auto;">
+                                            </a>
+                                          </div>
+                                        </td>
+                                      </tr>
                                     </tbody>
-                                
-                                </table>
-
-
-
-                                
-                                <br><br>
-                                <div style="text-align: center;">
+                                  </table>
+                                  
+                                  <br><br>
+                                  <div style="text-align: center;">
                                     <a href="../Image/Thermal Straps__A5-501 AlTS and F5-501 CuFS.webp">
-                                        <img src="../Image/Thermal Straps__A5-501 AlTS and F5-501 CuFS.webp" alt="Image 20250704-5" style="width: 100%; height: auto;">
+                                      <img src="../Image/Thermal Straps__A5-501 AlTS and F5-501 CuFS.webp" alt="AlTS and CuFS Example" style="width: 100%; height: auto;">
                                     </a>
-                                </div>
-                                <p style="text-align:justify">
-                                    ▲ Technology Applications, Inc.提供不同材質的熱導帶，1100 鋁的密度大約只有銅的三分之一，熱導率則約為銅的一半，因此在本質上，鋁帶相較於銅帶最多可具有三分之一的質量優勢。可以根據熱錨功率需求和重量之間作權衡。
-                                    <br><span style="font-size: 0.7em; line-height: 0.8;">
-                                        Ref: Technology Applications, Inc.
-                                    </span><br><br>
+                                  </div>
+                                  
+                                  <p style="text-align:justify">
+                                    ▲ Technology Applications, Inc. offers thermal straps in different materials.
+                                    Because 1100 aluminum has roughly one third the density of copper and half the thermal conductivity, there is intrinsically a mass benefit of up to one third less for aluminum compared to copper straps.
+                                    This allows for a trade-off between thermal anchoring performance and total mass.
+                                    <br>
+                                    <span style="font-size: 0.7em; line-height: 0.8;">
+                                      Ref: Technology Applications, Inc.
+                                    </span>
+                                    <br><br>
+                                  </p>
+                                  
+
+
+                                <p>
+                                    <span style="font-size: 0.5em; line-height: 0.8;">
+                                        Originally written in Chinese by the author, these articles are translated into English to invite cross-language resonance.
+                                    </span>
                                 </p>
-                                
-                                
-
-
                                 <div class="post-meta">
                                     <span class="post-author">
-                                        <a href="../About/Wang.html"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="">王培儒</a>
+                                        <a href="../About_en/Wang.html"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="">Peir-Ru Wang</a>
                                     </span>
                                     <span class="post-category">
-                                        <a href="./main.html"><i class="fa fa-folder" aria-hidden="true"></i>硬體導論</a>
+                                        <a href="./main.html"><i class="fa fa-folder" aria-hidden="true"></i>Hardware Guide (2025)</a>
                                     </span>
                                 </div><!-- /.post-meta -->
                             
@@ -239,14 +241,14 @@ fetch("lessons.json")
 
     if (index > 0) {
       const prev = pages[index - 1];
-      html += `<a class="btn btn-gray" href="${prev.file}">← 上一頁</a> `;
+      html += `<a class="btn btn-gray" href="${prev.file}">← Previous</a> `;
     }
 
-    html += `<a class="btn btn-gray" href="../QC_hardware_en/${current}" style="margin: 0 10px;">English Version</a>`;
+    html += `<a class="btn btn-gray" href="../QC_hardware/${current}" style="margin: 0 10px;">中文版</a>`;
 
     if (index < pages.length - 1) {
       const next = pages[index + 1];
-      html += `<a class="btn btn-gray" href="${next.file}">下一頁 →</a>`;
+      html += `<a class="btn btn-gray" href="${next.file}">Next →</a>`;
     }
 
     document.getElementById("prev-next-nav").innerHTML = html;
@@ -326,7 +328,7 @@ fetch("lessons.json")
             <div class="row">
                 <div class="col-md-3 col-sm-4 col-xs-6">
                     <a href="../index.html" class="site-title">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</a>
-                    <p>一起走進新時代的前沿科學與量子科技</p>
+                    <p>Exploring the Quantum Technology Together.</p>
                     </div>
                 <div class="col-lg-offset-4 col-md-3 col-sm-4 col-md-offset-2 col-sm-offset-0 col-xs-6 ">
                     <p class="site-title">𝐾𝐸𝐸𝑃 𝐼𝑁 𝑇𝑂𝑈𝐶𝐻</p>
