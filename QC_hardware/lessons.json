@@ -11,7 +11,7 @@
     { "title": "核心硬體組件", "file": "D.html" ,"enabled": false},
     { "title": "量子處理器 (QPU)", "file": "E.html" ,"enabled": false},
     { "title": "稀釋製冷機", "file": "F.html" ,"enabled": false},
-    { "title": "控制電子系統", "file": "G.html" ,"enabled": false},    
+    { "title": "控制電子系統", "file": "G.html" , "status": "new" , "date": "2025-07-14"},    
     { "title": "輔助系統與零部件", "file": "J.html" ,"enabled": false},
     { "title": "微波元件廠商-TWPA", "file": "K.html" ,"enabled": false},
     { "title": "微波元件廠商-隔離器", "file": "L.html" ,"enabled": false},

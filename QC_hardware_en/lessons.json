@@ -6,9 +6,10 @@
     { "title": "Microwave Component Vendors", "file": "H.html"},
     { "title": "Cryogenic Wiring and Connectors", "file": "U2.html" },
     { "title": "Cryogenic Wiring and Connectors - Vendors", "file": "O.html" , "status": "new" , "date": "2025-07-03"},
-    { "title": "Towards a Scalable QPU - Quantum Chip Design", "file": "U.html" , "status": "revise" , "date": "2025-07-02" , "note": "Added an illustration of the length differences between readout resonators on the chip." , "anchor": "20250702"},
     { "title": "Thermal Management and Thermal Anchoring", "file": "M.html" , "status": "new" , "date": "2025-07-07"},
     { "title": "Thermalization Solutions", "file": "M2.html" , "status": "new" , "date": "2025-07-09"},
+    { "title": "Control Electronics", "file": "G.html" , "status": "new" , "date": "2025-07-14"}, 
+    { "title": "Towards a Scalable QPU - Quantum Chip Design", "file": "U.html" , "status": "revise" , "date": "2025-07-02" , "note": "Added an illustration of the length differences between readout resonators on the chip." , "anchor": "20250702"},
     { "title": "Towards a Scalable QPU - The Issue of Crosstalk", "file": "V2.html", "status": "new" , "date": "2025-06-23"},
     { "title": "", "file": "W.html" ,"enabled": false}
 ]
