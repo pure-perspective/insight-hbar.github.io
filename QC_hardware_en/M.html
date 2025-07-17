@@ -113,89 +113,9 @@
                                     <li><p>Reduced overall cooling efficiency of the system, potentially preventing stable operation.</p></li>
                                 </ul>
                                 <br><br>
-                                <h3>Dilution Refrigerator Structures</h3>
-                                <p style="text-align:justify">
-                                    Here is a brief introduction to wet and dry dilution refrigerators.
-                                </p>
-                                <table width="100%" border="1" cellpadding="10" cellspacing="0" style="border-collapse: collapse; font-family: sans-serif; border-color: #cccccc;">
-                                    
-                                    <thead>
-                                        <tr bgcolor="#e9ecef">
-                                            <th width="42%" style="text-align: center; vertical-align: middle;">Wet System</th>
-                                            <th style="text-align: center; vertical-align: middle;">Dry System</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        
-                                        <tr valign="middle">
-                                            <td align="center">
-                                                <div style="text-align: center;"><a href="../Image/20250704-5.png">
-                                                    <img src="../Image/20250704-5.png" alt="Wet dilution refrigerator schematic" style="width: 100%; height: auto;">
-                                                  </a>
-                                                </div>
-                                            </td>
-                                              
-                                            <td align="left"><div style="text-align: center;">
-                                                <a href="../Image/20250704-4.png">
-                                                    <img src="../Image/20250704-4.png" alt="Dry dilution refrigerator schematic" style="width: 100%; height: auto;">
-                                                  </a>
-                                            </div></td>
-                                        </tr>
-                                        <tr valign="middle">
-                                            <td align="left">
-                                                In a wet system, the entire cryogenic section is immersed in a liquid helium (⁴He) bath at 4K. During instrument assembly and disassembly, liquid helium is lost, making it an open-cycle system.
-                                            </td>
-                                              
-                                            <td align="left">
-                                                In a dry system, the 4K cooling stage uses a closed-cycle cryocooler. It cools the low-temperature section to 4K via heat exchange, significantly reducing liquid helium loss.
-                                            </td>
-                                        </tr>    
-                                </table>
-                                
-                                <p style="text-align:justify">
-                                    <span style="font-size: 0.7em; line-height: 0.8;">
-                                        Table Ref: Cao, H. (2021). Refrigeration Below 1 Kelvin. Journal of Low Temperature Physics.
-                                        <br>doi:10.1007/s10909-021-02606-7 
-                                    </span><br><br>
-                                </p>
-                                
-                                <h3>Multi-Layer Thermal Control: The Cold Plates of a Dilution Refrigerator</h3>
                                 
                                 <p style="text-align:justify;">
-                                    To combat heat leaks, a dilution refrigerator employs multiple platforms (cooling plates/isothermal plates) with progressively decreasing temperatures.
-                                </p>
-                                <table width="100%" border="1" cellpadding="10" cellspacing="0" style="border-collapse: collapse; font-family: sans-serif; border-color: #cccccc;">
-                                        <thead>
-                                            <tr bgcolor="#e8e8e8">
-                                                <th colspan="2" align="center">Dilution Refrigerator Stages</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td align="center" width="30%">60K Plate</td>
-                                                <td>Temperature around 60K-100K.</td>
-                                            </tr>
-                                            <tr>
-                                                <td align="center">4K Plate</td>
-                                                <td>Temperature around 4K.<br>This stage is connected to the first stage of the cryocooler and is where components like HEMT amplifiers and thermalizing filters are mounted.</td>
-                                            </tr>
-                                            <tr>
-                                                <td align="center">Still Plate</td>
-                                                <td>Temperature around 800 mK. This is the "Still" location in the dilution cooling cycle, further reducing heat conduction. Low-frequency filters or DC line heat sinks can be installed here.</td>
-                                            </tr>
-                                            <tr>
-                                                <td align="center">Cold Plate</td>
-                                                <td>Temperature around 100 mK.<br>A buffer layer before the quantum operation zone, often used for mounting circulators and as an intermediate point for heat sinking.</td>
-                                            </tr>
-                                            <tr>
-                                                <td align="center">MXC Plate<br>(Mixing Chamber)</td>
-                                                <td>Temperature around 10–20 mK.<br>The coldest stage, where key components like the qubit chip, TWPAs, and isolators are mounted. It is the core operational and heat-sinking layer.</td>
-                                            </tr>
-                                        </tbody>
-                                </table>
-                                
-                                <p style="text-align:justify;">
-                                    Each cooling plate acts as a heat interception net. The goal is to intercept and absorb heat at each stage before it reaches the core MXC plate. Roughly speaking, each cooling stage is responsible for reducing the temperature by an order of magnitude. With the cooling stages in place, the next step is to absorb the heat from the signal lines, which brings us to the crucial technique of Thermal Anchoring, also known as Heat Sinking or Thermalization.
+                                    Each cooling plate in dilution-refrigerator acts as a heat interception net. The goal is to intercept and absorb heat at each stage before it reaches the core MXC plate. Roughly speaking, each cooling stage is responsible for reducing the temperature by an order of magnitude. With the cooling stages in place, the next step is to absorb the heat from the signal lines, which brings us to the crucial technique of Thermal Anchoring, also known as Heat Sinking or Thermalization.
                                 </p>
                                 <br><br>
                                 <h3>What is Thermal Anchoring?</h3>
