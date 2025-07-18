@@ -25,4 +25,5 @@
     { "title": "循環器製造商", "file": "T.html" ,"enabled": false},
     { "title": "核心硬體組件", "file": "D.html" ,"enabled": false},
     { "title": "量子處理器 (QPU)", "file": "E.html" ,"enabled": false, "next":""}
+    { "title": "軟體", "file": "" ,"enabled": false, "next":""}
 ]
