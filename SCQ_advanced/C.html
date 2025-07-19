@@ -24,8 +24,8 @@
     <link href="../assets/css/responsive.css" rel="stylesheet">
 
     <title>超導量子位元(進階版)</title>
-    <meta name="description" content="深入解析2025年超導量子電腦的構建，涵蓋量子處理器(QPU)、稀釋製冷機、控制電子、低溫佈線等核心硬體。提供全球主要製造商、價格範圍、技術挑戰與未來趨勢的詳細指引。">
-    <meta name="keywords" content="超導量子電腦, 量子位元, Qubit, QPU, 稀釋製冷機, IBM, Google, QuantWare, Bluefors, 低溫系統, 控制電子, Josephson Junction, Transmon, Fluxonium, 量子計算硬體, SEO">
+    <meta name="description" content="超導量子位元(進階版)詳解2025年超導量子電腦構建，包括QPU、稀釋製冷機、控制電子等核心硬體技術，深入探討量子化理論與實現方法。">
+    <meta name="keywords" content="超導量子電腦, 量子位元, Qubit, 量子硬體, 超導量子電路, 量子計算, Josephson節, Transmon, Fluxonium, 低溫制冷, 量子科技, 量子理論">
     <link rel="canonical" href="https://www.insight-ihbar.com/SCQ_advanced/C.html">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -93,11 +93,11 @@
                                 </div>
                                 
 
-                                    <p style="text-align:justify">
+                                    <p >
                                     正則量子化是針對古典系統引入量子結構的一套方法，其核心是將 Hamiltonian 的 Poisson 結構替換為對易關係（commutator relation）。在前一節中，我們已經給出了 Lagrangian，現在透過 Lagendre 變換即可得到 Hamiltonian。
                                         </p>
                                     
-                                        <p style="text-align:justify">
+                                        <p >
                                           正則動量 \(\Phi_\#\) 定義為：
                                           \[
                                           \Phi_\# \equiv \frac{\partial \mathcal{L}}{\partial \dot{Q}} = \mathcal{L}\dot{Q} \leftrightarrow \dot{Q} = \frac{\Phi_\#}{L}.
@@ -108,7 +108,7 @@
                                           \]
                                         </p>
                                     
-                                        <p style="text-align:justify">
+                                        <p >
                                           在量子系統中，正則座標 \(q\) 和正則動量 \(p\) 滿足對易關係：
                                           \[
                                           [x, p] = i\hbar.
@@ -135,11 +135,11 @@
                                           這個負號也可以由 Lagrangian 的反對稱性進一步解釋。
                                         </p>
                                     
-                                        <p style="text-align:justify">
+                                        <p >
                                     有一種說法是因為後續會利用非線性的電感元件:約瑟夫森節（Josephson junction）取代線性電感，此非線性項如果出現在位能項比較好理解。不過，後面在驅動量子位元的時候，也是施加電容電壓來驅動，此時卻反而像驅動動能而不是驅動位能。以計算而言，誰是動能誰是位能是沒有差的。
                                     </p>
                                     
-                                        <p style="text-align:justify">
+                                        <p >
                                     
                                           我們引入新的變量 \(a\)、\(a^\dagger\)：
                                           \[
@@ -153,7 +153,7 @@
                                           \]
                                         </p>
                                     
-                                        <p style="text-align:justify">
+                                        <p >
                                           易證 \([a, a^\dagger] = 1\)：
                                           \[
                                           [a, a^\dagger] = aa^\dagger - a^\dagger a = \frac{1}{2\hbar} \sqrt{\frac{L}{C}} \left[ Q, \Phi_\# \right] = 1.
@@ -169,7 +169,7 @@
                                           \]
                                         </p>
                                     
-                                        <p style="text-align:justify">
+                                        <p >
                                           最終得到量子化後的 Hamiltonian，每個能階差為 \(\hbar \omega\)。
                                     </p>
 

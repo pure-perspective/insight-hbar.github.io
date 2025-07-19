@@ -24,8 +24,8 @@
     <link href="../assets/css/responsive.css" rel="stylesheet">
 
     <title>超導量子電腦硬體指南 (2025) | 量子位元、組件與廠商全解析</title>
-    <meta name="description" content="深入解析2025年超導量子電腦的構建，涵蓋量子處理器(QPU)、稀釋製冷機、控制電子、低溫佈線等核心硬體。提供全球主要製造商、價格範圍、技術挑戰與未來趨勢的詳細指引。">
-    <meta name="keywords" content="超導量子電腦, 量子位元, Qubit, QPU, 稀釋製冷機, IBM, Google, QuantWare, Bluefors, 低溫系統, 控制電子, Josephson Junction, Transmon, Fluxonium, 量子計算硬體, SEO">
+    <meta name="description" content="超導量子電腦硬體指南（2025），涵蓋量子處理器、稀釋製冷機、控制電子、低溫佈線等核心硬體，提供全球主要廠商、技術挑戰與未來趨勢分析。">
+    <meta name="keywords" content="超導量子電腦, 量子位元, Qubit, 量子硬體, 低溫終端器, 射頻終端器, 量子處理器, 製冷系統, 量子組件, 量子廠商">
     <link rel="canonical" href="https://www.insight-ihbar.com/QC_hardware/Q.html">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -92,11 +92,11 @@
                                     <h3></h3>
                                 </div>
                                 
-                                <p style="text-align:justify" class="dark-background">射頻終端器（或負載）用於吸收不必要的射頻功率並減少敏感低溫系統中的反射。本節將區分通用供應商和提供專為低溫環境設計的終端器的廠商。</p>
+                                <p  class="dark-background">射頻終端器（或負載）用於吸收不必要的射頻功率並減少敏感低溫系統中的反射。本節將區分通用供應商和提供專為低溫環境設計的終端器的廠商。</p>
                       
                                 <h3>11.1 成熟射頻組件供應商</h3>
-                                <p style="text-align:justify" class="dark-background">市場上存在大量製造商提供各種功率等級、頻率範圍和連接器類型的終端器，用於通用射頻應用。</p>
-                                <p style="text-align:justify" class="dark-background">主要供應商包括：</p>
+                                <p  class="dark-background">市場上存在大量製造商提供各種功率等級、頻率範圍和連接器類型的終端器，用於通用射頻應用。</p>
+                                <p  class="dark-background">主要供應商包括：</p>
                                 <ul>
                                     <li><strong>MECA:</strong> 提供多種終端器產品 <sup>21</sup>。</li>
                                     <li><strong>Mini Circuits:</strong> 產品線包含終端器 <sup>21</sup>。</li>
@@ -115,8 +115,8 @@
                                 </ul>
                       
                                 <h3>11.2 專業及低溫終端器供應商</h3>
-                                <p style="text-align:justify" class="dark-background">低溫終端器對於在量子運算裝置中正確端接未使用的埠或吸收訊號以防止反射和管理熱雜訊至關重要。它們必須在 mK 溫度下可靠工作，通常需要無磁性並提供良好的熱錨固。</p>
-                                <p style="text-align:justify" class="dark-background">主要供應商和產品特性：</p>
+                                <p  class="dark-background">低溫終端器對於在量子運算裝置中正確端接未使用的埠或吸收訊號以防止反射和管理熱雜訊至關重要。它們必須在 mK 溫度下可靠工作，通常需要無磁性並提供良好的熱錨固。</p>
+                                <p  class="dark-background">主要供應商和產品特性：</p>
                                 <ul>
                                     <li><strong>XMA Corporation (Omni Spectra):</strong> 明確提供可在 20mK 下工作的低溫終端器，採用其專有的薄膜電阻技術和專利製造工藝以確保熱穩定性 <sup>151</sup>。例如：6701-7100-02-CRYO (DC-65 GHz)。</li>
                                     <li><strong>Quantum Microwave:</strong> 提供低溫終端器，例如 QMC-CRYOTERMF-DC18NM (DC-18 GHz，無磁性) 和 QMC-CRYOTERM-0412 (4-12 GHz，熱沉同軸終端器) <sup>21</sup>。</li>
@@ -125,9 +125,9 @@
                                     <li><strong>Radiall:</strong> 其低溫組件 <sup>65</sup> 可能包括或需要相容的終端器，特別是針對其系統中的熱沉層。</li>
                                     <li><strong>Low Noise Factory:</strong> 其配件可能包括用於其低溫 LNA 裝置的專用終端器 <sup>15</sup>。</li>
                                 </ul>
-                                <p style="text-align:justify" class="dark-background">與其他低溫被動組件類似，一個專業的製造商群體（XMA、Quantum Microwave）和一些成熟的參與者（Pasternack）明確提供低溫終端器。標準終端器在低溫下電阻和阻抗可能發生變化，導致匹配不良和反射。所用材料也可能出現問題（例如磁化率）。專業的低溫終端器解決了這些問題，正如 XMA 強調其產品在低至 20mK 時仍具有熱穩定性 <sup>151</sup>。</p>
-                                <p style="text-align:justify" class="dark-background">一個重要的趨勢是開發能夠在低溫階段有效耗散少量射頻功率而不會顯著加熱環境的良好熱沉的終端器。即使終端器吸收的少量射頻功率，如果沒有適當熱沉到冷板，也可能導致局部發熱。Quantum Microwave 的「低溫熱沉同軸終端器」<sup>153</sup> 正是針對這一需求。</p>
-                                <p style="text-align:justify" class="dark-background">對於量子和低溫射頻系統，使用專為低溫操作設計或驗證的終端器至關重要。使用標準的室溫終端器可能會影響系統性能和熱穩定性。</p>
+                                <p  class="dark-background">與其他低溫被動組件類似，一個專業的製造商群體（XMA、Quantum Microwave）和一些成熟的參與者（Pasternack）明確提供低溫終端器。標準終端器在低溫下電阻和阻抗可能發生變化，導致匹配不良和反射。所用材料也可能出現問題（例如磁化率）。專業的低溫終端器解決了這些問題，正如 XMA 強調其產品在低至 20mK 時仍具有熱穩定性 <sup>151</sup>。</p>
+                                <p  class="dark-background">一個重要的趨勢是開發能夠在低溫階段有效耗散少量射頻功率而不會顯著加熱環境的良好熱沉的終端器。即使終端器吸收的少量射頻功率，如果沒有適當熱沉到冷板，也可能導致局部發熱。Quantum Microwave 的「低溫熱沉同軸終端器」<sup>153</sup> 正是針對這一需求。</p>
+                                <p  class="dark-background">對於量子和低溫射頻系統，使用專為低溫操作設計或驗證的終端器至關重要。使用標準的室溫終端器可能會影響系統性能和熱穩定性。</p>
                       
                                 <table>
                                     <caption>表 10：主要射頻終端器製造商 (通用射頻及低溫/量子應用)</caption>
@@ -216,7 +216,7 @@
                                         </tr>
                                     </tbody>
                                 </table>
-                                <p style="text-align:justify">
+                                <p >
                                     ▲
                                     <br><span style="font-size: 0.7em; line-height: 0.8;">
 

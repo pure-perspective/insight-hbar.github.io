@@ -24,8 +24,8 @@
     <link href="../assets/css/responsive.css" rel="stylesheet">
 
     <title>Superconducting Qubits (Advanced)</title>
-    <meta name="description" content="深入解析2025年超導量子電腦的構建，涵蓋量子處理器(QPU)、稀釋製冷機、控制電子、低溫佈線等核心硬體。提供全球主要製造商、價格範圍、技術挑戰與未來趨勢的詳細指引。">
-    <meta name="keywords" content="超導量子電腦, 量子位元, Qubit, QPU, 稀釋製冷機, IBM, Google, QuantWare, Bluefors, 低溫系統, 控制電子, Josephson Junction, Transmon, Fluxonium, 量子計算硬體, SEO">
+    <meta name="description" content="Explore advanced superconducting qubits, Hamiltonian derivations, and quantum hardware insights for 2025 quantum computing developments.">
+    <meta name="keywords" content="Superconducting qubits advanced quantum computing Hamiltonian derivation low temperature quantum hardware insights qubit physics quantum mechanics in superconducting systems quantum information processing Josephson junction fluxonium transmon qubits quantum system modeling quantum control techniques">
     <link rel="canonical" href="https://www.insight-ihbar.com/SCQ_advanced_en/E.html">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -94,7 +94,7 @@
 
                                
 
-    <p style="text-align:justify">
+    <p >
       Starting from \(L(\dot{Q}, Q)\), based on the antisymmetry between the kinetic and potential energy in the Lagrangian, we manually introduce a negative sign when defining the canonical momentum \(\Phi\) corresponding to \(\dot{Q}\) to absorb this antisymmetry (otherwise, the resulting Hamiltonian would be negative):
       \[
       \Phi \equiv -\frac{\partial \mathcal{L}}{\partial \dot{Q}} \implies \dot{\Phi} = -\frac{\partial \mathcal{L}}{\partial Q}.
@@ -105,7 +105,7 @@
       \]
     </p>
 
-    <p style="text-align:justify">
+    <p >
       Using differential techniques, we can prove that \(\bar{\mathcal{L}} = \bar{\mathcal{L}}(\dot{\Phi}, \Phi)\) is indeed a function of \((\dot{\Phi}, \Phi)\) space:
       \[
       d\bar{\mathcal{L}} = d\mathcal{L} + d(\dot{\Phi} Q) + d(\Phi \dot{Q}) = \frac{\partial \mathcal{L}}{\partial \dot{Q}} d\dot{Q} + \frac{\partial \mathcal{L}}{\partial Q} dQ + Qd\dot{\Phi} + \dot{\Phi}dQ + \dot{Q}d\Phi + \Phi d\dot{Q}.
@@ -116,7 +116,7 @@
       \]
     </p>
 
-    <p style="text-align:justify">
+    <p >
       The corresponding canonical momentum \(\Pi\) for \(\dot{\Phi}\) is:
       \[
       \Pi = \frac{\partial \bar{\mathcal{L}}}{\partial \dot{\Phi}} = Q,
@@ -131,7 +131,7 @@
       \]
     </p>
 
-    <p style="text-align:justify">
+    <p >
       This allows us to simplify subsequent derivations by following these steps:
       <ol>
         <li>Write down \(L(\dot{Q}, Q)\).</li>
@@ -150,7 +150,7 @@
       </ol>
     </p>
 
-    <p style="text-align:justify">
+    <p >
       This eliminates the need for the cumbersome transformation \(L(\dot{Q}, Q) \to \bar{\mathcal{L}}(\dot{\Phi}, \Phi) \to \bar{\mathcal{H}} (Q, \Phi)\). Especially when introducing external coupling terms (e.g., in deriving how to drive and read quantum bits, external signals interacting with quantum bits, or coupling between two quantum bits), following the traditional approach would lead to extremely complex intermediate calculations, similar to the momentum shift \(p \to p - eA\) in an electromagnetic field.
     </p>
 

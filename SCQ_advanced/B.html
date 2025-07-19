@@ -24,8 +24,8 @@
     <link href="../assets/css/responsive.css" rel="stylesheet">
 
     <title>超導量子位元(進階版)</title>
-    <meta name="description" content="深入解析2025年超導量子電腦的構建，涵蓋量子處理器(QPU)、稀釋製冷機、控制電子、低溫佈線等核心硬體。提供全球主要製造商、價格範圍、技術挑戰與未來趨勢的詳細指引。">
-    <meta name="keywords" content="超導量子電腦, 量子位元, Qubit, QPU, 稀釋製冷機, IBM, Google, QuantWare, Bluefors, 低溫系統, 控制電子, Josephson Junction, Transmon, Fluxonium, 量子計算硬體, SEO">
+    <meta name="description" content="超導量子位元(進階版)介紹超導量子電腦核心硬體，包括QPU、稀釋製冷機與控制電子，解析量子化LC電路與量子計算基礎。">
+    <meta name="keywords" content="超導量子電腦, 量子位元, Qubit, 超導量子電路, LC振蕩電路, 量子化, 低溫系統, Josephson接面, Transmon, 量子硬體">
     <link rel="canonical" href="https://www.insight-ihbar.com/SCQ_advanced/B.html">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -92,17 +92,17 @@
                                     <h3>簡諧振蕩</h3>
                                 </div>
  
-                                <p style="text-align:justify">
+                                <p >
                                 量子物理中常見的簡諧振蕩，經過量子化後能產生離散的能階，這正是量子計算基礎中的量子位元所依賴的概念。量子位元需要以具有量子效應的元件為基礎，利用超導體作為量子材料，結合 LC 振蕩電路的概念，製造出超導量子位元。本節將首先討論 LC 電路的量子化過程。
                                     </p>
                                 
                                 <div style="text-align: center;">
                                 <a href="../Image/LC.png">
-                                    <img src="../Image/LC.png" alt="取代文字" style="width: 30%; height: auto;">
+                                    <img src="../Image/LC.png" alt="純白色兔子插畫" style="width: 30%; height: auto;">
                                 </a>
                                 </div>
                             
-                                <p style="text-align:justify">
+                                <p >
                                     ▲一個基礎的 \(LC\) 振蕩電路包含一個電感 \(L\) 和一個電容 \(C\)。定義電容攜帶的電荷為 \(Q\)，當電容儲存的電荷改變速度（即 \(\dot{Q}\)）時，即表示電路上的流動電流。電容和電感分別儲存的能量可表達為：
                                   \[
                                   E_C = \frac{Q^2}{2C}, \quad E_L = \frac{L\dot{Q}^2}{2}.
@@ -112,7 +112,7 @@
                                   \mathcal{L}(\dot{Q}, Q) = T - U = \frac{L\dot{Q}^2}{2} - \frac{Q^2}{2C}.
                                   \]
                                 </p>
-                                <p style="text-align:justify">
+                                <p >
                                   根據歐拉-拉格朗日方程：
                                   \[
                                     \frac{d}{dt} \frac{\partial \mathcal{L}}{\partial \dot{Q}} - \frac{\partial \mathcal{L}}{\partial Q} = 0,

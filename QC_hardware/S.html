@@ -24,8 +24,8 @@
     <link href="../assets/css/responsive.css" rel="stylesheet">
 
     <title>超導量子電腦硬體指南 (2025) | 量子位元、組件與廠商全解析</title>
-    <meta name="description" content="深入解析2025年超導量子電腦的構建，涵蓋量子處理器(QPU)、稀釋製冷機、控制電子、低溫佈線等核心硬體。提供全球主要製造商、價格範圍、技術挑戰與未來趨勢的詳細指引。">
-    <meta name="keywords" content="超導量子電腦, 量子位元, Qubit, QPU, 稀釋製冷機, IBM, Google, QuantWare, Bluefors, 低溫系統, 控制電子, Josephson Junction, Transmon, Fluxonium, 量子計算硬體, SEO">
+    <meta name="description" content="超導量子電腦硬體指南2025，全面解析量子處理器、稀釋製冷機、控制電子與低溫佈線，揭示全球主要廠商、技術挑戰與未來趨勢。">
+    <meta name="keywords" content="超導量子電腦, 量子硬體, 量子位元, Qubit, 低溫濾波器, 超導量子處理器, 量子廠商, 稀釋製冷機, 量子控制電子, 量子計算技術">
     <link rel="canonical" href="https://www.insight-ihbar.com/QC_hardware/S.html">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -94,11 +94,11 @@
 
 
                                 <h2>6. 低通濾波器製造商</h2>
-                                <p style="text-align:justify" class="dark-background">低通濾波器 (LPF) 用於傳輸低於特定截止頻率的訊號，同時衰減高於該頻率的訊號。在量子運算等低溫應用中，LPF 對於減少進入敏感量子組件或低溫放大器的熱雜訊和高頻干擾至關重要。本節將區分通用型射頻/微波 LPF 供應商和提供專為低溫環境設計的 LPF 的廠商。</p>
+                                <p  class="dark-background">低通濾波器 (LPF) 用於傳輸低於特定截止頻率的訊號，同時衰減高於該頻率的訊號。在量子運算等低溫應用中，LPF 對於減少進入敏感量子組件或低溫放大器的熱雜訊和高頻干擾至關重要。本節將區分通用型射頻/微波 LPF 供應商和提供專為低溫環境設計的 LPF 的廠商。</p>
                       
                                 <h3>6.1 成熟射頻濾波器公司</h3>
-                                <p style="text-align:justify" class="dark-background">這些公司提供基於各種技術（如 LC、陶瓷、腔體等）的 LPF，主要用於室溫下的多種應用。</p>
-                                <p style="text-align:justify" class="dark-background">主要供應商包括：</p>
+                                <p  class="dark-background">這些公司提供基於各種技術（如 LC、陶瓷、腔體等）的 LPF，主要用於室溫下的多種應用。</p>
+                                <p  class="dark-background">主要供應商包括：</p>
                                 <ul>
                                     <li><strong>Mini Circuits:</strong> 提供廣泛的 LPF 產品 <sup>90</sup>。</li>
                                     <li><strong>Anatech Electronics:</strong> 提供多種標準和客製化 LPF <sup>90</sup>。</li>
@@ -112,8 +112,8 @@
                                 </ul>
                       
                                 <h3>6.2 專業及低溫低通濾波器供應商</h3>
-                                <p style="text-align:justify" class="dark-background">低溫 LPF 對於保護量子位元的相干性至關重要，它們需要使用無磁材料並進行精心的熱沉設計。</p>
-                                <p style="text-align:justify" class="dark-background">主要供應商和產品特性：</p>
+                                <p  class="dark-background">低溫 LPF 對於保護量子位元的相干性至關重要，它們需要使用無磁材料並進行精心的熱沉設計。</p>
+                                <p  class="dark-background">主要供應商和產品特性：</p>
                                 <ul>
                                     <li><strong>Quantum Microwave:</strong> EverythingRF 列出其擁有 23 種 LPF 產品 <sup>90</sup>。鑒於其公司名稱和專注領域 <sup>18</sup>，這些產品很可能包括低溫 LPF，是量子應用的關鍵供應商。</li>
                                     <li><strong>SCALINQ:</strong> 列有 3 種 LPF 產品 <sup>90</sup>。作為一家量子硬體公司 <sup>32</sup>，其 LPF 可能專為低溫/量子應用而設計。</li>
@@ -123,8 +123,8 @@
                                     <li><strong>Oxford Instruments NanoScience:</strong> 為其稀釋製冷機提供用於直流線束的低通濾波器，具有不同的截止頻率 <sup>104</sup>。雖然這些是直流線路濾波器，但也顯示了其在低溫濾波方面的能力。</li>
                                     <li><strong>Fermilab (研究背景):</strong> <sup>122</sup> 詳細介紹了一種使用 Eccosorb CR 為鋁諧振器設計的客製化單通道內聯紅外濾波器，該濾波器提高了品質因數。雖然 Fermilab 並非商業製造商，但這突顯了研究中對客製化低溫濾波的需求和方法。</li>
                                 </ul>
-                                <p style="text-align:justify" class="dark-background">標準 LPF 可能由於材料特性在 mK 溫度的變化而無法預期地工作，並且可能引入過多熱量。量子系統需要精細的雜訊濾波以保護量子位元的相干性。像 Quantum Machines 這樣的公司專門設計用於「低於 1 開爾文的先進濾波和熱沉」的濾波器 <sup>103</sup>。量子位元數量的增加導致控制/讀取線路密度的增加，這就需要緊湊且不影響低溫性能的濾波解決方案，Quantum Machines 的 QFilter-II 及其可堆疊性即是此趨勢的例證 <sup>103</sup>。</p>
-                                <p style="text-align:justify" class="dark-background">因此，採購低溫 LPF 通常需要超越傳統射頻濾波器製造商，尋求量子硬體或低溫組件領域的專家。客製化解決方案或作為集成低溫佈線包一部分設計的濾波器很常見。</p>
+                                <p  class="dark-background">標準 LPF 可能由於材料特性在 mK 溫度的變化而無法預期地工作，並且可能引入過多熱量。量子系統需要精細的雜訊濾波以保護量子位元的相干性。像 Quantum Machines 這樣的公司專門設計用於「低於 1 開爾文的先進濾波和熱沉」的濾波器 <sup>103</sup>。量子位元數量的增加導致控制/讀取線路密度的增加，這就需要緊湊且不影響低溫性能的濾波解決方案，Quantum Machines 的 QFilter-II 及其可堆疊性即是此趨勢的例證 <sup>103</sup>。</p>
+                                <p  class="dark-background">因此，採購低溫 LPF 通常需要超越傳統射頻濾波器製造商，尋求量子硬體或低溫組件領域的專家。客製化解決方案或作為集成低溫佈線包一部分設計的濾波器很常見。</p>
                       
                                 <table>
                                     <caption>表 5：主要低通濾波器製造商 (通用射頻及低溫/量子應用)</caption>
@@ -217,7 +217,7 @@
                                 
                                 
                                 
-                                <p style="text-align:justify">
+                                <p >
                                     ▲
                                     <br><span style="font-size: 0.7em; line-height: 0.8;">
 

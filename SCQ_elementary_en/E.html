@@ -24,8 +24,8 @@
     <link href="../assets/css/responsive.css" rel="stylesheet">
 
     <title>Superconducting Qubits (Elementary)</title>
-    <meta name="description" content="深入解析2025年超導量子電腦的構建，涵蓋量子處理器(QPU)、稀釋製冷機、控制電子、低溫佈線等核心硬體。提供全球主要製造商、價格範圍、技術挑戰與未來趨勢的詳細指引。">
-    <meta name="keywords" content="超導量子電腦, 量子位元, Qubit, QPU, 稀釋製冷機, IBM, Google, QuantWare, Bluefors, 低溫系統, 控制電子, Josephson Junction, Transmon, Fluxonium, 量子計算硬體, SEO">
+    <meta name="description" content="Explore the evolution of superconducting qubits, including Transmon, Fluxonium, and Blochnium, with insights into hardware, design challenges, and future trends.">
+    <meta name="keywords" content="Superconducting qubits, quantum computing hardware, Josephson Junction, Transmon, Fluxonium, Blochnium, quantum circuit design, low temperature quantum systems, qubit decoherence, frequency tuning in quantum processors">
     <link rel="canonical" href="https://www.insight-ihbar.com/SCQ_elementary_en/E.html">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -92,39 +92,39 @@
                                     <h3></h3>
                                 </div>
 
-                            <p style="text-align:justify">
+                            <p >
                               The evolution of early superconducting qubits can be observed in the figure below:
                             </p>
                         
                             <div style="text-align: center;">
                               <a href="../Image/LCJ Qubit.png">
-                                <img src="../Image/LCJ Qubit.png" alt="Current Superconducting Qubits" style="width: 100%; height: auto;">
+                                <img src="../Image/LCJ Qubit.png" alt="Cat playing with yarn" style="width: 100%; height: auto;">
                               </a>
                             </div>
                         
-                            <p style="text-align:justify">
+                            <p >
                               Early superconducting qubits were highly susceptible to noise and relied on external control circuits to form energy levels. These external control circuits often consisted of large control instruments (referred to as "large" relative to the micrometer-scale JJ, imagine them being the size of everyday computers, with characteristic dimensions in centimeters). Such large integrated circuits introduced significant classical noise, leading to qubit decoherence. To improve fidelity, a capacitor (\(C\)) was connected in parallel, forming what is known as a Transmon. A single Transmon constitutes an \(LC\) circuit with quantized energy levels.
                             </p>
                         
-                            <p style="text-align:justify">
+                            <p >
                               Because Transmons have their quantum frequencies, precise frequency control and resonance are required to alter their quantum states for quantum computation. When developing large-scale quantum circuits, a single control or readout line often connects multiple qubits. If their frequencies are too similar, signals may interfere with adjacent qubits in the spectrum, causing crosstalk. Frequency adjustments are achieved by altering the capacitance value (\(C\)) or the inductance of the Josephson Junction (\(L_J\)) during fabrication. However, precise control of frequency isolation between qubits during fabrication is extremely challenging. Manufacturing errors can lead to deviations, and once fabrication is complete, adjustments cannot be made, lowering the yield. Moreover, over time (e.g., monthly or daily), the frequency of Josephson Junctions deviates from their original design due to atomic or defect diffusion at the heterogeneous material interface. Once the deviation exceeds a threshold, the entire circuit fails. Thus, the importance of "post-fabrication frequency tuning" for Transmons becomes evident. Scientists use two JJs forming a SQUID to create a Tunable Transmon, where magnetic flux between the two JJs can adjust the Transmon's frequency. This enables synchronization of qubit calibration during computation, achieving frequency isolation. The dual JJs in a Tunable Transmon can be symmetric (identical) or asymmetric (different). Symmetric designs allow a wider tunable frequency range but are more affected by noise in magnetic flux control; asymmetric designs, while having a smaller tunable range, offer higher frequency stability.
                             </p>
                         
-                            <p style="text-align:justify">
+                            <p >
                               While a Transmon eliminates reliance on external control instruments, adding a capacitor (\(C\)) introduces stored energy by separating positive and negative charges. This creates a micrometer-scale dipole, making it highly susceptible to electromagnetic noise, causing decoherence. To mitigate this, scientists focus on one side of the Josephson Junction and replace it with multiple series-connected JJs to form an inductor (\(L\)), called Fluxonium. Fluxonium currently achieves decoherence times in the microsecond range.
                             </p>
                         
-                            <p style="text-align:justify">
+                            <p >
                               Further improvements in qubit stability focus on continuously increasing inductance (\(L\)) and reducing capacitance (\(C\)), leading to developments like Blochnium. The following figures illustrate that different superconducting qubits essentially involve tuning \(L\), \(C\), and \(J\).
                             </p>
                         
                             <div style="text-align: center;">
                               <a href="../Image/SCQ ratio.png">
-                                <img src="../Image/SCQ ratio.png" alt="SCQ Ratio" style="width: 100%; height: auto;">
+                                <img src="../Image/SCQ ratio.png" alt="Quantum diagram" style="width: 100%; height: auto;">
                               </a>
                             </div>
                         
-                            <p style="text-align:justify" class="dark-background">
+                            <p  class="dark-background">
                               ▲ The right side of this figure illustrates the duality of the Transmon and Blochnium concepts. The Transmon is a "nonlinear inductor" paired with a capacitor, while Blochnium can be seen as a "nonlinear capacitor" paired with an inductor.<br>
                               <span style="font-size: 0.7em; line-height: 0.8;">Ref: 10.1038/s41586-020-2687-9<br>
                               Ref: ar5iv.labs.arxiv.org/html/1907.02937</span><br><br>
@@ -132,10 +132,10 @@
                         
                             <div style="text-align: center;">
                               <a href="../Image/SCQ.png">
-                                <img src="../Image/SCQ.png" alt="SCQ Examples" style="width: 70%; height: auto;">
+                                <img src="../Image/SCQ.png" alt="Quantum systems comparison" style="width: 70%; height: auto;">
                               </a>
                             </div>
-                            <p style="text-align:justify" class="dark-background">
+                            <p  class="dark-background">
                                 <span style="font-size: 0.7em; line-height: 0.8;">Ref: 10.1038/s41467-022-34614-w</span><br><br>
                             </p>
 

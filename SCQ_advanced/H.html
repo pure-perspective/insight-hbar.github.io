@@ -24,8 +24,8 @@
     <link href="../assets/css/responsive.css" rel="stylesheet">
 
     <title>超導量子位元(進階版)</title>
-    <meta name="description" content="深入解析2025年超導量子電腦的構建，涵蓋量子處理器(QPU)、稀釋製冷機、控制電子、低溫佈線等核心硬體。提供全球主要製造商、價格範圍、技術挑戰與未來趨勢的詳細指引。">
-    <meta name="keywords" content="超導量子電腦, 量子位元, Qubit, QPU, 稀釋製冷機, IBM, Google, QuantWare, Bluefors, 低溫系統, 控制電子, Josephson Junction, Transmon, Fluxonium, 量子計算硬體, SEO">
+    <meta name="description" content="超導量子位元(進階版)介紹，包括Transmon性質、量子硬體、非線性效應與未來趨勢，深入解析超導量子電腦核心技術。">
+    <meta name="keywords" content="超導量子電腦, 量子位元, Transmon, Josephson節, SQUID, 量子硬體, 低溫系統, 量子計算, 非線性效應, 量子科技">
     <link rel="canonical" href="https://www.insight-ihbar.com/SCQ_advanced/H.html">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -95,20 +95,20 @@
 
                                 <div style="text-align: center;">
                                 <a href="../Image/Transmon.png">
-                                    <img src="../Image/Transmon.png" alt="取代文字" style="width: 98%; height: auto;">
+                                    <img src="../Image/Transmon.png" alt="三種QUID轉換器電路圖" style="width: 98%; height: auto;">
                                 </a>
                                 </div>
-                                <p style="text-align:justify">
+                                <p >
                                 <span style="font-size: 0.7em; line-height: 0.8;">Ref: DOI:10.48550/arXiv.2203.04164</span><br><br>
                                 </p>
                         
-                                <p style="text-align:justify">
+                                <p >
                                     前文提及約瑟夫森節具有電感性質，Transmon即是LC電路中的電感替換成約瑟夫森節。本節直接討論 Tunable Transmon，採用 SQUID 當作電感。實務上因為材料製作的不均一性，不同 Transmon 會有不一樣的特性，如果採用 Tunable Transmon，可以透過微調磁通量 \( \Phi_B \) 的方式使 Qubit 性質一致。此外，我們在前面量子化 LC 電路時，\([ \Phi, Q ] = i\hbar\) 是一對正則變量，利用 SQUID 的推導可以很自然地將磁通量 \( \Phi \) 與相位差 \( \Delta\theta \) 做聯繫，即：
                                     \[
                                     \Phi \equiv \frac{\Delta\theta_1}{\pi} \Phi_0 - \Phi_B
                                     \]
                                 </p>
-                                <p style="text-align:justify">
+                                <p >
                                     現在我們寫下 Hamiltonian：
                                     \[
                                     \mathcal{H} = \frac{Q^2}{2C} + \frac{\Phi_\#^2}{2L} = \frac{Q^2}{2C} + \frac{(I_0 \pi)}{2\Phi_0} \cos\left(\frac{\Phi_B}{\Phi_0} \pi\right) \Phi^2 - \frac{I_0}{24} \left(\frac{\pi}{\Phi_0}\right)^3 \cos\left(\frac{\Phi_B}{\Phi_0} \pi\right) \Phi^4 + \cdots
@@ -121,7 +121,7 @@
                                     L = \left(\frac{I_0 \pi}{\Phi_0} \cos\left(\frac{\Phi_B}{\Phi_0} \pi\right)\right)^{-1}
                                     \]
                                 </p>
-                                <p style="text-align:justify">
+                                <p >
                                     現在我們要討論非線性對於能階的改變，前文我們選擇新的變量 \( a \)、\( a^\dagger \)：
                                     \[
                                     a = \sqrt{\frac{1}{2\hbar} \sqrt{ \frac{L}{C}}} \left(\sqrt{\frac{C}{L}} \Phi + iQ\right), \quad
@@ -134,7 +134,7 @@
                                     \]
                                 
                                 </p>
-                                <p style="text-align:justify">
+                                <p >
                                     將 Hamiltonian 表達式展開為：
                                     \[
                                     \mathcal{H} = \frac{\hbar}{\sqrt{LC}} \left[a^\dagger a + \frac{1}{2}\right] - \frac{1}{24L} \left(\frac{\pi}{\Phi_0}\right)^2 \left[i \sqrt{\frac{\hbar}{2\sqrt{L/C}}} (a^\dagger + a)\right]^4
@@ -146,7 +146,7 @@
                                     該表達式包含線性和非線性項，線性項描述的是量子簡諧振子的能階，而非線性項源自於 Josephson 節對於能階的修正。
                                 </p>
                                 
-                                <p style="text-align:justify">
+                                <p >
                                 利用微擾理論，當 \( \mathcal{H} = H_0 + \Delta H \)， \( |E_0^m\rangle \to |E^m\rangle \)、 \( E_0^m \to E^m = E_0^m + \delta E^m \)，我們知道對能階 \( E_0^m \) 的修正 \( \delta E^m \) 為：
                                 </p>
                                 
@@ -156,7 +156,7 @@
                                 \]
                                 </p>
                                 
-                                <p style="text-align:justify">
+                                <p >
                                 計算如下：
                                 </p>
                                 
@@ -166,7 +166,7 @@
                                 \]
                                 </p>
                                 
-                                <p style="text-align:justify">
+                                <p >
                                 展開為：
                                 </p>
                                 
@@ -177,7 +177,7 @@
                                 \]
                                 </p>
                                 
-                                <p style="text-align:justify">
+                                <p >
                                 因為取期望值，只會留下 \( a, a^\dagger \) 次數相等的項，剩下：
                                 </p>
                                 
@@ -187,7 +187,7 @@
                                 \]
                                 </p>
                                 
-                                <p style="text-align:justify">
+                                <p >
                                 繼續簡化：
                                 </p>
                                 
@@ -197,7 +197,7 @@
                                 \]
                                 </p>
                                 
-                                <p style="text-align:justify">
+                                <p >
                                 再整理為：
                                 </p>
                                 
@@ -207,7 +207,7 @@
                                 \]
                                 </p>
                                 
-                                <p style="text-align:justify">
+                                <p >
                                 進一步簡化：
                                 </p>
                                 
@@ -220,7 +220,7 @@
                                 \]
                                 </p>
                                 
-                                <p style="text-align:justify">
+                                <p >
                                 最終得到：
                                 </p>
                                 
@@ -230,7 +230,7 @@
                                 \]
                                 </p>
                                 
-                                <p style="text-align:justify">
+                                <p >
                                 定義能階差：
                                 </p>
                                 
@@ -246,7 +246,7 @@
                                 \]
                                 </p>
                                 
-                                <p style="text-align:justify">
+                                <p >
                                 最終得到：
                                 </p>
                                 
@@ -256,7 +256,7 @@
                                 \]
                                 </p>
                                 
-                                <p style="text-align:justify">
+                                <p >
                                 計算 \( \Delta E^{21} - \Delta E^{10} \)：
                                 </p>
                                 
@@ -272,16 +272,16 @@
                                 \]
                                 </p>
                                 
-                                <p style="text-align:justify">
+                                <p >
                                 \( E_C \) 表示其非線性效應。
                                 </p>
                                 
                                 <div style="text-align: center;">
                                 <a href="../Image/Transmon state.png">
-                                    <img src="../Image/Transmon state.png" alt="取代文字" style="width: 50%; height: auto;">
+                                    <img src="../Image/Transmon state.png" alt="能隙能級示意圖" style="width: 50%; height: auto;">
                                 </a>
                                 </div>
-                                <p style="text-align:justify">
+                                <p >
                                 <span style="font-size: 0.7em; line-height: 0.8;">Ref: DOI:10.1103/RevModPhys.93.025005</span><br><br>
                                 
                     

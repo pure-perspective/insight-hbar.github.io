@@ -24,8 +24,8 @@
     <link href="../assets/css/responsive.css" rel="stylesheet">
 
     <title>超導量子位元(科普版)</title>
-    <meta name="description" content="深入解析2025年超導量子電腦的構建，涵蓋量子處理器(QPU)、稀釋製冷機、控制電子、低溫佈線等核心硬體。提供全球主要製造商、價格範圍、技術挑戰與未來趨勢的詳細指引。">
-    <meta name="keywords" content="超導量子電腦, 量子位元, Qubit, QPU, 稀釋製冷機, IBM, Google, QuantWare, Bluefors, 低溫系統, 控制電子, Josephson Junction, Transmon, Fluxonium, 量子計算硬體, SEO">
+    <meta name="description" content="超導量子位元科普介紹，深入解析超導量子電腦的控制原理與硬體技術，掌握量子運算的未來趨勢與挑戰。">
+    <meta name="keywords" content="超導量子位元, 量子電腦, Qubit, 超導量子計算, 量子控制, Bloch球, 脈衝技術, 低溫量子硬體, 量子技術科普, 量子運算">
     <link rel="canonical" href="https://www.insight-ihbar.com/SCQ_elementary/K.html">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -101,14 +101,14 @@
                                 </div>
                                 
 
-                                <p style="text-align:justify">
+                                <p >
                                 最常見的作法為拉比震盪（Rabi Oscillation），透過施加特定頻率的電場震盪脈衝（Pulse） \( P(t) \)。先來看 Qubit 受到 \( \pi \) -pulse從 \( |\ 0\rangle \rightarrow |\ 1\rangle \)，利用 Bloch 球進行可視化：
                                 </p>
 
 
                                 <div style="text-align: center;">
                                 <a href="../Image/pi pulse.gif">
-                                    <img src="../Image/pi pulse.gif" alt="取代文字" style="width: 100%; height: auto;">
+                                    <img src="../Image/pi pulse.gif" alt="3D球面座標與脈衝波形圖" style="width: 100%; height: auto;">
                                 </a>
                                 </div>
 
@@ -120,7 +120,7 @@
                                             <li><b>脈衝的頻率（Frequency \( \omega_d \)）：</b> 決定是否能精確驅動 Qubit</li>
                                             <li><b>脈衝的包絡（Envelop \( F(t, \tau) \)）：</b> 影響漏態（Leakage）</li>
                                         </ul>
-                                <p style="text-align:justify">
+                                <p >
                                 一個完整的脈衝可以表達為：
                                 \[
                                     P(t) = A \cdot F(t, \tau) \cdot \sin(\omega_q t)
@@ -133,41 +133,41 @@
                                 
                                 <div style="text-align: center;">
                                 <a href="../Image/pulse.png">
-                                    <img src="../Image/pulse.png" alt="取代文字" style="width: 100%; height: auto;">
+                                    <img src="../Image/pulse.png" alt="正弦波包絡與脈衝圖示" style="width: 100%; height: auto;">
                                 </a>
                                 </div>
 
                                     
-                                <p style="text-align:justify">
+                                <p >
                                 一般來說因為Qubit相干時間很短，會希望盡可能短的時間操作完Qubit的運算，以超導量子位元而言，相干時間能維持達微秒（μs）當前的技術而言已經很久了，故超導量子位元脈衝多半固定在奈秒等級（\(ns\)）。故操作Qubit的狀態一般採用調控脈衝的振幅的大小來決定轉角。 <br>
                                 (實驗中驅動大約\(10ns\)左右\(^a\))<br>
                                 <span style="font-size: 0.7em; line-height: 0.8;">\(^a\) 10.1103/PRXQuantum.5.030353</span><br><br>
                                 </p>
 
-                                <p style="text-align:justify">
+                                <p >
                                 可以藉由 Bloch 球進行可視化，在這邊畫出對\( X \) 軸轉 \(0.25\pi \)、\( 0.5\pi \)、\(0.75\pi\)和\(\pi\)-pulse。可以發現說利用振幅的大小可以決定轉動的角度。
                                 </p>
 
 
                                 <div style="text-align: center;">
                                 <a href="../Image/4 amplitude.gif">
-                                    <img src="../Image/4 amplitude.gif" alt="取代文字" style="width: 100%; height: auto;">
+                                    <img src="../Image/4 amplitude.gif" alt="三維亮球圖與余弦脈衝變化圖" style="width: 100%; height: auto;">
                                 </a>
                                 </div>
-                                <p style="text-align:justify">
+                                <p >
                                 同樣的，也可以討論利用不同脈衝的時長\(T\)來達到相同的 \( \pi \) -pulse從 \( |\ 0\rangle \rightarrow |\ 1\rangle \)
                                 </p>
                                 <div style="text-align: center;">
                                 <a href="../Image/4 duration compare.gif">
-                                    <img src="../Image/4 duration compare.gif" alt="取代文字" style="width: 100%; height: auto;">
+                                    <img src="../Image/4 duration compare.gif" alt="三維球面與四個中心餘弦脈衝圖" style="width: 100%; height: auto;">
                                 </a>
                                 </div>
 
-                                <p style="text-align:justify">
+                                <p >
                                 當然，讀者也許會想說，既然超導Qubit相干時間很短，那脈衝的時長\(T\)越短越好。下一節我們就會提到，越尖的脈衝會引入更多不相關的震動頻率，導致Qubit的操作出現誤差。實務上，如何決定脈衝的時長\(T\)與脈衝的震幅\(A\)，一直是Qubit日常校正的一環。良好的校正會得到優質的量子計算效果，反之，光是誤差就可以導致計算不如古典電腦來的準確。
                                 </p>
 
-                                <p style="text-align:justify">
+                                <p >
                                     <span style="font-size: 0.7em; line-height: 0.8;">Pulse shape:<br>
                                     10.1103/PRXQuantum.5.030353<br>
                                     10.1103/PhysRevLett.116.020501<br></span>

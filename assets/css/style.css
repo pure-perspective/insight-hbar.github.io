@@ -397,7 +397,7 @@ select {
 }
 
 .bootstrap-select.btn-group .dropdown-menu.inner {
-    position: static; *
+    position: static; 
     float: none;
     border: 0;
     padding: 0;
@@ -1744,5 +1744,15 @@ a.linkedin-bg:hover {
     font-weight: bold;
     border-left-color: #00bfa5; /* 或你想要的高亮色 */
     background-color: #eefdfb;
+  }
+  
+
+  @media (min-width: 1024px) {
+    .post-content {
+      text-align: justify;
+      text-justify: inter-word;
+      line-height: 1.6;
+      text-indent: 1.5em;
+    }
   }
   

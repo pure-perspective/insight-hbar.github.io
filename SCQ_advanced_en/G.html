@@ -24,8 +24,8 @@
     <link href="../assets/css/responsive.css" rel="stylesheet">
 
     <title>Superconducting Qubits (Advanced)</title>
-    <meta name="description" content="深入解析2025年超導量子電腦的構建，涵蓋量子處理器(QPU)、稀釋製冷機、控制電子、低溫佈線等核心硬體。提供全球主要製造商、價格範圍、技術挑戰與未來趨勢的詳細指引。">
-    <meta name="keywords" content="超導量子電腦, 量子位元, Qubit, QPU, 稀釋製冷機, IBM, Google, QuantWare, Bluefors, 低溫系統, 控制電子, Josephson Junction, Transmon, Fluxonium, 量子計算硬體, SEO">
+    <meta name="description" content="Discover advanced superconducting qubits, including SQUIDs and Tunable Transmons, with insights on hardware, design, and future quantum computing trends.">
+    <meta name="keywords" content="Superconducting qubits advanced physics and quantum computing research quantum hardware tunable transmons Josephson junction SQUID inductance fluxonium low temperature systems quantum information processing innovative quantum hardware design future quantum trends">
     <link rel="canonical" href="https://www.insight-ihbar.com/SCQ_advanced_en/G.html">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -95,11 +95,11 @@
                         
                             <div style="text-align: center;">
                               <a href="../Image/SQUID.png">
-                                <img src="../Image/SQUID.png" alt="SQUID Diagram" style="width: 50%; height: auto;">
+                                <img src="../Image/SQUID.png" alt="Magnetic flux through coil" style="width: 50%; height: auto;">
                               </a>
                             </div>
                         
-                            <p style="text-align:justify">
+                            <p >
                               Two Josephson junctions, \(J_1\) and \(J_2\), are connected to form a closed loop, with a magnetic flux \(\Phi_B\) and voltage \(V\) applied. According to the previous section, the integral of the superconducting wavefunction phase around the loop must satisfy:
                               \[
                               \oint \nabla \theta(r) \cdot d\vec{l} - \frac{q}{\hbar} \Phi_B = 2\pi N.
@@ -114,7 +114,7 @@
                               \]
                             </p>
                         
-                            <p style="text-align:justify">
+                            <p >
                               When the entire SQUID loop carries a current \(I = I_1 + I_2\), and using the Josephson current relation from the previous section (assuming a symmetric SQUID with both junctions having the same \(I_c\)), we compute:
                               \[
                               I = I_1 + I_2 = I_0 (\sin\Delta\theta_1 + \sin\Delta\theta_2).
@@ -138,7 +138,7 @@
                               \]
                             </p>
                         
-                            <p style="text-align:justify">
+                            <p >
                               From the previous section, Josephson junctions exhibit inductive properties. Similarly, we can discuss the inductance of the SQUID. Differentiating the current with respect to time gives:
                               \[
                               \dot{I} = 2I_0 \cos\left(\frac{\Phi_B}{\Phi_0} \pi\right) \cos\left(\Delta\theta_1 - \frac{\Phi_B}{\Phi_0} \pi\right) \dot{\Delta\theta_1}.
@@ -154,7 +154,7 @@
                               \]
                             </p>
                         
-                            <p style="text-align:justify">
+                            <p >
                               Notice that the value of \(L_{\text{SQUID}}\) is influenced by the external magnetic flux \(\Phi_B\), which is key for tuning the frequency in Tunable Transmons. Defining the variable \(\Phi\):
                               \[
                               \Phi \equiv \frac{\Delta\theta_1}{\pi} \Phi_0 - \Phi_B = \frac{\Phi_0}{\pi} \left(\Delta\theta_1 - \frac{\Phi_B}{\Phi_0} \pi\right),
@@ -169,7 +169,7 @@
                               \]
                             </p>
                         
-                            <p style="text-align:justify">
+                            <p >
                               For a fixed external flux \(\Phi_B\), the energy stored in a SQUID is:
                               \[
                               E = \int IV \, dt = \int \left[2I_0 \cos\left(\frac{\Phi_B}{\Phi_0} \pi\right) \sin\left(\frac{\Phi}{\Phi_0} \pi\right) \cdot \frac{1}{2} \dot{\Phi}\right] dt.
@@ -186,10 +186,10 @@
                         
                         <div style="text-align: center;">
                           <a href="../Image/SQUID transmon.png">
-                            <img src="../Image/SQUID transmon.png" alt="取代文字" style="width:60%; height: auto;">
+                            <img src="../Image/SQUID transmon.png" alt="Bluetooth icon" style="width:60%; height: auto;">
                           </a>
                         </div>
-                        <p style="text-align:justify">
+                        <p >
                         ▲An \(LC\) circuit with tunable inductance formed by two Josephson junctions.
                         
                         </p>

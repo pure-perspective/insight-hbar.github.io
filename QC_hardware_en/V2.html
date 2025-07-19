@@ -24,8 +24,8 @@
     <link href="../assets/css/responsive.css" rel="stylesheet">
 
     <title>Hardware Introduction</title>
-    <meta name="description" content="深入解析2025年超導量子電腦的構建，涵蓋量子處理器(QPU)、稀釋製冷機、控制電子、低溫佈線等核心硬體。提供全球主要製造商、價格範圍、技術挑戰與未來趨勢的詳細指引。">
-    <meta name="keywords" content="超導量子電腦, 量子位元, Qubit, QPU, 稀釋製冷機, IBM, Google, QuantWare, Bluefors, 低溫系統, 控制電子, Josephson Junction, Transmon, Fluxonium, 量子計算硬體, SEO">
+    <meta name="description" content="Discover insights on quantum hardware, crosstalk issues, and scalable QPU design strategies for 2025 in this comprehensive guide.">
+    <meta name="keywords" content="Quantum hardware crosstalk mitigation and scalable QPU design strategies in 2025">
     <link rel="canonical" href="https://www.insight-ihbar.com/QC_hardware_en/V2.html">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -85,21 +85,21 @@
                 <div class="row">
                     <div class="col-md-9">
                         <article class="blog-post">
-                            <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="">-->
+                            <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="Laptop on desk">-->
                             <div class="post-content">
                                 <div style="text-align: center;">
                                     <h2>Towards a Scalable QPU - The Issue of Crosstalk</h2>
                                     <h3></h3>
                                 </div>
                                 
-                                <p style="text-align:justify">
+                                <p >
                                     In the current stage of quantum computer development, the system is, strictly speaking, a semi-classical, semi-quantum hybrid. Classical computers are used to send microwave signals carrying classical information, which then interact with the qubits. The qubits, in turn, return classical signals carrying quantum information, which are then analyzed by the classical computer. This characteristic allows us to roughly categorize the issue of crosstalk into classical crosstalk and quantum crosstalk. However, the reader need not worry too much about the exact definitions, as in practice, different types of crosstalk often occur simultaneously. Physicists and engineers use hypothetical crosstalk models to predict their occurrence and then perform optimizations.
                                 </p>
                                 
                                 <div id="C"><br><br><br></div>
                                 <h3>Classical Crosstalk</h3>
                                 
-                                <p style="text-align:justify">
+                                <p >
                                   Unintended effects caused by control signals, gate operations, or unexpected coupling terms between qubits are generally classified as classical crosstalk. This can be simply understood from the Hamiltonian:
                                   \[
                                   \hat{H}=\hat{H}_{qubits}+\hat{H}_{coupling}+V_{control}+\color{red}{\hat{H}_{unexpected}}
@@ -109,10 +109,10 @@
                                 
                                 <div style="text-align: center;">
                                     <a href="../Image/control-crosstalk.png">
-                                      <img src="../Image/control-crosstalk.png" alt="Crosstalk caused by leaking electromagnetic fields from control signals" style="width: 100%; height: auto;">
+                                      <img src="../Image/control-crosstalk.png" alt="Quantum measurement diagram" style="width: 100%; height: auto;">
                                     </a>
                                 </div>
-                                <p style="text-align:justify">
+                                <p >
                                     ▲ Crosstalk caused by the leakage of electromagnetic fields from control signals affecting other qubits.
                                   <br><span style="font-size: 0.7em; line-height: 0.8;">
                                       Ref: Drawn by the author
@@ -121,10 +121,10 @@
                                 
                                 <div style="text-align: center;">
                                     <a href="../Image/Unexpected-static-coupling.png">
-                                      <img src="../Image/Unexpected-static-coupling.png" alt="Unintended static coupling between qubits" style="width: 100%; height: auto;">
+                                      <img src="../Image/Unexpected-static-coupling.png" alt="Genetic pedigree chart" style="width: 100%; height: auto;">
                                     </a>
                                 </div>
-                                <p style="text-align:justify">
+                                <p >
                                     ▲ Unintended coupling terms between qubits cause unexpected state transitions or decoherence.
                                     <br><span style="font-size: 0.7em; line-height: 0.8;">
                                         Ref: Drawn by the author
@@ -134,10 +134,10 @@
                                 <h3>Return Current Focus</h3>
                                 <div style="text-align: center;">
                                     <a href="../Image/Return_current.png">
-                                      <img src="../Image/Return_current.png" alt="Return current path on a quantum chip" style="width: 100%; height: auto;">
+                                      <img src="../Image/Return_current.png" alt="Quantum circuit" style="width: 100%; height: auto;">
                                     </a>
                                 </div>
-                                <p style="text-align:justify">
+                                <p >
                                     ▲ In modern high-precision electronic circuits, grounding issues require careful attention. Similarly, in quantum circuits, it is crucial that the current returns to the ground along the ideal path. If it strays across the chip, it can cause flux crosstalk. This necessitates designs that focus the return current, for example, by using airbridges to connect ground planes as much as possible, allowing the flux current to exit the chip quickly.
                                     <br><span style="font-size: 0.7em; line-height: 0.8;">
                                         Ref: Left: Sinica<br>
@@ -146,7 +146,7 @@
                                 </p>
                                 
                                 <h3>Quantum Crosstalk</h3>
-                                <p style="text-align:justify">
+                                <p >
                                   Quantum crosstalk arises when the control of a specific target qubit is not as expected because other qubits are in different states. In the quantum world, the complete physical evolution involves both the Hamiltonian and the state vector:
                                   \[
                                     i\hbar\partial_t \ket{\psi}=\hat{H}\ket{\psi}
@@ -156,10 +156,10 @@
                                 
                                 <div style="text-align: center;">
                                   <a href="../Image/State-propagation.png">
-                                    <img src="../Image/State-propagation.png" alt="State propagation crosstalk" style="width: 100%; height: auto;">
+                                    <img src="../Image/State-propagation.png" alt="Quantum circuit diagram" style="width: 100%; height: auto;">
                                   </a>
                                 </div>
-                                <p style="text-align:justify">
+                                <p >
                                   ▲ State Propagation: A qubit that is not in its ground state may affect other qubits that are.
                                   <br><span style="font-size: 0.7em; line-height: 0.8;">
                                       Ref: Drawn by the author
@@ -168,17 +168,17 @@
                                 
                                 <div style="text-align: center;">
                                   <a href="../Image/Quantum-crosstalk.png">
-                                    <img src="../Image/Quantum-crosstalk.png" alt="Long-range quantum crosstalk" style="width: 100%; height: auto;">
+                                    <img src="../Image/Quantum-crosstalk.png" alt="Quantum circuit diagram" style="width: 100%; height: auto;">
                                   </a>
                                 </div>
-                                <p style="text-align:justify">
+                                <p >
                                   ▲ In an ideal quantum chip, when a computation is confined to a local subsystem, the operational result and quality should theoretically not depend on the state of the remaining qubits. In practice, however, even spatially distant qubits can potentially affect the operational subsystem.
                                   <br><span style="font-size: 0.7em; line-height: 0.8;">
                                       Ref: Drawn by the author
                                   </span><br><br>
                                 </p>
                                 
-                                <p style="text-align:justify">
+                                <p >
                                   Of course, the evolution of a quantum state is related to the Hamiltonian. A change in the state between different qubits must be related to whether there are interaction terms in the Hamiltonian. Therefore, the distinction between quantum and classical crosstalk is not always clear-cut. Crosstalk can be corrected through optimizations in the fabrication process, as well as through calibration methods that correct the gate operations.
                                   <br><br><br>
                                 </p>
@@ -215,7 +215,7 @@
                                 </p>
                                 <div class="post-meta">
                                     <span class="post-author">
-                                        <a href="../About_en/Wang.html"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="">Peir-Ru Wang</a>
+                                        <a href="../About_en/Wang.html"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="Professional headshot">Peir-Ru Wang</a>
                                     </span>
                                     <span class="post-category">
                                         <a href="./main.html"><i class="fa fa-folder" aria-hidden="true"></i>Hardware Guide (2025)</a>

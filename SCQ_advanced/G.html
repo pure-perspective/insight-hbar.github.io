@@ -24,8 +24,8 @@
     <link href="../assets/css/responsive.css" rel="stylesheet">
 
     <title>超導量子位元(進階版)</title>
-    <meta name="description" content="深入解析2025年超導量子電腦的構建，涵蓋量子處理器(QPU)、稀釋製冷機、控制電子、低溫佈線等核心硬體。提供全球主要製造商、價格範圍、技術挑戰與未來趨勢的詳細指引。">
-    <meta name="keywords" content="超導量子電腦, 量子位元, Qubit, QPU, 稀釋製冷機, IBM, Google, QuantWare, Bluefors, 低溫系統, 控制電子, Josephson Junction, Transmon, Fluxonium, 量子計算硬體, SEO">
+    <meta name="description" content="超導量子位元(進階版)，深入解析2025年超導量子電腦硬體構建，包括量子處理器、稀釋製冷機、控制電子與低溫佈線，了解核心技術與未來趨勢。">
+    <meta name="keywords" content="超導量子位元, 進階量子電腦, SQUID, 量子硬體, 量子電路, 超導量子技術, 量子比特, 量子計算, 溫控系統, 量子科技趨勢">
     <link rel="canonical" href="https://www.insight-ihbar.com/SCQ_advanced/G.html">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -95,12 +95,12 @@
                     
                     <div style="text-align: center;">
                       <a href="../Image/SQUID.png">
-                        <img src="../Image/SQUID.png" alt="取代文字" style="width: 50%; height: auto;">
+                        <img src="../Image/SQUID.png" alt="磁場中的圓環與穿過的面積變化" style="width: 50%; height: auto;">
                       </a>
                     </div>
                     
                     
-                            <p style="text-align:justify">
+                            <p >
                                 將兩組約瑟夫森節 \(J_1\)、\(J_2\) 相組，中間形成一個閉環，通入磁通 \( \Phi_B \) 與電壓 \( V \)。在前一節中，超導函數的相位對閉環的積分需滿足：
                                 \[
                                 \oint \nabla \theta(r) \cdot d\vec{l} - \frac{q}{\hbar} \Phi_B = 2\pi N
@@ -113,7 +113,7 @@
                                 \Delta\theta_2 = \Delta\theta_1 - 2\pi \frac{\Phi_B}{\Phi_0} + 2\pi N
                                 \]
                             </p>
-                            <p style="text-align:justify">
+                            <p >
                                 當整個 SQUID 通入電流 \( I = I_1 + I_2 \)，並使用前一節約瑟夫森節電流的關係式（這裡考慮對稱的 SQUID，即兩個約瑟夫森節的特性 \( I_c \) 相同），計算得：
                                 \[
                                 I = I_1 + I_2 = I_0 (\sin\Delta\theta_1 + \sin\Delta\theta_2)
@@ -133,7 +133,7 @@
                                 I = 2I_0 \cos\left(\frac{\Phi_B}{\Phi_0} \pi\right) \sin\left(\Delta\theta_1 - \frac{\Phi_B}{\Phi_0} \pi\right)
                                 \]
                             </p>
-                            <p style="text-align:justify">
+                            <p >
                                 前一節提到約瑟夫森節具有電感的性質，同理我們可以討論 SQUID 的電感性質。將電流對時間微分：
                                 \[
                                 \dot{I} = 2I_0 \cos\left(\frac{\Phi_B}{\Phi_0} \pi\right) \cos\left(\Delta\theta_1 - \frac{\Phi_B}{\Phi_0} \pi\right) \dot{\Delta\theta_1}
@@ -148,7 +148,7 @@
                                 \cos\left(\Delta\theta_1 - \frac{\Phi_B}{\Phi_0} \pi\right)\right]
                                 \]
                             </p>
-                            <p style="text-align:justify">
+                            <p >
                                 可以注意到 \( L_{\text{SQUID}} \) 的值會受到外加磁通 \( \Phi_B \) 的影響，這為後來 Tunable Transmon 調整頻率的關鍵。定義變數 \( \Phi \)：
                                 \[
                                 \Phi \equiv \frac{\Delta\theta_1}{\pi} \Phi_0 - \Phi_B = \frac{\Phi_0}{\pi} \left(\Delta\theta_1 - \frac{\Phi}{\Phi_0} \pi\right)
@@ -162,7 +162,7 @@
                                 V = \frac{1}{2} \dot{\Phi}, \quad I = 2I_0 \cos\left(\frac{\Phi_B}{\Phi_0} \pi\right) \sin\left(\frac{\Phi}{\Phi_0} \pi\right)
                                 \]
                             </p>
-                            <p style="text-align:justify">
+                            <p >
                                 固定外場 \( \Phi_B \) 下，一組 SQUID 儲存的能量為：
                                 \[
                                 E = \int IV \, dt = \int \left[2I_0 \cos\left(\frac{\Phi_B}{\Phi_0} \pi\right) \sin\left(\frac{\Phi}{\Phi_0} \pi\right) \cdot \frac{1}{2} \dot{\Phi}\right] dt
@@ -181,10 +181,10 @@
                     
                     <div style="text-align: center;">
                       <a href="../Image/SQUID transmon.png">
-                        <img src="../Image/SQUID transmon.png" alt="取代文字" style="width:60%; height: auto;">
+                        <img src="../Image/SQUID transmon.png" alt="這是一個向下箭頭符號" style="width:60%; height: auto;">
                       </a>
                     </div>
-                    <p style="text-align:justify">
+                    <p >
                     ▲由兩個約瑟夫森節組合成可調電感值的\(LC\)電路。
                     
                     </p>

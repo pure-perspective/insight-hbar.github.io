@@ -24,8 +24,8 @@
     <link href="../assets/css/responsive.css" rel="stylesheet">
 
     <title>超導量子電腦硬體指南 (2025) | 量子位元、組件與廠商全解析</title>
-    <meta name="description" content="深入解析2025年超導量子電腦的構建，涵蓋量子處理器(QPU)、稀釋製冷機、控制電子、低溫佈線等核心硬體。提供全球主要製造商、價格範圍、技術挑戰與未來趨勢的詳細指引。">
-    <meta name="keywords" content="超導量子電腦, 量子位元, Qubit, QPU, 稀釋製冷機, IBM, Google, QuantWare, Bluefors, 低溫系統, 控制電子, Josephson Junction, Transmon, Fluxonium, 量子計算硬體, SEO">
+    <meta name="description" content="超導量子電腦硬體指南2025，全面解析量子位元、QPU、稀釋製冷機與控制電子等核心硬體技術，涵蓋全球主要廠商、價格範圍與未來趨勢。">
+    <meta name="keywords" content="超導量子電腦, 量子位元, Qubit, QPU, 稀釋製冷機, 量子計算硬體, 量子科技, 低溫系統, 控制電子, 量子電路">
     <link rel="canonical" href="https://www.insight-ihbar.com/QC_hardware/V2.html">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -92,7 +92,7 @@
                                     <h3></h3>
                                 </div>
                                 
-                                <p style="text-align:justify">
+                                <p >
                                     在當前的量子電腦發展上，嚴格來說其實是半古典、半量子的綜合體，利用古典電腦發送帶有古典資訊的微波訊號，進入到量子位元後，
                                     因為量子位元與微波耦合，會回傳帶有量子資訊的古典信號，再由古典電腦分析結果。
                                     此特性可以稍微將串擾議題分類為古典串擾與量子串擾。
@@ -103,7 +103,7 @@
                                 <div id="C"><br><br><br></div>
                                 <h3>古典串擾</h3>
                                 
-                                <p style="text-align:justify">
+                                <p >
                                   由控制訊號、閘操作、量子位元間非預期的耦合項造成的非預期影響，大體上歸類為古典串擾。可以簡單從Hamiltonian來思考：
                                   \[
                                   \hat{H}=\hat{H}_{qubits}+\hat{H}_{coupling}+V_{control}+\color{red}{\hat{H}_{unexpected}}
@@ -114,10 +114,10 @@
 
                                   <div style="text-align: center;">
                                     <a href="../Image/control-crosstalk.png">
-                                      <img src="../Image/control-crosstalk.png" alt="取代文字" style="width: 100%; height: auto;">
+                                      <img src="../Image/control-crosstalk.png" alt="X射線穿透人體投影圖" style="width: 100%; height: auto;">
                                     </a>
                                   </div>
-                                  <p style="text-align:justify">
+                                  <p >
                                     ▲由控制訊號的電磁場洩漏造成其他量子位元的影響。
                                     
   
@@ -130,10 +130,10 @@
 
                                   <div style="text-align: center;">
                                     <a href="../Image/Unexpected-static-coupling.png">
-                                      <img src="../Image/Unexpected-static-coupling.png" alt="取代文字" style="width: 100%; height: auto;">
+                                      <img src="../Image/Unexpected-static-coupling.png" alt="核子反應角色示意圖" style="width: 100%; height: auto;">
                                     </a>
                                   </div>
-                                  <p style="text-align:justify">
+                                  <p >
                                     ▲量子位元間有設計外的耦合項，造成非預期的狀態轉換或退相干。
                                     <br><span style="font-size: 0.7em; line-height: 0.8;">
                                         Ref: 作者繪製
@@ -143,10 +143,10 @@
                                   <h3>返回電流 Return Current Focus</h3>
                                   <div style="text-align: center;">
                                     <a href="../Image/Return_current.png">
-                                      <img src="../Image/Return_current.png" alt="取代文字" style="width: 100%; height: auto;">
+                                      <img src="../Image/Return_current.png" alt="微晶電路圖與電磁場路徑示意" style="width: 100%; height: auto;">
                                     </a>
                                   </div>
-                                  <p style="text-align:justify">
+                                  <p >
                                     ▲ 在現代精密電子電路中，需要注意接地問題。同樣的在量子電路中，電流是否依照理想狀態返回接地，
                                     如果在晶片上亂竄，會造成Flux crosstalk。此時就需要Return Current Focus的設計
                                     例如利用空橋將接地的部分盡可能相連，使Flux current盡可能快速離開晶片。                                  
@@ -162,7 +162,7 @@
                                 
                                 
                                     <h3>量子串擾</h3>
-                                    <p style="text-align:justify">
+                                    <p >
                                       量子串擾來自於其他量子位元因為處在不同狀態，造成指定的量子位元控制不如預期。在量子世界裡，完整的物理演化包含Hamiltonian和state vector：
                                       \[
                                         i\hbar\partial_t \ket{\psi}=\hat{H}\ket{\psi}
@@ -172,10 +172,10 @@
                                     </p>
                                     <div style="text-align: center;">
                                       <a href="../Image/State-propagation.png">
-                                        <img src="../Image/State-propagation.png" alt="取代文字" style="width: 100%; height: auto;">
+                                        <img src="../Image/State-propagation.png" alt="量子糾纏的測量示意圖" style="width: 100%; height: auto;">
                                       </a>
                                     </div>
-                                    <p style="text-align:justify">
+                                    <p >
                                       ▲ State Propagation，不在基態的量子位元可能會影響到其他處在基態的量子位元。
                                       <br><span style="font-size: 0.7em; line-height: 0.8;">
                                           Ref: 作者繪製
@@ -184,17 +184,17 @@
   
                                       <div style="text-align: center;">
                                         <a href="../Image/Quantum-crosstalk.png">
-                                          <img src="../Image/Quantum-crosstalk.png" alt="取代文字" style="width: 100%; height: auto;">
+                                          <img src="../Image/Quantum-crosstalk.png" alt="量子閘電路示意圖" style="width: 100%; height: auto;">
                                         </a>
                                       </div>
-                                      <p style="text-align:justify">
+                                      <p >
                                         ▲ 理想的量子晶片，當計算侷限在局部子系統時，理論上操作結果、品質不應與其餘量子位元的狀態有關。但實務上，即便空間位置很遠的量子位元，也有可能會對操作子系統產生影響。
                                         <br><span style="font-size: 0.7em; line-height: 0.8;">
                                             Ref: 作者繪製
                                         </span><br><br>
                                         </p>
 
-                                        <p style="text-align:justify">
+                                        <p >
                                           當然，量子狀態的演化其實跟Hamiltonian有關，不同位元間的狀態改變一定與Hamiltonian是否有交互作用項有關，量子串擾與古典串擾不一定有明確的劃分。
                                           串擾的修正，可以在製程上進行優化，也可以利用校正的方式，針對運算閘操作進行修正。
                                           <br><br><br>

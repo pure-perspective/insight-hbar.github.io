@@ -24,8 +24,8 @@
     <link href="../assets/css/responsive.css" rel="stylesheet">
 
     <title>超導量子位元(進階版)</title>
-    <meta name="description" content="深入解析2025年超導量子電腦的構建，涵蓋量子處理器(QPU)、稀釋製冷機、控制電子、低溫佈線等核心硬體。提供全球主要製造商、價格範圍、技術挑戰與未來趨勢的詳細指引。">
-    <meta name="keywords" content="超導量子電腦, 量子位元, Qubit, QPU, 稀釋製冷機, IBM, Google, QuantWare, Bluefors, 低溫系統, 控制電子, Josephson Junction, Transmon, Fluxonium, 量子計算硬體, SEO">
+    <meta name="description" content="超導量子位元(進階版)深入解析2025年超導量子電腦的核心硬體、QPU、稀釋製冷機、控制電子與技術挑戰，探索未來量子計算趨勢。">
+    <meta name="keywords" content="超導量子位元, 進階版, 量子電腦, 量子硬體, Qubit, Hamiltonian, 量子計算, 低溫系統, Josephson Junction, 量子科技">
     <link rel="canonical" href="https://www.insight-ihbar.com/SCQ_advanced/E.html">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -93,7 +93,7 @@
                                 </div>
 
                                   
-                                <p style="text-align:justify">
+                                <p >
                                 從 \(L(\dot{Q}, Q)\) 出發，基於 Lagrangian 動能與位能的反對稱性，我們定義對應 \(\dot{Q}\) 的正則動量 \(\Phi\) 時手動加入一個負號，以吸收反對稱性（否則後續的 Hamiltonian 會為負）：
                                 \[
                                 \Phi \equiv -\frac{\partial \mathcal{L}}{\partial \dot{Q}} \implies \dot{\Phi} = -\frac{\partial \mathcal{L}}{\partial Q}.
@@ -104,7 +104,7 @@
                                 \]
                                 </p>
                             
-                                <p style="text-align:justify">
+                                <p >
                                 利用微分的方式，可以證明 \(\bar{\mathcal{L}} = \bar{\mathcal{L}}(\dot{\Phi}, \Phi)\) 是 \((\dot{\Phi}, \Phi)\) 空間的函數：
                                 \[
                                 d\bar{\mathcal{L}} = d\mathcal{L} + d(\dot{\Phi} Q) + d(\Phi \dot{Q}) = \frac{\partial \mathcal{L}}{\partial \dot{Q}} d\dot{Q} + \frac{\partial \mathcal{L}}{\partial Q} dQ + Qd\dot{\Phi} + \dot{\Phi}dQ + \dot{Q}d\Phi + \Phi d\dot{Q}.
@@ -115,7 +115,7 @@
                                 \]
                                 </p>
                             
-                                <p style="text-align:justify">
+                                <p >
                                 此時，對應 \(\dot{\Phi}\) 的正則動量 \(\Pi\) 為：
                                 \[
                                 \Pi = \frac{\partial \bar{\mathcal{L}}}{\partial \dot{\Phi}} = Q,
@@ -130,7 +130,7 @@
                                 \]
                                 </p>
                             
-                                <p style="text-align:justify">
+                                <p >
                                 這樣，我們可以簡化後續的推導，只需遵循以下步驟：
                                 <ol>
                                     <li>寫下 \(L(\dot{Q}, Q)\)。</li>
@@ -149,7 +149,7 @@
                                 </ol>
                                 </p>
                             
-                                <p style="text-align:justify">
+                                <p >
                                 這樣無需經過繁瑣的轉換 \(L(\dot{Q}, Q) \to \bar{\mathcal{L}}(\dot{\Phi}, \Phi) \to \bar{\mathcal{H}}(Q, \Phi)\)。特別是在後續引入外力耦合項時（如在推導如何驅動與讀取量子位元時，外部訊號與量子位元交互作用，或是兩個量子位元之間的耦合），如果按照繁瑣的推導，會出現類似於電磁場下的動量 \(p \to p - eA\) 的情況，在中間轉換時極度複雜。
                                 </p>
                             

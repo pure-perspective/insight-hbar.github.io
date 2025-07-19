@@ -24,8 +24,8 @@
     <link href="../assets/css/responsive.css" rel="stylesheet">
 
     <title>Superconducting Qubits (Advanced)</title>
-    <meta name="description" content="深入解析2025年超導量子電腦的構建，涵蓋量子處理器(QPU)、稀釋製冷機、控制電子、低溫佈線等核心硬體。提供全球主要製造商、價格範圍、技術挑戰與未來趨勢的詳細指引。">
-    <meta name="keywords" content="超導量子電腦, 量子位元, Qubit, QPU, 稀釋製冷機, IBM, Google, QuantWare, Bluefors, 低溫系統, 控制電子, Josephson Junction, Transmon, Fluxonium, 量子計算硬體, SEO">
+    <meta name="description" content="Explore advanced superconducting qubits, quantum hardware, and the latest trends in quantum computing technology for 2025.">
+    <meta name="keywords" content="Superconducting qubits advanced quantum computing hardware low temperature quantum systems Josephson junction fluxonium transmon qubits quantum hardware trends 2025 quantum physics research quantum information processing">
     <link rel="canonical" href="https://www.insight-ihbar.com/SCQ_advanced_en/D.html">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -93,7 +93,7 @@
                                 </div>
 
                                 
-    <p style="text-align:justify">
+    <p >
       In practice, to correctly perform quantization via the commutator relation, it is essential to strictly define the correspondence between \(x, p\); otherwise, sign discrepancies might arise. Continuing from the previous section, we know:
       \[
       \dot{\Phi}_\# = \frac{d}{dt} \frac{\partial \mathcal{L}}{\partial \dot{Q}} = \frac{\partial \mathcal{L}}{\partial Q} = -\frac{Q}{C} \implies Q = -C\dot{\Phi}_\#.
@@ -101,7 +101,7 @@
       Now, we transform the Lagrangian \(L\) into momentum space.
     </p>
 
-    <p style="text-align:justify">
+    <p >
       Define a new Lagrangian \(\bar{\mathcal{L}}\) as:
       \[
       \bar{\mathcal{L}} \equiv  \mathcal{L} - \frac{d}{dt} (\Phi_\# Q) =  \mathcal{L} - \dot{\Phi}_\# Q - \Phi_\# \dot{Q},
@@ -116,7 +116,7 @@
       \]
     </p>
 
-    <p style="text-align:justify">
+    <p >
       Note that at this point \(\mathcal{L}(Q, \dot{Q}) \to \bar{\mathcal{L}}(\Phi_\#, \dot{\Phi}_\#)\), and the roles of kinetic and potential energy are interchanged. Additionally, \(\bar{\mathcal{L}} = -\mathcal{L}\), corresponding to the antisymmetry of the Lagrangian. To absorb this antisymmetry, we define a new variable:
       \[
       \Phi = -\Phi_\#.
@@ -127,14 +127,14 @@
       \]
     </p>
 
-    <p style="text-align:justify">
+    <p >
       The corresponding canonical momentum \(\Pi\) (related to \(Q\) based on previous results):
       \[
       \Pi \equiv \frac{\partial \bar{\mathcal{L}}}{\partial \dot{\Phi}} = C\dot{\Phi} = -C\dot{\Phi}_\# = Q \implies \dot{\Phi} = \frac{\Pi}{C} = \frac{Q}{C}.
       \]
     </p>
 
-    <p style="text-align:justify">
+    <p >
       The Hamiltonian \(\bar{\mathcal{H}} \) is defined as:
       \[
       \bar{\mathcal{H}}  = \Pi\dot{\Phi} - \bar{\mathcal{L}} = \frac{\Pi^2}{C} - \frac{\Pi^2}{2C} + \frac{\Phi^2}{2L} = \frac{\Pi^2}{2C} + \frac{\Phi^2}{2L},
@@ -146,7 +146,7 @@
       identical to the traditional condition.
     </p>
 
-    <p style="text-align:justify">
+    <p >
       Define new variables \(a\) and \(a^\dagger\):
       \[
       a = \sqrt{\frac{1}{2\hbar} \sqrt{\frac{L}{C}}} \left( \sqrt{\frac{C}{L}} \Phi + iQ \right), \quad
@@ -159,7 +159,7 @@
       \]
     </p>
 
-    <p style="text-align:justify">
+    <p >
       It is easy to verify \([a, a^\dagger] = 1\):
       \[
       [a, a^\dagger] = aa^\dagger - a^\dagger a = \frac{1}{2\hbar} \sqrt{\frac{L}{C}} \left[ \Phi, Q \right] = 1.
@@ -174,7 +174,7 @@
       \]
     </p>
 
-    <p style="text-align:justify">
+    <p >
       Finally, we once again obtain the quantized Hamiltonian, where the difference between each energy level is \(\hbar \omega\).
     </p>
 

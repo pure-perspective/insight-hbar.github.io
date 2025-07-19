@@ -24,8 +24,8 @@
     <link href="../assets/css/responsive.css" rel="stylesheet">
 
     <title>超導量子位元(進階版)</title>
-    <meta name="description" content="深入解析2025年超導量子電腦的構建，涵蓋量子處理器(QPU)、稀釋製冷機、控制電子、低溫佈線等核心硬體。提供全球主要製造商、價格範圍、技術挑戰與未來趨勢的詳細指引。">
-    <meta name="keywords" content="超導量子電腦, 量子位元, Qubit, QPU, 稀釋製冷機, IBM, Google, QuantWare, Bluefors, 低溫系統, 控制電子, Josephson Junction, Transmon, Fluxonium, 量子計算硬體, SEO">
+    <meta name="description" content="超導量子位元進階解析，深入探討量子電腦核心硬體、量子化理論、Hamiltonian推導與量子態操控，掌握未來量子科技趨勢。">
+    <meta name="keywords" content="超導量子位元, 量子電腦硬體, Hamiltonian, 量子化, Josephson接面, Transmon, Fluxonium, 低溫系統, 量子控制, 量子計算">
     <link rel="canonical" href="https://www.insight-ihbar.com/SCQ_advanced/D.html">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -95,7 +95,7 @@
 
 
                         
-                            <p style="text-align:justify">
+                            <p >
                               實際上，要正確地透過對易關係（commutator relation）進行量子化，需要嚴格規定 \(x, p\) 的對應關係，否則可能會出現負號上的偏差。承接前一節，我們知道：
                               \[
                               \dot{\Phi}_\# = \frac{d}{dt} \frac{\partial \mathcal{L}}{\partial \dot{Q}} = \frac{\partial \mathcal{L}}{\partial Q} = -\frac{Q}{C} \implies Q = -C\dot{\Phi}_\#.
@@ -103,7 +103,7 @@
                               現在，我們將 Lagrangian \(L\) 轉換到動量空間。
                             </p>
                         
-                            <p style="text-align:justify">
+                            <p >
                               定義新的 Lagrangian \(\bar{\mathcal{L}}\) 為：
                               \[
                               \bar{\mathcal{L}} \equiv \mathcal{L} - \frac{d}{dt} (\Phi_\# Q) = \mathcal{L} - \dot{\Phi}_\# Q - \Phi_\# \dot{Q},
@@ -118,7 +118,7 @@
                               \]
                             </p>
                         
-                            <p style="text-align:justify">
+                            <p >
                               注意，此時 \(\mathcal{L}(Q, \dot{Q}) \to \bar{\mathcal{L}}(\Phi_\#, \dot{\Phi}_\#)\)，動能與位能的角色互換。同時，有 \(\bar{\mathcal{L}} = -\mathcal{L}\)，對應於 Lagrangian 的反對稱性。為吸收這一反對稱性，我們定義新的變量：
                               \[
                               \Phi = -\Phi_\#.
@@ -129,14 +129,14 @@
                               \]
                             </p>
                         
-                            <p style="text-align:justify">
+                            <p >
                               對應的正則動量 \(\Pi\)（並利用前述結果與 \(Q\) 進行聯繫）：
                               \[
                               \Pi \equiv \frac{\partial \bar{\mathcal{L}}}{\partial \dot{\Phi}} = C\dot{\Phi} = -C\dot{\Phi}_\# = Q \implies \dot{\Phi} = \frac{\Pi}{C} = \frac{Q}{C}.
                               \]
                             </p>
                         
-                            <p style="text-align:justify">
+                            <p >
                               Hamiltonian \(\bar{\mathcal{H}}\) 定義為：
                               \[
                               \bar{\mathcal{H}} = \Pi\dot{\Phi} - \bar{\mathcal{L}} = \frac{\Pi^2}{C} - \frac{\Pi^2}{2C} + \frac{\Phi^2}{2L} = \frac{\Pi^2}{2C} + \frac{\Phi^2}{2L},
@@ -148,7 +148,7 @@
                               與傳統條件相同。
                             </p>
                         
-                            <p style="text-align:justify">
+                            <p >
                               定義新的變量 \(a\)、\(a^\dagger\)：
                               \[
                               a = \sqrt{\frac{1}{2\hbar} \sqrt{\frac{L}{C}}} \left( \sqrt{\frac{C}{L}} \Phi + iQ \right), \quad
@@ -161,7 +161,7 @@
                               \]
                             </p>
                         
-                            <p style="text-align:justify">
+                            <p >
                               易證 \([a, a^\dagger] = 1\)：
                               \[
                               [a, a^\dagger] = aa^\dagger - a^\dagger a = \frac{1}{2\hbar} \sqrt{\frac{L}{C}} \left[ \Phi, Q \right] = 1.
@@ -176,7 +176,7 @@
                               \]
                             </p>
                         
-                            <p style="text-align:justify">
+                            <p >
                               最終，我們再次得到量子化後的 Hamiltonian，其中每個能階的差異為 \(\hbar \omega\)。
                             </p>
 

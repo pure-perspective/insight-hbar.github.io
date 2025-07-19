@@ -24,8 +24,8 @@
     <link href="../assets/css/responsive.css" rel="stylesheet">
 
     <title>Superconducting Qubits (Advanced)</title>
-    <meta name="description" content="深入解析2025年超導量子電腦的構建，涵蓋量子處理器(QPU)、稀釋製冷機、控制電子、低溫佈線等核心硬體。提供全球主要製造商、價格範圍、技術挑戰與未來趨勢的詳細指引。">
-    <meta name="keywords" content="超導量子電腦, 量子位元, Qubit, QPU, 稀釋製冷機, IBM, Google, QuantWare, Bluefors, 低溫系統, 控制電子, Josephson Junction, Transmon, Fluxonium, 量子計算硬體, SEO">
+    <meta name="description" content="Explore advanced superconducting qubits, quantum hardware, and key components like QPU and dilution refrigerators for 2025 quantum computing developments.">
+    <meta name="keywords" content="Superconducting qubits advanced quantum hardware quantum computing components low temperature systems Josephson Junction Transmon fluxonium quantum physics for 2025 qubit research Bloch sphere representation quantum bits (qubits) quantum information processing">
     <link rel="canonical" href="https://www.insight-ihbar.com/SCQ_advanced_en/I.html">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -94,21 +94,21 @@
 
                              
 
-    <p style="text-align:justify">
+    <p >
       The fundamental principle behind modern computers relies on bits for storing information and logic gates for computation. Information is encoded in binary as sequences of 0s and 1s. These bits are manipulated to store information. For example, to store the number 19, its binary representation is 10011. When stored in an 8-bit memory, the state becomes:
     </p>
 
-    <p style="text-align:justify">
+    <p >
       \[ \ket{bit_1} \ket{bit_2} \ket{bit_3} \ket{bit_4} \ket{bit_5} \ket{bit_6} \ket{bit_7} \ket{bit_8} \] 
       changing to:
       \[ \ket{0} \ket{0} \ket{0} \ket{1} \ket{0} \ket{0} \ket{1} \ket{1} \]
     </p>
 
-    <p style="text-align:justify">
+    <p >
       In a quantum harmonic oscillator, the different energy levels \( n \) can be connected using \( a^\dagger \) and \( a \):
     </p>
 
-    <p style="text-align:justify">
+    <p >
       \[
       \ket{n+1} = \frac{a^\dagger}{\sqrt{n+1}} \ket{n}, \quad 
       \ket{n-1} = \frac{a}{\sqrt{n}} \ket{n}, \quad 
@@ -116,11 +116,11 @@
       \]
     </p>
 
-    <p style="text-align:justify">
+    <p >
       In this case:
     </p>
 
-    <p style="text-align:justify">
+    <p >
       \[
       a^\dagger = 
       \begin{bmatrix}
@@ -132,7 +132,7 @@
       \]
     </p>
 
-    <p style="text-align:justify">
+    <p >
       \[
       a =
       \begin{bmatrix}
@@ -144,11 +144,11 @@
       \]
     </p>
 
-    <p style="text-align:justify">
+    <p >
       This represents an infinite-dimensional quantum system. A superconducting qubit uses the Transmon's ground state \( \ket{0} \) (or \( \ket{g} \)) and the first excited state \( \ket{1} \) (or \( \ket{e} \)) as its computational basis. In the two-dimensional framework of quantum computation:
     </p>
 
-    <p style="text-align:justify">
+    <p >
       \[
       a^\dagger \rightarrow \sigma^+ = 
       \begin{bmatrix}
@@ -163,11 +163,11 @@
       \]
     </p>
 
-    <p style="text-align:justify">
+    <p >
       These lead to the following definitions:
     </p>
 
-    <p style="text-align:justify">
+    <p >
       \[
       \sigma_x = \sigma^+ + \sigma^- = 
       \begin{bmatrix}
@@ -187,11 +187,11 @@
       \]
     </p>
 
-    <p style="text-align:justify">
+    <p >
       These are the famous Pauli matrices. Here are some algebraic relations:
     </p>
 
-    <p style="text-align:justify">
+    <p >
       \[
       \{\sigma^-, \sigma^+\} = \sigma^-\sigma^+ + \sigma^+\sigma^- = \mathbb{I} = 
       \begin{bmatrix}
@@ -206,17 +206,17 @@
       \]
     </p>
 
-    <p style="text-align:justify">
+    <p >
       For \( i, j, k = x, y, z \):
     </p>
 
-    <p style="text-align:justify">
+    <p >
       \[
       \sigma_i \sigma_j = \delta_{ij}\mathbb{I} + i\epsilon_{ijk}\sigma_k
       \]
     </p>
 
-    <p style="text-align:justify">
+    <p >
       The Pauli matrices are deeply connected to rotations in three-dimensional space. However, one might wonder: why does a two-level qubit system relate to three-dimensional rotations? This will be discussed in the next section on qubits and the Bloch sphere representation.
     </p>
 

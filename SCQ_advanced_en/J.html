@@ -24,8 +24,8 @@
     <link href="../assets/css/responsive.css" rel="stylesheet">
 
     <title>Superconducting Qubits (Advanced)</title>
-    <meta name="description" content="深入解析2025年超導量子電腦的構建，涵蓋量子處理器(QPU)、稀釋製冷機、控制電子、低溫佈線等核心硬體。提供全球主要製造商、價格範圍、技術挑戰與未來趨勢的詳細指引。">
-    <meta name="keywords" content="超導量子電腦, 量子位元, Qubit, QPU, 稀釋製冷機, IBM, Google, QuantWare, Bluefors, 低溫系統, 控制電子, Josephson Junction, Transmon, Fluxonium, 量子計算硬體, SEO">
+    <meta name="description" content="Discover advanced insights into superconducting qubits, Bloch sphere visualization, quantum hardware, and future trends in quantum computing.">
+    <meta name="keywords" content="Superconducting qubits advanced quantum computing concepts Bloch sphere visualization quantum hardware low temperature systems Josephson Junction Transmon fluxonium quantum gate entanglement quantum coherence quantum algorithms quantum information processing">
     <link rel="canonical" href="https://www.insight-ihbar.com/SCQ_advanced_en/J.html">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -92,43 +92,43 @@
                                     <h3></h3>
                                 </div>
 
-                                <p style="text-align:justify">
+                                <p >
                                     The Bloch sphere is a geometric tool used to describe the state of a qubit. In a two-level qubit system, any quantum state can be expressed as a linear combination of the ground state \( \ket{0} \) and the excited state \( \ket{1} \):
                                   </p>
                                   
-                                  <p style="text-align:justify">
+                                  <p >
                                     \[
                                     \ket{\psi} = \alpha \ket{0} + \beta \ket{1},
                                     \]
                                     where \( \alpha \) and \( \beta \) are complex numbers satisfying the normalization condition \( |\alpha|^2 + |\beta|^2 = 1 \).
                                   </p>
                                   
-                                  <p style="text-align:justify">
+                                  <p >
                                     If we express \( \alpha \) and \( \beta \) using spherical coordinates, the state can be written as:
                                   </p>
                                   
-                                  <p style="text-align:justify">
+                                  <p >
                                     \[
                                     \ket{\psi} = \cos\left(\frac{\theta}{2}\right)\ket{0} + e^{i\phi}\sin\left(\frac{\theta}{2}\right)\ket{1},
                                     \]
                                     where \( \theta \) is the angle between the state vector and the \( z \)-axis, and \( \phi \) is the phase angle in the \( x \)-\( y \) plane.
                                   </p>
                                   
-                                  <p style="text-align:justify">
+                                  <p >
                                     This representation allows us to visualize the qubit state as a point on the surface of a unit sphere in three-dimensional space, known as the Bloch sphere. Some important points on the Bloch sphere include:
                                   </p>
                                   
-                                  <p style="text-align:justify">
+                                  <p >
                                     • North pole (\( \theta = 0 \)): corresponds to \( \ket{0} \)<br>
                                     • South pole (\( \theta = \pi \)): corresponds to \( \ket{1} \)<br>
                                     • Equator (\( \theta = \pi/2 \)): corresponds to equal-amplitude superposition states such as \( \frac{1}{\sqrt{2}}(\ket{0} + e^{i\phi}\ket{1}) \)
                                   </p>
                                   
-                                  <p style="text-align:justify">
+                                  <p >
                                     The three axes of the Bloch sphere correspond to the expectation values of the Pauli matrices:
                                   </p>
                                   
-                                  <p style="text-align:justify">
+                                  <p >
                                     \[
                                     x = \langle \sigma_x \rangle, \quad y = \langle \sigma_y \rangle, \quad z = \langle \sigma_z \rangle,
                                     \]
@@ -138,11 +138,11 @@
                                     \]
                                   </p>
                                   
-                                  <p style="text-align:justify">
+                                  <p >
                                     Through the Bloch sphere, we can intuitively visualize the evolution of a qubit state. For instance, when a qubit undergoes a rotation operation \( R_x(\theta) = e^{-i\theta \sigma_x / 2} \), its state rotates by angle \( \theta \) around the \( x \)-axis. This geometric view provides great convenience for controlling and measuring qubits in quantum computation.
                                   </p>
                                   
-                                  <p style="text-align:justify">
+                                  <p >
                                     The Bloch sphere is not only a tool for describing single-qubit states, but also a cornerstone for understanding quantum gates, entanglement, and coherence. In the upcoming sections, we will further explore how to use the Bloch sphere to design and simulate quantum algorithms.
                                   </p>
 

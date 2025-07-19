@@ -24,8 +24,8 @@
     <link href="../assets/css/responsive.css" rel="stylesheet">
 
     <title>Superconducting Qubits (Advanced)</title>
-    <meta name="description" content="深入解析2025年超導量子電腦的構建，涵蓋量子處理器(QPU)、稀釋製冷機、控制電子、低溫佈線等核心硬體。提供全球主要製造商、價格範圍、技術挑戰與未來趨勢的詳細指引。">
-    <meta name="keywords" content="超導量子電腦, 量子位元, Qubit, QPU, 稀釋製冷機, IBM, Google, QuantWare, Bluefors, 低溫系統, 控制電子, Josephson Junction, Transmon, Fluxonium, 量子計算硬體, SEO">
+    <meta name="description" content="Discover advanced insights into superconducting qubits, quantum hardware, and 2025 developments with detailed guides on components, challenges, and future trends.">
+    <meta name="keywords" content="Superconducting qubits and quantum hardware development in 2025 Quantum computing components and circuits Quantum error correction in superconducting qubits Qubit control and readout technology Low-temperature quantum systems and dilution refrigerators Qubit coupling and entanglement techniques Quantum circuit design and layout Superconducting transmons and Josephson Junctions Quantum chip architecture and multi-qubit modules Quantum physics and quantum information processing">
     <link rel="canonical" href="https://www.insight-ihbar.com/SCQ_advanced_en/A.html">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -94,7 +94,7 @@
 
                                 
                                 
-                            <p style="text-align:justify">
+                            <p >
                               Quantum computing demonstrates immense computational potential in specific problems compared to classical computers. However, its hardware faces challenges such as difficulty in control and short operation times. Quantum computing hardware revolves around quantum bits (qubits) as core components, supplemented by driving components to manipulate qubit states and readout components to measure them. Furthermore, due to qubits' susceptibility to external interference, calibration/adjustment components and quantum error correction components are also necessary. In summary, they can be categorized as follows:
                             </p>
                         
@@ -106,11 +106,11 @@
                               <li>Error correction components</li>
                             </ul>
                         
-                            <p style="text-align:justify">
+                            <p >
                               In fact, current memory systems also include similar hardware divisions, but in quantum computing, these components need to be considered holistically. More specifically, due to interactions between different components, when quantum physics is employed to describe the entire quantum circuit using its Hamiltonian (or Schrödinger equation), the interactions will "modify" the properties of qubits. On one hand, these modifications enable the operation and measurement of qubit information; on the other hand, they cause deviations from ideal states, leading to errors.
                             </p>
                         
-                            <p style="text-align:justify">
+                            <p >
                               This article focuses on superconducting quantum circuits, with the components in quantum circuits categorized as follows (from two perspectives):
                             </p>
                         
@@ -143,11 +143,11 @@
                         
                         <div style="text-align: center;">
                           <a href="../Image/SIngle Qubit circuit.png">
-                            <img src="../Image/SIngle Qubit circuit.png" alt="Replacement Text" style="width: 100%; height: auto;">
+                            <img src="../Image/SIngle Qubit circuit.png" alt="Quantum circuit diagram" style="width: 100%; height: auto;">
                           </a>
                         </div>
                         
-                            <p style="text-align:justify">
+                            <p >
                                 
                               
                                 ▲ Let's first take a look at the layout of a single qubit. (a) A microscope view of the circuit, (b) the corresponding circuit diagram. This diagram includes a qubit (red transmon), a readout resonator (light blue), and two feedlines separately driving the qubit and the readout resonator. Components are coupled via capacitors. Additionally, a flux line near the qubit generates a magnetic field to adjust the operational frequency of the transmon. (c) The readout resonator, coupled to the qubit, shows spectral shifts depending on whether the qubit is in state \(|0\rangle\) or \(|1\rangle\). This spectral shift allows determination of the qubit state.
@@ -156,10 +156,10 @@
                         
                         <div style="text-align: center;">
                           <a href="../Image/2 qubit 1 resonator.png">
-                            <img src="../Image/2 qubit 1 resonator.png" alt="Replacement Text" style="width: 100%; height: auto;">
+                            <img src="../Image/2 qubit 1 resonator.png" alt="Quantum circuit diagram" style="width: 100%; height: auto;">
                           </a>
                         </div>
-                            <p style="text-align:justify">
+                            <p >
                                 
                               
                                 ▲ This image shows two qubits (transmons) coupled through a resonator (indirect coupling). Note the text below indicating that the resonator also functions as a coupler between the two qubits.
@@ -168,19 +168,19 @@
                         
                         <div style="text-align: center;">
                           <a href="../Image/4 qubit.png">
-                            <img src="../Image/4 qubit.png" alt="Replacement Text" style="width: 100%; height: auto;">
+                            <img src="../Image/4 qubit.png" alt="Second-gen qubit processor" style="width: 100%; height: auto;">
                           </a>
                         </div>
-                            <p style="text-align:justify">
+                            <p >
                                 ▲ This image shows four qubits connected via a bus resonator. Each qubit is directly connected to flux lines, and there are readout feedlines on the top-\mathcal{L}eft and bottom-right. Each feedline is connected to two readout resonators, coupling with two qubits simultaneously.
                             </p>
                         
                         <div style="text-align: center;">
                           <a href="../Image/5Q.png">
-                            <img src="../Image/5Q.png" alt="Replacement Text" style="width: 80%; height: auto;">
+                            <img src="../Image/5Q.png" alt="Quantum circuit diagram" style="width: 80%; height: auto;">
                           </a>
                         </div>
-                            <p style="text-align:justify">
+                            <p >
                                
                               
                                 ▲ This is a schematic of a 5-qubit layout. Here, Z represents flux lines, and XY represents drive lines. The five qubits are directly coupled via capacitors. Each qubit has its own readout resonator, which merges (inductively coupled) into the readout line.
@@ -190,13 +190,13 @@
                         <p style="font-weight: bold; font-size: 1.2em;">Towards Multi-Qubit Modules</p>
                         <div style="text-align: center;">
                           <a href="./17 surface.png">
-                            <img src="../Image/17 surface.png" alt="Replacement Text" style="width: 43%; height: auto;">
+                            <img src="../Image/17 surface.png" alt="Quantum circuit diagram" style="width: 43%; height: auto;">
                           </a>
                           <a href="./Starmon.png">
-                            <img src="../Image/Starmon.png" alt="Replacement Text" style="width: 55%; height: auto;">
+                            <img src="../Image/Starmon.png" alt="Microwave circuit diagram" style="width: 55%; height: auto;">
                           </a>
                         </div>
-                        <p style="text-align:justify">
+                        <p >
                             
                               
                               

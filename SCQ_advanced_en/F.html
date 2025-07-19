@@ -24,8 +24,8 @@
     <link href="../assets/css/responsive.css" rel="stylesheet">
 
     <title>Superconducting Qubits (Advanced)</title>
-    <meta name="description" content="深入解析2025年超導量子電腦的構建，涵蓋量子處理器(QPU)、稀釋製冷機、控制電子、低溫佈線等核心硬體。提供全球主要製造商、價格範圍、技術挑戰與未來趨勢的詳細指引。">
-    <meta name="keywords" content="超導量子電腦, 量子位元, Qubit, QPU, 稀釋製冷機, IBM, Google, QuantWare, Bluefors, 低溫系統, 控制電子, Josephson Junction, Transmon, Fluxonium, 量子計算硬體, SEO">
+    <meta name="description" content="Explore advanced superconducting qubits, Josephson junction nonlinear inductance, and quantum hardware insights for 2025 quantum computing developments.">
+    <meta name="keywords" content="Superconducting qubits, Josephson junction nonlinear inductance, quantum hardware, quantum computing 2025, low temperature systems, fluxonium, Transmon, quantum circuit design, superconducting quantum technology">
     <link rel="canonical" href="https://www.insight-ihbar.com/SCQ_advanced_en/F.html">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -95,11 +95,11 @@
                                 
     <div style="text-align: center;">
       <a href="../Image/JJ.png">
-        <img src="../Image/JJ.png" alt="Josephson Junction Diagram" style="width: 50%; height: auto;">
+        <img src="../Image/JJ.png" alt="Logic diagram with two boxes" style="width: 50%; height: auto;">
       </a>
     </div>
 
-    <p style="text-align:justify">
+    <p >
       A Josephson junction can be described with its intrinsic properties represented by \(H_0\). When a voltage \(V\) is applied across the junction, the interaction between the superconducting wavefunctions is represented by \(K\). The equation of motion is given as:
       \[
       i\hbar \frac{\partial}{\partial t}
@@ -138,7 +138,7 @@
 
     <details class="dark-background">
       <summary>Derivation for \(\theta_A, n_A\)</summary>
-      <p style="text-align:justify">
+      <p >
         The first equation is:
         \[
         i\hbar \frac{\partial}{\partial t} (\sqrt{n_A} e^{i\theta_A}) = 
@@ -188,7 +188,7 @@
 
     <details class="dark-background">
       <summary>Derivation for \(\theta_B, n_B\)</summary>
-      <p style="text-align:justify">
+      <p >
         The second equation is:
         \[
         i\hbar \frac{\partial}{\partial t} (\sqrt{n_B} e^{i\theta_B}) = 
@@ -236,7 +236,7 @@
       </table>
     </details>
 
-    <p style="text-align:justify">
+    <p >
       Combining these results:
       <ul>
         <li>For \(\theta_A\):
@@ -262,7 +262,7 @@
       </ul>
     </p>
 
-    <p style="text-align:justify">
+    <p >
       Defining the phase difference \(\Delta \theta = \theta_B - \theta_A\) and combining the first two equations, we find:
       \[
       \hbar \frac{\partial \Delta \theta}{\partial t} = 2eV + \frac{K}{\hbar} \left( \frac{n_B - n_A}{\sqrt{n_A n_B}} \right) \cos\Delta \theta.
@@ -278,7 +278,7 @@
       where \(I_c\) is the critical current of the Josephson junction.
     </p>
 
-    <p style="text-align:justify">
+    <p >
       The nonlinear inductance of the Josephson junction is defined as:
       \[
       L_J(\Delta \theta) = \left(\frac{2e}{\hbar I_c \cos\Delta \theta}\right).
@@ -295,11 +295,11 @@
     </p>
 <div style="text-align: center;">
   <a href="../Image/LC JJ circuit.png">
-    <img src="../Image/LC JJ circuit.png" alt="取代文字" style="width: 80%; height: auto;">
+    <img src="../Image/LC JJ circuit.png" alt="Optical illusion arrow" style="width: 80%; height: auto;">
   </a>
 </div>
 
-<p style="text-align:justify">
+<p >
 ▲ Transforming a linear \(LC\) circuit into a nonlinear \(LC\) circuit by incorporating the nonlinear inductance of Josephson junctions. \(L_J\) represents the inductance of the Josephson junction.
 
 </p>

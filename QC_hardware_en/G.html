@@ -24,8 +24,8 @@
     <link href="../assets/css/responsive.css" rel="stylesheet">
 
     <title>Control Electronics</title>
-    <meta name="description" content="深入解析2025年超導量子電腦的構建，涵蓋量子處理器(QPU)、稀釋製冷機、控制電子、低溫佈線等核心硬體。提供全球主要製造商、價格範圍、技術挑戰與未來趨勢的詳細指引。">
-    <meta name="keywords" content="超導量子電腦, 量子位元, Qubit, QPU, 稀釋製冷機, IBM, Google, QuantWare, Bluefors, 低溫系統, 控制電子, Josephson Junction, Transmon, Fluxonium, 量子計算硬體, SEO">
+    <meta name="description" content="Control electronics for superconducting qubits: generation, readout, synchronization, scalability, and latest vendor solutions for quantum control systems.">
+    <meta name="keywords" content="Quantum control electronics for superconducting qubits, cryo-CMOS integration, FPGA-based quantum control systems, microwave pulse generation, low-noise quantum electronics, scalable quantum hardware platforms, hybrid quantum-classical control systems, vendor solutions for quantum hardware, real-time feedback in quantum computing, high-precision quantum control hardware">
     <link rel="canonical" href="https://www.insight-ihbar.com/QC_hardware_en/G.html">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -85,92 +85,92 @@
                 <div class="row">
                     <div class="col-md-9">
                         <article class="blog-post">
-                            <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="">-->
+                            <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="Laptop on desk">-->
                             <div class="post-content">
                                 <div style="text-align: center;">
                                     <h2>Control Electronics</h2>
                                     <h3></h3>
                                 </div>
-                                <p style="text-align:justify" class="dark-background">
+                                <p  class="dark-background">
                                     The control electronics are responsible for translating algorithmic instructions into physical signals applied to the qubits. For superconducting qubits, this typically involves generating microwave pulses with specific frequencies, amplitudes, phases, and durations. The precision of these pulses is extremely high, often on the nanosecond or even shorter timescales. The control system must also be able to synchronously operate multiple qubits and may include real-time feedback and calibration algorithms. An efficient quantum control system must meet several demanding requirements:
                                 </p>
                                 <ul>
-                                    <li><p style="text-align:justify" class="dark-background"><strong>Manipulating Quantum States:</strong>
+                                    <li><p  class="dark-background"><strong>Manipulating Quantum States:</strong>
                                         Generating precisely timed, shaped, and phased microwave pulse signals. These pulses act on the qubits, driving their rotation on the Bloch sphere to achieve state initialization, superposition preparation, quantum logic gate operations (such as single-qubit rotation gates like Hadamard, X, Y, Z, and two-qubit entangling gates like CNOT, CZ), and the execution of complete quantum algorithm sequences.</p></li>
                                     
-                                    <li><p style="text-align:justify" class="dark-background"><strong>Reading Out Quantum States:</strong> At the end of a quantum computation, the final state of each qubit (whether it is \( \ket{0} \) or \( \ket{1} \)) must be measured. This is typically done by sending a probe microwave pulse to a readout resonator coupled to the qubit and measuring the phase and amplitude changes of the transmitted or reflected signal. Since the readout signal is extremely weak (on the single-photon level), it requires low-noise amplifiers to be amplified to a detectable level before being acquired and digitized by electronic equipment.</p></li>
+                                    <li><p  class="dark-background"><strong>Reading Out Quantum States:</strong> At the end of a quantum computation, the final state of each qubit (whether it is \( \ket{0} \) or \( \ket{1} \)) must be measured. This is typically done by sending a probe microwave pulse to a readout resonator coupled to the qubit and measuring the phase and amplitude changes of the transmitted or reflected signal. Since the readout signal is extremely weak (on the single-photon level), it requires low-noise amplifiers to be amplified to a detectable level before being acquired and digitized by electronic equipment.</p></li>
                                     
                                     <li>
-                                        <p style="text-align:justify" class="dark-background">
+                                        <p  class="dark-background">
                                             <strong>Low Latency & Real-time Feedback:</strong>
                                             Many advanced quantum protocols, such as Quantum Error Correction (QEC), dynamic calibration, and active reset, are critically dependent on this capability. The control system must be able to perform classical computations based on intermediate measurement results within an extremely short delay (typically several hundred nanoseconds) and instantly adjust subsequent pulse sequences or issue feedback operations. The entire feedback loop must be completed within the qubit's coherence time to effectively correct errors or compensate for system drifts, placing strict demands on the system's processing speed and responsiveness.
                                         </p>
                                     </li>
                                     
                                     <li>
-                                        <p style="text-align:justify" class="dark-background">
+                                        <p  class="dark-background">
                                             <strong>Multi-channel Synchronization:</strong>
                                             A large-scale quantum processor contains tens to hundreds of qubits, and all multi-qubit operations rely on a high degree of coordination between the various control and readout channels. Therefore, the control system must be able to precisely synchronize the generation and acquisition of signals across all channels, ensuring the consistency and timing accuracy of all operations.
                                         </p>
                                     </li>
                                     <li>
-                                        <p style="text-align:justify" class="dark-background">
+                                        <p  class="dark-background">
                                             <strong>Scalability:</strong>
                                             As the number of qubits increases, the required number of control channels also grows dramatically, which poses immense challenges to the control system's physical size, cost, and overall complexity. An ideal control system architecture must support smooth scaling to adapt to the needs of future larger-scale quantum processors without leading to exponential growth in cost or system management complexity.
                                         </p>
                                     </li>
                                 
                                     <li>
-                                        <p style="text-align:justify" class="dark-background">
+                                        <p  class="dark-background">
                                             <strong>High Precision and Stability:</strong>
                                             All control pulses applied to the qubits must have extremely precise and stable parameters—including shape, timing, frequency, amplitude, and phase. Any tiny deviation can lead to the accumulation of errors in quantum operations, thereby reducing the fidelity of the quantum gates. Among these, timing precision is often required to be at the nanosecond (ns) or even picosecond (ps) level. Furthermore, pulses across different channels must also be highly synchronized to ensure the accuracy of multi-qubit operations.
                                         </p>
                                     </li>
                                     
-                                    <li><p style="text-align:justify" class="dark-background"><b>Bandwidth:</b> Sufficient bandwidth is required to generate fast pulse edges and complex waveforms.</p></li>
+                                    <li><p  class="dark-background"><b>Bandwidth:</b> Sufficient bandwidth is required to generate fast pulse edges and complex waveforms.</p></li>
                                     
-                                    <li><p style="text-align:justify" class="dark-background"><b>Low Noise:</b> Noise in the control signals directly affects the coherence and operational fidelity of the qubits.</p></li>
-                                    <li><p style="text-align:justify" class="dark-background"><b>Cryo-CMOS Integration:</b> Integrating parts of the control electronics (especially those close to the QPU) into the cryogenic environment can significantly reduce the number of cables from room temperature to the QPU, lowering thermal load and reducing signal latency and distortion. However, designing and operating complex CMOS circuits at extremely low temperatures is a huge technical challenge in itself, involving issues like component performance changes, power management, and heat dissipation.</p></li>
-                                    <li><p style="text-align:justify" class="dark-background"><b>Software Integration and Calibration:</b> The control hardware needs to be tightly integrated with high-level software and requires complex automated calibration routines to optimize pulse parameters and compensate for hardware imperfections.</p></li>
+                                    <li><p  class="dark-background"><b>Low Noise:</b> Noise in the control signals directly affects the coherence and operational fidelity of the qubits.</p></li>
+                                    <li><p  class="dark-background"><b>Cryo-CMOS Integration:</b> Integrating parts of the control electronics (especially those close to the QPU) into the cryogenic environment can significantly reduce the number of cables from room temperature to the QPU, lowering thermal load and reducing signal latency and distortion. However, designing and operating complex CMOS circuits at extremely low temperatures is a huge technical challenge in itself, involving issues like component performance changes, power management, and heat dissipation.</p></li>
+                                    <li><p  class="dark-background"><b>Software Integration and Calibration:</b> The control hardware needs to be tightly integrated with high-level software and requires complex automated calibration routines to optimize pulse parameters and compensate for hardware imperfections.</p></li>
                                 </ul>
-                                <p style="text-align:justify" class="dark-background">
+                                <p  class="dark-background">
                                     Control electronics are evolving from using general-purpose laboratory instruments to specialized, integrated, and cryo-compatible systems. Cryo-CMOS technology is considered one of the key paths to solving the control bottleneck for large-scale quantum computers, promising to bring control functions closer to the qubits, thereby improving performance and reducing system complexity. However, this also means that the design of the control system must be even more tightly coupled with the design of the QPU and the cryogenic system.
                                 
                                 
-                                <p style="text-align:justify" class="dark-background">
+                                <p  class="dark-background">
                                     To meet the demands mentioned above, modern quantum control systems typically integrate the following key hardware components:
                                 </p>
                                 <ul>
-                                    <li><p style="text-align:justify" class="dark-background"><strong>Arbitrary Waveform Generators (AWGs):</strong> These are the core for generating control pulses. High-performance AWGs can generate user-defined, complex waveforms with extremely high time resolution (sampling rates up to GSa/s) and amplitude resolution (e.g., 16-bit). They often have multiple output channels and support triggering and sequence playback. These waveforms are then up-converted to drive the qubits. By optimizing the time-domain waveform, AWGs can solve technical problems in applications like coherent control and quantum entanglement manipulation.</p></li>
+                                    <li><p  class="dark-background"><strong>Arbitrary Waveform Generators (AWGs):</strong> These are the core for generating control pulses. High-performance AWGs can generate user-defined, complex waveforms with extremely high time resolution (sampling rates up to GSa/s) and amplitude resolution (e.g., 16-bit). They often have multiple output channels and support triggering and sequence playback. These waveforms are then up-converted to drive the qubits. By optimizing the time-domain waveform, AWGs can solve technical problems in applications like coherent control and quantum entanglement manipulation.</p></li>
                                     
-                                    <li><p style="text-align:justify" class="dark-background"><strong>Field-Programmable Gate Arrays (FPGAs):</strong> 
+                                    <li><p  class="dark-background"><strong>Field-Programmable Gate Arrays (FPGAs):</strong> 
                                         FPGAs are key to implementing real-time control logic. They are programmed to perform high-speed pulse sequence generation, parameter calculation, conditional branching, trigger management, data acquisition and processing, and synchronization with other instruments. Their reconfigurability, parallel processing capabilities, and low-latency characteristics make them highly suitable for the real-time demands of quantum control. FPGAs are used in quantum computing for interfacing with and controlling hardware, executing complex tasks like quantum error correction, qubit control, and data processing. They are particularly valuable in hybrid quantum-classical computing systems.
                                         </p></li>
                                     
-                                    <li><p style="text-align:justify" class="dark-background"><strong>Digital-to-Analog / Analog-to-Digital Converters (DACs/ADCs):</strong> </p></li>
+                                    <li><p  class="dark-background"><strong>Digital-to-Analog / Analog-to-Digital Converters (DACs/ADCs):</strong> </p></li>
                                         <ul>
-                                            <li><p style="text-align:justify" class="dark-background"><strong>Digital-to-Analog Converters (DACs):</strong> Convert the digital waveform data from an FPGA or AWG into an analog voltage signal. Their resolution and speed directly impact the precision of the control pulses.</p></li>
-                                            <li><p style="text-align:justify" class="dark-background"><strong>Analog-to-Digital Converters (ADCs):</strong> Convert the amplified analog readout signal from the qubits into digital data for analysis by an FPGA or a subsequent processing unit. Their sampling rate and resolution determine the readout speed and precision.</p></li>
+                                            <li><p  class="dark-background"><strong>Digital-to-Analog Converters (DACs):</strong> Convert the digital waveform data from an FPGA or AWG into an analog voltage signal. Their resolution and speed directly impact the precision of the control pulses.</p></li>
+                                            <li><p  class="dark-background"><strong>Analog-to-Digital Converters (ADCs):</strong> Convert the amplified analog readout signal from the qubits into digital data for analysis by an FPGA or a subsequent processing unit. Their sampling rate and resolution determine the readout speed and precision.</p></li>
                                         </ul>
                                     
-                                    <li><p style="text-align:justify" class="dark-background"><b>RF/Microwave Sources & Mixers:</b> Generate microwave carrier signals and mix them (IQ modulation) with the baseband pulses from the AWG to produce control pulses at the qubit's resonant frequency.</p></li>
+                                    <li><p  class="dark-background"><b>RF/Microwave Sources & Mixers:</b> Generate microwave carrier signals and mix them (IQ modulation) with the baseband pulses from the AWG to produce control pulses at the qubit's resonant frequency.</p></li>
                                         <ul>
-                                        <li><p style="text-align:justify" class="dark-background"><strong>Up/Down-conversion Modules:</strong> 
+                                        <li><p  class="dark-background"><strong>Up/Down-conversion Modules:</strong> 
                                         Since AWGs typically generate baseband or intermediate frequency (IF) signals, mixers and local oscillators (LOs) are needed to up-convert these signals to the gigahertz (GHz) microwave frequencies required for qubit operations. Similarly, during readout, the GHz signals from the qubits need to be down-converted to a frequency that the ADC can handle. The noise performance and linearity of these modules are very important.</p></li>
                                     </ul>
                                     
                                 </ul>
                                 
                                 
-                                <p style="text-align:justify" class="dark-background">The field of quantum control electronics is undergoing rapid evolution, marked by three key trends. 
+                                <p  class="dark-background">The field of quantum control electronics is undergoing rapid evolution, marked by three key trends. 
                                     First, control systems are shifting from early setups cobbled together from general-purpose instruments to <b>specially designed, highly integrated quantum control platforms</b>. In the initial stages of quantum computing research, scientists typically used commercially available general-purpose AWGs, DACs/ADCs, and signal sources to build their control systems. Traditional test and measurement companies like Keysight Technologies and Rohde & Schwarz continue to provide high-frequency AWGs, VNAs, and signal analyzers suitable for quantum research. However, as qubit counts and algorithmic complexity increased, managing and synchronizing a large number of discrete instruments became extremely difficult, creating a bottleneck for system scaling and performance enhancement. More importantly, quantum computing imposes special requirements on control systems, such as ultra-low latency real-time feedback, complex conditional logic execution, and picosecond-level cross-channel synchronization, which are difficult to achieve efficiently with standard off-the-shelf instruments. This demand has fueled the rise of specialized suppliers like Quantum Machines, Qblox, Zurich Instruments, and SpinQ. They have developed holistic solutions that integrate AWGs, digitizers, FPGA processing units, and dedicated control software and firmware (such as QM's QUA language or ZI's LabOne Q framework). These specialized platforms greatly simplify system setup and programming in the lab and enable the execution of more complex, real-time-dependent quantum protocols.</p>
                                 
-                                <p style="text-align:justify" class="dark-background">Second, directly integrating <b>real-time classical computing capabilities (typically based on FPGAs or GPUs) into the control loop</b> is becoming increasingly important, even indispensable. This is particularly crucial for advanced applications like quantum error correction and dynamic calibration. Quantum states are extremely fragile, and control parameters can drift over time. QEC schemes require the system to quickly measure the state of ancillary qubits (the syndrome), perform classical decoding calculations to determine what error occurred, and then rapidly apply the corresponding correction operation to the data qubits—all within the qubit's coherence time. Similarly, dynamic calibration requires real-time measurement of qubit parameters (like frequency drift) during an experiment and immediate adjustment of control pulse parameters to compensate. These tasks require a massive amount of classical computation and decision-making on nanosecond to microsecond timescales. Therefore, the core of modern control systems is a powerful FPGA or a specialized processor. There is even an emerging trend of tightly integrating these systems with high-performance computing units like GPUs (e.g., NVIDIA DGX Quantum) to bring classical computing power as close as possible to the quantum hardware, achieving low-latency real-time processing. This trend signifies that quantum computing is moving towards a deeply integrated, hardware-level hybrid quantum-classical architecture.</p>
-                                <p style="text-align:justify" class="dark-background">
+                                <p  class="dark-background">Second, directly integrating <b>real-time classical computing capabilities (typically based on FPGAs or GPUs) into the control loop</b> is becoming increasingly important, even indispensable. This is particularly crucial for advanced applications like quantum error correction and dynamic calibration. Quantum states are extremely fragile, and control parameters can drift over time. QEC schemes require the system to quickly measure the state of ancillary qubits (the syndrome), perform classical decoding calculations to determine what error occurred, and then rapidly apply the corresponding correction operation to the data qubits—all within the qubit's coherence time. Similarly, dynamic calibration requires real-time measurement of qubit parameters (like frequency drift) during an experiment and immediate adjustment of control pulse parameters to compensate. These tasks require a massive amount of classical computation and decision-making on nanosecond to microsecond timescales. Therefore, the core of modern control systems is a powerful FPGA or a specialized processor. There is even an emerging trend of tightly integrating these systems with high-performance computing units like GPUs (e.g., NVIDIA DGX Quantum) to bring classical computing power as close as possible to the quantum hardware, achieving low-latency real-time processing. This trend signifies that quantum computing is moving towards a deeply integrated, hardware-level hybrid quantum-classical architecture.</p>
+                                <p  class="dark-background">
                                     Another frontier is <b>Cryo-CMOS integration</b>, which involves moving parts of the control electronics into the cryogenic environment to address the wiring bottleneck in large-scale quantum computers, reducing thermal load and signal latency. However, this means the control system design must be even more tightly coupled with the QPU and cryogenic system designs.
                                 </p>
                                 
-                                <p style="text-align:justify" class="dark-background">Overall, the trend in modern quantum control systems is towards integration, modularity, and software-definition. Suppliers are increasingly offering complete solutions that include hardware and accompanying software (firmware, APIs, high-level programming frameworks) to simplify system integration and experimental programming. System architectures are increasingly emphasizing real-time processing capabilities and low-latency feedback to support more advanced quantum computing protocols and error correction needs.</p>
+                                <p  class="dark-background">Overall, the trend in modern quantum control systems is towards integration, modularity, and software-definition. Suppliers are increasingly offering complete solutions that include hardware and accompanying software (firmware, APIs, high-level programming frameworks) to simplify system integration and experimental programming. System architectures are increasingly emphasizing real-time processing capabilities and low-latency feedback to support more advanced quantum computing protocols and error correction needs.</p>
                                 <br><br>
                                 
                                 <h3>Vendors</h3>
@@ -259,7 +259,7 @@
                                               
                                             <td align="left"><div style="text-align: center;">
                                                 <a href="../Image/OPX_1000-1.webp">
-                                                <img src="../Image/OPX_1000-1.webp" alt="Quantum Machines OPX1000 Controller" style="width: 100%; height: auto;">
+                                                <img src="../Image/OPX_1000-1.webp" alt="Server hardware components" style="width: 100%; height: auto;">
                                                 </a>
                                             </div></td>
                                         </tr>
@@ -268,7 +268,7 @@
                                             <td align="left">
                                                 <div style="text-align: center;">
                                                     <a href="../Image/NVIDIA Grace Hopper.png">
-                                                        <img src="../Image/NVIDIA Grace Hopper.png" alt="NVIDIA Grace Hopper Superchip" style="width: 100%; height: auto;">
+                                                        <img src="../Image/NVIDIA Grace Hopper.png" alt="Nvidia quantum processor" style="width: 100%; height: auto;">
                                                     </a>
                                                 </div>
                                             </td>
@@ -278,7 +278,7 @@
                                             <td align="left">
                                                 <div style="text-align: center;">
                                                     <a href="../Image/Qblox.png">
-                                                        <img src="../Image/Qblox.png" alt="Qblox Cluster System" style="width: 100%; height: auto;">
+                                                        <img src="../Image/Qblox.png" alt="Industrial control system" style="width: 100%; height: auto;">
                                                     </a>
                                                 </div>
                                             </td>
@@ -288,7 +288,7 @@
                                             <td align="left">
                                                 <div style="text-align: center;">
                                                     <a href="../Image/Zurich.webp">
-                                                        <img src="../Image/Zurich.webp" alt="Zurich Instruments QCCS System" style="width: 100%; height: auto;">
+                                                        <img src="../Image/Zurich.webp" alt="Laboratory equipment" style="width: 100%; height: auto;">
                                                     </a>
                                                 </div>
                                             </td>
@@ -298,7 +298,7 @@
                                             <td align="left">
                                                 <div style="text-align: center;">
                                                     <a href="../Image/KEYSIGHT.png">
-                                                        <img src="../Image/KEYSIGHT.png" alt="Keysight Quantum Control System" style="width: 100%; height: auto;">
+                                                        <img src="../Image/KEYSIGHT.png" alt="Networking hardware" style="width: 100%; height: auto;">
                                                     </a>
                                                 </div>
                                             </td>
@@ -316,7 +316,7 @@
                                 </p>
                                 <div class="post-meta">
                                     <span class="post-author">
-                                        <a href="../About_en/Wang.html"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="">Peir-Ru Wang</a>
+                                        <a href="../About_en/Wang.html"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="Professional portrait">Peir-Ru Wang</a>
                                     </span>
                                     <span class="post-category">
                                         <a href="./main.html"><i class="fa fa-folder" aria-hidden="true"></i>Hardware Guide (2025)</a>

@@ -24,8 +24,8 @@
     <link href="../assets/css/responsive.css" rel="stylesheet">
 
     <title>Superconducting Qubits (Advanced)</title>
-    <meta name="description" content="深入解析2025年超導量子電腦的構建，涵蓋量子處理器(QPU)、稀釋製冷機、控制電子、低溫佈線等核心硬體。提供全球主要製造商、價格範圍、技術挑戰與未來趨勢的詳細指引。">
-    <meta name="keywords" content="超導量子電腦, 量子位元, Qubit, QPU, 稀釋製冷機, IBM, Google, QuantWare, Bluefors, 低溫系統, 控制電子, Josephson Junction, Transmon, Fluxonium, 量子計算硬體, SEO">
+    <meta name="description" content="Explore advanced superconducting qubits, their coupling mechanisms, hardware components, and future quantum computing trends in 2025.">
+    <meta name="keywords" content="Superconducting qubits advanced quantum computing 2025 LC circuit coupling quantum hardware Josephson junction fluxonium low temperature systems quantum control qubit physics semiconductor qubits quantum technology research">
     <link rel="canonical" href="https://www.insight-ihbar.com/SCQ_advanced_en/L.html">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -95,10 +95,10 @@
                                 
         <div style="text-align: center;">
             <a href="../Image/2_LC.png">
-                <img src="../Image/2_LC.png" alt="Coupled LC Circuits" style="width: 70%; height: auto;">
+                <img src="../Image/2_LC.png" alt="Traffic light signal" style="width: 70%; height: auto;">
             </a>
         </div>
-        <p style="text-align:justify">
+        <p >
             Quantum computation requires coupling between qubits, which can influence the parameters of the qubits. Let us first discuss two linear LC circuits coupled through a capacitor \( C_g \).
         </p>
         <p style="text-align:center">
@@ -106,7 +106,7 @@
             \mathcal{L}_{2LC} = \frac{L_A \dot{Q}_A^2}{2} + \frac{L_B \dot{Q}_B^2}{2} - \frac{Q_A^2}{2C_A} - \frac{Q_B^2}{2C_B} - \frac{Q_g^2}{2C_g}
             \]
         </p>
-        <p style="text-align:justify">
+        <p >
             The charge \( Q_g \) on the coupling capacitor \( C_g \) can be expressed in terms of \( Q_A \) and \( Q_B \) using the properties of capacitors:
         </p>
         <p style="text-align:center">
@@ -114,7 +114,7 @@
             Q_g = C_g (V_A - V_B) = C_g \left( \frac{Q_A}{C_A} - \frac{Q_B}{C_B} \right)
             \]
         </p>
-        <p style="text-align:justify">
+        <p >
             Substituting this into the Lagrangian and simplifying:
         </p>
         <p style="text-align:center">
@@ -122,7 +122,7 @@
             \mathcal{L}_{2LC} = \frac{L_A \dot{Q}_A^2}{2} + \frac{L_B \dot{Q}_B^2}{2} - \frac{(C_A + C_g) }{2C_A^2} Q_A^2 - \frac{(C_B + C_g) }{2C_B^2}Q_B^2 + \frac{C_g}{C_A C_B} Q_A Q_B
             \]
         </p>
-        <p style="text-align:justify">
+        <p >
             Here, define \( C_{\Sigma A} = \frac{C_A^2}{C_A + C_g} \) and \( C_{\Sigma B} = \frac{C_B^2}{C_B + C_g} \). The canonical momentum is defined as:
         </p>
         <p style="text-align:center">
@@ -130,7 +130,7 @@
             \Phi_A = -\frac{\partial \mathcal{L}_{2LC}}{\partial \dot{Q}_A} = -L_A \dot{Q}_A \quad \rightarrow \quad \dot{Q}_A = -\frac{\Phi_A}{L_A}
             \]
         </p>
-        <p style="text-align:justify">
+        <p >
             The Hamiltonian can then be expressed as:
         </p>
         <p style="text-align:center">
@@ -138,7 +138,7 @@
             \bar{\mathcal{H}}_{2LC} = \frac{\Phi_A^2}{2L_A} + \frac{Q_A^2}{2C_{\Sigma A}} + \frac{\Phi_B^2}{2L_B} + \frac{Q_B^2}{2C_{\Sigma B}} - \frac{C_g}{C_A C_B} Q_A Q_B
             \]
         </p>
-        <p style="text-align:justify">
+        <p >
             Moving to canonical quantization:
         </p>
         <p style="text-align:center">
@@ -149,7 +149,7 @@
             \end{aligned}
             \]
         </p>
-        <p style="text-align:justify">
+        <p >
             Defining the frequencies \( \omega_{\Sigma A} = \frac{1}{\sqrt{L_A C_{\Sigma A}}} \) and \( \omega_{\Sigma B} = \frac{1}{\sqrt{L_B C_{\Sigma B}}} \):
         </p>
         <p style="text-align:center">
@@ -157,7 +157,7 @@
             \bar{\mathcal{H}}_{2LC} = \hbar \omega_{\Sigma A} \left(a_{\Sigma A}^\dagger a_{\Sigma A} + \frac{1}{2}\right) + \hbar \omega_{\Sigma B} \left(a_{\Sigma B}^\dagger a_{\Sigma B} + \frac{1}{2}\right) - \hbar \Omega_g \, i(a_{\Sigma A}^\dagger - a_{\Sigma A}) \, i(a_{\Sigma B}^\dagger - a_{\Sigma B})
             \]
         </p>
-        <p style="text-align:justify">
+        <p >
             The coupling strength \( \Omega_g \) is defined as:
         </p>
         <p style="text-align:center">

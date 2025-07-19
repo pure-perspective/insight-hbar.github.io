@@ -24,8 +24,8 @@
     <link href="../assets/css/responsive.css" rel="stylesheet">
 
     <title>Superconducting Qubits (Advanced)</title>
-    <meta name="description" content="深入解析2025年超導量子電腦的構建，涵蓋量子處理器(QPU)、稀釋製冷機、控制電子、低溫佈線等核心硬體。提供全球主要製造商、價格範圍、技術挑戰與未來趨勢的詳細指引。">
-    <meta name="keywords" content="超導量子電腦, 量子位元, Qubit, QPU, 稀釋製冷機, IBM, Google, QuantWare, Bluefors, 低溫系統, 控制電子, Josephson Junction, Transmon, Fluxonium, 量子計算硬體, SEO">
+    <meta name="description" content="Exploring advanced superconducting qubits, their properties, Hamiltonian derivation, energy corrections, and trends in quantum computing.">
+    <meta name="keywords" content="Superconducting qubits advanced properties Hamiltonian derivation energy corrections quantum computing Josephson junction fluxonium transmon nonlinear energy levels perturbation theory low temperature quantum hardware optimized qubit design">
     <link rel="canonical" href="https://www.insight-ihbar.com/SCQ_advanced_en/H.html">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -85,7 +85,7 @@
                 <div class="row">
                     <div class="col-md-9">
                         <article class="blog-post">
-                            <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="">-->
+                            <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="Empty desk space">-->
                             <div class="post-content">
                                 <div style="text-align: center;">
                                     <h2>Properties of the Transmon</h2>
@@ -94,24 +94,24 @@
 
                             <div style="text-align: center;">
                               <a href="../Image/Transmon.png">
-                                <img src="../Image/Transmon.png" alt="Transmon Diagram" style="width: 98%; height: auto;">
+                                <img src="../Image/Transmon.png" alt="Types of transmon circuits" style="width: 98%; height: auto;">
                               </a>
                             </div>
-                            <p style="text-align:justify" class="dark-background">
+                            <p  class="dark-background">
                                 <span style="font-size: 0.7em; line-height: 0.8;">
                                     Ref: DOI:10.48550/arXiv.2203.04164
                                 </span><br><br>
                               </p>
                             
                         
-                            <p style="text-align:justify">
+                            <p >
                               As mentioned previously, Josephson junctions exhibit inductive properties, and the Transmon is a variant of an LC circuit where the inductance is replaced by a Josephson junction. This section directly discusses the Tunable Transmon, where a SQUID is used as the inductance. In practice, due to material inhomogeneity, different Transmons may have different properties. However, by using a Tunable Transmon, the qubit properties can be made consistent by fine-tuning the magnetic flux \(\Phi_B\). Additionally, as we discussed earlier when quantizing the LC circuit, \([ \Phi, Q ] = i\hbar\) are conjugate variables. Using the derivation for the SQUID, we can naturally relate the magnetic flux \(\Phi\) to the phase difference \(\Delta\theta\), i.e.:
                               \[
                               \Phi \equiv \frac{\Delta\theta_1}{\pi} \Phi_0 - \Phi_B.
                               \]
                             </p>
                         
-                            <p style="text-align:justify">
+                            <p >
                               Now, we write down the Hamiltonian:
                               \[
                               \mathcal{H} = \frac{Q^2}{2C} + \frac{\Phi_\#^2}{2L} = \frac{Q^2}{2C} + \frac{(I_0 \pi)}{2\Phi_0} \cos\left(\frac{\Phi_B}{\Phi_0} \pi\right) \Phi^2 - \frac{I_0}{24} \left(\frac{\pi}{\Phi_0}\right)^3 \cos\left(\frac{\Phi_B}{\Phi_0} \pi\right) \Phi^4 + \cdots
@@ -125,7 +125,7 @@
                               \]
                             </p>
                         
-                            <p style="text-align:justify">
+                            <p >
                               Next, we discuss how the nonlinearity affects the energy levels. From earlier, we selected new variables \( a \), \( a^\dagger \):
                               \[
                               a = \sqrt{\frac{1}{2\hbar} \sqrt{ \frac{L}{C}}} \left(\sqrt{\frac{C}{L}} \Phi + iQ\right), \quad
@@ -138,7 +138,7 @@
                               \]
                             </p>
                         
-                            <p style="text-align:justify">
+                            <p >
                               Expanding the Hamiltonian:
                               \[
                               \mathcal{H} = \frac{\hbar}{\sqrt{LC}} \left[a^\dagger a + \frac{1}{2}\right] - \frac{1}{24L} \left(\frac{\pi}{\Phi_0}\right)^2 \left[i \sqrt{\frac{\hbar}{2\sqrt{L/C}}} (a^\dagger + a)\right]^4.
@@ -150,7 +150,7 @@
                               This expression contains both linear and nonlinear terms, where the linear terms describe the energy levels of a quantum harmonic oscillator, and the nonlinear terms arise from the Josephson junction's correction to the energy levels.
                             </p>
                         
-                            <p style="text-align:justify">
+                            <p >
                               Using perturbation theory, when \( \mathcal{H} = H_0 + \Delta H \), and \( |E_0^m\rangle \to |E^m\rangle \), \( E_0^m \to E^m = E_0^m + \delta E^m \), we know the energy correction \( \delta E^m \) to the energy level \( E_0^m \) is:
                             </p>
                         
@@ -160,7 +160,7 @@
                               \]
                             </p>
                         
-                            <p style="text-align:justify">
+                            <p >
                               Expanding this:
                             </p>
                         
@@ -170,7 +170,7 @@
                               \]
                             </p>
                         
-                            <p style="text-align:justify">
+                            <p >
                               Expanding further:
                             </p>
                         
@@ -181,7 +181,7 @@
                               \]
                             </p>
                         
-                            <p style="text-align:justify">
+                            <p >
                               Taking the expectation value, we only keep terms where \( a \) and \( a^\dagger \) appear with equal powers, resulting in:
                             </p>
                         
@@ -191,7 +191,7 @@
                               \]
                             </p>
                         
-                            <p style="text-align:justify">
+                            <p >
                               Simplifying further:
                             </p>
                         
@@ -201,7 +201,7 @@
                               \]
                             </p>
                         
-                            <p style="text-align:justify">
+                            <p >
                               Further simplifying:
                             </p>
                         
@@ -211,7 +211,7 @@
                               \]
                             </p>
                         
-                            <p style="text-align:justify">
+                            <p >
                               After further simplification:
                             </p>
                         
@@ -221,7 +221,7 @@
                               \]
                             </p>
                         
-                            <p style="text-align:justify">
+                            <p >
                               This simplifies to:
                             </p>
                         
@@ -231,7 +231,7 @@
                               \]
                             </p>
                         
-                            <p style="text-align:justify">
+                            <p >
                               Finally, the energy level correction is:
                             </p>
                         
@@ -241,7 +241,7 @@
                               \]
                             </p>
                         
-                            <p style="text-align:justify">
+                            <p >
                               The energy difference between levels \(m\) and \(m-1\) is:
                             </p>
                         
@@ -257,7 +257,7 @@
                               \]
                             </p>
                         
-                            <p style="text-align:justify">
+                            <p >
                               Finally, we get:
                             </p>
                         
@@ -267,7 +267,7 @@
                               \]
                             </p>
                         
-                            <p style="text-align:justify">
+                            <p >
                               Calculating \( \Delta E^{21} - \Delta E^{10} \):
                             </p>
                         
@@ -283,17 +283,17 @@
                               \]
                             </p>
                         
-                            <p style="text-align:justify">
+                            <p >
                               \( E_C \) represents the nonlinear effect.
                             </p>
                         
                             <div style="text-align: center;">
                               <a href="../Image/Transmon state.png">
-                                <img src="../Image/Transmon state.png" alt="Transmon State Diagram" style="width: 50%; height: auto;">
+                                <img src="../Image/Transmon state.png" alt="Quantum energy levels" style="width: 50%; height: auto;">
                               </a>
                             </div>
                             
-                            <p style="text-align:justify" class="dark-background">
+                            <p  class="dark-background">
                               <span style="font-size: 0.7em; line-height: 0.8;">
                                 Ref: DOI:10.1103/RevModPhys.93.025005
                               </span><br><br>
@@ -311,7 +311,7 @@
                                 </p>
                                 <div class="post-meta">
                                     <span class="post-author">
-                                        <a href="../About_en/Wang.html"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="">Peir-Ru Wang</a>
+                                        <a href="../About_en/Wang.html"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="Professional headshot">Peir-Ru Wang</a>
                                     </span>
                                     <span class="post-category">
                                         <a href="./main.html"><i class="fa fa-folder" aria-hidden="true"></i>Superconducting Qubits (Advanced)</a>

@@ -24,8 +24,8 @@
     <link href="../assets/css/responsive.css" rel="stylesheet">
 
     <title>超導量子位元(進階版)</title>
-    <meta name="description" content="深入解析2025年超導量子電腦的構建，涵蓋量子處理器(QPU)、稀釋製冷機、控制電子、低溫佈線等核心硬體。提供全球主要製造商、價格範圍、技術挑戰與未來趨勢的詳細指引。">
-    <meta name="keywords" content="超導量子電腦, 量子位元, Qubit, QPU, 稀釋製冷機, IBM, Google, QuantWare, Bluefors, 低溫系統, 控制電子, Josephson Junction, Transmon, Fluxonium, 量子計算硬體, SEO">
+    <meta name="description" content="超導量子位元(進階版)介紹2025年量子電腦核心硬體，包括QPU、稀釋製冷機、控制電子等，解析相關技術挑戰與未來趨勢。">
+    <meta name="keywords" content="超導量子電腦, 量子位元, Qubit, Transmon, 超導量子硬體, 量子計算, 量子科技, 低溫系統, Josephson接面, 布洛赫球">
     <link rel="canonical" href="https://www.insight-ihbar.com/SCQ_advanced/I.html">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -92,31 +92,31 @@
                                     <h3></h3>
                                 </div>
                                 
-                                      <p style="text-align:justify">
+                                      <p >
                                         現代電腦運作的原理利用位元進行資訊的儲存、邏輯閘進行運算。資訊會以二進制的編碼表示成0與1的代碼，再將一系列位元依指定的方式變成0或1的狀態，來儲存資訊。例如說，想要儲存19這個數字資訊，換算成二進制表示為10011，這時候可以如果記憶體為八個位元做存儲：
                                       </p>
                                   
-                                  <p style="text-align:justify">
+                                  <p >
                                         \[ \ket{bit_1} \ket{bit_2} \ket{bit_3} \ket{bit_4} \ket{bit_5} \ket{bit_6} \ket{bit_7} \ket{bit_8} \]
                                         狀態改變成：
                                         \[ \ket{0} \ket{0} \ket{0} \ket{1} \ket{0} \ket{0} \ket{1} \ket{1} \]
                                     </p>
                                   
-                                      <p style="text-align:justify">
+                                      <p >
                                         在量子簡諧振子中，不同能階 \( n \)，可以用 \( a^\dagger \) 和 \( a \) 來聯繫：
                                       </p>
                                   
-                                      <p style="text-align:justify">
+                                      <p >
                                         \[
                                         \ket{n+1} = \frac{a^\dagger}{ \sqrt{n+1}} \ket{n}, \quad \ket{n-1} = \frac{a}{ \sqrt{n} }\ket{n}, \quad \ket{n} = \frac{(a^\dagger)^n}{\sqrt{n!}} \ket{0}
                                         \]
                                       </p>
                                   
-                                      <p style="text-align:justify">
+                                      <p >
                                         在此情況下：
                                       </p>
                                   
-                                      <p style="text-align:justify">
+                                      <p >
                                         \[
                                         a^\dagger = 
                                   \left(\begin{matrix}
@@ -128,7 +128,7 @@
                                         \]
                                   </p>
                                   
-                                      <p style="text-align:justify">
+                                      <p >
                                   \[
                                         a =
                                         \left(\begin{matrix}
@@ -140,11 +140,11 @@
                                         \]
                                       </p>
                                   
-                                      <p style="text-align:justify">
+                                      <p >
                                         這是一個無窮維的量子系統。一個超導量子位元是取 Transmon 的基態 \( \ket{0} \)（或 \( \ket{g} \)）與第一激發態 \( \ket{1} \)（或 \( \ket{e} \)）作為運算單元。在量子計算的二維框架下：
                                       </p>
                                   
-                                      <p style="text-align:justify">
+                                      <p >
                                         \[
                                         a^\dagger \rightarrow \sigma^+ = 
                                         \begin{bmatrix}
@@ -159,11 +159,11 @@
                                         \]
                                       </p>
                                   
-                                      <p style="text-align:justify">
+                                      <p >
                                         此時可以定義：
                                       </p>
                                   
-                                      <p style="text-align:justify">
+                                      <p >
                                         \[
                                         \sigma_x = \sigma^+ + \sigma^- = 
                                         \begin{bmatrix}
@@ -183,11 +183,11 @@
                                         \]
                                       </p>
                                   
-                                      <p style="text-align:justify">
+                                      <p >
                                         即是大名鼎鼎的包立矩陣。這邊有一些代數結構：
                                       </p>
                                   
-                                      <p style="text-align:justify">
+                                      <p >
                                         \[
                                         \{\sigma^-, \sigma^+\} = \sigma^-\sigma^+ + \sigma^+\sigma^- = \mathbb{I} = 
                                         \begin{bmatrix}
@@ -202,17 +202,17 @@
                                         \]
                                       </p>
                                   
-                                      <p style="text-align:justify">
+                                      <p >
                                         對於 \( i, j, k = x, y, z \)：
                                       </p>
                                   
-                                      <p style="text-align:justify">
+                                      <p >
                                         \[
                                         \sigma_i \sigma_j = \delta_{ij}\mathbb{I} + i\epsilon_{ijk}\sigma_k
                                         \]
                                       </p>
                                   
-                                      <p style="text-align:justify">
+                                      <p >
                                         包立矩陣與三維空間的旋轉高度相關。但讀者也許想問，為何二維的位元系統會出現三維旋轉呢？下一節將討論所謂的量子位元與布洛赫球表示。
                                       </p>
 

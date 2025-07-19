@@ -24,8 +24,8 @@
     <link href="../assets/css/responsive.css" rel="stylesheet">
 
     <title>超導量子位元(科普版)</title>
-    <meta name="description" content="深入解析2025年超導量子電腦的構建，涵蓋量子處理器(QPU)、稀釋製冷機、控制電子、低溫佈線等核心硬體。提供全球主要製造商、價格範圍、技術挑戰與未來趨勢的詳細指引。">
-    <meta name="keywords" content="超導量子電腦, 量子位元, Qubit, QPU, 稀釋製冷機, IBM, Google, QuantWare, Bluefors, 低溫系統, 控制電子, Josephson Junction, Transmon, Fluxonium, 量子計算硬體, SEO">
+    <meta name="description" content="超導量子位元科普介紹，深入解析約瑟夫森節的原理與量子硬體，了解2025年超導量子電腦的最新技術與應用趨勢。">
+    <meta name="keywords" content="超導量子位元, 量子電腦, 約瑟夫森節, 量子比特, 超導量子硬體, 低溫系統, 量子計算, 超導電路, 量子科技, 量子物理">
     <link rel="canonical" href="https://www.insight-ihbar.com/SCQ_elementary/B.html">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -100,7 +100,7 @@
                                     <h3>解析約瑟夫森節如何變成量子位元</h3>
                                 </div>
                                 
-                                <p style="text-align:justify">
+                                <p >
                                     在古典計算中，一系列古典位元以0或1兩個狀態來紀錄資訊，同樣的，量子位元也是利用不同的量子狀態來記錄資訊和計算。最簡單的量子能階概念即為量子簡諧震盪(Quantum Simple Harmonic Oscillator)。想要用電子電路來實踐簡諧震盪，最簡單的方式就是一個\(LC\)電路，由一個電感\(L\)與一個電容\(C\)組成，可以見下圖（a）。古典的簡諧震盪是連續的，但在量子世界裡能階簡諧震盪是不連續的，可以利用不同能階來記錄訊息，我們習慣以\( \ket{0} \)、\(\ket{1}\)、\(\ket{2}\)...或\( \ket{g} \)、\(\ket{e}\)、\(\ket{f}\)...代表不同能量的能階，可以參考下圖（b）。可以看到圖（b）每個能階的差距是相同的，都是\(\hbar \omega_r\)。然而當我們要操作量子位元則的時侯，會希望系統被限制在\( \ket{0} \)和\(\ket{1}\)之間作轉換就好，此時就需要非線性元件來區分\( \ket{0} \)和\(\ket{1}\)與其他不想要的能階。約瑟夫森節就是良好的非線性電感元件，如圖（c）。圖（d）可以看到能階差距發生變化，就可以利用能階不圖的特性，來操作量子位元。故最基本的超導量子位元即為一個超導電容與一個約瑟夫森節組成！
                                     <br>
                                     <br>
@@ -109,10 +109,10 @@
                                 
                                 <div style="text-align: center;">
                                     <a href="../Image/SCQubit state.jpg">
-                                    <img src="../Image/SCQubit state.jpg" alt="取代文字" style="width: 100%; height: auto;">
+                                    <img src="../Image/SCQubit state.jpg" alt="量子比特能級能量圖與超導電路圖示" style="width: 100%; height: auto;">
                                     </a>
                                 </div>
-                                <p style="text-align:justify" class="dark-background">
+                                <p  class="dark-background">
                                     <span style="font-size: 0.7em; line-height: 0.8;">Ref: 10.1063/1.5089550 </span>
                                 <br>
                                 <br>
@@ -120,10 +120,10 @@
                                 
                                 <div style="text-align: center;">
                                     <a href="../Image/Transmon state.png">
-                                    <img src="../Image/Transmon state.png" alt="取代文字" style="width: 70%; height: auto;">
+                                    <img src="../Image/Transmon state.png" alt="量子能階示意圖" style="width: 70%; height: auto;">
                                     </a>
                                 </div>
-                                <p style="text-align:justify" class="dark-background">
+                                <p  class="dark-background">
                                 ▲此圖也可以很明顯展示超導量子位元能階變化，第二激發態\(\ket{f}\)(或\(\ket{2}\))能量較低。<br>
                                 <span style="font-size: 0.7em; line-height: 0.8;">Ref: 10.1103/RevModPhys.93.025005</span>
                                 

@@ -24,8 +24,8 @@
     <link href="../assets/css/responsive.css" rel="stylesheet">
 
     <title>超導量子位元(進階版)</title>
-    <meta name="description" content="深入解析2025年超導量子電腦的構建，涵蓋量子處理器(QPU)、稀釋製冷機、控制電子、低溫佈線等核心硬體。提供全球主要製造商、價格範圍、技術挑戰與未來趨勢的詳細指引。">
-    <meta name="keywords" content="超導量子電腦, 量子位元, Qubit, QPU, 稀釋製冷機, IBM, Google, QuantWare, Bluefors, 低溫系統, 控制電子, Josephson Junction, Transmon, Fluxonium, 量子計算硬體, SEO">
+    <meta name="description" content="探索2025年超導量子電腦的核心硬體，包括量子位元、控制系統、低溫冷卻技術與關鍵製造商，深入了解量子處理器、電路設計與未來發展趨勢。">
+    <meta name="keywords" content="超導量子電腦, 量子位元, Qubit, 超導量子電路, 量子硬體, 量子糾錯, 低溫冷卻技術, 量子控制系統, 量子計算技術, 量子晶片">
     <link rel="canonical" href="https://www.insight-ihbar.com/SCQ_advanced/A.html">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -92,7 +92,7 @@
                                     <h3>從控制面看超導量子電腦</h3>
                                 </div>
 
-                                <p style="text-align:justify">
+                                <p >
                                 量子計算在特定問題上蘊含遠超古典電腦的運算潛力，其硬體卻也面臨控制困難、操作時間過短的問題。量子計算的硬體以量子位元作為的核心元件，還需搭配操控量子位元狀態的驅動元件、量子位元狀態的讀取元件。此外，因為量子位元容易受到外界干擾的特性，量子位元的校正/微調元件、量子糾錯元件等。簡而言之可以包含以下：
                                 </p>
                             
@@ -104,11 +104,11 @@
                                 <li>糾錯</li>
                                 </ul>
                             
-                                <p style="text-align:justify">
+                                <p >
                                 事實上，在現今的記憶體中，其實也包含以上不同的硬體分工，只是在量子計算裡面，以上不同元件需要整體考慮。更具體一點的講法，因為不同元件會互相交互作用，當我們利用量子物理學，寫下其整個量子電路的 Hamiltonian（或薛丁格方程式），其交互作用像會去"修正"量子位元本身的特性，一方面我們利用"修正"的特性來操作和讀取量子位元的資訊，然而另一方面卻也導致量子位元受到影響，偏離理想狀態、導致錯誤產生。
                                 </p>
                             
-                                <p style="text-align:justify">
+                                <p >
                                 本文專注在超導量子電路，量子電路中包含的元件分類如下（兩種切入點）：
                                 </p>
                             
@@ -143,21 +143,21 @@
                             
                                 <div style="text-align: center;">
                                 <a href="../Image/SIngle Qubit circuit.png">
-                                    <img src="../Image/SIngle Qubit circuit.png" alt="取代文字" style="width: 100%; height: auto;">
+                                    <img src="../Image/SIngle Qubit circuit.png" alt="量子比特光腔系統示意圖" style="width: 100%; height: auto;">
                                 </a>
                                 </div>
                                 
-                                    <p style="text-align:justify">
+                                    <p >
                                     ▲首先可以先欣賞一下單量子位元的 layout。（a）顯微鏡底下的電路圖，（b）對應的電路圖，此圖中有一個 Qubit（紅色 Transmon）、一個 readout resonator（天藍色），兩條 feedline 個別驅動（Drive）量子位元與 readout resonator。各元件間利用電容作耦合。另外有一條 Flux line 連到 Qubit 旁，會產生磁場來改變 Transmon 的操作頻率。（c）readout resonator 因為與量子位元耦合，會受到量子位元在 \(|0\rangle\) 或 \(|1\rangle\) 狀態的差異產生頻譜的位移，利用 readout resonator 頻譜的位移的特性來得知量子位元的狀態。
                                     <br><span style="font-size: 0.7em; line-height: 0.8;">Ref:arxiv.org/pdf/2106.11352</span><br><br>
                                     </p>
                                 
                                 <div style="text-align: center;">
                                 <a href="../Image/2 qubit 1 resonator.png">
-                                    <img src="../Image/2 qubit 1 resonator.png" alt="取代文字" style="width: 100%; height: auto;">
+                                    <img src="../Image/2 qubit 1 resonator.png" alt="超導量子比特的共振器連接示意圖" style="width: 100%; height: auto;">
                                 </a>
                                 </div>
-                                    <p style="text-align:justify">
+                                    <p >
                                     ▲這張圖是兩個量子位元（Transmon）藉由一個 resonator 耦合在一起（間接耦合），可以注意的是下方一行文字寫這個 resonator 兼具耦合兩個量子位元的功能。
                                     <br><span style="font-size: 0.7em; line-height: 0.8;">Ref:doi.org/10.1038/nature08121</span><br><br>
                                 </p>
@@ -165,20 +165,20 @@
                                 
                                 <div style="text-align: center;">
                                 <a href="../Image/4 qubit.png">
-                                    <img src="../Image/4 qubit.png" alt="取代文字" style="width: 100%; height: auto;">
+                                    <img src="../Image/4 qubit.png" alt="第二代四量子比特處理器電路圖" style="width: 100%; height: auto;">
                                 </a>
                                 </div>
-                                <p style="text-align:justify">
+                                <p >
                                     ▲這張圖是四個 Qubit，中間由 bus resonator 串連耦合四個 Qubit。其中四個接頭直通 Qubit，是 flux-line，另外左上跟右下各有一條 readout feedline I/O，各自連結到兩個 readout resonator 並與 Qubit 耦合（等於說一條 readout feedline 會同時讀取兩個 Qubit）。
                                 </p>
                                 
                                 
                                 <div style="text-align: center;">
                                 <a href="../Image/5Q.png">
-                                    <img src="../Image/5Q.png" alt="取代文字" style="width: 80%; height: auto;">
+                                    <img src="../Image/5Q.png" alt="量子比特晶片圖示" style="width: 80%; height: auto;">
                                 </a>
                                 </div>
-                                <p style="text-align:justify">
+                                <p >
                                     
                                 
                                     ▲這張是另一種 5 qubit layout 的示意圖。其中 Z 是 flux line，XY 是 Drive line，5 個 Qubit 是直接電容耦合。此外，每個 qubit 都有自己的 readout resonator，在上方併入（此圖顯示是電感耦合）到 readout line。
@@ -188,13 +188,13 @@
                                 <p style="font-weight: bold; font-size: 1.2em;">邁向多 Qubit 模組</p>
                                 <div style="text-align: center;">
                                 <a href="./17 surface.png">
-                                    <img src="../Image/17 surface.png" alt="取代文字" style="width: 43%; height: auto;">
+                                    <img src="../Image/17 surface.png" alt="量子電路圖示。" style="width: 43%; height: auto;">
                                 </a>
                                 <a href="./Starmon.png">
-                                    <img src="../Image/Starmon.png" alt="取代文字" style="width: 55%; height: auto;">
+                                    <img src="../Image/Starmon.png" alt="微波驅動線與耦合匯流排結構圖" style="width: 55%; height: auto;">
                                 </a>
                                 </div>
-                                <p style="text-align:justify">
+                                <p >
                                     ▲要達到量子計算，需要同時操作許多 Qubit，同時因為糾錯的關係，也需要額外的 Qubit 來進行糾錯。下圖是一個 17 位元的實驗性量子晶片，排列方式是一種稱為 surface code（表面碼）的量子糾錯型態，圓形為 Qubit，粉色及紅色是 Data Qubit，天藍色及綠色是 Check Qubit。每個 Qubit 都連接 7 條線（暱稱為 Starmon），其中 4 條為 Qubit 間耦合、1 條 Flux line、1 條 Drive line、1 條 Readout resonator。Readout resonator 分別併入到三條 feedline。
                                     <br><span style="font-size: 0.7em; line-height: 0.8;">https://arxiv.org/pdf/1612.08208</span><br><br>
                                 </p>

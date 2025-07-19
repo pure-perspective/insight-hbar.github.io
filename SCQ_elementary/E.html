@@ -24,8 +24,8 @@
     <link href="../assets/css/responsive.css" rel="stylesheet">
 
     <title>超導量子位元(科普版)</title>
-    <meta name="description" content="深入解析2025年超導量子電腦的構建，涵蓋量子處理器(QPU)、稀釋製冷機、控制電子、低溫佈線等核心硬體。提供全球主要製造商、價格範圍、技術挑戰與未來趨勢的詳細指引。">
-    <meta name="keywords" content="超導量子電腦, 量子位元, Qubit, QPU, 稀釋製冷機, IBM, Google, QuantWare, Bluefors, 低溫系統, 控制電子, Josephson Junction, Transmon, Fluxonium, 量子計算硬體, SEO">
+    <meta name="description" content="超導量子位元科普介紹，涵蓋量子電腦核心硬體、Transmon、Fluxonium及Blochnium的原理與發展趨勢，深入解析超導量子技術。">
+    <meta name="keywords" content="超導量子位元, 量子電腦, Qubit, Transmon, Fluxonium, Blochnium, 低溫系統, 約瑟夫森節, 量子硬體, 量子控制">
     <link rel="canonical" href="https://www.insight-ihbar.com/SCQ_elementary/E.html">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -102,38 +102,38 @@
                                 
 
                         
-                                <p style="text-align:justify">
+                                <p >
                                 早期的超導Qubit進一步的演化，可以參看下圖：
                                 </p>
                                 <div style="text-align: center;">
                                 <a href="../Image/LCJ Qubit.png">
-                                    <img src="../Image/LCJ Qubit.png" alt="取代文字" style="width: 100%; height: auto;">
+                                    <img src="../Image/LCJ Qubit.png" alt="閉路的心臟象徵永恆生命力" style="width: 100%; height: auto;">
                                 </a>
                                 </div>
-                                    <p style="text-align:justify">
+                                    <p >
                                 早期的超導Qubit容易受到雜訊的影響，需要仰賴外部控制電路來形成能階，外部控制電路常常是大型控制儀器（這裡指的「大型」是相對於微米等級的JJ，讀者可以想像就是日常電腦等級的大小，特徵尺度為公分），如此大型的積體電路就會有許多古典雜訊，會導致量子位元退相干。為了提升保真度(Fidelity)，將一個電容\(C\)並聯，構成所謂的Transmon。此時一個Transmon即構成一個\(LC\)電路，有自身量子化的能階。
                                 </p>
 
-                                    <p style="text-align:justify">
+                                    <p >
                                 因為Transmon有自身的量子頻率，若要控制Transmon進行量子運算，需要精準的頻率控制與其共振來改變其量子態。當進行大型量子電路發展時，一條控制線或讀取線常會串連多個Qubit，此時如果彼此頻率太相近，會導致訊號影響到頻譜上鄰近的Qubit，是crosstalk的成因之一。調控頻率的方式需從改變電容職值\(C\)或是約瑟夫森節的電感值\(L_J\)做調整，必須從製程上進行參數調控，但要在製程中同時精準控制不同Qubit間的頻率隔離，非常的複雜。加上製成可能造成的誤差，一旦離開製程階段便無法調整，容易造成良率下降。此外，約瑟夫森節實際上會隨時間（每個月甚至每天）偏離原本預設的頻率，這是由於材料異質接面常見的物體，會因為原子移動、缺陷移動等擴散，慢慢改變接面的形狀，一旦頻率偏離過大，整個電路就會失效。故尋找可以「後天調頻」的Transmon顯現其重要性。科學家採用兩個JJ構成的SQUID來構成Tunable Transmon，透過兩個JJ之間的磁通量，可以調控Transmon的頻率。如此一來便可以在量子計算時，同步校正每個Qubit，並達到頻率隔離。構成Tunable Transmon的雙約瑟夫森節可以是相同的（對稱Symmetric）或是不同的（非對稱Asymmetric）。對稱的設計有較大的頻率可調範圍，但相對的就極異受調控磁通量的雜訊；反之對稱的設計雖然頻率可調範圍較小，但頻率的穩定度就較高。
                                 </p>
 
 
-                                    <p style="text-align:justify">
+                                    <p >
                                 一個Transmon雖然脫離對外部控制儀器的依賴，但因為其加入一個電容\(C\)，電容是利用正負電荷分離來進行儲能，可以想像這是一個微米等級的偶極，極易受到電磁訊號的干擾導致退相干。在電路設計上，常利用電感當作濾波、抗干擾的元件，科學家便從其中一側的約瑟夫森節著手，改成串連許多約瑟夫森節構成一個電感\(L\)，稱為Fluxonium。目前Fluxonium可以達到微秒等級的退相干時間。
                                 </p>
 
-                                    <p style="text-align:justify">
+                                    <p >
                                 更進一步提升Qubit的穩定度，目前方向是不斷提升電感\(L\)、並減少電容\(C\)，有一系列的發展稱為Blochnium。可以參考下面兩張圖，不同的超導Qubit實際上就是調整\(L\)、\(C\)和\(J\)。
                                 <br><br></p>
 
 
                                 <div style="text-align: center;">
                                 <a href="../Image/SCQ ratio.png">
-                                    <img src="../Image/SCQ ratio.png" alt="取代文字" style="width: 100%; height: auto;">
+                                    <img src="../Image/SCQ ratio.png" alt="量子光電效應圖示與能態分佈圖" style="width: 100%; height: auto;">
                                 </a>
                                 </div>
-                                <p style="text-align:justify" class="dark-background">
+                                <p  class="dark-background">
                                 ▲此圖右半部說明Transmon和Blochnium概念的對偶，Transmon是「非線性電感」搭配電容，Blochnium可以看成是「非線性電容」搭配電感。<br>
                                     <span style="font-size: 0.7em; line-height: 0.8;">Ref: 10.1038/s41586-020-2687-9<br>
                                     Ref: ar5iv.labs.arxiv.org/html/1907.02937
@@ -144,12 +144,12 @@
 
                                 <div style="text-align: center;">
                                 <a href="../Image/SCQ.png">
-                                    <img src="../Image/SCQ.png" alt="取代文字" style="width: 70%; height: auto;">
+                                    <img src="../Image/SCQ.png" alt="不同量子比特能量比例圖示" style="width: 70%; height: auto;">
                                 </a>
                                 </div>
                                 
 
-                                <p style="text-align:justify" class="dark-background">
+                                <p  class="dark-background">
                                     <span style="font-size: 0.7em; line-height: 0.8;">Ref: 10.1038/s41467-022-34614-w</span>
                                     <br><br>
                                 </p>

@@ -24,8 +24,8 @@
     <link href="../assets/css/responsive.css" rel="stylesheet">
 
     <title>超導量子電腦硬體指南 (2025) | 量子位元、組件與廠商全解析</title>
-    <meta name="description" content="深入解析2025年超導量子電腦的構建，涵蓋量子處理器(QPU)、稀釋製冷機、控制電子、低溫佈線等核心硬體。提供全球主要製造商、價格範圍、技術挑戰與未來趨勢的詳細指引。">
-    <meta name="keywords" content="超導量子電腦, 量子位元, Qubit, QPU, 稀釋製冷機, IBM, Google, QuantWare, Bluefors, 低溫系統, 控制電子, Josephson Junction, Transmon, Fluxonium, 量子計算硬體, SEO">
+    <meta name="description" content="超導量子電腦硬體指南（2025）全面解析量子位元、組件與製造商，包括稀釋制冷機、微波元件與關鍵科技挑戰，助你掌握最新量子硬體發展趨勢。">
+    <meta name="keywords" content="超導量子電腦, 量子硬體, 量子位元, 微波元件, 稀釋制冷機, 量子放大器, Josephson Junction, TWPA, 量子電路, 低溫系統">
     <link rel="canonical" href="https://www.insight-ihbar.com/QC_hardware/C.html">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -93,12 +93,12 @@
                                 </div>
                                 
                                       
-                                      <p style="text-align:justify" class="dark-background">
+                                      <p  class="dark-background">
                                         前一節針對量子電腦稀釋制冷機內部的部件做一個簡單的綜覽，接下來我們針對微波元件，詳細解說各部件的功能。
                                       </p>
                                   
                                       <h3>關鍵組件與技術</h3>
-                                      <p style="text-align:justify" class="dark-background">
+                                      <p  class="dark-background">
                                         微波元件作為橋接外部儀器控制訊號送往QPU，同時也要負擔將運算後的訊號經過放大橫送回到儀器中，會包含以下元件：
                                       </p>
                                       <ul>
@@ -117,16 +117,16 @@
                                         <li><b>混頻器、濾波器和ADC：</b> 用於將放大的微波訊號下變頻到中頻，濾除雜訊，然後由ADC轉換為數位訊號進行處理。</li>
                                       </ul>
 
-                                      <p style="text-align:justify" class="dark-background">
+                                      <p  class="dark-background">
                                        <br>接下來我們將搭配電路圖，詳細解說各部件的功能。<br><br>
                                       </p>
 
                                       <div style="text-align: center;">
                                         <a href="../Image/20250531-01.png">
-                                        <img src="../Image/20250531-01.png" alt="取代文字" style="width: 100%; height: auto;">
+                                        <img src="../Image/20250531-01.png" alt="高精密量子電腦冷卻裝置示意圖" style="width: 100%; height: auto;">
                                         </a>
                                       </div>
-                                      <p style="text-align:justify" class="dark-background">
+                                      <p  class="dark-background">
                                         ▲透過電路功能圖對照硬體，可進一步了解量子電腦中硬體元件的配置。
                                         <br>(a) 安裝有 25 條驅動線（drive lines）、25 條磁通線（flux lines）、4 條讀出線（read-out）、6 條讀入線（read-in），以及 5 條泵浦線（pump lines）的 Bluefors XLD 型稀釋制冷機。
                                         <br>(b) 稀釋制冷機內部電纜配置的示意圖。我們藉由下方表格來解說各個元件及端口的功能：
@@ -291,10 +291,10 @@
                           
                                       <div style="text-align: center;">
                                         <a href="../Image/20250531-03.png">
-                                        <img src="../Image/20250531-03.png" alt="取代文字" style="width: 70%; height: auto;">
+                                        <img src="../Image/20250531-03.png" alt="高真空實驗裝置設計細節" style="width: 70%; height: auto;">
                                         </a>
                                       </div>
-                                      <p style="text-align:justify" class="dark-background">
+                                      <p  class="dark-background">
                                         ▲在制冷機最底端、也是最冷的部分，稱為混合室（Mixing Chamber，MXC）。此區的溫度維持在10mK以下，以操作超導量子電路。
                                         (a) 安裝於 MXC 板上的元件：來自量子處理器的讀出訊號首先經過右側的第一組四通道磁屏蔽隔離器陣列，再通過定向耦合器、行波參數放大器（TWPA），以及左側的第二組相同的隔離器陣列。
                                         (b) 安裝於 4K 板上的四顆 HEMT 放大器。
@@ -350,7 +350,7 @@
                                         </tbody>
                                     
                                     </table>
-                                      <p style="text-align:justify" class="dark-background">
+                                      <p  class="dark-background">
                                         讀出系統的發展與QPU和控制系統的發展緊密相連。實現高保真度、快速且可擴展的讀出是實用量子計算的關鍵。TWPA等寬帶量子放大器的出現，為解決大規模量子位元系統的多路復用讀出問題提供了有希望的途徑。
                                       </p>
 

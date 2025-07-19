@@ -24,8 +24,8 @@
     <link href="../assets/css/responsive.css" rel="stylesheet">
 
     <title>超導量子位元(科普版)</title>
-    <meta name="description" content="深入解析2025年超導量子電腦的構建，涵蓋量子處理器(QPU)、稀釋製冷機、控制電子、低溫佈線等核心硬體。提供全球主要製造商、價格範圍、技術挑戰與未來趨勢的詳細指引。">
-    <meta name="keywords" content="超導量子電腦, 量子位元, Qubit, QPU, 稀釋製冷機, IBM, Google, QuantWare, Bluefors, 低溫系統, 控制電子, Josephson Junction, Transmon, Fluxonium, 量子計算硬體, SEO">
+    <meta name="description" content="超導量子位元科普介紹，解析2025年超導量子電腦核心硬體、控制技術與未來趨勢，讓您輕鬆了解量子科技的前沿發展。">
+    <meta name="keywords" content="超導量子位元, 量子電腦, Qubit, 低溫系統, 量子控制技術, 量子硬體, 超導量子科技, 量子運算, 量子控制線路, 量子科技前沿">
     <link rel="canonical" href="https://www.insight-ihbar.com/SCQ_elementary/I.html">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -100,39 +100,39 @@
                                     <h3></h3>
                                 </div>
                                 
-                                <p style="text-align:justify">
+                                <p >
                                 前文介紹量子電腦複雜的硬體設計，本節稍微介紹一下超導電腦控式訊號的線路設計。控制訊號由任意波形產生器(AWG)生成數位訊號，透過數位-類比轉換器(DAC)轉換成類比訊號，通過層層的濾波器送入到量子位元電路中，然後回饋出來的訊號再通過類比-數位轉換器(ADC)換成數位訊號由儀器量測。
                                 </p>
                                 <div style="text-align: center;">
                                     <a href="../Image/QC structure.png">
-                                    <img src="../Image/QC structure.png" alt="取代文字" style="width: 100%; height: auto;">
+                                    <img src="../Image/QC structure.png" alt="固態量子位元技術的各種挑戰圖示" style="width: 100%; height: auto;">
                                     </a>
                                 
                                 </div>
-                                <p style="text-align:justify">
+                                <p >
                                     <span style="font-size: 0.7em; line-height: 0.8;">Ref: arxiv: 2303.15547</span><br><br>
                                 </p>
                                 
                                 
-                                <p style="text-align:justify">
+                                <p >
                                 前面在「<a href="./H.html">超導量子電腦長什麼樣子？</a>」文中可以見到大量的線路層層穿越低溫腔進入到量子位元中，如此複雜的線路需要精密的設計、降噪、隔熱，容易增加成本和出錯率，造成大型化（scalable）的困難度。以下講解兩種可能的方案，試圖減少穿越的線路。
                                 </p>
                                 <div style="text-align: center;">
                                     <a href="../Image/Image/Control link.png">
-                                    <img src="../Image/Control link.png" alt="取代文字" style="width: 70%; height: auto;">
+                                    <img src="../Image/Control link.png" alt="不同量子通訊方案比較圖示" style="width: 70%; height: auto;">
                                     </a>
                                 </div>
-                                <p style="text-align:justify" class="dark-background">
+                                <p  class="dark-background">
                                 ▲光纖方案，（a）是傳統控制線路，（b）採用不同波長的載波混波技術，將控制訊號透過光電轉換器放到對應的載波上，通過光纖束進入到腔體中，再轉換回控制Qubit的控制訊號。
                                 <br><span style="font-size: 0.7em; line-height: 0.8;">Ref: DOI: 10.1038/s41586-021-03268-x</span><br><br>
                                 </p>
                                 
                                 <div style="text-align: center;">
                                     <a href="../Image/Control Bus.png">
-                                    <img src="../Image/Control Bus.png" alt="取代文字" style="width: 70%; height: auto;">
+                                    <img src="../Image/Control Bus.png" alt="量子比特能譜圖與頻譜分布圖" style="width: 70%; height: auto;">
                                     </a>
                                 </div>
-                                <p style="text-align:justify" class="dark-background">
+                                <p  class="dark-background">
                                 ▲透過Qubit頻率隔離，並且利用設計過的控制頻譜訊號，使得Qubit之間的控制可以隔離開來，便可通過單一控制線路控制多個Qubit。
                                 <br><span style="font-size: 0.7em; line-height: 0.8;">arXiv:2501.10710v1</span><br><br>
                                 </p>
