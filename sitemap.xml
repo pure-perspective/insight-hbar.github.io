@@ -241,6 +241,26 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.insight-ihbar.com/SpQ/text.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.insight-ihbar.com/SpQ/main.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.insight-ihbar.com/SpQ/A.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.insight-ihbar.com/SpQ/model.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.insight-ihbar.com/Q-Sketch/Q-Sketch.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -477,6 +497,11 @@
   </url>
   <url>
     <loc>https://www.insight-ihbar.com/About/Wang.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.insight-ihbar.com/SpQ_en/main.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
