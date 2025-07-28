@@ -1,6 +1,6 @@
 [
     { "title": "Semiconductor Spin Qubits: Intoduction", "file": "main.html" , "status": "new" , "date": "2025-07-21"},
-    { "title": "約瑟夫森節", "file": "A.html" ,"enabled": false},
+    { "title": "What are Spin Qubits?", "file": "A.html" , "status": "new" , "date": "2025-07-28"},
     { "title": "超導量子位元是什麼呢？", "file": "B.html" ,"enabled": false},
     { "title": "淺談超導電路量子位元的種類", "file": "C.html" ,"enabled": false},
     { "title": "早年超導量子位元的種類", "file": "D.html" ,"enabled": false},

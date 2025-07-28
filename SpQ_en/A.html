@@ -23,10 +23,10 @@
     <link href="../assets/css/style.css" rel="stylesheet">
     <link href="../assets/css/responsive.css" rel="stylesheet">
 
-    <title>半導體自旋量子位元</title>
-    <meta name="description" content="超導量子位元科普介紹，深入解析半導體自旋量子位元的原理、應用與未來趨勢，適合科技愛好者與專業人士了解量子計算核心技術。">
-    <meta name="keywords" content="半導體自旋量子位元, 量子計算, 量子位元, 超導量子電路, 量子科技, 量子硬體, 量子資訊, 量子糾錯, 半導體量子技術, 自旋量子比特">
-    <link rel="canonical" href="https://www.insight-ihbar.com/SpQ/A.html">
+    <title>Hardware Introduction</title>
+    <meta name="description" content="Discover insights into semiconductor spin qubits, their role in quantum computing, challenges, and future prospects for 2025.">
+    <meta name="keywords" content="Semiconductor spin qubits quantum computing hardware guide, quantum bits, qubit technology, superconducting qubits, quantum dot fabrication, low temperature cooling systems, Josephson junctions, high-fidelity two-qubit gates, scalable quantum processors">
+    <link rel="canonical" href="https://www.insight-ihbar.com/SpQ_en/main.html">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -41,33 +41,25 @@
         <nav id="primary-navigation" class="site-navigation">
             <div class="container">
 
-                <div class="navbar-header">
-                   
-                    <a href="../index.html" class="site-title">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</a>
-
+                <div class="navbar-header">                   
+                    <a href="../index_en.html" class="site-title">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</a>
                 </div><!-- /.navbar-header -->
 
                 <div class="collapse navbar-collapse" id="agency-navbar-collapse">
-
                     <ul class="nav navbar-nav navbar-right">
-
-                        <li><a href="../index.html">Home</a></li>
-                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">科普介紹<i class="fa fa-caret-down hidden-xs" aria-hidden="true"></i></a>
-
+                        <li><a href="../index_en.html">Home</a></li>
+                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Qubit Physics<i class="fa fa-caret-down hidden-xs" aria-hidden="true"></i></a>
                             <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                                <li><a href="../SCQ_elementary/main.html">超導量子位元(科普版)</a></li>
-                              <li><a href="../SCQ_advanced/main.html">超導量子位元(進階版)</a></li>
-                              <li class="active"><a href="../SpQ/main.html">半導體自旋量子位元</a></li>
+                              <li><a href="../SCQ_elementary_en/main.html">Superconducting Qubits (Elementary)</a></li>
+                              <li><a href="../SCQ_advanced_en/main.html">Superconducting Qubits (Advanced)</a></li>
+                              <li class="active"><a href="../SpQ_en/main.html">Semiconductor Spin Qubits</a></li>
                             </ul>
-
                         </li>
                         <!--<li class="active"><a href="../SCQ_elementary/main.html">科普介紹</a></li>-->
-                        <li><a href="../QC_hardware/main.html">硬體導論</a></li>
-                        <li><a href="../About/main.html">關於我們</a></li>
-                        <li><a href="../index_en.html">English</a></li>
-                        
+                        <li><a href="../QC_hardware_en/main.html">Hardware</a></li>
+                        <li><a href="../About_en/main.html">About Us</a></li>
+                        <li><a href="../index.html">中文版</a></li>                        
                     </ul>
-
                 </div>
 
             </div>   
@@ -77,10 +69,10 @@
     <div id="hero" class="hero overlay subpage-hero blog-hero">
         <div class="hero-content">
             <div class="hero_2-text">
-                <a href="../SpQ/main.html"><h1>半導體自旋量子位元</h1></a>
+                <h1>Semiconductor Spin Qubits</h1>
                 <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
-                  <!--<li class="breadcrumb-item"><a href="../SCQ_elementary/main.html">超導量子位元(科普版)</a></li>
+                  <li class="breadcrumb-item"><a href="../index_en.html">Home</a></li>
+                  <!--<li class="breadcrumb-item"><a href="./main.html">Hardware Guide (2025)</a></li>
                   <li class="breadcrumb-item active">約瑟夫森節</li>-->
                 </ol>
             </div><!-- /.hero-text -->
@@ -94,93 +86,76 @@
                 <div class="row">
                     <div class="col-md-9">
                         <article class="blog-post">
-                            <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="">-->
+                            <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="Laptop on wooden desk">-->
                             <div class="post-content">
                                 <div style="text-align: center;">
-                                    <h2>什麼是自旋量子位元？</h2>
-                                    <h3>自旋量子位元的實踐方式</h3>
+                                    <h2>What are Spin Qubits?</h2>
+                                    <h3>Implementations of Spin Qubits</h3>
                                 </div>
-                                <p>量子效應的顯現，可以簡單地分成<b>內稟量子效應</b>、<b>單體量子效應</b>或是<b>統計量子效應</b>：</p>
+                                <p>The manifestation of quantum effects can be broadly categorized into <b>intrinsic quantum effects</b>, <b>single-particle quantum effects</b>, and <b>statistical quantum effects</b>:</p>
                                 <ul>
-                                    <li><p><b>內稟量子效應</b>：電子或原子自身帶有的自旋、自旋-軌道耦合、光子帶有的偏振等，這些性質不依賴於外部環境。</p></li>
-                                    <li><p><b>單體量子效應</b>：個別電子、原子在特定環境限制下顯現量子效應。例如在低溫、局限的位能井下，電子的德布羅伊波長與位能井的特徵尺度相近時，能量的能階化就會很明顯。或是當材料縮小到奈米尺度時（例如量子點、奈米線、冷原子），材料的特性也會出現量子能階。</p></li>
-                                    <li><p><b>統計量子效應</b>：大量的電子或原子進入到量子統計的整體狀態，此時各自的物理量已沒有實際意義，必須視為整體來看待。例如超導、超流、玻色-愛因斯坦凝聚、雷射、鐵磁性，亦或是材料的聲子、激子等準激發粒子。</p></li>
+                                    <li><p><b>Intrinsic Quantum Effects:</b> These are properties inherent to particles like electrons or atoms, such as spin, spin-orbit coupling, or the polarization of photons. These properties do not depend on the external environment.</p></li>
+                                    <li><p><b>Single-Particle Quantum Effects:</b> An individual electron or atom exhibits quantum effects under specific environmental constraints. For example, at low temperatures and within a confined potential well, when the electron's de Broglie wavelength is comparable to the characteristic scale of the well, energy quantization becomes significant. Similarly, when a material is scaled down to the nanoscale (e.g., quantum dots, nanowires, cold atoms), its properties also exhibit quantum energy levels.</p></li>
+                                    <li><p><b>Statistical Quantum Effects:</b> A large number of electrons or atoms enter a collective quantum statistical state, where individual physical quantities lose their meaning and must be considered as a whole. Examples include superconductivity, superfluidity, Bose-Einstein condensation, lasers, ferromagnetism, as well as quasiparticle excitations in materials like phonons and excitons.</p></li>
                                 </ul>
                                 
-                                <p>以上的特性都可以作為量子計算的量子位元。半導體自旋量子位元就是用上了自旋效應和侷限效應，利用局限的位能井限制電子，並透過訊號控制電子的自旋來記錄資訊。</p>
+                                <p>Any of the above properties can be used to create qubits for quantum computing. Semiconductor spin qubits utilize both the spin effect and the confinement effect, using a confined potential well to trap an electron and controlling its spin to store information.</p>
                                 
                                 <div style="text-align: center;">
                                     <a href="../Image/QD_size_2.gif">
-                                        <img src="../Image/QD_size_2.gif" alt="顯示不同模組區域的結構圖" style="width: 100%; height: auto;">
+                                        <img src="../Image/QD_size_2.gif" alt="Diagram showing the emergence of quantum effects with decreasing material size" style="width: 100%; height: auto;">
                                     </a>
                                 </div>
                                 <p class="dark-background">
-                                    ▲材料隨的尺度的縮小，量子效應開始顯現、能階化。<br>
+                                    ▲ As the scale of a material shrinks, quantum effects begin to manifest and energy levels become quantized.<br>
                                     <span style="font-size: 0.7em; line-height: 0.8;">
                                         Advancements in thermoelectric materials: optimization strategies for enhancing energy conversion
                                         <br>DOI: 10.1039/D4TA03666B
-                                        <!--https://pubs.rsc.org/image/article/2024/TA/d4ta03666b/d4ta03666b-f6_hi-res.gif-->
                                     </span>
                                     <br><br>
                                 </p>
                                 
-                                <h3>如何實現半導體量子位元？</h3>
-                                <p>如前所說，半導體自旋量子位元利用局限的位能井限制電子，使電子產生顯著的量子效應。局限的方式有<b>材料幾何局限</b>與<b>人工閘極局限</b>。
-                                    材料幾何局限是利用材料的不均勻性，形成位能變化；而人工閘極局限透過半導體微影製程製作電極圖案，施加電壓產稱位能變化。可以由以下介紹。</p>
+                                <h3>How are Semiconductor Qubits Realized?</h3>
+                                <p>As mentioned, semiconductor spin qubits use a confined potential well to trap an electron, causing it to exhibit significant quantum effects. The confinement can be achieved through <b>material geometric confinement</b> or <b>artificial gate confinement</b>. Material geometric confinement uses inhomogeneities in the material to create potential variations, while artificial gate confinement uses lithographically defined electrode patterns to apply voltages that create potential variations. These are introduced below.</p>
                                 <table border="1" cellspacing="0" cellpadding="8" width="100%">
                                     <thead>
-                                      <tr>
-                                        <th width="20%" style="text-align: center; vertical-align: middle;">材料幾何侷限</th>
-                                        <th width="60%" style="text-align: center; vertical-align: middle;">說明</th>
-                                        <th style="text-align: center; vertical-align: middle;">閘極輔助侷限？</th>
+                                      <tr bgcolor="#f2f2f2">
+                                        <th width="20%" style="text-align: center; vertical-align: middle;">Material Geometric Confinement</th>
+                                        <th width="60%" style="text-align: center; vertical-align: middle;">Description</th>
+                                        <th style="text-align: center; vertical-align: middle;">Gate-Assisted Confinement?</th>
                                       </tr>
                                     </thead>
                                     <tbody>
                                       <tr>
-                                        <td style="text-align: center; vertical-align: middle;">摻雜雜質點（零維）</td>
-                                        <td style="text-align: center; vertical-align: middle;">透過矽材料中的摻雜原子，例如磷摻雜，自然形成一個缺陷中心。</td>
-                                        <td style="text-align: center; vertical-align: middle;">透過閘極固定摻雜位置。</td>
+                                        <td style="text-align: center; vertical-align: middle;">Dopant Impurity (0D)</td>
+                                        <td style="text-align: center; vertical-align: middle;">A defect center is naturally formed by a dopant atom in a silicon material, for example, phosphorus doping.</td>
+                                        <td style="text-align: center; vertical-align: middle;">Gates are used to fix the dopant's position.</td>
                                       </tr>
                                       <tr>
-                                        <td style="text-align: center; vertical-align: middle;">量子點（零維）</td>
-                                        <td style="text-align: center; vertical-align: middle;">材料長晶過程中，自形成球對稱量子點。</td>
-                                        <td style="text-align: center; vertical-align: middle;">不需</td>
+                                        <td style="text-align: center; vertical-align: middle;">Quantum Dot (0D)</td>
+                                        <td style="text-align: center; vertical-align: middle;">Spherically symmetric quantum dots are self-assembled during the material growth process.</td>
+                                        <td style="text-align: center; vertical-align: middle;">Not required.</td>
                                       </tr>
                                       <tr>
-                                        <td style="text-align: center; vertical-align: middle;">奈米線（一維）</td>
-                                        <td style="text-align: center; vertical-align: middle;">可透過蝕刻或是長晶的方式形成一維奈米線。</td>
-                                        <td style="text-align: center; vertical-align: middle;">透過閘極在軸方向侷限</td>
+                                        <td style="text-align: center; vertical-align: middle;">Nanowire (1D)</td>
+                                        <td style="text-align: center; vertical-align: middle;">One-dimensional nanowires can be formed through etching or crystal growth.</td>
+                                        <td style="text-align: center; vertical-align: middle;">Gates are used for confinement along the axial direction.</td>
                                       </tr>
                                       <tr>
-                                        <td style="text-align: center; vertical-align: middle;">二維電子氣（二維）</td>
-                                        <td style="text-align: center; vertical-align: middle;">異質接面中形成的自由電子氣。</td>
-                                        <td style="text-align: center; vertical-align: middle;">透過閘極定義局部位能井。</td>
+                                        <td style="text-align: center; vertical-align: middle;">Two-Dimensional Electron Gas (2DEG) (2D)</td>
+                                        <td style="text-align: center; vertical-align: middle;">A free electron gas formed at a heterojunction interface.</td>
+                                        <td style="text-align: center; vertical-align: middle;">Gates are used to define local potential wells.</td>
                                       </tr>
                                     </tbody>
                                   </table>
                                   <br>
                                 <div style="text-align: center;">
                                     <a href="../Image/Spin_Q_dim.png">
-                                        <img src="../Image/Spin_Q_dim.png" alt="顯示不同模組區域的結構圖" style="width: 100%; height: auto;">
+                                        <img src="../Image/Spin_Q_dim.png" alt="Four ways to implement quantum dot qubits" style="width: 100%; height: auto;">
                                     </a>
                                 </div>
                                 <p class="dark-background">
-                                    ▲四種實現量子點位元的方式，分別為雜質摻雜、量子點、奈米線、異質接面中的二維電子氣。<br>
-                                    <span style="font-size: 0.7em; line-height: 0.8;">
-                                        Silicon quantum electronics
-                                        <br>DOI:10.1103/RevModPhys.85.961
-                                    </span>
-                                    <br><br>
-                                </p>
-
-                                <h3>磷摻雜</h3>
-                                <div style="text-align: center;">
-                                    <a href="../Image/Dopant_Qubit.png">
-                                        <img src="../Image/Dopant_Qubit.png" alt="顯示不同模組區域的結構圖" style="width: 80%; height: auto;">
-                                    </a>
-                                </div>
-                                <p class="dark-background">
-                                    ▲利用磷摻雜形成的缺陷中心，製作成量子點。<br>
+                                    ▲ Four ways to implement quantum dot qubits: impurity doping, quantum dots, nanowires, and a two-dimensional electron gas at a heterojunction.<br>
                                     <span style="font-size: 0.7em; line-height: 0.8;">
                                         Silicon quantum electronics
                                         <br>DOI:10.1103/RevModPhys.85.961
@@ -188,78 +163,87 @@
                                     <br><br>
                                 </p>
                                 
-                                <h3>鍺量子點</h3>
+                                <h3>Phosphorus Doping</h3>
                                 <div style="text-align: center;">
-                                    <a href="../Image/Ge-QD.png">
-                                        <img src="../Image/Ge-QD.png" alt="顯示不同模組區域的結構圖" style="width: 80%; height: auto;">
+                                    <a href="../Image/Dopant_Qubit.png">
+                                        <img src="../Image/Dopant_Qubit.png" alt="Quantum dot formed by phosphorus doping" style="width: 80%; height: auto;">
                                     </a>
                                 </div>
                                 <p class="dark-background">
-                                    ▲透過長晶的方式，在矽材料上長出奈米尺度的球形鍺量子點。
-                                    <span style="font-size: 0.7em; line-height: 0.8;">
-                                        <br>YouTube:【2024陽明交大電機專題探索】李佩雯教授介紹
-                                        <br><a href="https://www.youtube.com/watch?v=LuXsf-pWFeI&t=7s">https://www.youtube.com/watch?v=LuXsf-pWFeI&t=7s</a>
-                                    </span>
-                                    <br><br>
-                                </p>
-
-
-                                <div style="text-align: center;">
-                                    <a href="../Image/Ge-Dot-size.png">
-                                        <img src="../Image/Ge-Dot-size.png" alt="顯示不同模組區域的結構圖" style="width: 80%; height: auto;">
-                                    </a>
-                                </div>
-                                <p class="dark-background">
-                                    ▲球形鍺量子點可以調控尺寸，會直接改變鍺的能隙。
-                                    <span style="font-size: 0.7em; line-height: 0.8;">
-                                        <br>YouTube:【2024陽明交大電機專題探索】李佩雯教授介紹
-                                        <br><a href="https://www.youtube.com/watch?v=LuXsf-pWFeI&t=7s">https://www.youtube.com/watch?v=LuXsf-pWFeI&t=7s</a>
-                                    </span>
-                                    <br><br>
-                                </p>
-
-
-
-
-                                <div style="text-align: center;">
-                                    <a href="../Image/SET-DQD.png">
-                                        <img src="../Image/SET-DQD.png" alt="顯示不同模組區域的結構圖" style="width: 80%; height: auto;">
-                                    </a>
-                                </div>
-                                <p class="dark-background">
-                                    ▲量子點位元可以組合成雙量子元件（DQD），也可以整合單電子電晶體（SET）。
-                                    <span style="font-size: 0.7em; line-height: 0.8;">
-                                        <br>YouTube:【2024陽明交大電機專題探索】李佩雯教授介紹
-                                        <br><a href="https://www.youtube.com/watch?v=LuXsf-pWFeI&t=7s">https://www.youtube.com/watch?v=LuXsf-pWFeI&t=7s</a>
-                                    </span>
-                                    <br><br>
-                                </p>
-
-                                <h3>奈米線</h3>
-                                <div style="text-align: center;">
-                                    <a href="../Image/Nanowire_Qubit.png">
-                                        <img src="../Image/Nanowire_Qubit.png" alt="顯示不同模組區域的結構圖" style="width: 80%; height: auto;">
-                                    </a>
-                                </div>
-                                <p class="dark-background">
-                                    ▲在一維奈米線上，加入閘極來形成位能井。
+                                    ▲ Using a defect center formed by phosphorus doping to create a quantum dot.<br>
                                     <span style="font-size: 0.7em; line-height: 0.8;">
                                         Silicon quantum electronics
                                         <br>DOI:10.1103/RevModPhys.85.961
                                     </span>
                                     <br><br>
                                 </p>
-
-
-                                <h3>閘定義量子位元（二維電子氣）</h3>
+                                
+                                <h3>Germanium Quantum Dots</h3>
+                                <div style="text-align: center;">
+                                    <a href="../Image/Ge-QD.png">
+                                        <img src="../Image/Ge-QD.png" alt="Nanoscale spherical germanium quantum dots on silicon" style="width: 80%; height: auto;">
+                                    </a>
+                                </div>
+                                <p class="dark-background">
+                                    ▲ Growing nanoscale spherical germanium quantum dots on a silicon material through crystal growth.
+                                    <span style="font-size: 0.7em; line-height: 0.8;">
+                                        <br>YouTube: 【2024 NYCU Electrical Engineering Project Exploration】 Introduction by Prof. Pei-Wen Li
+                                        <br><a href="https://www.youtube.com/watch?v=LuXsf-pWFeI&t=7s">https://www.youtube.com/watch?v=LuXsf-pWFeI&t=7s</a>
+                                    </span>
+                                    <br><br>
+                                </p>
+                                
+                                <div style="text-align: center;">
+                                    <a href="../Image/Ge-Dot-size.png">
+                                        <img src="../Image/Ge-Dot-size.png" alt="Size control of Germanium quantum dots" style="width: 80%; height: auto;">
+                                    </a>
+                                </div>
+                                <p class="dark-background">
+                                    ▲ The size of spherical germanium quantum dots can be controlled, which directly alters the energy gap of germanium.
+                                    <span style="font-size: 0.7em; line-height: 0.8;">
+                                        <br>YouTube: 【2024 NYCU Electrical Engineering Project Exploration】 Introduction by Prof. Pei-Wen Li
+                                        <br><a href="https://www.youtube.com/watch?v=LuXsf-pWFeI&t=7s">https://www.youtube.com/watch?v=LuXsf-pWFeI&t=7s</a>
+                                    </span>
+                                    <br><br>
+                                </p>
+                                
+                                <div style="text-align: center;">
+                                    <a href="../Image/SET-DQD.png">
+                                        <img src="../Image/SET-DQD.png" alt="Double Quantum Dot (DQD) and Single Electron Transistor (SET)" style="width: 80%; height: auto;">
+                                    </a>
+                                </div>
+                                <p class="dark-background">
+                                    ▲ Quantum dot qubits can be combined to form Double Quantum Dot (DQD) devices and can also be integrated with Single Electron Transistors (SETs).
+                                    <span style="font-size: 0.7em; line-height: 0.8;">
+                                        <br>YouTube: 【2024 NYCU Electrical Engineering Project Exploration】 Introduction by Prof. Pei-Wen Li
+                                        <br><a href="https://www.youtube.com/watch?v=LuXsf-pWFeI&t=7s">https://www.youtube.com/watch?v=LuXsf-pWFeI&t=7s</a>
+                                    </span>
+                                    <br><br>
+                                </p>
+                                
+                                <h3>Nanowires</h3>
+                                <div style="text-align: center;">
+                                    <a href="../Image/Nanowire_Qubit.png">
+                                        <img src="../Image/Nanowire_Qubit.png" alt="Potential well formed by gates on a nanowire" style="width: 80%; height: auto;">
+                                    </a>
+                                </div>
+                                <p class="dark-background">
+                                    ▲ Using gates on a one-dimensional nanowire to form a potential well.
+                                    <span style="font-size: 0.7em; line-height: 0.8;">
+                                        Silicon quantum electronics
+                                        <br>DOI:10.1103/RevModPhys.85.961
+                                    </span>
+                                    <br><br>
+                                </p>
+                                
+                                <h3>Gate-Defined Qubits (2D Electron Gas)</h3>
                                 <div style="text-align: center;">
                                     <a href="../Image/SpQ-1.png">
-                                        <img src="../Image/SpQ-1.png" alt="奈米規模量子比特電路圖示" style="width: 100%; height: auto;">
+                                        <img src="../Image/SpQ-1.png" alt="Schematic of a nanoscale qubit circuit" style="width: 100%; height: auto;">
                                     </a>
                                 </div>
                                 <p  class="dark-background">
-                                    ▲當前最主流的自旋量子。利用半導體製程層層堆疊、蝕刻的特性，先製作異質的夾層，例如\(SiGe-Si-SiGe\)，此時中間層會帶有許多可以自由移動的電子，形成二維自由電子氣層。
-                                    接著在上方製作出閘極，利用閘極產生的電壓來形成量子點。<br>
+                                    ▲ The current mainstream approach for spin qubits. It utilizes the layer-by-layer deposition and etching characteristics of semiconductor fabrication. First, a heterostructure sandwich is created, for example, \(SiGe-Si-SiGe\). The middle layer then contains many freely moving electrons, forming a two-dimensional electron gas (2DEG). Gates are then fabricated on top, and the voltages applied by these gates are used to form quantum dots.<br>
                                     <span style="font-size: 0.7em; line-height: 0.8;">
                                         Resonantly driven CNOT gate for electron spins
                                         <br>DOI:10.1126/science.aao5965
@@ -269,48 +253,50 @@
                                 </p>
 
 
-
-
                                 
-                                
+
+                                <p>
+                                    <span style="font-size: 0.5em; line-height: 0.8;">
+                                        Originally written in Chinese by the author, these articles are translated into English to invite cross-language resonance.
+                                    </span>
+                                </p>
                                 <div class="post-meta">
                                     <span class="post-author">
-                                        <a href="../About/Wang.html"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="">王培儒</a>
+                                        <a href="../About_en/Wang.html"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="Professional headshot">Peir-Ru Wang</a>
                                     </span>
                                     <span class="post-category">
-                                        <a href="../SpQ/main.html"><i class="fa fa-folder" aria-hidden="true"></i>半導體自旋量子位元</a>
+                                        <a href="../SpQ_en/main.html"><i class="fa fa-folder" aria-hidden="true"></i>Semiconductor Spin Qubits</a>
                                     </span>
                                 </div><!-- /.post-meta -->
                             
-                                
                                 <div id="prev-next-nav" class="text-center"></div>
 
                                 <script>
-                                fetch("lessons.json")
-                                .then(res => res.json())
-                                .then(pages => {
-                                    const current = location.pathname.split("/").pop();
-                                    const index = pages.findIndex(p => p.file === current);
-                                    let html = "";
+fetch("lessons.json")
+  .then(res => res.json())
+  .then(pages => {
+    // 過濾掉 disabled 的頁面
+    pages = pages.filter(p => p.enabled !== false);
 
-                                    // 上一頁按鈕
-                                    if (index > 0) {
-                                    const prev = pages[index - 1];
-                                    html += `<a class="btn btn-gray" href="${prev.file}">← 上一頁</a> `;
-                                    }
+    const current = location.pathname.split("/").pop();
+    const index = pages.findIndex(p => p.file === current);
+    let html = "";
 
-                                    // 英文版按鈕
-                                    html += `<a class="btn btn-gray" href="../SpQ_en/${current}" style="margin: 0 10px;">English Version</a>`;
+    if (index > 0) {
+      const prev = pages[index - 1];
+      html += `<a class="btn btn-gray" href="${prev.file}">← Previous</a> `;
+    }
 
-                                    // 下一頁按鈕
-                                    if (index < pages.length - 1) {
-                                    const next = pages[index + 1];
-                                    html += `<a class="btn btn-gray" href="${next.file}">下一頁 →</a>`;
-                                    }
+    html += `<a class="btn btn-gray" href="../SpQ/${current}" style="margin: 0 10px;">中文版</a>`;
 
-                                    document.getElementById("prev-next-nav").innerHTML = html;
-                                });
-                                </script>
+    if (index < pages.length - 1) {
+      const next = pages[index + 1];
+      html += `<a class="btn btn-gray" href="${next.file}">Next →</a>`;
+    }
+
+    document.getElementById("prev-next-nav").innerHTML = html;
+  });
+</script>
 
                             </div><!-- /.post-content -->
                         </article><!-- /.blog-post -->
@@ -355,17 +341,21 @@
                                 <div id="lesson-list_2"></div>
                             </div>
                             <script>
-                            fetch("lessons.json")
-                                .then(res => res.json())
-                                .then(pages => {
-                                const current = location.pathname.split("/").pop();
-                                const list = pages.map(p => {
-                                    const isActive = p.file === current ? "active" : "";
-                                    return `<div class="lesson-link ${isActive}"><a href="${p.file}">${p.title}</a></div>`;
-                                }).join("");
-                                document.getElementById("lesson-list_2").innerHTML = list;
-                                });
-                            </script>
+fetch("lessons.json")
+  .then(res => res.json())
+  .then(pages => {
+    const current = location.pathname.split("/").pop();
+    const list = pages
+      .filter(p => p.enabled !== false) // ← 這行：只顯示 enabled 沒被關閉的項目
+      .map(p => {
+        const isActive = p.file === current ? "active" : "";
+        return `<div class="lesson-link ${isActive}"><a href="${p.file}">${p.title}</a></div>`;
+      })
+      .join("");
+    document.getElementById("lesson-list_2").innerHTML = list;
+  });
+</script>
+
   
                         </div><!-- /.sidebar -->
                         
@@ -380,8 +370,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3 col-sm-4 col-xs-6">
-                    <a class="site-title">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</a>
-                    <p>一起走進新時代的前沿科學與量子科技</p>
+                    <a href="../index.html" class="site-title">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</a>
+                    <p>Exploring the Quantum Technology Together.</p>
                     </div>
                 <div class="col-lg-offset-4 col-md-3 col-sm-4 col-md-offset-2 col-sm-offset-0 col-xs-6 ">
                     <p class="site-title">𝐾𝐸𝐸𝑃 𝐼𝑁 𝑇𝑂𝑈𝐶𝐻</p>
