@@ -100,177 +100,134 @@
                             <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="">-->
                             <div class="post-content">
                                 <div style="text-align: center;">
-                                    <h2>什麼是半導體自旋量子位元？</h2>
-                                    <h3>自旋量子位元的實踐方式</h3>
+                                    <h2>半導體自旋量子位元的種類與編碼方式</h2>
+                                    <h3></h3>
                                 </div>
-                                <p>量子效應的顯現，可以簡單地分成<b>內稟量子效應</b>、<b>單體量子效應</b>或是<b>統計量子效應</b>：</p>
-                                <ul>
-                                    <li><p><b>內稟量子效應</b>：電子或原子自身帶有的自旋、自旋-軌道耦合、光子帶有的偏振等，這些性質不依賴於外部環境。</p></li>
-                                    <li><p><b>單體量子效應</b>：個別電子、原子在特定環境限制下顯現量子效應。例如在低溫、局限的位能井下，電子的德布羅伊波長與位能井的特徵尺度相近時，能量的能階化就會很明顯。或是當材料縮小到奈米尺度時（例如量子點、奈米線、冷原子），材料的特性也會出現量子能階。</p></li>
-                                    <li><p><b>統計量子效應</b>：大量的電子或原子進入到量子統計的整體狀態，此時各自的物理量已沒有實際意義，必須視為整體來看待。例如超導、超流、玻色-愛因斯坦凝聚、雷射、鐵磁性，亦或是材料的聲子、激子等準激發粒子。</p></li>
-                                </ul>
                                 
-                                <p>以上的特性都可以作為量子計算的量子位元。半導體自旋量子位元就是用上了自旋效應和侷限效應，利用局限的位能井限制電子，並透過訊號控制電子的自旋來記錄資訊。</p>
                                 
-                                <div style="text-align: center;">
-                                    <a href="../Image/QD_size_2.gif">
-                                        <img src="../Image/QD_size_2.gif" alt="顯示不同模組區域的結構圖" style="width: 100%; height: auto;">
-                                    </a>
-                                </div>
-                                <p class="dark-background">
-                                    ▲材料隨的尺度的縮小，量子效應開始顯現、能階化。<br>
-                                    <span style="font-size: 0.7em; line-height: 0.8;">
-                                        Advancements in thermoelectric materials: optimization strategies for enhancing energy conversion
-                                        <br>DOI: 10.1039/D4TA03666B
-                                        <!--https://pubs.rsc.org/image/article/2024/TA/d4ta03666b/d4ta03666b-f6_hi-res.gif-->
-                                    </span>
-                                    <br><br>
-                                </p>
-                                
-                                <h3>如何實現半導體量子位元？</h3>
-                                <p>如前所說，半導體自旋量子位元利用局限的位能井限制電子，使電子產生顯著的量子效應。局限的方式有<b>材料幾何局限</b>與<b>人工閘極局限</b>。
-                                    材料幾何局限是利用材料的不均勻性，形成位能變化；而人工閘極局限透過半導體微影製程製作電極圖案，施加電壓產稱位能變化。可以由以下介紹。</p>
-                                <table border="1" cellspacing="0" cellpadding="8" width="100%">
-                                    <thead>
-                                      <tr>
-                                        <th width="20%" style="text-align: center; vertical-align: middle;">材料幾何侷限</th>
-                                        <th width="60%" style="text-align: center; vertical-align: middle;">說明</th>
-                                        <th style="text-align: center; vertical-align: middle;">閘極輔助侷限？</th>
-                                      </tr>
-                                    </thead>
-                                    <tbody>
-                                      <tr>
-                                        <td style="text-align: center; vertical-align: middle;">摻雜雜質點（零維）</td>
-                                        <td style="text-align: center; vertical-align: middle;">透過矽材料中的摻雜原子，例如磷摻雜，自然形成一個缺陷中心。</td>
-                                        <td style="text-align: center; vertical-align: middle;">透過閘極固定摻雜位置。</td>
-                                      </tr>
-                                      <tr>
-                                        <td style="text-align: center; vertical-align: middle;">量子點（零維）</td>
-                                        <td style="text-align: center; vertical-align: middle;">材料長晶過程中，自形成球對稱量子點。</td>
-                                        <td style="text-align: center; vertical-align: middle;">不需</td>
-                                      </tr>
-                                      <tr>
-                                        <td style="text-align: center; vertical-align: middle;">奈米線（一維）</td>
-                                        <td style="text-align: center; vertical-align: middle;">可透過蝕刻或是長晶的方式形成一維奈米線。</td>
-                                        <td style="text-align: center; vertical-align: middle;">透過閘極在軸方向侷限</td>
-                                      </tr>
-                                      <tr>
-                                        <td style="text-align: center; vertical-align: middle;">二維電子氣（二維）</td>
-                                        <td style="text-align: center; vertical-align: middle;">異質接面中形成的自由電子氣。</td>
-                                        <td style="text-align: center; vertical-align: middle;">透過閘極定義局部位能井。</td>
-                                      </tr>
-                                    </tbody>
-                                  </table>
-                                  <br>
-                                <div style="text-align: center;">
-                                    <a href="../Image/Spin_Q_dim.png">
-                                        <img src="../Image/Spin_Q_dim.png" alt="顯示不同模組區域的結構圖" style="width: 100%; height: auto;">
-                                    </a>
-                                </div>
-                                <p class="dark-background">
-                                    ▲四種實現量子點位元的方式，分別為雜質摻雜、量子點、奈米線、異質接面中的二維電子氣。<br>
-                                    <span style="font-size: 0.7em; line-height: 0.8;">
-                                        Silicon quantum electronics
-                                        <br>DOI:10.1103/RevModPhys.85.961
-                                    </span>
-                                    <br><br>
-                                </p>
-
-                                <h3>磷摻雜</h3>
-                                <div style="text-align: center;">
-                                    <a href="../Image/Dopant_Qubit.png">
-                                        <img src="../Image/Dopant_Qubit.png" alt="顯示不同模組區域的結構圖" style="width: 80%; height: auto;">
-                                    </a>
-                                </div>
-                                <p class="dark-background">
-                                    ▲利用磷摻雜形成的缺陷中心，製作成量子點。<br>
-                                    <span style="font-size: 0.7em; line-height: 0.8;">
-                                        Silicon quantum electronics
-                                        <br>DOI:10.1103/RevModPhys.85.961
-                                    </span>
-                                    <br><br>
-                                </p>
-                                
-                                <h3>鍺量子點</h3>
-                                <div style="text-align: center;">
-                                    <a href="../Image/Ge-QD.png">
-                                        <img src="../Image/Ge-QD.png" alt="顯示不同模組區域的結構圖" style="width: 80%; height: auto;">
-                                    </a>
-                                </div>
-                                <p class="dark-background">
-                                    ▲透過長晶的方式，在矽材料上長出奈米尺度的球形鍺量子點。
-                                    <span style="font-size: 0.7em; line-height: 0.8;">
-                                        <br>YouTube:【2024陽明交大電機專題探索】李佩雯教授介紹
-                                        <br><a href="https://www.youtube.com/watch?v=LuXsf-pWFeI&t=7s">https://www.youtube.com/watch?v=LuXsf-pWFeI&t=7s</a>
-                                    </span>
-                                    <br><br>
-                                </p>
+                                <p>在半導體量子位元的種類中，主要的分類方式是依照編碼方式，即選取哪些量子態來對應\( \ket{0} \)與\( \ket{1} \)，
+                                    可以用自旋方式來編碼（Spin Qubit）、也可以用量子點中帶電數量來編碼（Charge Qubit）
+                                    ；可以用單個量子點，也可以組合多個量子點來編碼。
+                                    這些不同的編碼方案在物理實現的複雜性、操控方式和對雜訊的敏感度上各有取捨。<br><br>
+                                    </p>
+                                    <h3>Spin Qubit與Charge Qubit</h3>
+                                    <div style="text-align: center;">
+                                        <a href="../Image/Charge_Spin.png">
+                                            <img src="../Image/Charge_Spin.png" alt="顯示不同模組區域的結構圖" style="width: 70%; height: auto;">
+                                        </a>
+                                    </div>
+                                    <p class="dark-background">
+                                        ▲前面提到，半導體量子位元就是利用<b>內稟量子效應</b>或<b>位能井量子效應</b>，來進行量子編碼。
+                                        Spin Qubit是利用量子點中自旋的狀態來編碼。
+                                        而Charge Qubit中，是利用電荷處在兩個量子點之一，來編碼資訊。
+                                        <span style="font-size: 0.7em; line-height: 0.8;">
+                                            <br>Ref: YouTube:【2024陽明交大電機專題探索】李佩雯教授介紹
+                                            <br><a href="https://www.youtube.com/watch?v=LuXsf-pWFeI&t=7s">https://www.youtube.com/watch?v=LuXsf-pWFeI&t=7s</a>
+                                        </span>
+                                        <br><br>
+                                    </p>
 
 
-                                <div style="text-align: center;">
-                                    <a href="../Image/Ge-Dot-size.png">
-                                        <img src="../Image/Ge-Dot-size.png" alt="顯示不同模組區域的結構圖" style="width: 80%; height: auto;">
-                                    </a>
-                                </div>
-                                <p class="dark-background">
-                                    ▲球形鍺量子點可以調控尺寸，會直接改變鍺的能隙。
-                                    <span style="font-size: 0.7em; line-height: 0.8;">
-                                        <br>YouTube:【2024陽明交大電機專題探索】李佩雯教授介紹
-                                        <br><a href="https://www.youtube.com/watch?v=LuXsf-pWFeI&t=7s">https://www.youtube.com/watch?v=LuXsf-pWFeI&t=7s</a>
-                                    </span>
-                                    <br><br>
-                                </p>
+                                    <h3>多量子點組合與自旋編碼的種類</h3>
+                                    <p>有趣的是，自旋量子位元可以利用多個自旋組合，來構造不同的編碼方式。</p>
 
+                                    <div style="text-align: center;">
+                                        <a href="../Image/QD_type_4.png">
+                                            <img src="../Image/QD_type_4.png" alt="顯示不同模組區域的結構圖" style="width: 100%; height: auto;">
+                                        </a>
+                                    </div>
+                                    <p class="dark-background">
+                                        <span style="font-size: 0.7em; line-height: 0.8;">
+                                            Ref: Semiconductor spin qubits
+                                            <br>DOI: 10.1103/RevModPhys.95.025003
+                                        </span>
+                                        <br><br>
+                                    </p>
+                                    <ul>
+                                        <li>
+                                            <p><strong>Single-Spin Qubit:</strong> 這是最直觀的編碼方式。
+                                                一個量子位元被編碼在單一量子點中，施加z方向磁場\(B_z\)，來區分電子的自旋向下\(\ket{0}\)和自旋向上\(\ket{1}\)兩個狀態中。
+                                                這種方案概念簡單，物理結構也最為簡潔。
+                                                其操控通常需要施加一個與量子位元共振的振盪磁場\(B_x\)，即電子自旋共振，來驅動自旋的旋轉。
+                                                然而，在奈米尺度上產生精確、局域化的振盪磁場是一項重大的技術挑戰，且只對磁場響應，無法用電場來控制，這促使了更複雜編碼方案的發展。</p>
+                                          </li>
+                                          <li>
+                                            <p><strong>Singlet-Triplet (\(S-T_0\) Qubit):</strong> 
+                                                這種方案利用一組雙量子點（Double Quantum Dot, DQD）中的兩個電子的自旋來編碼成一個量子位元。
+                                                其邏輯基態被定義為兩個電子的總自旋為0的「單重態」
+                                            \( \ket{S} = \frac{1}{\sqrt{2}} \left( \ket{\uparrow\downarrow} - \ket{\downarrow\uparrow} \right) \)
+                                            和總自旋為1、磁量子數為0的「三重態」
+                                            \( \ket{T_0} = \frac{1}{\sqrt{2}} \left( \ket{\uparrow\downarrow} + \ket{\downarrow\uparrow} \right) \)。
+                                            \(S-T_0\)量子位元的優勢在於，可以透過電場方式控制兩個量子點之間的位能高度，從而開啟或關閉兩個電子波函數的交疊，這會產生量子力學效應中的exchange interaction。
+                                            這種交互作用可以直接驅動量子位元進行\(Z-Rotation\)。而x軸需要透過磁場梯度來進行操作。
+                                            此方式可以讓z軸藉由電場、x軸藉由磁場來個別控制。</p>
+                                          </li>
+                                          <li>
+                                            <p><strong>Exchange-Only Qubit:</strong> 這是一種實現全電控的方案，它將一個邏輯量子位元編碼在三個量子點中的三個電子上。透過電場控制相鄰量子點之間的交換交互作用，完全無需任何磁場或磁場梯度來操作。</p>
+                                          </li>
+                                        </ul>
 
+                                        <p>以上三種的方式，利用整合多個量子點的方式，逐步將純磁場控制改良成全電場的控制，便於整合進當前的半導體製程與控制邏輯中。
+                                            事實上，還有更多豐富的方案：
+                                        </p>
+                                        <div style="text-align: center;">
+                                            <a href="../Image/QD_type_3.png">
+                                                <img src="../Image/QD_type_3.png" alt="顯示不同模組區域的結構圖" style="width: 100%; height: auto;">
+                                            </a>
+                                        </div>
+                                        <p class="dark-background">
+                                            ▲橫向表示一個量子位元包含幾個量子點（粉色）、縱向表示一個量子位元包含幾個自旋並分布在哪個量子點中。
+                                        
+                                            <span style="font-size: 0.7em; line-height: 0.8;">
+                                                <br>Ref: Semiconductor spin qubits
+                                                <br>DOI: 10.1103/RevModPhys.95.025003
+                                            </span>
+                                            <br><br>
+                                        </p>
+                                        <p>舉例像是量子點混合量子位元：</p>
+                                        <ul>
+                                            <li><p><strong>量子點混合量子位元 (Quantum Dot Hybrid Qubit):</strong>
+                                                為了克服 \(S-T_0\) 量子位元對磁場梯度的依賴，進一步提出混合量子位元。
+                                                它利用三個電子
+                                                分佈在一個雙量子點中（一個點有一個電子，另一個點有兩個）來編碼量子位元。
+                                                其邏輯基態可以被定義為
+                                                \[ \ket{0} \equiv \ket{\downarrow}\otimes S \]
+                                                和
+                                                \[ \ket{1} \equiv  \sqrt{\frac{1}{3}}\ket{\uparrow}\otimes T_0-\sqrt{\frac{2}{3}}\ket{\uparrow}\otimes T_{-} \]，
+                                                其中 \( S \) 代表雙電子點中的單重態、\(T_0, T_{-}\)代表雙電子點中的三重態。
+                                                這種編碼的能階分裂主要由量子點內的單重態–三重態能量差決定，因此不需要外部磁場梯度就能實現快速的量子位元旋轉，同時對電荷雜訊也較不敏感。
+                                            </p></li>
+                                            </ul>
 
+                                            <div style="text-align: center;">
+                                                <a href="../Image/hybrid_dot.png">
+                                                    <img src="../Image/hybrid_dot.png" alt="顯示不同模組區域的結構圖" style="width: 70%; height: auto;">
+                                                </a>
+                                            </div>
+                                            <p class="dark-background">
+                                                ▲量子點混合量子位元的例子，可以看出兩個量子點中分別帶有一個與兩個電子。
+                                                <span style="font-size: 0.7em; line-height: 0.8;">
+                                                    <br>Ref: Extending the coherence of a quantum dot hybrid qubit
+                                                    <br>DOI: 10.1038/s41534-017-0034-2
+                                                </span>
+                                                <br><br>
+                                            </p>
 
-                                <div style="text-align: center;">
-                                    <a href="../Image/SET-DQD.png">
-                                        <img src="../Image/SET-DQD.png" alt="顯示不同模組區域的結構圖" style="width: 80%; height: auto;">
-                                    </a>
-                                </div>
-                                <p class="dark-background">
-                                    ▲量子點位元可以組合成雙量子元件（DQD），也可以整合單電子電晶體（SET）。
-                                    <span style="font-size: 0.7em; line-height: 0.8;">
-                                        <br>YouTube:【2024陽明交大電機專題探索】李佩雯教授介紹
-                                        <br><a href="https://www.youtube.com/watch?v=LuXsf-pWFeI&t=7s">https://www.youtube.com/watch?v=LuXsf-pWFeI&t=7s</a>
-                                    </span>
-                                    <br><br>
-                                </p>
+                                            <p>而豐富的量子點組合方式，也有不同的量子態編碼與之對應：N表示一個量子位元含有N個量子點、q代表磁量子數，可以比對\(\ket{0},\ket{1}\)對應到的實際量子態為何？</p>
+                                            <div style="text-align: center;">
+                                                <a href="../Image/QD_type_1.png">
+                                                    <img src="../Image/QD_type_1.png" alt="顯示不同模組區域的結構圖" style="width: 80%; height: auto;">
+                                                </a>
+                                            </div>
+                                            <p class="dark-background">
+                                                <span style="font-size: 0.7em; line-height: 0.8;">
+                                                    Semiconductor spin qubits
+                                                    <br>DOI: 10.1103/RevModPhys.95.025003
+                                                </span>
+                                                <br><br>
+                                            </p>
 
-                                <h3>奈米線</h3>
-                                <div style="text-align: center;">
-                                    <a href="../Image/Nanowire_Qubit.png">
-                                        <img src="../Image/Nanowire_Qubit.png" alt="顯示不同模組區域的結構圖" style="width: 80%; height: auto;">
-                                    </a>
-                                </div>
-                                <p class="dark-background">
-                                    ▲在一維奈米線上，加入閘極來形成位能井。
-                                    <span style="font-size: 0.7em; line-height: 0.8;">
-                                        Silicon quantum electronics
-                                        <br>DOI:10.1103/RevModPhys.85.961
-                                    </span>
-                                    <br><br>
-                                </p>
-
-
-                                <h3>閘定義量子位元（二維電子氣）</h3>
-                                <div style="text-align: center;">
-                                    <a href="../Image/SpQ-1.png">
-                                        <img src="../Image/SpQ-1.png" alt="奈米規模量子比特電路圖示" style="width: 100%; height: auto;">
-                                    </a>
-                                </div>
-                                <p  class="dark-background">
-                                    ▲當前最主流的自旋量子。利用半導體製程層層堆疊、蝕刻的特性，先製作異質的夾層，例如\(SiGe-Si-SiGe\)，此時中間層會帶有許多可以自由移動的電子，形成二維自由電子氣層。
-                                    接著在上方製作出閘極，利用閘極產生的電壓來形成量子點。<br>
-                                    <span style="font-size: 0.7em; line-height: 0.8;">
-                                        Resonantly driven CNOT gate for electron spins
-                                        <br>DOI:10.1126/science.aao5965
-                                    </span>
-                                    <br>
-                                    <br>
-                                </p>
-
+     
 
 
 

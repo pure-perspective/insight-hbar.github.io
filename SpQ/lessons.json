@@ -1,8 +1,8 @@
 [
     { "title": "半導體自旋量子位元:引言", "file": "main.html" , "status": "new" , "date": "2025-07-21"},
-    { "title": "什麼是自旋量子位元？", "file": "A.html" , "status": "new" , "date": "2025-07-28"},
-    { "title": "控制自旋量子位元？", "file": "B.html" ,"enabled": false},
-    { "title": "自旋量子位元的種類、1,2,2.5,3", "file": "C.html" ,"enabled": false},
+    { "title": "什麼是半導體自旋量子位元？", "file": "A.html" , "status": "new" , "date": "2025-07-28"},
+    { "title": "控制自旋量子位元？", "file": "C.html" ,"enabled": false},
+    { "title": "半導體自旋量子位元的種類與編碼方式", "file": "B.html" , "status": "new" , "date": "2025-07-29"},
     { "title": "Shuttled", "file": "D.html" ,"enabled": false},
     { "title": "Measure", "file": "F.html" ,"enabled": false},
     { "title": "Andreev hybrid", "file": "G.html" ,"enabled": false}

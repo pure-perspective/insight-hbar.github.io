@@ -1,7 +1,7 @@
 [
     { "title": "Semiconductor Spin Qubits: Intoduction", "file": "main.html" , "status": "new" , "date": "2025-07-21"},
     { "title": "What are Spin Qubits?", "file": "A.html" , "status": "new" , "date": "2025-07-28"},
-    { "title": "超導量子位元是什麼呢？", "file": "B.html" ,"enabled": false},
+    { "title": "Types and Encoding Schemes of Semiconductor Spin Qubits", "file": "B.html" , "status": "new" , "date": "2025-07-29"},
     { "title": "淺談超導電路量子位元的種類", "file": "C.html" ,"enabled": false},
     { "title": "早年超導量子位元的種類", "file": "D.html" ,"enabled": false},
     { "title": "電子顯微鏡下的超導量子位元", "file": "F.html" ,"enabled": false},

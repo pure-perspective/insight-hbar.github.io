@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <meta name="author" content="Peir-Ru Wang">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;1,300&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/20250525-icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/20250525-icon.png">
+
+    <!-- 預設圖片 URL（建議為 1200x630，jpg 或 png）-->
+    <meta property="og:image" content="../Image/Spin_Q_dim.png">
+
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/css/style.css" rel="stylesheet">
+    <link href="../assets/css/responsive.css" rel="stylesheet">
+
+    <title>Hardware Introduction</title>
+    <meta name="description" content="Discover insights into semiconductor spin qubits, their role in quantum computing, challenges, and future prospects for 2025.">
+    <meta name="keywords" content="Semiconductor spin qubits quantum computing hardware guide, quantum bits, qubit technology, superconducting qubits, quantum dot fabrication, low temperature cooling systems, Josephson junctions, high-fidelity two-qubit gates, scalable quantum processors">
+    <link rel="canonical" href="https://www.insight-ihbar.com/SpQ_en/main.html">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+    <header id="masthead" class="site-header">
+        <nav id="primary-navigation" class="site-navigation">
+            <div class="container">
+
+                <div class="navbar-header">                   
+                    <a href="../index_en.html" class="site-title">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</a>
+                </div><!-- /.navbar-header -->
+
+                <div class="collapse navbar-collapse" id="agency-navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="../index_en.html">Home</a></li>
+                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Qubit Physics<i class="fa fa-caret-down hidden-xs" aria-hidden="true"></i></a>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                              <li><a href="../SCQ_elementary_en/main.html">Superconducting Qubits (Elementary)</a></li>
+                              <li><a href="../SCQ_advanced_en/main.html">Superconducting Qubits (Advanced)</a></li>
+                              <li class="active"><a href="../SpQ_en/main.html">Semiconductor Spin Qubits</a></li>
+                            </ul>
+                        </li>
+                        <!--<li class="active"><a href="../SCQ_elementary/main.html">科普介紹</a></li>-->
+                        <li><a href="../QC_hardware_en/main.html">Hardware</a></li>
+                        <li><a href="../About_en/main.html">About Us</a></li>
+                        <li><a href="../index.html">中文版</a></li>                        
+                    </ul>
+                </div>
+
+            </div>   
+        </nav><!-- /.site-navigation -->
+    </header><!-- /#mastheaed -->
+
+    <div id="hero" class="hero overlay subpage-hero blog-hero">
+        <div class="hero-content">
+            <div class="hero_2-text">
+                <h1>Semiconductor Spin Qubits</h1>
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="../index_en.html">Home</a></li>
+                  <!--<li class="breadcrumb-item"><a href="./main.html">Hardware Guide (2025)</a></li>
+                  <li class="breadcrumb-item active">約瑟夫森節</li>-->
+                </ol>
+            </div><!-- /.hero-text -->
+        </div><!-- /.hero-content -->
+    </div><!-- /.hero -->
+
+    <main id="main" class="site-main">
+
+        <section class="site-section subpage-site-section section-blog">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                        <article class="blog-post">
+                            <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="Laptop on wooden desk">-->
+                            <div class="post-content">
+                                <div style="text-align: center;">
+                                    <h2>Types and Encoding Schemes of Semiconductor Spin Qubits</h2>
+                                    <h3></h3>
+                                </div>
+                                
+                                
+                                <p>Among the types of semiconductor qubits, the main classification is based on the encoding scheme, i.e., which quantum states are chosen to correspond to \( \ket{0} \) and \( \ket{1} \). They can be encoded using spin (Spin Qubit) or by the number of charges in a quantum dot (Charge Qubit); a single quantum dot can be used, or multiple quantum dots can be combined for encoding. These different encoding schemes involve trade-offs in terms of physical implementation complexity, control methods, and sensitivity to noise.<br><br>
+                                </p>
+                                <h3>Spin Qubits and Charge Qubits</h3>
+                                <div style="text-align: center;">
+                                    <a href="../Image/Charge_Spin.png">
+                                        <img src="../Image/Charge_Spin.png" alt="Diagram showing the structure of different module areas" style="width: 70%; height: auto;">
+                                    </a>
+                                </div>
+                                <p class="dark-background">
+                                    ▲ As mentioned earlier, semiconductor qubits utilize either <b>intrinsic quantum effects</b> or <b>potential well quantum effects</b> for quantum encoding. A Spin Qubit uses the spin state of an electron in a quantum dot for encoding. In a Charge Qubit, information is encoded by the location of a charge in one of two quantum dots.
+                                    <span style="font-size: 0.7em; line-height: 0.8;">
+                                        <br>Ref: YouTube: [2024 NYCU Electrical Engineering Project Exploration] Prof. Pei-Wen Li Introduction
+                                        <br><a href="https://www.youtube.com/watch?v=LuXsf-pWFeI&t=7s">https://www.youtube.com/watch?v=LuXsf-pWFeI&t=7s</a>
+                                    </span>
+                                    <br><br>
+                                </p>
+                                
+                                
+                                <h3>Multi-Quantum Dot Combinations and Types of Spin Encoding</h3>
+                                <p>Interestingly, spin qubits can utilize combinations of multiple spins to construct different encoding schemes.</p>
+                                
+                                <div style="text-align: center;">
+                                    <a href="../Image/QD_type_4.png">
+                                        <img src="../Image/QD_type_4.png" alt="Diagram showing the structure of different module areas" style="width: 100%; height: auto;">
+                                    </a>
+                                </div>
+                                <p class="dark-background">
+                                    <span style="font-size: 0.7em; line-height: 0.8;">
+                                        Ref: Semiconductor spin qubits
+                                        <br>DOI: 10.1103/RevModPhys.95.025003
+                                    </span>
+                                    <br><br>
+                                </p>
+                                <ul>
+                                    <li>
+                                        <p><strong>Single-Spin Qubit:</strong> This is the most intuitive encoding method. A qubit is encoded in the two states of a single electron confined in a single quantum dot, spin-down \( \ket{0} \) and spin-up \( \ket{1} \), distinguished by applying a z-direction magnetic field \(B_z\). This scheme is conceptually simple and has the most straightforward physical structure. Its control typically requires applying an oscillating magnetic field \(B_x\) resonant with the qubit, i.e., electron spin resonance (ESR), to drive spin rotations. However, generating a precise, localized oscillating magnetic field at the nanoscale is a significant technological challenge, and it only responds to magnetic fields, not electric fields, which has spurred the development of more complex encoding schemes.</p>
+                                      </li>
+                                      <li>
+                                        <p><strong>Singlet-Triplet (\(S-T_0\) Qubit):</strong> 
+                                            This scheme uses the spins of two electrons in a double quantum dot (DQD) to encode one qubit. Its logical basis states are defined as the 'singlet state' with a total spin of zero,
+                                        \( \ket{S} = \frac{1}{\sqrt{2}} \left( \ket{\uparrow\downarrow} - \ket{\downarrow\uparrow} \right) \)
+                                        and the 'triplet state' with a total spin of one and a magnetic quantum number of zero,
+                                        \( \ket{T_0} = \frac{1}{\sqrt{2}} \left( \ket{\uparrow\downarrow} + \ket{\downarrow\uparrow} \right) \).
+                                        The advantage of the \(S-T_0\) qubit is that the potential barrier between the two quantum dots can be controlled electrically, thereby turning the overlap of the two electron wave functions on or off, which gives rise to the quantum mechanical effect of exchange interaction. This interaction can directly drive \(Z\)-rotations of the qubit. X-axis rotations, however, require a magnetic field gradient for operation. This method allows the z-axis to be controlled by an electric field and the x-axis by a magnetic field, respectively.</p>
+                                      </li>
+                                      <li>
+                                        <p><strong>Exchange-Only Qubit:</strong> This is a scheme for all-electrical control, which encodes a logical qubit using three electrons in three quantum dots. By electrically controlling the exchange interaction between adjacent quantum dots, all operations can be performed without any magnetic fields or magnetic field gradients.</p>
+                                      </li>
+                                    </ul>
+                                
+                                    <p>The three methods above show a progression from purely magnetic control to all-electrical control by integrating multiple quantum dots, making them easier to integrate into current semiconductor manufacturing processes and control logic. In fact, there are many more rich schemes:
+                                    </p>
+                                    <div style="text-align: center;">
+                                        <a href="../Image/QD_type_3.png">
+                                            <img src="../Image/QD_type_3.png" alt="Diagram showing the structure of different module areas" style="width: 100%; height: auto;">
+                                        </a>
+                                    </div>
+                                    <p class="dark-background">
+                                        ▲ The horizontal axis represents how many quantum dots (pink) a qubit contains, and the vertical axis shows how many spins a qubit contains and in which quantum dots they are distributed.
+                                    
+                                        <span style="font-size: 0.7em; line-height: 0.8;">
+                                            <br>Ref: Semiconductor spin qubits
+                                            <br>DOI: 10.1103/RevModPhys.95.025003
+                                        </span>
+                                        <br><br>
+                                    </p>
+                                    <p>For example, the quantum dot hybrid qubit:</p>
+                                    <ul>
+                                        <li><p><strong>Quantum Dot Hybrid Qubit:</strong>
+                                            To overcome the reliance of \(S-T_0\) qubits on magnetic field gradients, the hybrid qubit was proposed. It uses three electrons distributed in a double quantum dot (one electron in one dot, two in the other) to encode a qubit. Its logical basis states can be defined as
+                                            \[ \ket{0} \equiv \ket{\downarrow}\otimes S \]
+                                            and
+                                            \[ \ket{1} \equiv  \sqrt{\frac{1}{3}}\ket{\uparrow}\otimes T_0-\sqrt{\frac{2}{3}}\ket{\uparrow}\otimes T_{-} \],
+                                            where \( S \) represents the singlet state in the double-electron dot, and \(T_0, T_{-}\) represent the triplet states. The energy splitting of this encoding is mainly determined by the singlet-triplet energy difference within a quantum dot, thus enabling fast qubit rotations without an external magnetic field gradient, while also being less sensitive to charge noise.
+                                        </p></li>
+                                        </ul>
+                                
+                                        <div style="text-align: center;">
+                                            <a href="../Image/hybrid_dot.png">
+                                                <img src="../Image/hybrid_dot.png" alt="Diagram showing the structure of different module areas" style="width: 70%; height: auto;">
+                                            </a>
+                                        </div>
+                                        <p class="dark-background">
+                                            ▲ An example of a quantum dot hybrid qubit, showing one and two electrons in the two quantum dots, respectively.
+                                            <span style="font-size: 0.7em; line-height: 0.8;">
+                                                <br>Ref: Extending the coherence of a quantum dot hybrid qubit
+                                                <br>DOI: 10.1038/s41534-017-0034-2
+                                            </span>
+                                            <br><br>
+                                        </p>
+                                
+                                        <p>The rich variety of quantum dot combinations also corresponds to different quantum state encodings: N represents a qubit containing N quantum dots, q represents the magnetic quantum number. You can compare and see which actual quantum states correspond to \(\ket{0}\) and \(\ket{1}\).</p>
+                                        <div style="text-align: center;">
+                                            <a href="../Image/QD_type_1.png">
+                                                <img src="../Image/QD_type_1.png" alt="Diagram showing the structure of different module areas" style="width: 80%; height: auto;">
+                                            </a>
+                                        </div>
+                                        <p class="dark-background">
+                                            <span style="font-size: 0.7em; line-height: 0.8;">
+                                                Semiconductor spin qubits
+                                                <br>DOI: 10.1103/RevModPhys.95.025003
+                                            </span>
+                                            <br><br>
+                                        </p>
+
+
+                                
+
+                                <p>
+                                    <span style="font-size: 0.5em; line-height: 0.8;">
+                                        Originally written in Chinese by the author, these articles are translated into English to invite cross-language resonance.
+                                    </span>
+                                </p>
+                                <div class="post-meta">
+                                    <span class="post-author">
+                                        <a href="../About_en/Wang.html"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="Professional headshot">Peir-Ru Wang</a>
+                                    </span>
+                                    <span class="post-category">
+                                        <a href="../SpQ_en/main.html"><i class="fa fa-folder" aria-hidden="true"></i>Semiconductor Spin Qubits</a>
+                                    </span>
+                                </div><!-- /.post-meta -->
+                            
+                                <div id="prev-next-nav" class="text-center"></div>
+
+                                <script>
+fetch("lessons.json")
+  .then(res => res.json())
+  .then(pages => {
+    // 過濾掉 disabled 的頁面
+    pages = pages.filter(p => p.enabled !== false);
+
+    const current = location.pathname.split("/").pop();
+    const index = pages.findIndex(p => p.file === current);
+    let html = "";
+
+    if (index > 0) {
+      const prev = pages[index - 1];
+      html += `<a class="btn btn-gray" href="${prev.file}">← Previous</a> `;
+    }
+
+    html += `<a class="btn btn-gray" href="../SpQ/${current}" style="margin: 0 10px;">中文版</a>`;
+
+    if (index < pages.length - 1) {
+      const next = pages[index + 1];
+      html += `<a class="btn btn-gray" href="${next.file}">Next →</a>`;
+    }
+
+    document.getElementById("prev-next-nav").innerHTML = html;
+  });
+</script>
+
+                            </div><!-- /.post-content -->
+                        </article><!-- /.blog-post -->
+                        <!--<div id="PostComments" class="post-comments">
+                            
+                            
+                            
+                        </div> /#PostComments -->
+                        <!--<div class="respond">
+                            <h3>Post a Comment</h3>
+                            <form class="form-horizontal">
+                                <input class="form-control" type="text" placeholder="Your Name*" required>
+                                <input class="form-control" type="email" placeholder="Your Email" required>
+                                <textarea class="form-control form-control-comment" type="text" placeholder="Your Comment*" required></textarea>
+                                <button class="btn btn-green">Add a comment</button>
+                            </form>    
+                        </div> /.respond -->
+                    </div>
+                    <aside class="col-md-3">
+                        <div class="sidebar">
+                            <!--<div class="widget search-form">
+                                <h4 class="widget-title">Search the blog</h4>
+                                <form class="form-group">
+                                    <input type="text" class="form-control" placeholder="Search" required>
+                                    <button class="btn btn-green" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                </form>
+                            </div> /.search-form -->
+                            <!--<div class="widget widget-recent-posts">
+                                <h4 class="widget-title">Recent posts</h4>
+                                <ul class="list-unstyled">
+                                    <li><a href="#">Inside The Lipsum</a></li>
+                                    <li><a href="#">Oscar Wilde</a></li>
+                                    <li><a href="#">Jeffrey Ween</a></li>
+                                    <li><a href="#">Responsive Design</a></li>
+                                    <li><a href="#">Development</a></li>
+                                </ul>
+                            </div> /.widget-recent-posts -->
+                            
+
+                            <div class="widget">
+                                <!--<h4 class="widget-title"><a href="./main.html">科普版：目錄</a></h4>-->
+                                <div id="lesson-list_2"></div>
+                            </div>
+                            <script>
+fetch("lessons.json")
+  .then(res => res.json())
+  .then(pages => {
+    const current = location.pathname.split("/").pop();
+    const list = pages
+      .filter(p => p.enabled !== false) // ← 這行：只顯示 enabled 沒被關閉的項目
+      .map(p => {
+        const isActive = p.file === current ? "active" : "";
+        return `<div class="lesson-link ${isActive}"><a href="${p.file}">${p.title}</a></div>`;
+      })
+      .join("");
+    document.getElementById("lesson-list_2").innerHTML = list;
+  });
+</script>
+
+  
+                        </div><!-- /.sidebar -->
+                        
+                    </aside>
+                </div>
+            </div>
+        </section><!-- /.section-portfolio -->
+
+    </main><!-- /#main -->
+
+    <footer id="colophon" class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-4 col-xs-6">
+                    <a href="../index.html" class="site-title">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</a>
+                    <p>Exploring the Quantum Technology Together.</p>
+                    </div>
+                <div class="col-lg-offset-4 col-md-3 col-sm-4 col-md-offset-2 col-sm-offset-0 col-xs-6 ">
+                    <p class="site-title">𝐾𝐸𝐸𝑃 𝐼𝑁 𝑇𝑂𝑈𝐶𝐻</p>
+                    <ul class="list-unstyled contact-links">
+                        <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@insight-ihbar.com">info@insight-ihbar.com</a></li>
+                        <!--<li><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+37400800000">+374 (00) 80 00 00 </a></li>
+                        <li><i class="fa fa-fax" aria-hidden="true"></i><a href="+37400900000">+374 (00) 90 00 00</a></li>
+                        <li><i class="fa-solid fa-location-dot"></i><p>Hsinchu 300, Taiwan (R.O.C.)</p></li>-->
+                    </ul>
+                </div>
+                <!--<div class="clearfix visible-xs"></div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+                    <h3>Featured links</h3>
+                    <ul class="list-unstyled">
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="portfolio.html">Porfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>-->
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-8">
+                        <div class="social-links">
+                            <!--<a class="twitter-bg" href="#"><i class="fab fa-twitter"></i></a>-->
+                            <!--<<a class="facebook-bg" href="https://www.facebook.com/people/Quantum-Perspectives/61576446849628/"><i class="fab fa-facebook"></i></a>-->
+                            <!--<a class="facebook-bg" href="https://www.facebook.com/people/%E9%87%8F%E5%AD%90%E9%81%A0%E8%A6%8BQuantum-Perspectives/61576883632888/"><i class="fab fa-facebook-f"></i></a>-->
+                            <!--<a class="pinterest" href="#"><i class="fa-solid fa-microscope"></i></a>-->
+                            <!--<a class="facebook-bg" href="https://www.facebook.com/people/Insight-hbar/61576811775374/"><i class="fab fa-facebook-f"></i></a>-->
+                            <a class="linkedin-bg" href="https://www.linkedin.com/company/insight-ihbar"><i class="fab fa-linkedin"></i></a>
+                        </div><!-- /.social-links -->
+                    </div>
+                    <div class="col-xs-4">
+                        <div class="text-right">
+                            <p><span style="font-size: 16px;">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</span></p>
+                            <p>All Rights Reserved</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.copyright -->
+    </footer><!-- /#footer -->
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/bootstrap-select.min.js"></script>
+    <script src="../assets/js/jquery.slicknav.min.js"></script>
+    <script src="../assets/js/jquery.countTo.min.js"></script>
+    <script src="../assets/js/jquery.shuffle.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
+</body>
+</html>
