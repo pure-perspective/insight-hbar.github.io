@@ -251,6 +251,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.insight-ihbar.com/SpQ/D.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.insight-ihbar.com/SpQ/main.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -507,6 +512,11 @@
   </url>
   <url>
     <loc>https://www.insight-ihbar.com/SpQ_en/B.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.insight-ihbar.com/SpQ_en/D.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

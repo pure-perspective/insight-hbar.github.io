@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <meta name="author" content="Peir-Ru Wang">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;1,300&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/20250525-icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/20250525-icon.png">
+    
+    <!-- 預設圖片 URL（建議為 1200x630，jpg 或 png）-->
+    <meta property="og:image" content="../Image/Spin_Q_dim.png">
+
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/css/style.css" rel="stylesheet">
+    <link href="../assets/css/responsive.css" rel="stylesheet">
+
+    <title>半導體自旋量子位元</title>
+    <meta name="description" content="超導量子位元科普介紹，深入解析半導體自旋量子位元的原理、應用與未來趨勢，適合科技愛好者與專業人士了解量子計算核心技術。">
+    <meta name="keywords" content="半導體自旋量子位元, 量子計算, 量子位元, 超導量子電路, 量子科技, 量子硬體, 量子資訊, 量子糾錯, 半導體量子技術, 自旋量子比特">
+    <link rel="canonical" href="https://www.insight-ihbar.com/SpQ/A.html">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+    <header id="masthead" class="site-header">
+        <nav id="primary-navigation" class="site-navigation">
+            <div class="container">
+
+                <div class="navbar-header">
+                   
+                    <a href="../index.html" class="site-title">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</a>
+
+                </div><!-- /.navbar-header -->
+
+                <div class="collapse navbar-collapse" id="agency-navbar-collapse">
+
+                    <ul class="nav navbar-nav navbar-right">
+
+                        <li><a href="../index.html">Home</a></li>
+                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">科普介紹<i class="fa fa-caret-down hidden-xs" aria-hidden="true"></i></a>
+
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                                <li><a href="../SCQ_elementary/main.html">超導量子位元(科普版)</a></li>
+                              <li><a href="../SCQ_advanced/main.html">超導量子位元(進階版)</a></li>
+                              <li class="active"><a href="../SpQ/main.html">半導體自旋量子位元</a></li>
+                            </ul>
+
+                        </li>
+                        <!--<li class="active"><a href="../SCQ_elementary/main.html">科普介紹</a></li>-->
+                        <li><a href="../QC_hardware/main.html">硬體導論</a></li>
+                        <li><a href="../About/main.html">關於我們</a></li>
+                        <li><a href="../index_en.html">English</a></li>
+                        
+                    </ul>
+
+                </div>
+
+            </div>   
+        </nav><!-- /.site-navigation -->
+    </header><!-- /#mastheaed -->
+
+    <div id="hero" class="hero overlay subpage-hero blog-hero">
+        <div class="hero-content">
+            <div class="hero_2-text">
+                <a href="../SpQ/main.html"><h1>半導體自旋量子位元</h1></a>
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                  <!--<li class="breadcrumb-item"><a href="../SCQ_elementary/main.html">超導量子位元(科普版)</a></li>
+                  <li class="breadcrumb-item active">約瑟夫森節</li>-->
+                </ol>
+            </div><!-- /.hero-text -->
+        </div><!-- /.hero-content -->
+    </div><!-- /.hero -->
+
+    <main id="main" class="site-main">
+
+        <section class="site-section subpage-site-section section-blog">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                        <article class="blog-post">
+                            <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="">-->
+                            <div class="post-content">
+                                <div style="text-align: center;">
+                                    <h2>半導體自旋量子位元的主流材料</h2>
+                                    <h3></h3>
+                                </div>
+                                
+                                
+                                <p>半導體自旋量子位元的性能和潛力，與使用的材料平台密不可分。材料的物理特性，包含能帶結構、載子等效質量、自旋-軌道耦合、壓電性、材料核自旋等，
+                                    材料的內在物理性質，如核自旋、自旋軌道耦合強度和與現有製造工藝的兼容性，
+                                    決定了量子位元的相干時間、操控方式、現有製造工藝的兼容性與可擴展性。
+                                    <br><br></p>
+
+                                <h3>能帶結構（Band Structure）</h3>
+                                <p>能帶結構決定能隙(Band gap)是直接(Direct)還是間接(Indirect)能隙。直接能隙可以讓載子從價帶激發到導帶時不需藉助聲子耦合，與光子耦合效率較高。
+                                    此外，能帶結構的簡併/對稱性，在量子位元中，通常會施加磁場進行自旋能態分裂，磁場選擇的方向會與晶格的結構有關。能態簡併/對稱性容易讓載子從指定的磁場選取狀態中，與其他能帶耦合而退相干。
+                                </p>
+                                <br><br>
+                                <h3>載子等效質量（Effective Mass）</h3>
+                                <p>在固態物質中的載子，並不是一般概念的真空電子。大量電子在晶體結構中形成能帶結構，基態也就是費米面，而載子是能帶結構的激發，產生的載子可以帶正電或負電。
+                                    而因為載子事實上會與晶格結構、其他電子有複雜的交互作用，移動的「慣性」就會與裸電子不同，視為「等效質量」。
+                                    等效質量的大小會決定載子在低溫時的「波長」。當波長越長，兩個量子點的波函數就越容易overlap，可以用較大的元件尺寸就實現量子交互作用。
+                                </p>
+                                <br><br>
+                                <h3>自旋-軌道耦合(Spin-Orbital Coupling, SOC)</h3>
+                                <p>有趣的是，自旋-軌道耦合是一種相對論性的現象。自旋是相對論框架下合理量子場自然的數學結構。
+                                    此外，電子在原子核周邊快速運動，原子核的電場會因電子的相對運動，在電子的視角下會產生磁場的分量（這也是一種相對論性的效應）。
+                                    此時磁場會與電子自旋磁矩產生交互作用。</p>
+                                    <p>
+                                    自旋-軌道耦合對量子位元控制是一個一體兩面的特性。
+                                    優點是，較強的自旋-軌道耦合，可以利用電場電控方式來影響電子的自旋狀態（即相對論性的電磁轉換），能用電場控制這點在積體電路上是優於用磁場來控制。
+                                    然而缺點也是，晶體結構的聲子擾動，極容易導致退相干。
+                                </p>
+                                <br><br>
+                                <h3>壓電性</h3>
+                                <p>材料的壓電性，可以透過機械應力產生電場訊號，與前述類似針對自旋狀態做調控。但缺點也是，聲子擾動更容易產生電場雜訊導致退相干。</p>
+                                <br><br>
+                                <h3>材料核自旋</h3>
+                                <p>因為電子帶有\(\frac{1}{2}\)的自旋，如果材料的原子核也帶有非零的核自旋的話，會產生自旋-自旋交互作用，非常容易導致退相干。透過同位素純化的方式選擇零自旋的元素作為基材，可有效增加相干時間。</p>
+                                
+                                <br><br>
+                                <h3>主要材料特性</h3>
+                                <p>常見的三種的半導體材料——砷化鎵（GaAs）、矽（Si）和鍺（Ge）。</p>
+                                <table border="1" cellspacing="0" cellpadding="8" width="100%">
+                                    <thead>
+                                        <tr>
+                                            <th style="text-align: center; vertical-align: middle;">特性</th>
+                                            <th width="28%" style="text-align: center; vertical-align: middle;">砷化鎵 (GaAs)</th>
+                                            <th width="28%" style="text-align: center; vertical-align: middle;">矽 (Si)</th>
+                                            <th width="28%" style="text-align: center; vertical-align: middle;">鍺 (Ge)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td style="text-align: center; vertical-align: middle;"><strong>主要載子</strong></td>
+                                            <td style="text-align: center; vertical-align: middle;">電子</td>
+                                            <td style="text-align: center; vertical-align: middle;">電子 / 電洞</td>
+                                            <td style="text-align: center; vertical-align: middle;">電洞</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: center; vertical-align: middle;"><strong>能隙結構</strong></td>
+                                            <td style="text-align: center; vertical-align: middle;">Direct</td>
+                                            <td style="text-align: center; vertical-align: middle;">Indirect</td>
+                                            <td style="text-align: center; vertical-align: middle;">Indirect<br>電子能帶高度簡併</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: center; vertical-align: middle;"><strong>載子等效質量</strong></td>
+                                            <td style="text-align: center; vertical-align: middle;">小</td>
+                                            <td style="text-align: center; vertical-align: middle;">大</td>
+                                            <td style="text-align: center; vertical-align: middle;">小</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: center; vertical-align: middle;"><strong>自旋軌道耦合</strong></td>
+                                            <td style="text-align: center; vertical-align: middle;">強</td>
+                                            <td style="text-align: center; vertical-align: middle;">電子：弱<br> 電洞：較強</td>
+                                            <td style="text-align: center; vertical-align: middle;">強且可調控</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: center; vertical-align: middle;"><strong>壓電性</strong></td>
+                                            <td style="text-align: center; vertical-align: middle;">有</td>
+                                            <td style="text-align: center; vertical-align: middle;">-</td>
+                                            <td style="text-align: center; vertical-align: middle;">-</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: center; vertical-align: middle;"><strong>核自旋環境</strong></td>
+                                            <td style="text-align: center; vertical-align: middle;">Ga, As均為自旋\(\frac{3}{2}\)</td>
+                                            <td style="text-align: center; vertical-align: middle;">>90% 為0自旋<sup>28</sup>Si, 可同位素純化</td>
+                                            <td style="text-align: center; vertical-align: middle;">主要同位素<sup>70</sup>Ge,<sup>72</sup>Ge,<sup>74</sup>Ge皆為零0</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: center; vertical-align: middle;"><strong>典型相干時間 \(T_2^*\)</strong></td>
+                                            <td style="text-align: center; vertical-align: middle;">短 (約幾十奈秒)</td>
+                                            <td style="text-align: center; vertical-align: middle;">較長 (毫秒)<br>因為低核子旋</td>
+                                            <td style="text-align: center; vertical-align: middle;">長 (約幾百奈秒，持續進步中)</td>
+                                        </tr>
+                                        
+                                        <tr>
+                                            <td style="text-align: center; vertical-align: middle;"><strong>閘極操控方式</strong></td>
+                                            <td style="text-align: center; vertical-align: middle;">電控 (SOC/Exchange-interaction)</td>
+                                            <td style="text-align: center; vertical-align: middle;">磁控 (ESR)<br>或<br>電控(SOC/Exchange-interaction)</td>
+                                            <td style="text-align: center; vertical-align: middle;">全電控 (強SOC)</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: center; vertical-align: middle;"><strong>CMOS兼容性</strong></td>
+                                            <td style="text-align: center; vertical-align: middle;">否</td>
+                                            <td style="text-align: center; vertical-align: middle;">極佳 (Si-MOS) / 良好 (Si/SiGe)</td>
+                                            <td style="text-align: center; vertical-align: middle;">良好 (與矽工藝兼容)</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: center; vertical-align: middle;"><strong>技術成熟度</strong></td>
+                                            <td style="text-align: center; vertical-align: middle;">開創性，現活躍度較低</td>
+                                            <td style="text-align: center; vertical-align: middle;">領先平台</td>
+                                            <td style="text-align: center; vertical-align: middle;">快速崛起的新興平台</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <br><br>
+                                <h3>砷化鎵 (GaAs)</h3>
+                                <p>砷化鎵是III-V族化合物半導體的典型代表，也是自旋電子學和自旋量子位元研究的開創材料。
+                                    GaAs因其晶體長晶質量非常高，可以透過分子束磊晶（MBE）生長出原子等級平整的異質結構界面，從而形成一個非常量好的二維電子氣層（2DEG），
+                                    這為定義高品質的量子點提供了良好的基礎。此外，GaAs具有較小的載子等效質量，可以有較大的量子相干長度，較容易實現量子位元的量子交互作用。</p>
+                                <p>然而，GaAs平台存在一個致命的、內在的缺陷：其組成的兩種原子——鎵（Ga）和砷（As）——的所有穩定同位素都具有非零的核自旋（均為\(\frac{3}{2}\)）。
+                                    這意味著在量子井中的電子自旋會被一個由數萬個原子核自旋構成的、隨機起伏的核自旋所包圍。電子自旋會與這些核自旋發生強烈的耦合。
+                                    這個隨機的核磁場就像一個強大的磁雜訊源，會導致電子自旋快速退相干。</p>
+                                <p>這種不可避免的交互作用，將GaAs中電子自旋的相干時間 \(T_2^*\)限制在一個非常短的範圍內，通常只有幾十奈秒。
+                                    這個難以克服的局限性，故近來研究重心逐漸從GaAs轉向了核自旋環境更為乾淨的IV族半導體材料：矽。</p>
+                            
+                                <br><br>
+                                <h3>矽 (Si)</h3>
+                                <p>矽是現代電子產業的基石，全球數兆美元的半導體產業都建立在矽基CMOS技術之上。
+                                    將量子計算建立在矽平台上，無疑為利用這一成熟、龐大的工業生態系來實現大規模製造提供了明確的可行方案。
+                                    除了與CMOS技術的兼容外，矽在作為自旋量子位元材料方面，具有零自旋的材料物理優勢。</p>
+                                <br>
+                                <h4>同位素純化與相干時間的躍升</h4>
+                                <p>矽最突出的優點在於其極其優越的核自旋環境。自然存在的矽主要由三種同位素組成：<sup>28</sup>Si: ~92.2%、<sup>29</sup>Si: ~4.7%）和<sup>30</sup>Si: ~3.1%）。
+                                    其中，只有<sup>29</sup>Si具有非零的核自旋（自旋為\(\frac{1}{2}\)），而佔絕大多數的<sup>28</sup>Si和<sup>30</sup>Si都是核自旋為零的同位素。這意味著在天然矽中，會與電子自旋發生超精細交互作用的核自旋密度已經比GaAs低得多。</p>
+                                <p>更進一步，利用離心濃縮等工業技術，可以製造出同位素高度純化的矽，特別是將<sup>28</sup>Si的豐度提高到99.9%以上。
+                                    這種同位素純化的<sup>28</sup>Si晶體，為電子自旋提供了一個幾乎沒有任何磁性雜訊的環境，退相干機制被幾乎完全消除。
+                                    這一突破使得矽中自旋量子位元的相干時間實現了數個數量級的飛躍，從天然矽中的微秒級別，一躍達到了同位素純化矽中的毫秒乃至秒級別。
+                                    如此長的相干時間，為實現遠超容錯閾值的高保真度量子操作提供了堅實的硬體基礎。</p>
+                                <br>
+                                <h4>Si-MOS 與 Si/SiGe 異質結構</h4>
+                                <p>在矽基自旋量子位元的研發中，主要存在兩種主流的器件結構平台：</p>
+                                <ul>
+                                    <li><p><strong>Si-MOS:</strong> 這種結構與構成現代CPU和記憶體晶片的CMOS電晶體在物理上幾乎完全相同。它通常由一個矽通道、一層二氧化矽（SiO₂）絕緣層和上方的金屬閘極構成。Si-MOS的最大優勢在於其與標準工業製造流程的兼容性，被認為是通往大規模、低成本製造量子處理器的最直接途徑。然而，Si/SiO₂界面不可避免地存在一些電荷缺陷，這會導致較強的電荷雜訊，會影響量子位元的性能。</p></li>
+                                    <li><p><strong>矽/矽鍺 (Si/SiGe) 異質結構:</strong> 採用磊晶生長的方式製造Si/SiGe異質結構，一層純矽薄膜被生長在一層矽鍺合金之上。由於能帶結構的差異，電子會被限制在純矽層中，遠離表面的界面缺陷，從而有效降低了電荷雜訊。這通常能帶來更高的量子位元性能，包括更高的保真度和更長的相干時間。然而，Si/SiGe異質結構的製造工藝比標準Si-MOS更為複雜，成本也更高。</p></li>
+                                </ul>
+
+                                <br><br>
+                                <h3>鍺 (Ge)</h3>
+                                
+                                <p>Ge平台結合了GaAs和Si的部分優點，並帶來了獨特的長處：</p>
+                                <ul>
+                                    <li><p><strong>核自旋環境:</strong> 與矽類似，鍺的天然同位素也主要由核自旋為零的同位素構成，因此可以提供一個低核自旋雜訊的環境，有望實現長的相干時間。</p></li>
+                                    <li><p><strong>強大且可調的自旋軌道耦合:</strong> 這是鍺最突出的優勢。與矽中極弱的SOC不同，鍺（特別是其價帶中的電洞）具有非常強的內稟SOC。這種強大的SOC意味著可以非常高效地透過電場（EDSR）來操控電洞自旋，實現快速的全電控單量子位元閘，而無需像在矽中那樣依賴複雜的微磁體結構，從而簡化了器件的設計和製造。</p></li>
+                                    <li><p><strong>較小的有效質量:</strong> 鍺中電洞的有效質量比矽中電子的要小，這意味著\可以製造尺寸更大、更容易加工的量子點（約50-100 nm），這在一定程度上放寬了對微影技術的極限要求。</p></li>
+                                </ul>
+                                <p>近年來，基於Ge/Si奈米線和平面Ge/SiGe異質結構的研究取得了快速進展，成功展示了高品質的電洞量子點、相干操控以及比矽中電洞更長的相干時間。
+                                    鍺平台的全電控特性和與矽工藝的良好兼容性，使其成為一個極具吸引力的、有望實現快速且可擴展量子計算的方案之一。</p>
+                                
+                                
+                                
+                                <div class="post-meta">
+                                    <span class="post-author">
+                                        <a href="../About/Wang.html"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="">王培儒</a>
+                                    </span>
+                                    <span class="post-category">
+                                        <a href="../SpQ/main.html"><i class="fa fa-folder" aria-hidden="true"></i>半導體自旋量子位元</a>
+                                    </span>
+                                </div><!-- /.post-meta -->
+                            
+                                
+                                <div id="prev-next-nav" class="text-center"></div>
+
+                                <script>
+                                    fetch("lessons.json")
+      .then(res => res.json())
+      .then(pages => {
+        // 過濾掉 disabled 的頁面
+        pages = pages.filter(p => p.enabled !== false);
+    
+        const current = location.pathname.split("/").pop();
+        const index = pages.findIndex(p => p.file === current);
+        let html = "";
+    
+        if (index > 0) {
+          const prev = pages[index - 1];
+          html += `<a class="btn btn-gray" href="${prev.file}">← 上一頁</a> `;
+        }
+    
+        html += `<a class="btn btn-gray" href="../SpQ_en/${current}" style="margin: 0 10px;">English Version</a>`;
+    
+        if (index < pages.length - 1) {
+          const next = pages[index + 1];
+          html += `<a class="btn btn-gray" href="${next.file}">下一頁 →</a>`;
+        }
+    
+        document.getElementById("prev-next-nav").innerHTML = html;
+      });
+    </script>
+
+                            </div><!-- /.post-content -->
+                        </article><!-- /.blog-post -->
+                        <!--<div id="PostComments" class="post-comments">
+                            
+                            
+                            
+                        </div> /#PostComments -->
+                        <!--<div class="respond">
+                            <h3>Post a Comment</h3>
+                            <form class="form-horizontal">
+                                <input class="form-control" type="text" placeholder="Your Name*" required>
+                                <input class="form-control" type="email" placeholder="Your Email" required>
+                                <textarea class="form-control form-control-comment" type="text" placeholder="Your Comment*" required></textarea>
+                                <button class="btn btn-green">Add a comment</button>
+                            </form>    
+                        </div> /.respond -->
+                    </div>
+                    <aside class="col-md-3">
+                        <div class="sidebar">
+                            <!--<div class="widget search-form">
+                                <h4 class="widget-title">Search the blog</h4>
+                                <form class="form-group">
+                                    <input type="text" class="form-control" placeholder="Search" required>
+                                    <button class="btn btn-green" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                </form>
+                            </div> /.search-form -->
+                            <!--<div class="widget widget-recent-posts">
+                                <h4 class="widget-title">Recent posts</h4>
+                                <ul class="list-unstyled">
+                                    <li><a href="#">Inside The Lipsum</a></li>
+                                    <li><a href="#">Oscar Wilde</a></li>
+                                    <li><a href="#">Jeffrey Ween</a></li>
+                                    <li><a href="#">Responsive Design</a></li>
+                                    <li><a href="#">Development</a></li>
+                                </ul>
+                            </div> /.widget-recent-posts -->
+                            
+
+                            <div class="widget">
+                                <!--<h4 class="widget-title"><a href="./main.html">科普版：目錄</a></h4>-->
+                                <div id="lesson-list_2"></div>
+                            </div>
+                            <script>
+fetch("lessons.json")
+  .then(res => res.json())
+  .then(pages => {
+    const current = location.pathname.split("/").pop();
+    const list = pages
+      .filter(p => p.enabled !== false) // ← 這行：只顯示 enabled 沒被關閉的項目
+      .map(p => {
+        const isActive = p.file === current ? "active" : "";
+        return `<div class="lesson-link ${isActive}"><a href="${p.file}">${p.title}</a></div>`;
+      })
+      .join("");
+    document.getElementById("lesson-list_2").innerHTML = list;
+  });
+</script>
+  
+                        </div><!-- /.sidebar -->
+                        
+                    </aside>
+                </div>
+            </div>
+        </section><!-- /.section-portfolio -->
+
+    </main><!-- /#main -->
+
+    <footer id="colophon" class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-4 col-xs-6">
+                    <a class="site-title">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</a>
+                    <p>一起走進新時代的前沿科學與量子科技</p>
+                    </div>
+                <div class="col-lg-offset-4 col-md-3 col-sm-4 col-md-offset-2 col-sm-offset-0 col-xs-6 ">
+                    <p class="site-title">𝐾𝐸𝐸𝑃 𝐼𝑁 𝑇𝑂𝑈𝐶𝐻</p>
+                    <ul class="list-unstyled contact-links">
+                        <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@insight-ihbar.com">info@insight-ihbar.com</a></li>
+                        <!--<li><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+37400800000">+374 (00) 80 00 00 </a></li>
+                        <li><i class="fa fa-fax" aria-hidden="true"></i><a href="+37400900000">+374 (00) 90 00 00</a></li>
+                        <li><i class="fa-solid fa-location-dot"></i><p>Hsinchu 300, Taiwan (R.O.C.)</p></li>-->
+                    </ul>
+                </div>
+                <!--<div class="clearfix visible-xs"></div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+                    <h3>Featured links</h3>
+                    <ul class="list-unstyled">
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="portfolio.html">Porfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>-->
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-8">
+                        <div class="social-links">
+                            <!--<a class="twitter-bg" href="#"><i class="fab fa-twitter"></i></a>-->
+                            <!--<<a class="facebook-bg" href="https://www.facebook.com/people/Quantum-Perspectives/61576446849628/"><i class="fab fa-facebook"></i></a>-->
+                            <!--<a class="facebook-bg" href="https://www.facebook.com/people/%E9%87%8F%E5%AD%90%E9%81%A0%E8%A6%8BQuantum-Perspectives/61576883632888/"><i class="fab fa-facebook-f"></i></a>-->
+                            <!--<a class="pinterest" href="#"><i class="fa-solid fa-microscope"></i></a>-->
+                            <!--<a class="facebook-bg" href="https://www.facebook.com/people/Insight-hbar/61576811775374/"><i class="fab fa-facebook-f"></i></a>-->
+                            <a class="linkedin-bg" href="https://www.linkedin.com/company/insight-ihbar"><i class="fab fa-linkedin"></i></a>
+                        </div><!-- /.social-links -->
+                    </div>
+                    <div class="col-xs-4">
+                        <div class="text-right">
+                            <p><span style="font-size: 16px;">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</span></p>
+                            <p>All Rights Reserved</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.copyright -->
+    </footer><!-- /#footer -->
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/bootstrap-select.min.js"></script>
+    <script src="../assets/js/jquery.slicknav.min.js"></script>
+    <script src="../assets/js/jquery.countTo.min.js"></script>
+    <script src="../assets/js/jquery.shuffle.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
+</body>
+</html>

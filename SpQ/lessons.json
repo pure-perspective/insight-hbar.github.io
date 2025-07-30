@@ -3,6 +3,7 @@
     { "title": "什麼是半導體自旋量子位元？", "file": "A.html" , "status": "new" , "date": "2025-07-28"},
     { "title": "控制自旋量子位元？", "file": "C.html" ,"enabled": false},
     { "title": "半導體自旋量子位元的種類與編碼方式", "file": "B.html" , "status": "new" , "date": "2025-07-29"},
+    { "title": "半導體自旋量子位元的主流材料", "file": "D.html" , "status": "new" , "date": "2025-07-30"},
     { "title": "Shuttled", "file": "D.html" ,"enabled": false},
     { "title": "Measure", "file": "F.html" ,"enabled": false},
     { "title": "Andreev hybrid", "file": "G.html" ,"enabled": false}

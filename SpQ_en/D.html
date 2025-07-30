@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <meta name="author" content="Peir-Ru Wang">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;1,300&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/20250525-icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/20250525-icon.png">
+
+    <!-- 預設圖片 URL（建議為 1200x630，jpg 或 png）-->
+    <meta property="og:image" content="../Image/Spin_Q_dim.png">
+
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/css/style.css" rel="stylesheet">
+    <link href="../assets/css/responsive.css" rel="stylesheet">
+
+    <title>Hardware Introduction</title>
+    <meta name="description" content="Discover insights into semiconductor spin qubits, their role in quantum computing, challenges, and future prospects for 2025.">
+    <meta name="keywords" content="Semiconductor spin qubits quantum computing hardware guide, quantum bits, qubit technology, superconducting qubits, quantum dot fabrication, low temperature cooling systems, Josephson junctions, high-fidelity two-qubit gates, scalable quantum processors">
+    <link rel="canonical" href="https://www.insight-ihbar.com/SpQ_en/main.html">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+    <header id="masthead" class="site-header">
+        <nav id="primary-navigation" class="site-navigation">
+            <div class="container">
+
+                <div class="navbar-header">                   
+                    <a href="../index_en.html" class="site-title">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</a>
+                </div><!-- /.navbar-header -->
+
+                <div class="collapse navbar-collapse" id="agency-navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="../index_en.html">Home</a></li>
+                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Qubit Physics<i class="fa fa-caret-down hidden-xs" aria-hidden="true"></i></a>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                              <li><a href="../SCQ_elementary_en/main.html">Superconducting Qubits (Elementary)</a></li>
+                              <li><a href="../SCQ_advanced_en/main.html">Superconducting Qubits (Advanced)</a></li>
+                              <li class="active"><a href="../SpQ_en/main.html">Semiconductor Spin Qubits</a></li>
+                            </ul>
+                        </li>
+                        <!--<li class="active"><a href="../SCQ_elementary/main.html">科普介紹</a></li>-->
+                        <li><a href="../QC_hardware_en/main.html">Hardware</a></li>
+                        <li><a href="../About_en/main.html">About Us</a></li>
+                        <li><a href="../index.html">中文版</a></li>                        
+                    </ul>
+                </div>
+
+            </div>   
+        </nav><!-- /.site-navigation -->
+    </header><!-- /#mastheaed -->
+
+    <div id="hero" class="hero overlay subpage-hero blog-hero">
+        <div class="hero-content">
+            <div class="hero_2-text">
+                <h1>Semiconductor Spin Qubits</h1>
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="../index_en.html">Home</a></li>
+                  <!--<li class="breadcrumb-item"><a href="./main.html">Hardware Guide (2025)</a></li>
+                  <li class="breadcrumb-item active">約瑟夫森節</li>-->
+                </ol>
+            </div><!-- /.hero-text -->
+        </div><!-- /.hero-content -->
+    </div><!-- /.hero -->
+
+    <main id="main" class="site-main">
+
+        <section class="site-section subpage-site-section section-blog">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                        <article class="blog-post">
+                            <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="Laptop on wooden desk">-->
+                            <div class="post-content">
+                                <div style="text-align: center;">
+                                    <h2>Mainstream Materials for Semiconductor Spin Qubits</h2>
+                                    <h3></h3>
+                                </div>
+                                
+                                
+                                <p>The performance and potential of semiconductor spin qubits are inextricably linked to the material platform used. The physical properties of the material, including its band structure, carrier effective mass, spin-orbit coupling, piezoelectricity, and the presence of nuclear spins, determine the qubit's coherence time, control methods, compatibility with existing manufacturing processes, and scalability.<br><br></p>
+                                
+                                <h3>Band Structure</h3>
+                                <p>The band structure determines whether the band gap is direct or indirect. A direct band gap allows carriers to be excited from the valence band to the conduction band without the need for phonon coupling, leading to higher efficiency in coupling with photons. Furthermore, the degeneracy and symmetry of the band structure are relevant; in qubits, a magnetic field is often applied to split the spin energy states, and the choice of field direction is related to the crystal lattice structure. Degenerate or symmetric energy states can easily allow carriers to couple with other bands and decohere from the selected magnetic field state.</p>
+                                <br><br>
+                                <h3>Carrier Effective Mass</h3>
+                                <p>Carriers in solid-state materials are not the same as free electrons in a vacuum. A large number of electrons in a crystal structure form a band structure with a ground state known as the Fermi sea. Carriers are excitations of this band structure and can be positively or negatively charged. Because carriers interact in complex ways with the crystal lattice and other electrons, their "inertia" of movement differs from that of a bare electron, which is described by an "effective mass." The magnitude of the effective mass determines the "wavelength" of the carrier at low temperatures. A longer wavelength makes it easier for the wave functions of two quantum dots to overlap, allowing quantum interactions to be realized with larger device dimensions.</p>
+                                <br><br>
+                                <h3>Spin-Orbit Coupling (SOC)</h3>
+                                <p>Interestingly, spin-orbit coupling is a relativistic phenomenon. Spin is a natural mathematical structure in a consistent relativistic quantum field framework. Furthermore, as an electron moves rapidly around an atomic nucleus, the electric field of the nucleus, due to the electron's relative motion, will appear to have a magnetic field component from the electron's perspective (this is also a relativistic effect). This magnetic field then interacts with the electron's spin magnetic moment.</p>
+                                <p>Spin-orbit coupling is a double-edged sword for qubit control. The advantage is that stronger SOC allows for the control of an electron's spin state via electric fields (a relativistic electromagnetic conversion), which is superior to magnetic field control for integrated circuits. However, the disadvantage is that phonon disturbances in the crystal structure can easily lead to decoherence.</p>
+                                <br><br>
+                                <h3>Piezoelectricity</h3>
+                                <p>The piezoelectric properties of a material allow for the generation of electric field signals through mechanical stress, which can be used to manipulate spin states similarly to the methods mentioned above. However, the disadvantage is also that phonon disturbances are more likely to generate electric field noise, leading to decoherence.</p>
+                                <br><br>
+                                <h3>Material Nuclear Spins</h3>
+                                <p>Because an electron has a spin of \(\frac{1}{2}\), if the atomic nuclei of the material also have non-zero nuclear spins, spin-spin interactions will occur, which can very easily lead to decoherence. Using isotopically purified materials with zero-spin isotopes as the substrate can effectively increase coherence times.</p>
+                                
+                                <br><br>
+                                <h3>Key Material Properties</h3>
+                                <p>The three most common semiconductor materials are Gallium Arsenide (GaAs), Silicon (Si), and Germanium (Ge).</p>
+                                <table border="1" cellspacing="0" cellpadding="8" width="100%">
+                                    <thead>
+                                        <tr bgcolor="#f2f2f2">
+                                            <th style="text-align: center; vertical-align: middle;">Property</th>
+                                            <th width="28%" style="text-align: center; vertical-align: middle;">Gallium Arsenide (GaAs)</th>
+                                            <th width="28%" style="text-align: center; vertical-align: middle;">Silicon (Si)</th>
+                                            <th width="28%" style="text-align: center; vertical-align: middle;">Germanium (Ge)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td style="text-align: center; vertical-align: middle;"><strong>Primary Carrier</strong></td>
+                                            <td style="text-align: center; vertical-align: middle;">Electrons</td>
+                                            <td style="text-align: center; vertical-align: middle;">Electrons / Holes</td>
+                                            <td style="text-align: center; vertical-align: middle;">Holes</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: center; vertical-align: middle;"><strong>Band Gap Structure</strong></td>
+                                            <td style="text-align: center; vertical-align: middle;">Direct</td>
+                                            <td style="text-align: center; vertical-align: middle;">Indirect</td>
+                                            <td style="text-align: center; vertical-align: middle;">Indirect<br>Highly degenerate electron bands</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: center; vertical-align: middle;"><strong>Carrier Effective Mass</strong></td>
+                                            <td style="text-align: center; vertical-align: middle;">Small</td>
+                                            <td style="text-align: center; vertical-align: middle;">Large</td>
+                                            <td style="text-align: center; vertical-align: middle;">Small</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: center; vertical-align: middle;"><strong>Spin-Orbit Coupling</strong></td>
+                                            <td style="text-align: center; vertical-align: middle;">Strong</td>
+                                            <td style="text-align: center; vertical-align: middle;">Electrons: Weak<br> Holes: Stronger</td>
+                                            <td style="text-align: center; vertical-align: middle;">Strong and tunable</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: center; vertical-align: middle;"><strong>Piezoelectricity</strong></td>
+                                            <td style="text-align: center; vertical-align: middle;">Yes</td>
+                                            <td style="text-align: center; vertical-align: middle;">-</td>
+                                            <td style="text-align: center; vertical-align: middle;">-</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: center; vertical-align: middle;"><strong>Nuclear Spin Environment</strong></td>
+                                            <td style="text-align: center; vertical-align: middle;">Ga and As are all spin-\(\frac{3}{2}\)</td>
+                                            <td style="text-align: center; vertical-align: middle;">&gt;90% is <sup>28</sup>Si (spin-0), can be isotopically purified</td>
+                                            <td style="text-align: center; vertical-align: middle;">Main isotopes <sup>70</sup>Ge, <sup>72</sup>Ge, <sup>74</sup>Ge are all spin-0</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: center; vertical-align: middle;"><strong>Typical Coherence Time \(T_2^*\)</strong></td>
+                                            <td style="text-align: center; vertical-align: middle;">Short (~tens of ns)</td>
+                                            <td style="text-align: center; vertical-align: middle;">Longer (ms)<br>due to low nuclear spin</td>
+                                            <td style="text-align: center; vertical-align: middle;">Long (~hundreds of ns, constantly improving)</td>
+                                        </tr>
+                                        
+                                        <tr>
+                                            <td style="text-align: center; vertical-align: middle;"><strong>Gate Control Method</strong></td>
+                                            <td style="text-align: center; vertical-align: middle;">Electrical (SOC/Exchange)</td>
+                                            <td style="text-align: center; vertical-align: middle;">Magnetic (ESR)<br>or<br>Electrical (SOC/Exchange)</td>
+                                            <td style="text-align: center; vertical-align: middle;">All-electrical (Strong SOC)</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: center; vertical-align: middle;"><strong>CMOS Compatibility</strong></td>
+                                            <td style="text-align: center; vertical-align: middle;">No</td>
+                                            <td style="text-align: center; vertical-align: middle;">Excellent (Si-MOS) / Good (Si/SiGe)</td>
+                                            <td style="text-align: center; vertical-align: middle;">Good (compatible with Si processes)</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: center; vertical-align: middle;"><strong>Technology Maturity</strong></td>
+                                            <td style="text-align: center; vertical-align: middle;">Pioneering, less active now</td>
+                                            <td style="text-align: center; vertical-align: middle;">Leading platform</td>
+                                            <td style="text-align: center; vertical-align: middle;">Rapidly emerging platform</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                
+                                <br><br>
+                                <h3>Gallium Arsenide (GaAs)</h3>
+                                <p>Gallium arsenide is a classic example of a III-V compound semiconductor and was a pioneering material for research in spintronics and spin qubits. Due to its very high crystal growth quality, atomically flat heterostructure interfaces can be grown using molecular beam epitaxy (MBE), forming a high-quality two-dimensional electron gas (2DEG). This provided an excellent foundation for defining high-quality quantum dots. Additionally, GaAs has a small carrier effective mass, which allows for a larger quantum coherence length, making it easier to achieve quantum interactions between qubits.</p>
+                                <p>However, the GaAs platform has a fatal, intrinsic flaw: both of its constituent atoms—gallium (Ga) and arsenic (As)—have stable isotopes with non-zero nuclear spins (both are spin-\(\frac{3}{2}\)). This means that an electron spin in a quantum well is surrounded by a randomly fluctuating bath of tens of thousands of nuclear spins. The electron spin couples strongly with these nuclear spins. This random nuclear magnetic field acts as a powerful source of magnetic noise, causing rapid decoherence of the electron spin.</p>
+                                <p>This unavoidable interaction limits the coherence time \(T_2^*\) of electron spins in GaAs to a very short range, typically only a few tens of nanoseconds. Due to this difficult-to-overcome limitation, research focus has gradually shifted from GaAs to Group IV semiconductor materials with a much cleaner nuclear spin environment: silicon.</p>
+                                
+                                <br><br>
+                                <h3>Silicon (Si)</h3>
+                                <p>Silicon is the cornerstone of the modern electronics industry, with the global multi-trillion-dollar semiconductor industry built upon Si-based CMOS technology. Building quantum computing on a silicon platform undoubtedly provides a clear and feasible path to leveraging this mature and vast industrial ecosystem for large-scale manufacturing. In addition to its compatibility with CMOS technology, silicon possesses a physical advantage as a spin qubit material due to its predominantly zero-spin nuclear environment.</p>
+                                <br>
+                                <h4>Isotopic Purification and the Leap in Coherence Time</h4>
+                                <p>Silicon's most prominent advantage is its extremely favorable nuclear spin environment. Naturally occurring silicon consists mainly of three isotopes: <sup>28</sup>Si (~92.2%), <sup>29</sup>Si (~4.7%), and <sup>30</sup>Si (~3.1%). Among these, only <sup>29</sup>Si has a non-zero nuclear spin (spin-\(\frac{1}{2}\)), while the vast majority, <sup>28</sup>Si and <sup>30</sup>Si, are spin-zero isotopes. This means that even in natural silicon, the density of nuclear spins that can cause hyperfine interactions with electron spins is already much lower than in GaAs.</p>
+                                <p>Furthermore, using industrial techniques such as centrifugal enrichment, it is possible to produce highly isotopically purified silicon, specifically increasing the abundance of <sup>28</sup>Si to over 99.9%. This isotopically purified <sup>28</sup>Si crystal provides an environment for electron spins that is almost completely free of magnetic noise, virtually eliminating this decoherence mechanism. This breakthrough has led to a leap of several orders of magnitude in the coherence time of spin qubits in silicon, from microseconds in natural silicon to milliseconds or even seconds in isotopically purified silicon. Such long coherence times provide a solid hardware foundation for achieving high-fidelity quantum operations that far exceed the fault-tolerance threshold.</p>
+                                <br>
+                                <h4>Si-MOS vs. Si/SiGe Heterostructures</h4>
+                                <p>In the development of silicon-based spin qubits, there are two mainstream device structure platforms:</p>
+                                <ul>
+                                    <li><p><strong>Si-MOS:</strong> This structure is physically almost identical to the CMOS transistors that make up modern CPUs and memory chips. It typically consists of a silicon channel, a silicon dioxide (SiO₂) insulating layer, and a metal gate on top. The biggest advantage of Si-MOS is its compatibility with standard industrial manufacturing processes, making it the most direct path to large-scale, low-cost fabrication of quantum processors. However, the Si/SiO₂ interface inevitably has some charge defects, which can cause significant charge noise and affect qubit performance.</p></li>
+                                    <li><p><strong>Silicon/Silicon-Germanium (Si/SiGe) Heterostructures:</strong> This approach uses epitaxial growth to create a Si/SiGe heterostructure, where a thin film of pure silicon is grown on top of a silicon-germanium alloy layer. Due to differences in the band structure, electrons are confined within the pure silicon layer, far from the surface interface defects, which effectively reduces charge noise. This generally leads to higher qubit performance, including higher fidelity and longer coherence times. However, the fabrication process for Si/SiGe heterostructures is more complex and costly than for standard Si-MOS.</p></li>
+                                </ul>
+                                
+                                <br><br>
+                                <h3>Germanium (Ge)</h3>
+                                <p>The Ge platform combines some of the advantages of both GaAs and Si, and brings its own unique strengths:</p>
+                                <ul>
+                                    <li><p><strong>Nuclear Spin Environment:</strong> Similar to silicon, the natural isotopes of germanium are predominantly spin-zero, providing a low nuclear spin noise environment and the potential for long coherence times.</p></li>
+                                    <li><p><strong>Strong and Tunable Spin-Orbit Coupling:</strong> This is germanium's most prominent advantage. Unlike the extremely weak SOC in silicon, germanium (especially holes in its valence band) has a very strong intrinsic SOC. This strong SOC means that electric fields can be used very efficiently to manipulate hole spins (via EDSR), enabling fast, all-electrical single-qubit gates without relying on complex micromagnet structures as in silicon, thus simplifying device design and fabrication.</p></li>
+                                    <li><p><strong>Smaller Effective Mass:</strong> The effective mass of holes in germanium is smaller than that of electrons in silicon. This means that larger, more easily processable quantum dots (around 50-100 nm) can be fabricated, which to some extent relaxes the extreme demands on lithography technology.</p></li>
+                                </ul>
+                                <p>In recent years, research based on Ge/Si nanowires and planar Ge/SiGe heterostructures has made rapid progress, successfully demonstrating high-quality hole quantum dots, coherent manipulation, and longer coherence times than for holes in silicon. The all-electrical control characteristics and good compatibility with silicon processes make the germanium platform a highly attractive and promising option for achieving fast and scalable quantum computing.</p>
+
+
+
+
+
+
+
+
+
+
+                                
+
+                                <p>
+                                    <span style="font-size: 0.5em; line-height: 0.8;">
+                                        Originally written in Chinese by the author, these articles are translated into English to invite cross-language resonance.
+                                    </span>
+                                </p>
+                                <div class="post-meta">
+                                    <span class="post-author">
+                                        <a href="../About_en/Wang.html"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="Professional headshot">Peir-Ru Wang</a>
+                                    </span>
+                                    <span class="post-category">
+                                        <a href="../SpQ_en/main.html"><i class="fa fa-folder" aria-hidden="true"></i>Semiconductor Spin Qubits</a>
+                                    </span>
+                                </div><!-- /.post-meta -->
+                            
+                                <div id="prev-next-nav" class="text-center"></div>
+
+                                <script>
+fetch("lessons.json")
+  .then(res => res.json())
+  .then(pages => {
+    // 過濾掉 disabled 的頁面
+    pages = pages.filter(p => p.enabled !== false);
+
+    const current = location.pathname.split("/").pop();
+    const index = pages.findIndex(p => p.file === current);
+    let html = "";
+
+    if (index > 0) {
+      const prev = pages[index - 1];
+      html += `<a class="btn btn-gray" href="${prev.file}">← Previous</a> `;
+    }
+
+    html += `<a class="btn btn-gray" href="../SpQ/${current}" style="margin: 0 10px;">中文版</a>`;
+
+    if (index < pages.length - 1) {
+      const next = pages[index + 1];
+      html += `<a class="btn btn-gray" href="${next.file}">Next →</a>`;
+    }
+
+    document.getElementById("prev-next-nav").innerHTML = html;
+  });
+</script>
+
+                            </div><!-- /.post-content -->
+                        </article><!-- /.blog-post -->
+                        <!--<div id="PostComments" class="post-comments">
+                            
+                            
+                            
+                        </div> /#PostComments -->
+                        <!--<div class="respond">
+                            <h3>Post a Comment</h3>
+                            <form class="form-horizontal">
+                                <input class="form-control" type="text" placeholder="Your Name*" required>
+                                <input class="form-control" type="email" placeholder="Your Email" required>
+                                <textarea class="form-control form-control-comment" type="text" placeholder="Your Comment*" required></textarea>
+                                <button class="btn btn-green">Add a comment</button>
+                            </form>    
+                        </div> /.respond -->
+                    </div>
+                    <aside class="col-md-3">
+                        <div class="sidebar">
+                            <!--<div class="widget search-form">
+                                <h4 class="widget-title">Search the blog</h4>
+                                <form class="form-group">
+                                    <input type="text" class="form-control" placeholder="Search" required>
+                                    <button class="btn btn-green" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                </form>
+                            </div> /.search-form -->
+                            <!--<div class="widget widget-recent-posts">
+                                <h4 class="widget-title">Recent posts</h4>
+                                <ul class="list-unstyled">
+                                    <li><a href="#">Inside The Lipsum</a></li>
+                                    <li><a href="#">Oscar Wilde</a></li>
+                                    <li><a href="#">Jeffrey Ween</a></li>
+                                    <li><a href="#">Responsive Design</a></li>
+                                    <li><a href="#">Development</a></li>
+                                </ul>
+                            </div> /.widget-recent-posts -->
+                            
+
+                            <div class="widget">
+                                <!--<h4 class="widget-title"><a href="./main.html">科普版：目錄</a></h4>-->
+                                <div id="lesson-list_2"></div>
+                            </div>
+                            <script>
+fetch("lessons.json")
+  .then(res => res.json())
+  .then(pages => {
+    const current = location.pathname.split("/").pop();
+    const list = pages
+      .filter(p => p.enabled !== false) // ← 這行：只顯示 enabled 沒被關閉的項目
+      .map(p => {
+        const isActive = p.file === current ? "active" : "";
+        return `<div class="lesson-link ${isActive}"><a href="${p.file}">${p.title}</a></div>`;
+      })
+      .join("");
+    document.getElementById("lesson-list_2").innerHTML = list;
+  });
+</script>
+
+  
+                        </div><!-- /.sidebar -->
+                        
+                    </aside>
+                </div>
+            </div>
+        </section><!-- /.section-portfolio -->
+
+    </main><!-- /#main -->
+
+    <footer id="colophon" class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-4 col-xs-6">
+                    <a href="../index.html" class="site-title">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</a>
+                    <p>Exploring the Quantum Technology Together.</p>
+                    </div>
+                <div class="col-lg-offset-4 col-md-3 col-sm-4 col-md-offset-2 col-sm-offset-0 col-xs-6 ">
+                    <p class="site-title">𝐾𝐸𝐸𝑃 𝐼𝑁 𝑇𝑂𝑈𝐶𝐻</p>
+                    <ul class="list-unstyled contact-links">
+                        <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@insight-ihbar.com">info@insight-ihbar.com</a></li>
+                        <!--<li><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+37400800000">+374 (00) 80 00 00 </a></li>
+                        <li><i class="fa fa-fax" aria-hidden="true"></i><a href="+37400900000">+374 (00) 90 00 00</a></li>
+                        <li><i class="fa-solid fa-location-dot"></i><p>Hsinchu 300, Taiwan (R.O.C.)</p></li>-->
+                    </ul>
+                </div>
+                <!--<div class="clearfix visible-xs"></div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+                    <h3>Featured links</h3>
+                    <ul class="list-unstyled">
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="portfolio.html">Porfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>-->
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-8">
+                        <div class="social-links">
+                            <!--<a class="twitter-bg" href="#"><i class="fab fa-twitter"></i></a>-->
+                            <!--<<a class="facebook-bg" href="https://www.facebook.com/people/Quantum-Perspectives/61576446849628/"><i class="fab fa-facebook"></i></a>-->
+                            <!--<a class="facebook-bg" href="https://www.facebook.com/people/%E9%87%8F%E5%AD%90%E9%81%A0%E8%A6%8BQuantum-Perspectives/61576883632888/"><i class="fab fa-facebook-f"></i></a>-->
+                            <!--<a class="pinterest" href="#"><i class="fa-solid fa-microscope"></i></a>-->
+                            <!--<a class="facebook-bg" href="https://www.facebook.com/people/Insight-hbar/61576811775374/"><i class="fab fa-facebook-f"></i></a>-->
+                            <a class="linkedin-bg" href="https://www.linkedin.com/company/insight-ihbar"><i class="fab fa-linkedin"></i></a>
+                        </div><!-- /.social-links -->
+                    </div>
+                    <div class="col-xs-4">
+                        <div class="text-right">
+                            <p><span style="font-size: 16px;">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</span></p>
+                            <p>All Rights Reserved</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.copyright -->
+    </footer><!-- /#footer -->
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/bootstrap-select.min.js"></script>
+    <script src="../assets/js/jquery.slicknav.min.js"></script>
+    <script src="../assets/js/jquery.countTo.min.js"></script>
+    <script src="../assets/js/jquery.shuffle.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
+</body>
+</html>
