@@ -3,7 +3,7 @@
     { "title": "What are Spin Qubits?", "file": "A.html" , "status": "new" , "date": "2025-07-28"},
     { "title": "Types and Encoding Schemes of Semiconductor Spin Qubits", "file": "B.html" , "status": "new" , "date": "2025-07-29"},
     { "title": "Mainstream Materials for Semiconductor Spin Qubits", "file": "D.html" , "status": "new" , "date": "2025-07-30"},
-    { "title": "早年超導量子位元的種類", "file": "D.html" ,"enabled": false},
+    { "title": "Hybrid Superconducting-Spin-Topological Qubits", "file": "G.html" , "status": "new" , "date": "2025-07-31"},
     { "title": "電子顯微鏡下的超導量子位元", "file": "F.html" ,"enabled": false},
     { "title": "其他種類的Qubit", "file": "G.html" ,"enabled": false},
     { "title": "超導量子電腦長什麼樣子？", "file": "H.html" ,"enabled": false},

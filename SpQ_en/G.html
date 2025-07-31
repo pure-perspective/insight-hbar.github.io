@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <meta name="author" content="Peir-Ru Wang">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;1,300&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/20250525-icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/20250525-icon.png">
+
+    <!-- 預設圖片 URL（建議為 1200x630，jpg 或 png）-->
+    <meta property="og:image" content="../Image/Spin_Q_dim.png">
+
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/css/style.css" rel="stylesheet">
+    <link href="../assets/css/responsive.css" rel="stylesheet">
+
+    <title>Hardware Introduction</title>
+    <meta name="description" content="Discover insights into semiconductor spin qubits, their role in quantum computing, challenges, and future prospects for 2025.">
+    <meta name="keywords" content="Semiconductor spin qubits quantum computing hardware guide, quantum bits, qubit technology, superconducting qubits, quantum dot fabrication, low temperature cooling systems, Josephson junctions, high-fidelity two-qubit gates, scalable quantum processors">
+    <link rel="canonical" href="https://www.insight-ihbar.com/SpQ_en/A.html">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+    <header id="masthead" class="site-header">
+        <nav id="primary-navigation" class="site-navigation">
+            <div class="container">
+
+                <div class="navbar-header">                   
+                    <a href="../index_en.html" class="site-title">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</a>
+                </div><!-- /.navbar-header -->
+
+                <div class="collapse navbar-collapse" id="agency-navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="../index_en.html">Home</a></li>
+                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Qubit Physics<i class="fa fa-caret-down hidden-xs" aria-hidden="true"></i></a>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                              <li><a href="../SCQ_elementary_en/main.html">Superconducting Qubits (Elementary)</a></li>
+                              <li><a href="../SCQ_advanced_en/main.html">Superconducting Qubits (Advanced)</a></li>
+                              <li class="active"><a href="../SpQ_en/main.html">Semiconductor Spin Qubits</a></li>
+                            </ul>
+                        </li>
+                        <!--<li class="active"><a href="../SCQ_elementary/main.html">科普介紹</a></li>-->
+                        <li><a href="../QC_hardware_en/main.html">Hardware</a></li>
+                        <li><a href="../About_en/main.html">About Us</a></li>
+                        <li><a href="../index.html">中文版</a></li>                        
+                    </ul>
+                </div>
+
+            </div>   
+        </nav><!-- /.site-navigation -->
+    </header><!-- /#mastheaed -->
+
+    <div id="hero" class="hero overlay subpage-hero blog-hero">
+        <div class="hero-content">
+            <div class="hero_2-text">
+                <h1>Semiconductor Spin Qubits</h1>
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="../index_en.html">Home</a></li>
+                  <!--<li class="breadcrumb-item"><a href="./main.html">Hardware Guide (2025)</a></li>
+                  <li class="breadcrumb-item active">約瑟夫森節</li>-->
+                </ol>
+            </div><!-- /.hero-text -->
+        </div><!-- /.hero-content -->
+    </div><!-- /.hero -->
+
+    <main id="main" class="site-main">
+
+        <section class="site-section subpage-site-section section-blog">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                        <article class="blog-post">
+                            <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="Laptop on wooden desk">-->
+                            <div class="post-content">
+                                <div style="text-align: center;">
+                                    <h2>Hybrid Superconducting-Spin-Topological Qubits</h2>
+                                    <h3></h3>
+                                </div>
+                                
+                                <p>
+                                    <span style="font-size: 0.7em; line-height: 0.8;">
+                                        This article is based on a lecture from QuTech.<br>
+                                        Ref: YouTube: "Hybrid Devices for Quantum Computing" by Marta Pita-Vidal @ QuTech, TU Delft<br>
+                                        <a href="https://www.youtube.com/watch?v=DWfjBdQMYCI">https://www.youtube.com/watch?v=DWfjBdQMYCI</a> <br>
+                                    </span>
+                                    <br>The lecture lists five types of qubits being researched at QuTech: superconducting qubits, spin quantum dot qubits, nitrogen-vacancy (NV) center in diamond qubits, Andreev qubits, and topological qubits.
+                                </p>
+                                
+                                <div style="text-align: center;">
+                                    <a href="../Image/20250412-01.png">
+                                    <img src="../Image/20250412-01.png" alt="Five types of qubits at QuTech" style="width: 80%; height: auto;">
+                                    </a>
+                                </div>
+                                
+                                <p>
+                                    Interestingly, apart from NV center qubits, spin quantum dot qubits, Andreev qubits, and topological qubits are all related to superconductivity to some extent.</p>
+                                    <ul>
+                                        <li><p>Spin quantum dot qubits operate at temperatures \( \leq 1K\), and their control electrodes often enter a superconducting state.</p></li>
+                                        <li><p>Andreev qubits are created using the phenomenon of Andreev reflection.</p></li>
+                                        <li><p>Topological qubits often use a nanowire placed on a superconductor. The proximity effect induces superconductivity in the nanowire, creating topological quantum states at its ends.</p></li>
+                                    </ul>
+                                    <p>
+                                     Each type of qubit has its own pros and cons. Therefore, integrating different types of qubits offers the potential to combine their strengths and create higher-performance hybrid qubits.<br><br>
+                                </p>
+                                
+                                <h3>Hybrid Type of Fluxonium</h3>
+                                <p>Here we introduce a hybrid of a superconducting Fluxonium qubit and a topological qubit.</p>
+                                <div style="text-align: center;">
+                                    <a href="../Image/20250412-03.png">
+                                    <img src="../Image/20250412-03.png" alt="Hybrid Fluxonium-Topological Qubit" style="width: 80%; height: auto;">
+                                    </a>
+                                </div>
+                                
+                                <p>
+                                    The topological qubit used here is an \( InAs \) nanowire coated with a layer of \(Al\), which becomes superconducting at low temperatures.
+                                </p>
+                                <div style="text-align: center;">
+                                    <a href="../Image/20250412-04.png">
+                                    <img src="../Image/20250412-04.png" alt="InAs nanowire with Al coating" style="width: 80%; height: auto;">
+                                    </a>
+                                </div>
+                                
+                                <p>
+                                    <span style="font-size: 0.7em; line-height: 0.8;">
+                                      Ref: Gate-Tunable Field-Compatible Fluxonium, 2020
+                                      <br><a href="https://doi.org/10.1103/PhysRevApplied.14.064038">10.1103/PhysRevApplied.14.064038</a>
+                                  </span>
+                                </p>
+                                
+                                <br><br>
+                                <h3>Andreev Bound States</h3>
+                                
+                                <p>
+                                    Andreev reflection occurs at the interface between a normal conductor/semiconductor and a superconductor. The principle of superconductivity is based on Cooper pairs, which are pairs of two electrons. However, in a normal conductor, charge carriers are single electrons. When a single electron tunnels from the semiconductor into the superconductor, it must form a Cooper pair. To conserve charge, a hole is reflected back. If a superconductor/normal-conductor/superconductor junction is formed, Andreev Bound States can form in the normal region.
+                                </p>
+                                
+                                <div style="text-align: center;">
+                                    <a href="../Image/20250413-01.png">
+                                    <img src="../Image/20250413-01.png" alt="Andreev Bound States schematic" style="width: 80%; height: auto;">
+                                    </a>
+                                </div>
+                                
+                                <p>
+                                  <span style="font-size: 0.7em; line-height: 0.8;">
+                                      Ref: "Andreev bound states in supercurrent-carrying carbon nanotubes revealed", 2010
+                                    <br> DOI: 10.1038/nphys1811
+                                </span></p>
+                                <br><br>
+                                <h3>Transmon-Spin Hybrid Qubit</h3>
+                                
+                                <div style="text-align: center;">
+                                    <a href="../Image/20250412-02.png">
+                                        <img src="../Image/20250412-02.png" alt="Transmon integrated with a Spin Qubit" style="width: 80%; height: auto;">
+                                    </a>
+                                </div>
+                                <p>
+                                  A Transmon integrated with a Spin Qubit.<br><br>
+                                </p>
+                                
+                                <div style="text-align: center;">
+                                    <a href="../Image/20250414-01.png">
+                                        <img src="../Image/20250414-01.png" alt="Asymmetric properties of a spin-based Josephson junction" style="width: 80%; height: auto;">
+                                    </a>
+                                </div>
+                                <p>
+                                    Due to the spin-based junction, the properties of the Josephson junction become spin-dependent, leading to asymmetric characteristics.<br>
+                                    <span style="font-size: 0.7em; line-height: 0.8;">
+                                      Ref: "Talks - Quantum Matter for Quantum Technologies 2024 - Marta PITA-VIDAL, IBM Zurich/TU Delft", 
+                                      <br> <a href="https://www.youtube.com/watch?v=VEFzm_DcQ08">https://www.youtube.com/watch?v=VEFzm_DcQ08</a>
+                                    
+                                </span>
+                                </p>
+                                
+                                <div style="text-align: center;">
+                                    <a href="../Image/20250414-02.png">
+                                        <img src="../Image/20250414-02.png" alt="Reading out a spin qubit with a SQUID" style="width: 80%; height: auto;">
+                                    </a>
+                                </div>
+                                <p>
+                                    By replacing one of the Josephson junctions in a SQUID with a spin-based junction, the state of the spin qubit can be read out via the supercurrent. The idea behind this type of research is that superconducting qubits are currently the easiest to drive in a quantum circuit. While traditional spin qubits have longer coherence times, they are not as easy to manipulate as superconducting qubits. Therefore, by integrating spin qubits with superconducting circuits, the mature technology of circuit QED can be used to drive the spin qubits.
+                                    <span style="font-size: 0.7em; line-height: 0.8;">
+                                      <br>"Singlet-Doublet Transitions of a Quantum Dot Josephson Junction Detected in a Transmon Circuit", 2022
+                                      <br>DOI: 10.1103/PRXQuantum.3.030311
+                                </span><br><br>
+                                </p>
+                                
+                                <div style="text-align: center;">
+                                    <a href="../Image/20250414-04.png">
+                                        <img src="../Image/20250414-04.png" alt="Tunable coupling between two distant spin qubits" style="width: 80%; height: auto;">
+                                    </a>
+                                </div>
+                                <p>
+                                   To achieve quantum computation, multiple qubits must interact. Further experiments have demonstrated tunable coupling between two distant spin qubits mediated by a superconducting circuit.
+                                    <span style="font-size: 0.7em; line-height: 0.8;">
+                                      <br>Ref: "Strong tunable coupling between two distant superconducting spin qubits", 2024
+                                      <br>DOI: 10.1038/s41567-024-02497-x
+                                </span><br><br>
+                                  </p>
+                                <div style="text-align: center;">
+                                    <a href="../Image/20250414-03.png">
+                                        <img src="../Image/20250414-03.png" alt="Circuit schematic for tunable coupling" style="width: 80%; height: auto;">
+                                    </a>
+                                </div>
+                                <p>
+                                  A circuit schematic from the experiment demonstrating tunable coupling between two distant spin qubits mediated by a superconducting circuit.
+                                  <span style="font-size: 0.7em; line-height: 0.8;">
+                                      <br>Ref: "Strong tunable coupling between two distant superconducting spin qubits", 2024
+                                      <br>DOI: 10.1038/s41567-024-02497-x
+                                </span>
+                                </p>
+                                
+
+
+
+
+
+
+
+
+
+                                
+
+                                <p>
+                                    <span style="font-size: 0.5em; line-height: 0.8;">
+                                        Originally written in Chinese by the author, these articles are translated into English to invite cross-language resonance.
+                                    </span>
+                                </p>
+                                <div class="post-meta">
+                                    <span class="post-author">
+                                        <a href="../About_en/Wang.html"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="Professional headshot">Peir-Ru Wang</a>
+                                    </span>
+                                    <span class="post-category">
+                                        <a href="../SpQ_en/main.html"><i class="fa fa-folder" aria-hidden="true"></i>Semiconductor Spin Qubits</a>
+                                    </span>
+                                </div><!-- /.post-meta -->
+                            
+                                <div id="prev-next-nav" class="text-center"></div>
+
+                                <script>
+fetch("lessons.json")
+  .then(res => res.json())
+  .then(pages => {
+    // 過濾掉 disabled 的頁面
+    pages = pages.filter(p => p.enabled !== false);
+
+    const current = location.pathname.split("/").pop();
+    const index = pages.findIndex(p => p.file === current);
+    let html = "";
+
+    if (index > 0) {
+      const prev = pages[index - 1];
+      html += `<a class="btn btn-gray" href="${prev.file}">← Previous</a> `;
+    }
+
+    html += `<a class="btn btn-gray" href="../SpQ/${current}" style="margin: 0 10px;">中文版</a>`;
+
+    if (index < pages.length - 1) {
+      const next = pages[index + 1];
+      html += `<a class="btn btn-gray" href="${next.file}">Next →</a>`;
+    }
+
+    document.getElementById("prev-next-nav").innerHTML = html;
+  });
+</script>
+
+                            </div><!-- /.post-content -->
+                        </article><!-- /.blog-post -->
+                        <!--<div id="PostComments" class="post-comments">
+                            
+                            
+                            
+                        </div> /#PostComments -->
+                        <!--<div class="respond">
+                            <h3>Post a Comment</h3>
+                            <form class="form-horizontal">
+                                <input class="form-control" type="text" placeholder="Your Name*" required>
+                                <input class="form-control" type="email" placeholder="Your Email" required>
+                                <textarea class="form-control form-control-comment" type="text" placeholder="Your Comment*" required></textarea>
+                                <button class="btn btn-green">Add a comment</button>
+                            </form>    
+                        </div> /.respond -->
+                    </div>
+                    <aside class="col-md-3">
+                        <div class="sidebar">
+                            <!--<div class="widget search-form">
+                                <h4 class="widget-title">Search the blog</h4>
+                                <form class="form-group">
+                                    <input type="text" class="form-control" placeholder="Search" required>
+                                    <button class="btn btn-green" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                </form>
+                            </div> /.search-form -->
+                            <!--<div class="widget widget-recent-posts">
+                                <h4 class="widget-title">Recent posts</h4>
+                                <ul class="list-unstyled">
+                                    <li><a href="#">Inside The Lipsum</a></li>
+                                    <li><a href="#">Oscar Wilde</a></li>
+                                    <li><a href="#">Jeffrey Ween</a></li>
+                                    <li><a href="#">Responsive Design</a></li>
+                                    <li><a href="#">Development</a></li>
+                                </ul>
+                            </div> /.widget-recent-posts -->
+                            
+
+                            <div class="widget">
+                                <!--<h4 class="widget-title"><a href="./main.html">科普版：目錄</a></h4>-->
+                                <div id="lesson-list_2"></div>
+                            </div>
+                            <script>
+fetch("lessons.json")
+  .then(res => res.json())
+  .then(pages => {
+    const current = location.pathname.split("/").pop();
+    const list = pages
+      .filter(p => p.enabled !== false) // ← 這行：只顯示 enabled 沒被關閉的項目
+      .map(p => {
+        const isActive = p.file === current ? "active" : "";
+        return `<div class="lesson-link ${isActive}"><a href="${p.file}">${p.title}</a></div>`;
+      })
+      .join("");
+    document.getElementById("lesson-list_2").innerHTML = list;
+  });
+</script>
+
+  
+                        </div><!-- /.sidebar -->
+                        
+                    </aside>
+                </div>
+            </div>
+        </section><!-- /.section-portfolio -->
+
+    </main><!-- /#main -->
+
+    <footer id="colophon" class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-4 col-xs-6">
+                    <a href="../index.html" class="site-title">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</a>
+                    <p>Exploring the Quantum Technology Together.</p>
+                    </div>
+                <div class="col-lg-offset-4 col-md-3 col-sm-4 col-md-offset-2 col-sm-offset-0 col-xs-6 ">
+                    <p class="site-title">𝐾𝐸𝐸𝑃 𝐼𝑁 𝑇𝑂𝑈𝐶𝐻</p>
+                    <ul class="list-unstyled contact-links">
+                        <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@insight-ihbar.com">info@insight-ihbar.com</a></li>
+                        <!--<li><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+37400800000">+374 (00) 80 00 00 </a></li>
+                        <li><i class="fa fa-fax" aria-hidden="true"></i><a href="+37400900000">+374 (00) 90 00 00</a></li>
+                        <li><i class="fa-solid fa-location-dot"></i><p>Hsinchu 300, Taiwan (R.O.C.)</p></li>-->
+                    </ul>
+                </div>
+                <!--<div class="clearfix visible-xs"></div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+                    <h3>Featured links</h3>
+                    <ul class="list-unstyled">
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="portfolio.html">Porfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>-->
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-8">
+                        <div class="social-links">
+                            <!--<a class="twitter-bg" href="#"><i class="fab fa-twitter"></i></a>-->
+                            <!--<<a class="facebook-bg" href="https://www.facebook.com/people/Quantum-Perspectives/61576446849628/"><i class="fab fa-facebook"></i></a>-->
+                            <!--<a class="facebook-bg" href="https://www.facebook.com/people/%E9%87%8F%E5%AD%90%E9%81%A0%E8%A6%8BQuantum-Perspectives/61576883632888/"><i class="fab fa-facebook-f"></i></a>-->
+                            <!--<a class="pinterest" href="#"><i class="fa-solid fa-microscope"></i></a>-->
+                            <!--<a class="facebook-bg" href="https://www.facebook.com/people/Insight-hbar/61576811775374/"><i class="fab fa-facebook-f"></i></a>-->
+                            <a class="linkedin-bg" href="https://www.linkedin.com/company/insight-ihbar"><i class="fab fa-linkedin"></i></a>
+                        </div><!-- /.social-links -->
+                    </div>
+                    <div class="col-xs-4">
+                        <div class="text-right">
+                            <p><span style="font-size: 16px;">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</span></p>
+                            <p>All Rights Reserved</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.copyright -->
+    </footer><!-- /#footer -->
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/bootstrap-select.min.js"></script>
+    <script src="../assets/js/jquery.slicknav.min.js"></script>
+    <script src="../assets/js/jquery.countTo.min.js"></script>
+    <script src="../assets/js/jquery.shuffle.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
+</body>
+</html>

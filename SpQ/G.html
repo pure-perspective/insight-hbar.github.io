@@ -18,15 +18,18 @@
 
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/20250525-icon.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/20250525-icon.png">
+    
+    <!-- 預設圖片 URL（建議為 1200x630，jpg 或 png）-->
+    <meta property="og:image" content="../Image/Spin_Q_dim.png">
 
     <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="../assets/css/style.css" rel="stylesheet">
     <link href="../assets/css/responsive.css" rel="stylesheet">
 
     <title>半導體自旋量子位元</title>
-    <meta name="description" content="超導量子位元科普介紹，深入解析半導體自旋量子位元的原理、應用與未來發展，適合科技愛好者與專業人士。">
-    <meta name="keywords" content="超導量子位元, 半導體自旋量子位元, 量子電腦, 量子硬體, 量子科技, 低溫系統, 超導材料, 量子資訊, 量子物理, 科普量子科技">
-    <link rel="canonical" href="https://www.insight-ihbar.com/SpQ/model.html">
+    <meta name="description" content="超導量子位元科普介紹，深入解析半導體自旋量子位元的原理、應用與未來趨勢，適合科技愛好者與專業人士了解量子計算核心技術。">
+    <meta name="keywords" content="半導體自旋量子位元, 量子計算, 量子位元, 超導量子電路, 量子科技, 量子硬體, 量子資訊, 量子糾錯, 半導體量子技術, 自旋量子比特">
+    <link rel="canonical" href="https://www.insight-ihbar.com/SpQ/A.html">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -97,42 +100,161 @@
                             <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="">-->
                             <div class="post-content">
                                 <div style="text-align: center;">
-                                    <h2>半導體自旋量子位元</h2>
-                                    <h3>引言</h3>
+                                    <h2>超導-自旋-拓樸複合量子位元</h2>
+                                    <h3></h3>
                                 </div>
+    
+        
+    
+  
+  
+      <p>
+        <span style="font-size: 0.7em; line-height: 0.8;">
+            本篇為參考QuTech的演講。<br>
+            Ref: Youtube: "Hybrid Devices for Quantum Computing" by Marta Pita @ QuTech, TU Delft<br>
+            <a href="https://www.youtube.com/watch?v=DWfjBdQMYCI">https://www.youtube.com/watch?v=DWfjBdQMYCI</a> <br>
+            </span>
+          <br>演講中列舉五種QuTech在研究的量子位元：超導量子位元、自旋量子點量子位元、氮空缺鑽石量子位元（NV center）、Andreev量子位元、和拓墣量子位元。
+      </p>
+  
+      <div style="text-align: center;">
+          <a href="../Image/20250412-01.png">
+          <img src="../Image/20250412-01.png" alt="取代文字" style="width: 80%; height: auto;">
+          </a>
+      </div>
+  
+      <p>
+          有趣的是，除了氮空缺量子位元之外，自旋量子點量子位元、Andreev量子位元、和拓墣量子位元多少都與超導有關。</p>
+          <ul>
+              <li><p>自旋量子點量子位元操作的溫度\( \leq 1K\)，其操作的電極常進入超導狀態。</p></li>
+              <li><p>Andreev量子位元是利用Andreev反射製作的量子位元。</p></li>
+              <li><p>拓墣量子位元常使用奈米線放置在超導體上，利用鄰近效應（Proximity Effect）使奈米線產生超導性，並在端點產生拓墣量子態。</p></li>
+          </ul>
+          <p>
+           個別的量子位元各有優缺點，故如果能整合不同的量子位元，有機會截長補短，製作效能更好的量子位元。<br><br>
+      </p>
+  
+      
+  
+  
+      <h3>Hybrid Type of Fluxonium</h3>
+      <p>這邊介紹的就是超導量子位元Fluxonium複合拓墣量子位元。</p>
+      <div style="text-align: center;">
+          <a href="../Image/20250412-03.png">
+          <img src="../Image/20250412-03.png" alt="取代文字" style="width: 80%; height: auto;">
+          </a>
+      </div>
+  
+      <p>
+          這邊採用的拓墣量子位元是\( InAs \)奈米線，表層鍍上\(Al\)在低溫下進入超導態。
+      </p>
+      <div style="text-align: center;">
+          <a href="../Image/20250412-04.png">
+          <img src="../Image/20250412-04.png" alt="取代文字" style="width: 80%; height: auto;">
+          </a>
+      </div>
+  
+  
+      
+  <p>
+      <span style="font-size: 0.7em; line-height: 0.8;">
+        Ref:Gate-Tunable Field-Compatible Fluxonium, 2020
+        <br><a href="https://doi.org/10.1103/PhysRevApplied.14.064038">10.1103/PhysRevApplied.14.064038</a>
+      </ul>
+    </span>
+  </p>
+  
+  <br><br>
+          <h3>Andreev Bound State</h3>
+    
+      <p>
+          所謂Andreev反射是發生在非超導/超導接面中。因為超導體的原理是兩個電子形成的Cooper Pair，但是非導體中移動的載子是個別的單一電子，當單一電子從半導體穿隧進入到超導體時必須形成Cooper Pair，電荷守恆的要求下就會反射一個電洞。如果是超導/非超導/超導串接，中間的非超導區域會形成Andreev Bound State。
+      </p>
+  
+      <div style="text-align: center;">
+          <a href="../Image/20250413-01.png">
+          <img src="../Image/20250413-01.png" alt="取代文字" style="width: 80%; height: auto;">
+          </a>
+      </div>
+  
+      <p>
+        <span style="font-size: 0.7em; line-height: 0.8;">
+            Ref: Andreev bound states in supercurrent-carrying carbon nanotubes revealed", 2010
+          <br> DOI: 10.1038/nphys1811
+      </span></p>
+      <br><br>
+          <h3>Transmon-Spin Hybrid Qubit</h3>
+          
+          <div style="text-align: center;">
+              <a href="../Image/20250412-02.png">
+                  <img src="../Image/20250412-02.png" alt="取代文字" style="width: 80%; height: auto;">
+              </a>
+          </div>
+          <p>
+            由Transmon整合Spin Qubit。<br><br>
+          </p>
+  
+          
+          
+          <div style="text-align: center;">
+              <a href="../Image/20250414-01.png">
+                  <img src="../Image/20250414-01.png" alt="取代文字" style="width: 80%; height: auto;">
+              </a>
+          </div>
+          <p>
+              因為自旋接面的關係，約瑟夫森節的特性與自旋相關，造成不對稱的特性。<br>
+              <span style="font-size: 0.7em; line-height: 0.8;">
+                Ref: "Talks - Quantum Matter for Quantum Technologies 2024 - Marta PITA-VIDAL, IBM Zurich/TU Delft", 
+                <br> <a href="https://www.youtube.com/watch?v=VEFzm_DcQ08">https://www.youtube.com/watch?v=VEFzm_DcQ08</a>
+              
+          </span>
+          </p>
+          
+          <div style="text-align: center;">
+              <a href="../Image/20250414-02.png">
+                  <img src="../Image/20250414-02.png" alt="取代文字" style="width: 80%; height: auto;">
+              </a>
+          </div>
+          <p>
+              利用將SQUID其中一側的約瑟夫森節改成自旋接面。可以透過超導電流去讀取自旋位元的狀態。
+              這類研究的想法是因為超導量子位元是目前最容易驅動量子電路，而傳統自旋位元雖然有較長的相干時間，但操控上不若超導量子位元來得容易。
+              故如果利用超導量子電路整合自旋位元，可以利用已經成熟的circuit QED來驅動自旋位元。
+              <span style="font-size: 0.7em; line-height: 0.8;">
+                <br>"Singlet-Doublet Transitions of a Quantum Dot Josephson Junction Detected in a Transmon Circuit", 2022
+                <br>DOI: 10.1103/PRXQuantum.3.030311
+          </span><br><br>
+          </p>
+          
+  
+          <div style="text-align: center;">
+              <a href="../Image/20250414-04.png">
+                  <img src="../Image/20250414-04.png" alt="取代文字" style="width: 80%; height: auto;">
+              </a>
+          </div>
+          <p>
+             要實現量子計算，就需要多個量子位元實現交互作用，進一步的實驗實現了利用超導量子電路將兩個不相鄰的自旋量子位元產生可調控的耦合交互作用。
+              <span style="font-size: 0.7em; line-height: 0.8;">
+                <br>Ref: "Strong tunable coupling between two distant superconducting spin qubits", 2024
+                <br>DOI: 10.1038/s41567-024-02497-x
+          </span><br><br>
+            </p>
+          <div style="text-align: center;">
+              <a href="../Image/20250414-03.png">
+                  <img src="../Image/20250414-03.png" alt="取代文字" style="width: 80%; height: auto;">
+              </a>
+          </div>
+          <p>
+            利用超導量子電路將兩個不相鄰的自旋量子位元產生可調控的耦合交互作用實驗中的電路示意圖。
+            <span style="font-size: 0.7em; line-height: 0.8;">
+                <br>Ref: "Strong tunable coupling between two distant superconducting spin qubits", 2024
+                <br>DOI: 10.1038/s41567-024-02497-x
+          </span>
+          </p>
+  
+
+
+
                                 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                
-
-                                <div style="text-align: center;">
-                                <a href="../Image/JJ.jpg">
-                                    <img src="../Image/JJ.jpg" alt="納米級奈米結構示意圖" style="width: 100%; height: auto;">
-                                </a>
-                                </div>
-                                <p  class="dark-background">
-                                    ▲
-                                    <span style="font-size: 0.7em; line-height: 0.8;">
-                                        
-                                    </span>
-                                    <br>
-                                    <br>
-                                </p>
-
                                 
                                 <div class="post-meta">
                                     <span class="post-author">
@@ -147,31 +269,31 @@
                                 <div id="prev-next-nav" class="text-center"></div>
 
                                 <script>
-                                fetch("lessons.json")
-                                .then(res => res.json())
-                                .then(pages => {
-                                    const current = location.pathname.split("/").pop();
-                                    const index = pages.findIndex(p => p.file === current);
-                                    let html = "";
-
-                                    // 上一頁按鈕
-                                    if (index > 0) {
-                                    const prev = pages[index - 1];
-                                    html += `<a class="btn btn-gray" href="${prev.file}">← 上一頁</a> `;
-                                    }
-
-                                    // 英文版按鈕
-                                    html += `<a class="btn btn-gray" href="../SpQ_en/${current}" style="margin: 0 10px;">English Version</a>`;
-
-                                    // 下一頁按鈕
-                                    if (index < pages.length - 1) {
-                                    const next = pages[index + 1];
-                                    html += `<a class="btn btn-gray" href="${next.file}">下一頁 →</a>`;
-                                    }
-
-                                    document.getElementById("prev-next-nav").innerHTML = html;
-                                });
-                                </script>
+                                    fetch("lessons.json")
+      .then(res => res.json())
+      .then(pages => {
+        // 過濾掉 disabled 的頁面
+        pages = pages.filter(p => p.enabled !== false);
+    
+        const current = location.pathname.split("/").pop();
+        const index = pages.findIndex(p => p.file === current);
+        let html = "";
+    
+        if (index > 0) {
+          const prev = pages[index - 1];
+          html += `<a class="btn btn-gray" href="${prev.file}">← 上一頁</a> `;
+        }
+    
+        html += `<a class="btn btn-gray" href="../SpQ_en/${current}" style="margin: 0 10px;">English Version</a>`;
+    
+        if (index < pages.length - 1) {
+          const next = pages[index + 1];
+          html += `<a class="btn btn-gray" href="${next.file}">下一頁 →</a>`;
+        }
+    
+        document.getElementById("prev-next-nav").innerHTML = html;
+      });
+    </script>
 
                             </div><!-- /.post-content -->
                         </article><!-- /.blog-post -->
@@ -216,17 +338,20 @@
                                 <div id="lesson-list_2"></div>
                             </div>
                             <script>
-                            fetch("lessons.json")
-                                .then(res => res.json())
-                                .then(pages => {
-                                const current = location.pathname.split("/").pop();
-                                const list = pages.map(p => {
-                                    const isActive = p.file === current ? "active" : "";
-                                    return `<div class="lesson-link ${isActive}"><a href="${p.file}">${p.title}</a></div>`;
-                                }).join("");
-                                document.getElementById("lesson-list_2").innerHTML = list;
-                                });
-                            </script>
+fetch("lessons.json")
+  .then(res => res.json())
+  .then(pages => {
+    const current = location.pathname.split("/").pop();
+    const list = pages
+      .filter(p => p.enabled !== false) // ← 這行：只顯示 enabled 沒被關閉的項目
+      .map(p => {
+        const isActive = p.file === current ? "active" : "";
+        return `<div class="lesson-link ${isActive}"><a href="${p.file}">${p.title}</a></div>`;
+      })
+      .join("");
+    document.getElementById("lesson-list_2").innerHTML = list;
+  });
+</script>
   
                         </div><!-- /.sidebar -->
                         

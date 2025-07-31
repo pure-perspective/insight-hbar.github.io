@@ -6,5 +6,5 @@
     { "title": "半導體自旋量子位元的主流材料", "file": "D.html" , "status": "new" , "date": "2025-07-30"},
     { "title": "Shuttled", "file": "D.html" ,"enabled": false},
     { "title": "Measure", "file": "F.html" ,"enabled": false},
-    { "title": "Andreev hybrid", "file": "G.html" ,"enabled": false}
+    { "title": "超導-自旋-拓樸複合量子位元", "file": "G.html" , "status": "new" , "date": "2025-07-31"}
 ]
