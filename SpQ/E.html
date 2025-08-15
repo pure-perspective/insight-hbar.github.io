@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <meta name="author" content="Peir-Ru Wang">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;1,300&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/20250525-icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/20250525-icon.png">
+    
+    <!-- 預設圖片 URL（建議為 1200x630，jpg 或 png）-->
+    <meta property="og:image" content="../Image/Spin_Q_dim.png">
+
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/css/style.css" rel="stylesheet">
+    <link href="../assets/css/responsive.css" rel="stylesheet">
+
+    <title>半導體自旋量子位元</title>
+    <meta name="description" content="超導量子位元科普介紹，深入解析半導體自旋量子位元的原理、應用與未來趨勢，適合科技愛好者與專業人士了解量子計算核心技術。">
+    <meta name="keywords" content="半導體自旋量子位元, 量子計算, 量子位元, 超導量子電路, 量子科技, 量子硬體, 量子資訊, 量子糾錯, 半導體量子技術, 自旋量子比特">
+    <link rel="canonical" href="https://www.insight-ihbar.com/SpQ/E.html">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        canvas { background: #f0f0f0; margin-top: 20px; border: 1px solid #ccc; }
+        .controls { margin-top: 20px;background: #f0f0f0;  }
+        label { margin: 0 10px; display: inline-block; width: 150px; }
+      </style>
+
+</head>
+<body>
+
+    <header id="masthead" class="site-header">
+        <nav id="primary-navigation" class="site-navigation">
+            <div class="container">
+
+                <div class="navbar-header">
+                   
+                    <a href="../index.html" class="site-title">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</a>
+
+                </div><!-- /.navbar-header -->
+
+                <div class="collapse navbar-collapse" id="agency-navbar-collapse">
+
+                    <ul class="nav navbar-nav navbar-right">
+
+                        <li><a href="../index.html">Home</a></li>
+                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">科普介紹<i class="fa fa-caret-down hidden-xs" aria-hidden="true"></i></a>
+
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                                <li><a href="../SCQ_elementary/main.html">超導量子位元(科普版)</a></li>
+                              <li><a href="../SCQ_advanced/main.html">超導量子位元(進階版)</a></li>
+                              <li class="active"><a href="../SpQ/main.html">半導體自旋量子位元</a></li>
+                            </ul>
+
+                        </li>
+                        <!--<li class="active"><a href="../SCQ_elementary/main.html">科普介紹</a></li>-->
+                        <li><a href="../QC_hardware/main.html">硬體導論</a></li>
+                        <li><a href="../About/main.html">關於我們</a></li>
+                        <li><a href="../index_en.html">English</a></li>
+                        
+                    </ul>
+
+                </div>
+
+            </div>   
+        </nav><!-- /.site-navigation -->
+    </header><!-- /#mastheaed -->
+
+    <div id="hero" class="hero overlay subpage-hero blog-hero">
+        <div class="hero-content">
+            <div class="hero_2-text">
+                <a href="../SpQ/main.html"><h1>半導體自旋量子位元</h1></a>
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                  <!--<li class="breadcrumb-item"><a href="../SCQ_elementary/main.html">超導量子位元(科普版)</a></li>
+                  <li class="breadcrumb-item active">約瑟夫森節</li>-->
+                </ol>
+            </div><!-- /.hero-text -->
+        </div><!-- /.hero-content -->
+    </div><!-- /.hero -->
+
+    <main id="main" class="site-main">
+
+        <section class="site-section subpage-site-section section-blog">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                        <article class="blog-post">
+                            <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="">-->
+                            <div class="post-content">
+                                <div style="text-align: center;">
+                                    <h2>單量子點的特性</h2>
+                                    <h3></h3>
+                                </div>
+                                <p>
+                                    單量子位元可作為的資訊載體（即量子位元），也可以用來當作量測元件（即Charge sensor）。
+                                    本文以閘極定義的量子點（Gate-based QD）作為介紹。
+                                    <br><br>
+                                </p>
+                                <h3>定義量子點</h3>
+                                <div style="text-align: center;">
+                                    <a href="../Image/1-SpQ-transition2.png">
+                                        <img src="../Image/1-SpQ-transition2.png" alt="顯示不同模組區域的結構圖" style="width: 70%; height: auto;">
+                                    </a>
+                                </div>
+                                <p class="dark-background">
+                                    ▲定義一個量子點，常見的方式由電極來建立勢壘\(V_b\)與位能井\(V_g\)。
+                                    勢壘的建立讓載子在位能井中產生量子能階，而閘極\(V_g\)控制位能井的深淺，調控能階的高低。這樣就定義一個獨立的量子點。
+                                    <span style="font-size: 0.7em; line-height: 0.8;">
+                                        <br>Ref:作者繪製
+                                    </span>
+                                    <br><br>
+                                </p>
+
+                                <h3>量子點的量測</h3>
+                                <p>在材料中定義量子點後，可以利用<b>電性量測</b>來測量量子點的狀態。</p>
+                                <div style="text-align: center;">
+                                    <a href="../Image/1-SpQ-transition3.png">
+                                        <img src="../Image/1-SpQ-transition3.png" alt="顯示不同模組區域的結構圖" style="width: 70%; height: auto;">
+                                    </a>
+                                </div>
+                                <p class="dark-background">
+                                    ▲量測電性就需要在兩側施加偏壓（S:Source, D:Drain），偏壓會驅動載子移動產生電流，透過量測電流的大小，來判斷量子點的能階狀態。
+                                    如果量子點能階沒有落在偏壓區間內，載子無法移動，就不會有電流。可以透過閘極\(V_g\)調控讓能階落在偏壓的區間，載子可以通過，即產生電流。
+
+                                    <span style="font-size: 0.7em; line-height: 0.8;">
+                                        <br>Ref:作者繪製
+                                    </span>
+                                    <br><br>
+                                </p>
+
+
+                                
+                                <h3>電子顯微鏡下單量子點的形貌</h3>
+
+
+                                <div style="text-align: center;">
+                                    <a href="../Image/SQ-gate.png">
+                                        <img src="../Image/SQ-gate.png" alt="顯示不同模組區域的結構圖" style="width: 100%; height: auto;">
+                                    </a>
+                                </div>
+                                <p class="dark-background">
+                                    ▲一個單量子點在電子顯微鏡下，使用六個電極進行實驗，其中比較細的電極LB、RB、PG、RG定義量子點的局限與位能井深淺，
+                                    可由圖(d)等高線模擬圖看出中間區域形成一個量子點。兩側比較粗的電極用來施加偏壓、量測電流。
+                                    <span style="font-size: 0.7em; line-height: 0.8;">
+                                        <br>A gate defined quantum dot on the twodimensional transition metal dichalcogenide semiconductor WSe2
+                                        <br>DOI: 10.1039/c5nr04961j
+                                    </span>
+                                    <br><br>
+                                </p>
+                                
+                                <h3>動畫模擬</h3>
+                                <p>再接著講單量子點的量測前，讀者們可以先透過下面動畫，透過滑桿調控偏壓\(V_s-V_d\)、閘極\(V_g\)來觀察電流的形成與否。
+                                    這邊亦加入磁場\(B\)可以觀察能級分裂。
+                                </p>
+                                <div class="controls" style="text-align: center;">
+                                    <h4><br>滑動滑桿<br></h4>
+                                    <label>Vs - Vd:
+                                      <input type="range" id="vsd" min="0" max="1" step="0.01" value="0.5">
+                                    </label>
+                                    <label>Vg:
+                                      <input type="range" id="vg" min="-1" max="1" step="0.01" value="0">
+                                    </label>
+                                    <label>Magnetic Field B:
+                                      <input type="range" id="bfield" min="-0.2" max="0.2" step="0.01" value="0">
+                                    </label>
+                                    <p><br></p>
+                                </div>
+                                  <canvas id="canvas" width="600" height="400" style="display: block; margin: 20px auto;"></canvas>
+                                  <script>
+                                    const canvas = document.getElementById('canvas');
+                                    const ctx = canvas.getContext('2d');
+                                    const vsdSlider = document.getElementById('vsd');
+                                    const vgSlider = document.getElementById('vg');
+                                    const bfieldSlider = document.getElementById('bfield');
+                                
+                                    function drawEnergyLandscape(vsd, vg, bfield) {
+                                      ctx.clearRect(0, 0, canvas.width, canvas.height);
+                                
+                                      // Source and Drain energy levels (Drain = left, Source = right)
+                                      const vd = 200 + vsd * 100; // drain
+                                      const vs = 200 - vsd * 100; // source
+                                
+                                      ctx.font = "14px sans-serif";
+                                      // Draw Source (right)
+                                      ctx.fillStyle = 'blue';
+                                      ctx.fillRect(40, vs, 100, 5);
+                                      ctx.fillStyle = 'black';
+                                      ctx.fillText('Source', 68, vs - 8);
+                                
+                                      // Draw Drain (left)
+                                      ctx.fillStyle = 'red';
+                                      ctx.fillRect(310, vd, 100, 5);
+                                      ctx.fillStyle = 'black';
+                                      ctx.fillText('Drain', 343, vd - 8);
+                                
+                                      
+                                
+                                      // Energy window (from Drain to Source)
+                                      ctx.fillStyle = 'rgba(100, 100, 255, 0.2)';
+                                      const top = Math.min(vs, vd);
+                                      const height = Math.abs(vs - vd);
+                                      ctx.fillRect(175, top, 100, height);
+                                
+                                      // Gate voltage effect
+                                      const dotEnergy = 0 + vg * 150;
+                                      const zeemanSplit = bfield * 40; // B field scale
+                                
+                                      // Define multiple levels
+                                      const levelCount = 5;
+                                      const levelSpacing = 80;
+                                      const baseLevels = Array.from({ length: levelCount }, (_, i) =>
+                                        dotEnergy + (i - 1) * levelSpacing
+                                      );
+                                
+                                      let currentPossible = false;
+                                      
+                                
+                                      // Draw spin-split levels and check for current
+                                      baseLevels.forEach((base, index) => {
+                                        const up = base - zeemanSplit;
+                                        const down = base + zeemanSplit;
+                                
+                                        // Spin-up level
+                                        ctx.strokeStyle = 'green';
+                                        ctx.beginPath();
+                                        ctx.moveTo(175, up);
+                                        ctx.lineTo(275, up);
+                                        ctx.stroke();
+                                        ctx.fillStyle = 'black';
+                                        ctx.font = "16px sans-serif";
+                                        ctx.fillText(`↑`, 210, up + 5);
+                                        //ctx.fillText(`E${levelCount-index - 1}`, 280, base+5);
+                                
+                                        // Spin-down level
+                                        ctx.beginPath();
+                                        ctx.moveTo(175, down);
+                                        ctx.lineTo(275, down);
+                                        ctx.stroke();
+                                        ctx.fillStyle = 'black';
+                                        ctx.fillText(`↓`, 225, down + 5);
+                                
+                                        // Check if any level is inside energy window
+                                        if ((up > top && up < top + height) || (down > top && down < top + height)) {
+                                          currentPossible = true;
+                                        }
+                                      });
+                                
+                                      // Draw current arrow or blockade message
+                                      if (currentPossible) {
+                                        ctx.fillStyle = 'blue';
+                                        ctx.beginPath();
+                                        ctx.moveTo(480, 220);
+                                        ctx.lineTo(500, 220);
+                                        ctx.lineTo(500, 210);
+                                        ctx.lineTo(520, 225);
+                                        ctx.lineTo(500, 240);
+                                        ctx.lineTo(500, 230);
+                                        ctx.lineTo(480, 230);
+                                        ctx.fill();
+                                        } else {
+                                        // 畫紅色禁止符號
+                                        ctx.strokeStyle = 'black';
+                                        ctx.lineWidth = 3;
+                                        ctx.beginPath();
+                                        ctx.arc(500, 210, 20, 0, 2 * Math.PI);
+                                        ctx.stroke();
+                                        ctx.beginPath();
+                                        ctx.moveTo(485, 195);
+                                        ctx.lineTo(515, 225);
+                                        ctx.stroke();
+                                        ctx.lineWidth = 1;
+                                        }
+                                        ctx.fillStyle = 'black';
+                                        ctx.font = "12px sans-serif";
+                                        ctx.fillText(currentPossible ? "Current flows!" : "\t\t\tBlockade", 460, 250);
+                                
+                                      // Show magnetic field value
+                                      ctx.fillStyle = 'black';
+                                      ctx.fillText(`Vs-Vd = ${(vsd*20).toFixed(2)}`, 20, 350);
+                                      ctx.fillText(`Vg = ${vg.toFixed(2)}`, 20, 370);
+                                      ctx.fillText(`B = ${bfield.toFixed(2)}`, 20, 390);
+                                    }
+                                
+                                    function update() {
+                                      const vsd = parseFloat(vsdSlider.value);
+                                      const vg = parseFloat(vgSlider.value);
+                                      const bfield = parseFloat(bfieldSlider.value);
+                                      drawEnergyLandscape(vsd, vg, bfield);
+                                    }
+                                
+                                    vsdSlider.addEventListener('input', update);
+                                    vgSlider.addEventListener('input', update);
+                                    bfieldSlider.addEventListener('input', update);
+                                
+                                    update(); // initial draw
+                                  </script>
+                                <br><br>
+                                <h3>量測能階與Coulomb diamonds</h3>
+                                <p>這邊將介紹半導體量子位元中極重要的Coulomb diamonds量測。</p>
+                                <div style="text-align: center;"></div>
+                                <a href="../Image/1-SpQ-transition4.png">
+                                    <img src="../Image/1-SpQ-transition4.png" alt="顯示不同模組區域的結構圖" style="width: 100%; height: auto;">
+                                </a>
+                            </div>
+                            <p class="dark-background">
+                                ▲量測量子點的電性可以調控偏壓（圖中為\(V_{sd}\)、橫軸）與閘極（圖中為\(V_{bg}\)、縱軸），黑色表示沒有電流、橘紅色表示有電流通過。
+                                調控偏壓大小\(V_{sd}\)決定可以產生電流的窗口大小、
+                                閘極\(V_{bg}\)控制能階是否落在產生電流的窗口。
+                                在弱偏壓下（\(V_{sd}=0\)附近），只有能階剛好落在狹窄的窗口才會有電流，調控\(V_{bg}\)就可以判斷不同能階。
+                                當偏壓增加時，窗口越來越大，就可以看見三角形的張開。
+                                當偏壓大過能階差距時（\(V_{sd}>3\)），窗口一定會包到任意能階，使得電流一定會導通。
+                                中間的黑色菱形區域，就是著名的Coulomb diamonds。
+                                <span style="font-size: 0.7em; line-height: 0.8;">
+                                    <br>Ref: Transport studies of electron-hole and spin-orbit interaction in GaSb/InAsSb core-shell nanowire quantum dots
+                                    <br>DOI: 10.1103/PhysRevB.91.161301
+                                </span>
+                                <br><br>
+                            </p>
+
+
+                            
+                            
+
+
+
+                                
+                                
+                                <div class="post-meta">
+                                    <span class="post-author">
+                                        <a href="../About/Wang.html"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="">王培儒</a>
+                                    </span>
+                                    <span class="post-category">
+                                        <a href="../SpQ/main.html"><i class="fa fa-folder" aria-hidden="true"></i>半導體自旋量子位元</a>
+                                    </span>
+                                </div><!-- /.post-meta -->
+                            
+                                
+                                <div id="prev-next-nav" class="text-center"></div>
+
+                                <script>
+                                    fetch("lessons.json")
+      .then(res => res.json())
+      .then(pages => {
+        // 過濾掉 disabled 的頁面
+        pages = pages.filter(p => p.enabled !== false);
+    
+        const current = location.pathname.split("/").pop();
+        const index = pages.findIndex(p => p.file === current);
+        let html = "";
+    
+        if (index > 0) {
+          const prev = pages[index - 1];
+          html += `<a class="btn btn-gray" href="${prev.file}">← 上一頁</a> `;
+        }
+    
+        html += `<a class="btn btn-gray" href="../SpQ_en/${current}" style="margin: 0 10px;">English Version</a>`;
+    
+        if (index < pages.length - 1) {
+          const next = pages[index + 1];
+          html += `<a class="btn btn-gray" href="${next.file}">下一頁 →</a>`;
+        }
+    
+        document.getElementById("prev-next-nav").innerHTML = html;
+      });
+    </script>
+
+                            </div><!-- /.post-content -->
+                        </article><!-- /.blog-post -->
+                        <!--<div id="PostComments" class="post-comments">
+                            
+                            
+                            
+                        </div> /#PostComments -->
+                        <!--<div class="respond">
+                            <h3>Post a Comment</h3>
+                            <form class="form-horizontal">
+                                <input class="form-control" type="text" placeholder="Your Name*" required>
+                                <input class="form-control" type="email" placeholder="Your Email" required>
+                                <textarea class="form-control form-control-comment" type="text" placeholder="Your Comment*" required></textarea>
+                                <button class="btn btn-green">Add a comment</button>
+                            </form>    
+                        </div> /.respond -->
+                    </div>
+                    <aside class="col-md-3">
+                        <div class="sidebar">
+                            <!--<div class="widget search-form">
+                                <h4 class="widget-title">Search the blog</h4>
+                                <form class="form-group">
+                                    <input type="text" class="form-control" placeholder="Search" required>
+                                    <button class="btn btn-green" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                </form>
+                            </div> /.search-form -->
+                            <!--<div class="widget widget-recent-posts">
+                                <h4 class="widget-title">Recent posts</h4>
+                                <ul class="list-unstyled">
+                                    <li><a href="#">Inside The Lipsum</a></li>
+                                    <li><a href="#">Oscar Wilde</a></li>
+                                    <li><a href="#">Jeffrey Ween</a></li>
+                                    <li><a href="#">Responsive Design</a></li>
+                                    <li><a href="#">Development</a></li>
+                                </ul>
+                            </div> /.widget-recent-posts -->
+                            
+
+                            <div class="widget">
+                                <!--<h4 class="widget-title"><a href="./main.html">科普版：目錄</a></h4>-->
+                                <div id="lesson-list_2"></div>
+                            </div>
+                            <script>
+fetch("lessons.json")
+  .then(res => res.json())
+  .then(pages => {
+    const current = location.pathname.split("/").pop();
+    const list = pages
+      .filter(p => p.enabled !== false) // ← 這行：只顯示 enabled 沒被關閉的項目
+      .map(p => {
+        const isActive = p.file === current ? "active" : "";
+        return `<div class="lesson-link ${isActive}"><a href="${p.file}">${p.title}</a></div>`;
+      })
+      .join("");
+    document.getElementById("lesson-list_2").innerHTML = list;
+  });
+</script>
+  
+                        </div><!-- /.sidebar -->
+                        
+                    </aside>
+                </div>
+            </div>
+        </section><!-- /.section-portfolio -->
+
+    </main><!-- /#main -->
+
+    <footer id="colophon" class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-4 col-xs-6">
+                    <a class="site-title">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</a>
+                    <p>一起走進新時代的前沿科學與量子科技</p>
+                    </div>
+                <div class="col-lg-offset-4 col-md-3 col-sm-4 col-md-offset-2 col-sm-offset-0 col-xs-6 ">
+                    <p class="site-title">𝐾𝐸𝐸𝑃 𝐼𝑁 𝑇𝑂𝑈𝐶𝐻</p>
+                    <ul class="list-unstyled contact-links">
+                        <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@insight-ihbar.com">info@insight-ihbar.com</a></li>
+                        <!--<li><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+37400800000">+374 (00) 80 00 00 </a></li>
+                        <li><i class="fa fa-fax" aria-hidden="true"></i><a href="+37400900000">+374 (00) 90 00 00</a></li>
+                        <li><i class="fa-solid fa-location-dot"></i><p>Hsinchu 300, Taiwan (R.O.C.)</p></li>-->
+                    </ul>
+                </div>
+                <!--<div class="clearfix visible-xs"></div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+                    <h3>Featured links</h3>
+                    <ul class="list-unstyled">
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="portfolio.html">Porfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>-->
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-8">
+                        <div class="social-links">
+                            <!--<a class="twitter-bg" href="#"><i class="fab fa-twitter"></i></a>-->
+                            <!--<<a class="facebook-bg" href="https://www.facebook.com/people/Quantum-Perspectives/61576446849628/"><i class="fab fa-facebook"></i></a>-->
+                            <!--<a class="facebook-bg" href="https://www.facebook.com/people/%E9%87%8F%E5%AD%90%E9%81%A0%E8%A6%8BQuantum-Perspectives/61576883632888/"><i class="fab fa-facebook-f"></i></a>-->
+                            <!--<a class="pinterest" href="#"><i class="fa-solid fa-microscope"></i></a>-->
+                            <!--<a class="facebook-bg" href="https://www.facebook.com/people/Insight-hbar/61576811775374/"><i class="fab fa-facebook-f"></i></a>-->
+                            <a class="linkedin-bg" href="https://www.linkedin.com/company/insight-ihbar"><i class="fab fa-linkedin"></i></a>
+                        </div><!-- /.social-links -->
+                    </div>
+                    <div class="col-xs-4">
+                        <div class="text-right">
+                            <p><span style="font-size: 16px;">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</span></p>
+                            <p>All Rights Reserved</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.copyright -->
+    </footer><!-- /#footer -->
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/bootstrap-select.min.js"></script>
+    <script src="../assets/js/jquery.slicknav.min.js"></script>
+    <script src="../assets/js/jquery.countTo.min.js"></script>
+    <script src="../assets/js/jquery.shuffle.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
+</body>
+</html>
