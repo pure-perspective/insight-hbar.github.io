@@ -29,18 +29,14 @@
     <title>Hardware Introduction</title>
     <meta name="description" content="Discover insights into semiconductor spin qubits, their role in quantum computing, challenges, and future prospects for 2025.">
     <meta name="keywords" content="Semiconductor spin qubits quantum computing hardware guide, quantum bits, qubit technology, superconducting qubits, quantum dot fabrication, low temperature cooling systems, Josephson junctions, high-fidelity two-qubit gates, scalable quantum processors">
-    <link rel="canonical" href="https://www.insight-ihbar.com/SpQ_en/E.html">
+    <link rel="canonical" href="https://www.insight-ihbar.com/SpQ_en/F.html">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <style>
-        canvas { background: #f0f0f0; margin-top: 20px; border: 1px solid #ccc; }
-        .controls { margin-top: 20px;background: #f0f0f0;  }
-        label { margin: 0 10px; display: inline-block; width: 150px; }
-      </style>
+
 </head>
 <body>
 
@@ -96,225 +92,102 @@
                             <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="Laptop on wooden desk">-->
                             <div class="post-content">
                                 <div style="text-align: center;">
-                                    <h2>Characteristics of a Single Quantum Dot</h2>
+                                    <h2>Characteristics of Double Quantum Dots</h2>
                                     <h3></h3>
                                 </div>
-                                <p>
-                                    A single quantum dot can serve as an information carrier (i.e., a qubit) or as a measurement device (i.e., a charge sensor). This article will introduce gate-defined quantum dots (Gate-based QDs).
-                                    <br><br>
-                                </p>
-                                <h3>Defining a Quantum Dot</h3>
+                                
+                                <p>Moving towards quantum computation requires connecting multiple qubits. Semiconductor qubits can be considered "semi-stationary" qubits; because their charge carriers can be moved, they exhibit many rich phenomena. This article introduces the most fundamental characteristics of a double quantum dot.</p>
+                                
                                 <div style="text-align: center;">
-                                    <a href="../Image/1-SpQ-transition2.png">
-                                        <img src="../Image/1-SpQ-transition2.png" alt="Defining a quantum dot with potential barriers and a potential well" style="width: 70%; height: auto;">
+                                    <a href="../Image/SpQ-2dot-1.png">
+                                        <img src="../Image/SpQ-2dot-1.png" alt="Conceptual diagram of a double quantum dot" style="width: 60%; height: auto;">
                                     </a>
                                 </div>
                                 <p class="dark-background">
-                                    ▲ A common way to define a quantum dot is by using electrodes to create potential barriers \(V_b\) and a potential well \(V_g\). The barriers cause the carriers in the potential well to have quantized energy levels, and the gate voltage \(V_g\) controls the depth of the well, thus tuning the energy levels. This defines an individual quantum dot.
+                                    ▲ Similar to a single quantum dot, this is a conceptual diagram for defining a double quantum dot. Two quantum dot regions are formed by three barrier gates \(V_{b1}, V_{b2}, V_{b3}\), and the energy levels of the two dots can be tuned by their respective plunger gates \(V_{g1}, V_{g2}\).
                                     <span style="font-size: 0.7em; line-height: 0.8;">
                                         <br>Ref: Drawn by the author
                                     </span>
                                     <br><br>
                                 </p>
                                 
-                                <h3>Measuring a Quantum Dot</h3>
-                                <p>After defining a quantum dot in a material, its state can be measured using <b>electrical transport measurements</b>.</p>
+                                <h3>Interaction Between Double Quantum Dots</h3>
+                                <p>Quantum computation requires interaction between qubits to perform effective quantum information processing. At the microscopic scale, for two closely spaced quantum dots, one must consider the Coulomb interaction between charge carriers and the cross-capacitance between gates. We use the notation \( (N_{QD_1},N_{QD_2})\) to represent the number of charges on the quantum dots \(QD_1\) and \(QD_2\). For example, \((0,1)\) means there are 0 carriers on \(QD_1\) and 1 carrier on \(QD_2\).</p>
                                 <div style="text-align: center;">
-                                    <a href="../Image/1-SpQ-transition3.png">
-                                        <img src="../Image/1-SpQ-transition3.png" alt="Electrical measurement of a quantum dot" style="width: 70%; height: auto;">
+                                    <a href="../Image/SpQ-2dot-2.png">
+                                        <img src="../Image/SpQ-2dot-2.png" alt="Schematic of Coulomb interaction in a double quantum dot" style="width: 100%; height: auto;">
                                     </a>
                                 </div>
                                 <p class="dark-background">
-                                    ▲ To measure electrical transport, a bias voltage must be applied across two terminals (S: Source, D: Drain). This bias drives carriers to move, generating a current. By measuring the magnitude of the current, the energy level state of the quantum dot can be determined. If the quantum dot's energy level does not fall within the bias window, carriers cannot move, and no current flows. The gate voltage \(V_g\) can be used to tune the energy level into the bias window, allowing carriers to pass and thus generating a current.
-                                
+                                    ▲ Schematic of the Coulomb interaction between carriers in a double quantum dot. When a charge enters one dot, the Coulomb interaction causes the energy level of the other dot to rise.
                                     <span style="font-size: 0.7em; line-height: 0.8;">
                                         <br>Ref: Drawn by the author
                                     </span>
                                     <br><br>
                                 </p>
                                 
-                                <h3>Micrograph of a Single Quantum Dot</h3>
+                                <h3>Measuring Energy Levels & the Stability Diagram</h3>
+                                <p>For a single quantum dot, there is the Coulomb Diamond measurement diagram. Similarly, for a double quantum dot, we can measure the energy levels by tuning the gate voltages \(V_{g1}\) and \(V_{g2}\). Due to the close proximity of the two dots, there are Coulomb interactions and capacitive cross-talk between the gates.</p>
                                 
                                 <div style="text-align: center;">
-                                    <a href="../Image/SQ-gate.png">
-                                        <img src="../Image/SQ-gate.png" alt="Electron micrograph of a single quantum dot device" style="width: 100%; height: auto;">
+                                    <a href="../Image/SpQ-2dot-4.png">
+                                        <img src="../Image/SpQ-2dot-4.png" alt="Evolution from independent quantum dots to a coupled stability diagram" style="width: 100%; height: auto;">
                                     </a>
                                 </div>
                                 <p class="dark-background">
-                                    ▲ A single quantum dot under an electron microscope, experimented on using six electrodes. The finer electrodes (LB, RB, PG, RG) define the confinement and potential well depth of the quantum dot. The contour plot simulation in figure (d) shows a quantum dot forming in the central region. The two thicker electrodes on the sides are used to apply bias and measure current.
+                                    ▲ (Left) A hypothetical signal diagram for two distant, non-interacting quantum dots, tuned by \(V_{g1}\) and \(V_{g2}\).
+                                    <br>(Middle) Considering the Coulomb interaction force between charges.
+                                    <br>(Right) The actual characteristics of a double quantum dot. In addition to Coulomb interaction, the cross-talk between the gates causes the characteristic hexagonal shape to appear.
                                     <span style="font-size: 0.7em; line-height: 0.8;">
-                                        <br>A gate defined quantum dot on the twodimensional transition metal dichalcogenide semiconductor WSe2
-                                        <br>DOI: 10.1039/c5nr04961j
+                                        <br>Ref: Drawn by the author
                                     </span>
                                     <br><br>
                                 </p>
                                 
-                                <h3>Animated Simulation</h3>
-                                <p>Before continuing with the measurement of a single quantum dot, readers can use the animation below. By adjusting the sliders for the bias voltage \(V_s-V_d\), the gate voltage \(V_g\), and the magnetic field \(B\), you can observe whether a current is formed and how the energy levels split.
-                                </p>
-                                <div class="controls" style="text-align: center;" width="600">
-                                    <h4><br>Adjust the Sliders<br></h4>
-                                    <label>Vs - Vd:
-                                      <input type="range" id="vsd" min="0" max="1" step="0.01" value="0.5">
-                                    </label>
-                                    <label>Vg:
-                                      <input type="range" id="vg" min="-1" max="1" step="0.01" value="0">
-                                    </label>
-                                    <label>Magnetic Field B:
-                                      <input type="range" id="bfield" min="-0.2" max="0.2" step="0.01" value="0">
-                                    </label>
-                                    <p><br></p>
-                                </div>
-                                  <canvas id="canvas" width="600" height="400" style="display: block; margin: 20px auto; border: 1px solid #ccc;"></canvas>
-                                  <script>
-                                    const canvas = document.getElementById('canvas');
-                                    const ctx = canvas.getContext('2d');
-                                    const vsdSlider = document.getElementById('vsd');
-                                    const vgSlider = document.getElementById('vg');
-                                    const bfieldSlider = document.getElementById('bfield');
-                                
-                                    function drawEnergyLandscape(vsd, vg, bfield) {
-                                      ctx.clearRect(0, 0, canvas.width, canvas.height);
-                                
-                                      // Source and Drain energy levels (Drain = left, Source = right)
-                                      const vd = 200 + vsd * 100; // drain
-                                      const vs = 200 - vsd * 100; // source
-                                
-                                      ctx.font = "14px sans-serif";
-                                      // Draw Source (right)
-                                      ctx.fillStyle = 'blue';
-                                      ctx.fillRect(40, vs, 100, 5);
-                                      ctx.fillStyle = 'black';
-                                      ctx.fillText('Source', 68, vs - 8);
-                                
-                                      // Draw Drain (left)
-                                      ctx.fillStyle = 'red';
-                                      ctx.fillRect(310, vd, 100, 5);
-                                      ctx.fillStyle = 'black';
-                                      ctx.fillText('Drain', 343, vd - 8);
-                                
-                                      // Energy window (from Drain to Source)
-                                      ctx.fillStyle = 'rgba(100, 100, 255, 0.2)';
-                                      const top = Math.min(vs, vd);
-                                      const height = Math.abs(vs - vd);
-                                      ctx.fillRect(175, top, 100, height);
-                                
-                                      // Gate voltage effect
-                                      const dotEnergy = 0 + vg * 150;
-                                      const zeemanSplit = bfield * 40; // B field scale
-                                
-                                      // Define multiple levels
-                                      const levelCount = 5;
-                                      const levelSpacing = 80;
-                                      const baseLevels = Array.from({ length: levelCount }, (_, i) =>
-                                        dotEnergy + (i - 1) * levelSpacing
-                                      );
-                                
-                                      let currentPossible = false;
-                                
-                                      // Draw spin-split levels and check for current
-                                      baseLevels.forEach((base, index) => {
-                                        const up = base - zeemanSplit;
-                                        const down = base + zeemanSplit;
-                                
-                                        // Spin-up level
-                                        ctx.strokeStyle = 'green';
-                                        ctx.beginPath();
-                                        ctx.moveTo(175, up);
-                                        ctx.lineTo(275, up);
-                                        ctx.stroke();
-                                        ctx.fillStyle = 'black';
-                                        ctx.font = "16px sans-serif";
-                                        ctx.fillText(`↑`, 210, up + 5);
-                                
-                                        // Spin-down level
-                                        ctx.beginPath();
-                                        ctx.moveTo(175, down);
-                                        ctx.lineTo(275, down);
-                                        ctx.stroke();
-                                        ctx.fillStyle = 'black';
-                                        ctx.fillText(`↓`, 225, down + 5);
-                                
-                                        // Check if any level is inside energy window
-                                        if ((up > top && up < top + height) || (down > top && down < top + height)) {
-                                          currentPossible = true;
-                                        }
-                                      });
-                                
-                                      // Draw current arrow or blockade message
-                                      if (currentPossible) {
-                                        ctx.fillStyle = 'blue';
-                                        ctx.beginPath();
-                                        ctx.moveTo(480, 220);
-                                        ctx.lineTo(500, 220);
-                                        ctx.lineTo(500, 210);
-                                        ctx.lineTo(520, 225);
-                                        ctx.lineTo(500, 240);
-                                        ctx.lineTo(500, 230);
-                                        ctx.lineTo(480, 230);
-                                        ctx.fill();
-                                        } else {
-                                        // Draw red prohibition sign
-                                        ctx.strokeStyle = 'black';
-                                        ctx.lineWidth = 3;
-                                        ctx.beginPath();
-                                        ctx.arc(500, 210, 20, 0, 2 * Math.PI);
-                                        ctx.stroke();
-                                        ctx.beginPath();
-                                        ctx.moveTo(485, 195);
-                                        ctx.lineTo(515, 225);
-                                        ctx.stroke();
-                                        ctx.lineWidth = 1;
-                                        }
-                                        ctx.fillStyle = 'black';
-                                        ctx.font = "12px sans-serif";
-                                        ctx.fillText(currentPossible ? "Current flows!" : "Blockade", 480, 250);
-                                
-                                      // Show parameter values
-                                      ctx.fillStyle = 'black';
-                                      ctx.fillText(`Vs-Vd = ${(vsd*20).toFixed(2)}`, 20, 350);
-                                      ctx.fillText(`Vg = ${vg.toFixed(2)}`, 20, 370);
-                                      ctx.fillText(`B = ${bfield.toFixed(2)}`, 20, 390);
-                                    }
-                                
-                                    function update() {
-                                      const vsd = parseFloat(vsdSlider.value);
-                                      const vg = parseFloat(vgSlider.value);
-                                      const bfield = parseFloat(bfieldSlider.value);
-                                      drawEnergyLandscape(vsd, vg, bfield);
-                                    }
-                                
-                                    vsdSlider.addEventListener('input', update);
-                                    vgSlider.addEventListener('input', update);
-                                    bfieldSlider.addEventListener('input', update);
-                                
-                                    update(); // initial draw
-                                  </script>
-                                <br><br>
-                                <h3>Measuring Energy Levels & Coulomb Diamonds</h3>
-                                <p>This section will introduce the extremely important Coulomb diamond measurement in semiconductor qubits.</p>
-                                <br>
                                 <div style="text-align: center;">
-                                    <a href="../Image/1-SpQ-transition4.png">
-                                        <img src="../Image/1-SpQ-transition4.png" alt="Coulomb diamond measurement plot" style="width: 100%; height: auto;">
+                                    <a href="../Image/SpQ-2dot-5.png">
+                                        <img src="../Image/SpQ-2dot-5.png" alt="Experimentally measured stability diagram of a double quantum dot" style="width: 100%; height: auto;">
                                     </a>
                                 </div>
                                 <p class="dark-background">
-                                    ▲ By tuning the bias voltage (horizontal axis, \(V_{sd}\)) and the gate voltage (vertical axis, \(V_{bg}\)), the electrical properties of the quantum dot can be measured. Black indicates no current, while orange-red indicates current flow. Tuning the bias \(V_{sd}\) determines the size of the window where current can flow, while the gate voltage \(V_{bg}\) controls whether an energy level falls within that window. At low bias (near \(V_{sd}=0\)), current only flows when an energy level is precisely aligned within the narrow window, allowing different energy levels to be identified by tuning \(V_{bg}\). As the bias increases, the window widens, and triangular regions open up. When the bias exceeds the energy level spacing, the window will always contain an energy level, so current will always flow. The central black diamond-shaped regions are the famous Coulomb diamonds.
+                                    ▲ An experimentally measured energy level characteristic plot of a double quantum dot, known as a <b>Stability Diagram</b>.
                                     <span style="font-size: 0.7em; line-height: 0.8;">
-                                        <br>Ref: Transport studies of electron-hole and spin-orbit interaction in GaSb/InAsSb core-shell nanowire quantum dots
-                                        <br>DOI: 10.1103/PhysRevB.91.161301
+                                        <br>Ref: Engineering Independent Electrostatic Control of Atomic-Scale (∼4 nm) Silicon Double Quantum Dots
+                                        <br>DOI: 10.1021/nl3012903
                                     </span>
                                     <br><br>
                                 </p>
                                 
+                                <h3>Carrier Transport Characteristics in a Double Quantum Dot</h3>
+                                <p>Due to the energy level shifts caused by Coulomb interaction between carriers, the current transport in a double quantum dot can occur through two different processes:</p>
+                                <div style="text-align: center;">
+                                    <a href="../Image/SpQ-2dot-3.png">
+                                        <img src="../Image/SpQ-2dot-3.png" alt="Two current transport cycles in a double quantum dot" style="width: 100%; height: auto;">
+                                    </a>
+                                </div>
+                                <p class="dark-background">
+                                    <b>Cycle A</b> is a more intuitive cycle where the energy levels of both quantum dots are aligned within the bias window, naturally forming a step-like flow of carriers.<br>
+                                    <b>Cycle B</b> is formed through the interaction between carriers; the addition of a new charge raises an energy level into the bias window, thereby completing a cycle.
+                                    <span style="font-size: 0.7em; line-height: 0.8;">
+                                        <br>Ref: Drawn by the author
+                                    </span>
+                                    <br><br>
+                                </p>
                                 
-
-
-
-
-
-
+                                <div style="text-align: center;">
+                                    <a href="../Image/SpQ-2dot-6.png">
+                                        <img src="../Image/SpQ-2dot-6.png" alt="Bias triangles in a stability diagram" style="width: 80%; height: auto;">
+                                    </a>
+                                </div>
+                                <p class="dark-background">
+                                    ▲ The difference between the two cycles can be understood through the Stability Diagram. Experimentally (right figure), one can also observe that the two different cycles produce pairs of triangular signals (bias triangles).
+                                    <span style="font-size: 0.7em; line-height: 0.8;">
+                                        <br>Ref:
+                                        <br>(Left) Drawn by the author
+                                        <br>(Right) Silicon quantum electronics, DOI: 10.1103/RevModPhys.85.961
+                                    </span>
+                                    <br><br>
+                                </p>
 
 
                                 
